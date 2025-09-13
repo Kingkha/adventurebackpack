@@ -101,7 +101,8 @@ function getPostUrl(post: { slug: string; folder?: string; subfolders?: string[]
   }
   
   // Case 4: If in a subfolder with different name, URL is /folder/slug
-  if (post.folder) {
+  // Exception: posts in "blog" folder should be served from root
+  if (post.folder && post.folder !== 'blog') {
     return `${SITE_URL}/${escapeXML(post.folder)}/${escapeXML(post.slug)}`;
   }
   
