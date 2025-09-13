@@ -120,9 +120,10 @@ function generateBlogSitemap() {
     console.log(`Read ${posts.length} posts from cache`);
     
     // Get unique folder names to create folder index URLs (first level only)
+    // Exclude "blog" folder since it's already hardcoded above
     const folders = [...new Set(
       posts
-        .filter(post => post.folder)
+        .filter(post => post.folder && post.folder !== 'blog')
         .map(post => post.folder)
     )].filter(Boolean);
     
