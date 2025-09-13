@@ -157,6 +157,12 @@ function generateBlogSitemap() {
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>${SITE_URL}/adventure-planner</loc>
+    <lastmod>${new Date().toISOString()}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>${SITE_URL}/about</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -216,6 +222,12 @@ function generateBlogSitemap() {
     <loc>${SITE_URL}/blog</loc>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>${SITE_URL}/adventure-planner</loc>
+    <lastmod>${new Date().toISOString()}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>${SITE_URL}/about</loc>

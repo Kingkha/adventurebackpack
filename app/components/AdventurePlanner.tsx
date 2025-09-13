@@ -175,11 +175,11 @@ export default function AdventurePlanner() {
           </div>
           
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 max-w-4xl mx-auto leading-tight">
-            Plan Your Next <span className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 to-orange-400">Epic Adventure</span>
+            AI Adventure Planner - Plan Your Next <span className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 to-orange-400">Epic Adventure</span>
           </h1>
           
           <p className="text-xl text-emerald-50 max-w-3xl mx-auto mb-8">
-            Get personalized adventure recommendations, detailed itineraries, and expert tips for hiking, climbing, camping, and outdoor activities worldwide.
+            Free AI-powered adventure planner tool for hiking, climbing, camping, and outdoor activities. Get personalized recommendations, detailed itineraries, gear suggestions, and expert tips for your next outdoor adventure.
           </p>
 
           {/* Adventure Categories */}
@@ -212,8 +212,8 @@ export default function AdventurePlanner() {
                 <Backpack className="h-6 w-6" />
               </div>
               <div>
-                <h2 className="text-lg font-bold">Adventure Planner AI</h2>
-                <p className="text-emerald-100 text-sm">Your personal adventure planning assistant</p>
+                <h2 className="text-lg font-bold">AI Adventure Planner</h2>
+                <p className="text-emerald-100 text-sm">Your personal AI-powered adventure planning assistant</p>
               </div>
             </div>
             
@@ -242,9 +242,9 @@ export default function AdventurePlanner() {
                   <Navigation className="h-8 w-8 text-white" />
                 </div>
                 
-                <h3 className="text-2xl font-bold text-gray-800 mb-3">What adventure calls to you?</h3>
+                <h2 className="text-2xl font-bold text-gray-800 mb-3">What Adventure Calls to You?</h2>
                 <p className="text-gray-600 max-w-md mb-8">
-                  Tell me about your dream adventure, and I'll help you plan every detail!
+                  Tell our AI adventure planner about your dream outdoor adventure, and we'll help you plan every detail with personalized recommendations!
                 </p>
                 
                 {/* Quick Action Cards */}
@@ -272,7 +272,7 @@ export default function AdventurePlanner() {
 
                 {/* Quick Prompts */}
                 <div className="w-full max-w-3xl">
-                  <p className="text-gray-700 font-medium mb-4">Or try one of these popular requests:</p>
+                  <h3 className="text-gray-700 font-medium mb-4">Or try one of these popular adventure planner requests:</h3>
                   <div className="flex flex-wrap gap-2 justify-center">
                     {quickPrompts.map((prompt, index) => (
                       <Badge 
@@ -289,10 +289,10 @@ export default function AdventurePlanner() {
 
                 <div className="mt-8 p-4 bg-gradient-to-r from-emerald-50 to-teal-50 rounded-lg border border-emerald-200 max-w-md">
                   <div className="flex items-center justify-center mb-2">
-                    <span className="bg-emerald-500 text-white px-3 py-1 rounded-full text-xs font-bold">PRO TIP</span>
+                    <span className="bg-emerald-500 text-white px-3 py-1 rounded-full text-xs font-bold">AI ADVENTURE PLANNER TIP</span>
                   </div>
                   <p className="text-emerald-700 text-sm">
-                    Be specific about your experience level, group size, and preferred activities for the best recommendations!
+                    Be specific about your experience level, group size, and preferred activities for the best AI adventure planner recommendations!
                   </p>
                 </div>
               </div>
@@ -351,7 +351,7 @@ export default function AdventurePlanner() {
               <Input
                 value={input}
                 onChange={handleInputChange}
-                placeholder="Describe your dream adventure... (e.g., 'Plan a 5-day hiking trip in the Alps for beginners')"
+                placeholder="Describe your dream adventure... (e.g., 'Plan a 5-day hiking trip in the Alps for beginners with our AI adventure planner')"
                 className="flex-grow rounded-xl bg-white px-4 py-3 border-gray-300 focus-visible:ring-emerald-500 text-base"
                 type="text"
               />
@@ -392,10 +392,10 @@ export default function AdventurePlanner() {
             <div className="bg-gradient-to-br from-emerald-500 to-teal-500 p-4 rounded-full w-fit mx-auto mb-4">
               <Mountain className="h-8 w-8 text-white" />
             </div>
-            <DialogTitle className="text-2xl font-bold">Unlock Unlimited Adventures</DialogTitle>
+            <DialogTitle className="text-2xl font-bold">Unlock Unlimited AI Adventure Planning</DialogTitle>
             <DialogDescription className="text-center space-y-3 pt-2">
-              <p className="text-gray-600">You've used your 3 free adventure plans.</p>
-              <p className="font-semibold text-gray-800">Sign in to plan unlimited epic adventures!</p>
+              <p className="text-gray-600">You've used your 3 free AI adventure planner sessions.</p>
+              <p className="font-semibold text-gray-800">Sign in to plan unlimited epic adventures with our AI adventure planner!</p>
               <div className="flex items-center justify-center space-x-4 text-sm text-gray-600 pt-2">
                 <div className="flex items-center">
                   <MapPin className="h-4 w-4 mr-1 text-emerald-500" />
