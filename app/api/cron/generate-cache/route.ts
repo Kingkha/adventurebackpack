@@ -3,6 +3,8 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 
+export const dynamic = 'force-dynamic';
+
 const contentDirectory = path.join(process.cwd(), "content");
 const cacheFile = path.join(process.cwd(), "content", "blog-cache.json");
 const sitemapFile = path.join(process.cwd(), "public", "sitemap.xml");
@@ -116,11 +118,42 @@ function generateSitemap(posts: BlogPostMeta[]) {
        .replace(/"/g, "&quot;")
        .replace(/'/g, "&apos;");
 
+  // Get unique folder names to create folder index URLs (first level only)
+  // Exclude "blog" folder since it's already hardcoded below
   const folders = [...new Set(
     posts
-      .filter(post => post.folder)
+      .filter(post => post.folder && post.folder !== 'blog')
       .map(post => post.folder)
   )].filter(Boolean);
+
+  // Helper function to determine the correct URL path for a post
+  function getPostUrl(post: { slug: string; folder?: string; subfolders?: string[] }): string {
+    // Case 1: If we have a nested structure with subfolders, build the path from all segments
+    if (post.subfolders && post.subfolders.length > 0) {
+      // If the file has the same name as its parent folder (index file)
+      if (post.slug === post.subfolders[post.subfolders.length - 1]) {
+        // Remove the duplicate last segment
+        return `${SITE_URL}/${post.subfolders.map(segment => escapeXML(segment)).join('/')}`;
+      }
+      
+      // Regular nested file
+      return `${SITE_URL}/${[...post.subfolders, post.slug].map(segment => escapeXML(segment)).join('/')}`;
+    }
+
+    // Case 2: If in a subfolder and has the same name as the folder, URL is /folder
+    if (post.folder && post.slug === post.folder) {
+      return `${SITE_URL}/${escapeXML(post.folder)}`;
+    }
+    
+    // Case 3: If in a subfolder with different name, URL is /folder/slug
+    // Exception: posts in "blog" folder should be served from root
+    if (post.folder && post.folder !== 'blog') {
+      return `${SITE_URL}/${escapeXML(post.folder)}/${escapeXML(post.slug)}`;
+    }
+    
+    // Default case: blog post, URL is /slug
+    return `${SITE_URL}/${escapeXML(post.slug)}`;
+  }
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -129,6 +162,21 @@ function generateSitemap(posts: BlogPostMeta[]) {
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
+  <url>
+    <loc>${SITE_URL}/blog</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>${SITE_URL}/about</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>${SITE_URL}/trust</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
   ${folders.map(folder => `
   <url>
     <loc>${SITE_URL}/${escapeXML(folder as string)}</loc>
@@ -136,9 +184,7 @@ function generateSitemap(posts: BlogPostMeta[]) {
     <priority>0.8</priority>
   </url>`).join("")}
   ${posts.map(post => {
-    const url = post.folder 
-      ? `${SITE_URL}/${escapeXML(post.folder)}/${escapeXML(post.slug)}`
-      : `${SITE_URL}/${escapeXML(post.slug)}`;
+    const url = getPostUrl(post);
     
     return `
   <url>
