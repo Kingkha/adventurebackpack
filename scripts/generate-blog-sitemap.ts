@@ -105,7 +105,7 @@ function getPostUrl(post: { slug: string; folder?: string; subfolders?: string[]
     return `${SITE_URL}/${escapeXML(post.folder)}/${escapeXML(post.slug)}`;
   }
   
-  // Default case: blog post in blog directory, URL is /blog/slug
+  // Default case: blog post, URL is /slug
   return `${SITE_URL}/${escapeXML(post.slug)}`;
 }
 
