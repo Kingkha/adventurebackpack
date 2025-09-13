@@ -1,0 +1,54 @@
+# Adventure Backpack Robots.txt
+# Main rules for all crawlers
+User-agent: *
+Allow: /
+Disallow: /chatbot?*
+Disallow: /api/
+Disallow: /auth/
+Disallow: /settings/
+Disallow: /admin/
+Disallow: /*.json$
+Disallow: /*?source=*
+Allow: /chatbot
+Allow: /sitemap.xml
+Allow: /manifest.json
+
+# Google-specific rules
+User-agent: Googlebot
+Allow: /
+Disallow: /adventure-planner?*
+Allow: /adventure-planner
+Allow: /*.js
+Allow: /*.css
+
+# Image-specific rules
+User-agent: Googlebot-Image
+Allow: /images/
+Allow: /public/images/
+Allow: /blog/images/
+
+# Social media crawler rules
+User-agent: Twitterbot
+Allow: /
+Allow: /images/
+Allow: /blog/
+
+User-agent: facebookexternalhit
+Allow: /
+Allow: /images/
+Allow: /blog/
+
+# Bing-specific rules
+User-agent: Bingbot
+Allow: /
+Disallow: /adventure-planner?*
+Allow: /adventure-planner
+
+# Crawl delay setting (optional)
+# Crawl-delay: 1
+
+# Sitemaps
+Sitemap: https://adventurebackpack.com/sitemap.xml
+
+# Host
+Host: https://adventurebackpack.com

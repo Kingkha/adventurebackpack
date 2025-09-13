@@ -1,0 +1,16 @@
+name: Daily Vercel Deploy
+on:
+  # 17:00 UTC == 00:00 ICT (Asia/Bangkok) every day
+  schedule:
+    - cron: '0 17 * * *'
+  workflow_dispatch:          # <-- lets you run it manually from the Actions tab
+env:
+  VERCEL_DEPLOY_HOOK: ${{ vars.VERCEL_DEPLOY_HOOK }}
+jobs:
+  trigger:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Vercel Deploy Hook
+        run: |
+          test -n "$VERCEL_DEPLOY_HOOK" || { echo "Hook is empty"; exit 1; }
+          curl --fail -sS -X POST "$VERCEL_DEPLOY_HOOK"
