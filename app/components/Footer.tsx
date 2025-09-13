@@ -91,197 +91,215 @@ export default function Footer({ topCities = [] }: FooterProps) {
   const pathname = usePathname()
   const currentYear = new Date().getFullYear()
   
+  // European cities with their display names
+  const europeanCities = [
+    // Germany
+    { name: 'Aachen', slug: 'aachen', country: 'Germany' },
+    { name: 'Rostock', slug: 'rostock', country: 'Germany' },
+    { name: 'Dortmund', slug: 'dortmund', country: 'Germany' },
+    { name: 'Füssen', slug: 'fussen', country: 'Germany' },
+    { name: 'Wiesbaden', slug: 'wiesbaden', country: 'Germany' },
+    { name: 'Würzburg', slug: 'wurzburg', country: 'Germany' },
+    { name: 'Linz', slug: 'linz', country: 'Austria' },
+    
+    // Spain
+    { name: 'A Coruña', slug: 'a-coruna', country: 'Spain' },
+    { name: 'Denia', slug: 'denia', country: 'Spain' },
+    { name: 'Mali Lošinj', slug: 'mali-losinj', country: 'Croatia' },
+    { name: 'Parga', slug: 'parga', country: 'Greece' },
+    { name: 'Grado', slug: 'grado', country: 'Italy' },
+    { name: 'Brescia', slug: 'brescia', country: 'Italy' },
+    { name: 'El Puerto de Santa María', slug: 'el-puerto-de-santa-maria', country: 'Spain' },
+    { name: 'Calvi', slug: 'calvi', country: 'France' },
+    { name: 'Orta San Giulio', slug: 'orta-san-giulio', country: 'Italy' },
+    { name: 'Ullapool', slug: 'ullapool', country: 'Scotland' },
+    { name: 'Fontainebleau', slug: 'fontainebleau', country: 'France' },
+    { name: 'Menton', slug: 'menton', country: 'France' },
+    { name: 'Milazzo', slug: 'milazzo', country: 'Italy' },
+    { name: 'Tarragona', slug: 'tarragona', country: 'Spain' },
+    { name: 'Hvar Town', slug: 'hvar-town', country: 'Croatia' },
+    { name: 'Montreux', slug: 'montreux', country: 'Switzerland' },
+    { name: 'Chartres', slug: 'chartres', country: 'France' },
+    { name: 'Cremona', slug: 'cremona', country: 'Italy' },
+    { name: 'Tivat', slug: 'tivat', country: 'Montenegro' },
+    { name: 'Helsingør', slug: 'helsingr', country: 'Denmark' },
+    { name: 'Perpignan', slug: 'perpignan', country: 'France' },
+    { name: 'Sirmione', slug: 'sirmione', country: 'Italy' },
+    { name: 'Zakopane', slug: 'zakopane', country: 'Poland' },
+    { name: 'Willemstad', slug: 'willemstad', country: 'Netherlands' },
+    { name: 'Versailles', slug: 'versailles', country: 'France' },
+    { name: 'Chambéry', slug: 'chambery', country: 'France' },
+    { name: 'Sanlúcar de Barrameda', slug: 'sanlucar-de-barrameda', country: 'Spain' },
+    { name: 'Locarno', slug: 'locarno', country: 'Switzerland' },
+    { name: 'Poprad', slug: 'poprad', country: 'Slovakia' },
+    
+    // UK & Ireland
+    { name: 'Dover', slug: 'dover', country: 'UK' },
+    
+    // Italy
+    { name: 'Bellagio', slug: 'bellagio', country: 'Italy' },
+    { name: 'Cortina d\'Ampezzo', slug: 'cortina-dampezzo', country: 'Italy' },
+    { name: 'Viterbo', slug: 'viterbo', country: 'Italy' },
+    { name: 'Cala Gonone', slug: 'cala-gonone', country: 'Italy' },
+    { name: 'Silves', slug: 'silves', country: 'Portugal' },
+    { name: 'Peso da Régua', slug: 'peso-da-regua', country: 'Portugal' },
+    { name: 'Carvoeiro', slug: 'carvoeiro', country: 'Portugal' },
+    { name: 'Vila Nova de Milfontes', slug: 'vila-nova-de-milfontes', country: 'Portugal' },
+    { name: 'Argostoli', slug: 'argostoli', country: 'Greece' },
+    { name: 'Kars', slug: 'kars', country: 'Turkey' },
+    { name: 'Alanya', slug: 'alanya', country: 'Turkey' },
+    { name: 'Urgup', slug: 'urgup', country: 'Turkey' },
+    { name: 'Sanlıurfa', slug: 'sanlurfa', country: 'Turkey' },
+    { name: 'Gaziantep', slug: 'gaziantep', country: 'Turkey' },
+    { name: 'Batumi', slug: 'batumi', country: 'Georgia' },
+    
+    // Other European
+    { name: 'Mdina', slug: 'mdina', country: 'Malta' },
+    { name: 'Dakhla', slug: 'dakhla', country: 'Morocco' },
+    { name: 'Taroudant', slug: 'taroudant', country: 'Morocco' },
+    { name: 'Tafraoute', slug: 'tafraoute', country: 'Morocco' }
+  ]
+
   return (
-    <footer className="bg-gray-800 text-gray-300 py-16 px-4 sm:px-6 lg:px-8">
+    <footer className="bg-gray-800 text-gray-300 py-12 px-4 sm:px-6 lg:px-8">
       <div className="container mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
-          {/* Column 1: Brand and Mission */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {/* Column 1: Brand */}
           <div>
-            <Link href="/" className="text-2xl font-bold text-white flex items-center">
+            <Link href="/" className="text-2xl font-bold text-white mb-3 block">
               Adventure Backpack
             </Link>
-            <p className="mt-3 text-gray-400">
-              Discover the world's most thrilling adventure activities, extreme sports, and adrenaline-pumping experiences.
+            <p className="text-gray-400 text-sm mb-4 leading-relaxed">
+              Your ultimate guide to European adventure destinations. Discover thrilling activities, extreme sports, and adrenaline-pumping experiences across Europe's most exciting cities.
             </p>
             
-            <div className="mt-6 flex space-x-4">
-              <Link href="https://facebook.com/adventurebackpack" 
-                className="p-2 rounded-full border border-gray-600 text-gray-400 hover:text-orange-300 hover:border-orange-300 transition-colors">
-                <Facebook className="h-5 w-5" />
-              </Link>
-              <Link href="https://twitter.com/adventurebackpack" 
-                className="p-2 rounded-full border border-gray-600 text-gray-400 hover:text-orange-300 hover:border-orange-300 transition-colors">
-                <Twitter className="h-5 w-5" />
-              </Link>
-              <Link href="https://instagram.com/adventurebackpack" 
-                className="p-2 rounded-full border border-gray-600 text-gray-400 hover:text-orange-300 hover:border-orange-300 transition-colors">
-                <Instagram className="h-5 w-5" />
-              </Link>
-              <Link href="https://github.com/adventurebackpack" 
-                className="p-2 rounded-full border border-gray-600 text-gray-400 hover:text-orange-300 hover:border-orange-300 transition-colors">
-                <Github className="h-5 w-5" />
-              </Link>
+            <div className="mb-4">
+              <h5 className="text-sm font-semibold text-gray-200 mb-2">What We Offer</h5>
+              <ul className="text-xs text-gray-400 space-y-1">
+                <li>• Comprehensive city guides</li>
+                <li>• Adventure activity recommendations</li>
+                <li>• Local insider tips</li>
+                <li>• Safety guidelines</li>
+                <li>• Budget-friendly options</li>
+              </ul>
+            </div>
+            
+            <div className="mb-4">
+              <h5 className="text-sm font-semibold text-gray-200 mb-2">Follow Our Adventures</h5>
+              <div className="flex space-x-3">
+                <Link href="https://facebook.com/adventurebackpack" 
+                  className="p-2 rounded-full bg-gray-700 text-gray-300 hover:text-orange-300 hover:bg-orange-600/20 transition-colors"
+                  title="Follow us on Facebook">
+                  <Facebook className="h-4 w-4" />
+                </Link>
+                <Link href="https://twitter.com/adventurebackpack" 
+                  className="p-2 rounded-full bg-gray-700 text-gray-300 hover:text-orange-300 hover:bg-orange-600/20 transition-colors"
+                  title="Follow us on Twitter">
+                  <Twitter className="h-4 w-4" />
+                </Link>
+                <Link href="https://instagram.com/adventurebackpack" 
+                  className="p-2 rounded-full bg-gray-700 text-gray-300 hover:text-orange-300 hover:bg-orange-600/20 transition-colors"
+                  title="Follow us on Instagram">
+                  <Instagram className="h-4 w-4" />
+                </Link>
+                <Link href="https://github.com/adventurebackpack" 
+                  className="p-2 rounded-full bg-gray-700 text-gray-300 hover:text-orange-300 hover:bg-orange-600/20 transition-colors"
+                  title="Check out our GitHub">
+                  <Github className="h-4 w-4" />
+                </Link>
+              </div>
+            </div>
+            
+            <div className="text-xs text-gray-500">
+              <p>Trusted by thousands of adventurers worldwide</p>
+              <p>Since 2024 • Made with ❤️ for explorers</p>
             </div>
           </div>
           
-          {/* Column 2: Extreme Sports */}
-          <div>
-            <h4 className="text-lg font-semibold mb-4 text-white">Extreme Sports</h4>
-            <ul className="space-y-2 mb-6">
-              <li><Link href="/rock-climbing" className="hover:text-orange-300 transition-colors">Rock Climbing</Link></li>
-              <li><Link href="/skydiving" className="hover:text-orange-300 transition-colors">Skydiving</Link></li>
-              <li><Link href="/bungee-jumping" className="hover:text-orange-300 transition-colors">Bungee Jumping</Link></li>
-              <li><Link href="/base-jumping" className="hover:text-orange-300 transition-colors">BASE Jumping</Link></li>
-              <li><Link href="/paragliding" className="hover:text-orange-300 transition-colors">Paragliding</Link></li>
-            </ul>
-            
-            <h4 className="text-lg font-semibold mb-4 text-white">Water Sports</h4>
-            <ul className="space-y-2">
-              <li><Link href="/white-water-rafting" className="hover:text-orange-300 transition-colors">White Water Rafting</Link></li>
-              <li><Link href="/surfing" className="hover:text-orange-300 transition-colors">Surfing</Link></li>
-              <li><Link href="/kitesurfing" className="hover:text-orange-300 transition-colors">Kitesurfing</Link></li>
-              <li><Link href="/scuba-diving" className="hover:text-orange-300 transition-colors">Scuba Diving</Link></li>
-              <li><Link href="/freediving" className="hover:text-orange-300 transition-colors">Freediving</Link></li>
-            </ul>
+          {/* Column 2: European Cities - Pillar Articles Only */}
+          <div className="lg:col-span-1">
+            <h4 className="text-lg font-semibold mb-4 text-white">European Destinations</h4>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
+              {europeanCities.map((city) => (
+                <div key={city.slug} className="text-center">
+                  <Link 
+                    href={`/${city.slug}-highlights`} 
+                    className="text-orange-300 hover:text-orange-200 font-medium text-xs transition-colors block py-1 px-2 rounded hover:bg-gray-700/50"
+                    title={`${city.name}, ${city.country}`}
+                  >
+                    {city.name}
+                  </Link>
+                </div>
+              ))}
+            </div>
           </div>
           
-          {/* Column 3: Mountain Adventures */}
+          {/* Column 3: About & Legal */}
           <div>
-            <h4 className="text-lg font-semibold mb-4 text-white">Mountain Adventures</h4>
-            <ul className="space-y-2 mb-6">
-              <li><Link href="/mountain-biking" className="hover:text-orange-300 transition-colors">Mountain Biking</Link></li>
-              <li><Link href="/epic-hiking" className="hover:text-orange-300 transition-colors">Epic Hiking</Link></li>
-              <li><Link href="/mountaineering" className="hover:text-orange-300 transition-colors">Mountaineering</Link></li>
-              <li><Link href="/alpine-skiing" className="hover:text-orange-300 transition-colors">Alpine Skiing</Link></li>
-              <li><Link href="/snowboarding" className="hover:text-orange-300 transition-colors">Snowboarding</Link></li>
-            </ul>
-            
-            <h4 className="text-lg font-semibold mb-4 text-white">Adventure Travel</h4>
-            <ul className="space-y-2">
-              <li><Link href="/backpacking" className="hover:text-orange-300 transition-colors">Backpacking</Link></li>
-              <li><Link href="/wilderness-camping" className="hover:text-orange-300 transition-colors">Wilderness Camping</Link></li>
-              <li><Link href="/survival-training" className="hover:text-orange-300 transition-colors">Survival Training</Link></li>
-              <li><Link href="/expedition-planning" className="hover:text-orange-300 transition-colors">Expedition Planning</Link></li>
-              <li><Link href="/adventure-photography" className="hover:text-orange-300 transition-colors">Adventure Photography</Link></li>
-            </ul>
-          </div>
-          
-          {/* Column 4: Adventure Destinations */}
-          <div>
-            <h4 className="text-lg font-semibold mb-4 text-white">Top Adventure Destinations</h4>
-            <ul className="space-y-2 mb-6">
-              <li><Link href="/new-zealand-adventures" className="hover:text-orange-300 transition-colors">New Zealand</Link></li>
-              <li><Link href="/nepal-adventures" className="hover:text-orange-300 transition-colors">Nepal</Link></li>
-              <li><Link href="/patagonia-adventures" className="hover:text-orange-300 transition-colors">Patagonia</Link></li>
-              <li><Link href="/swiss-alps-adventures" className="hover:text-orange-300 transition-colors">Swiss Alps</Link></li>
-              <li><Link href="/costa-rica-adventures" className="hover:text-orange-300 transition-colors">Costa Rica</Link></li>
-            </ul>
-            
-            <h4 className="text-lg font-semibold mb-4 text-white">Adventure Gear</h4>
-            <ul className="space-y-2">
-              <li><Link href="/climbing-gear" className="hover:text-orange-300 transition-colors">Climbing Gear</Link></li>
-              <li><Link href="/hiking-equipment" className="hover:text-orange-300 transition-colors">Hiking Equipment</Link></li>
-              <li><Link href="/camping-gear" className="hover:text-orange-300 transition-colors">Camping Gear</Link></li>
-              <li><Link href="/adventure-clothing" className="hover:text-orange-300 transition-colors">Adventure Clothing</Link></li>
-              <li><Link href="/safety-equipment" className="hover:text-orange-300 transition-colors">Safety Equipment</Link></li>
-            </ul>
-          </div>
-          
-          {/* Column 5: Adventure Categories & About */}
-          <div>
-            <h4 className="text-lg font-semibold mb-4 text-white">Adventure Categories</h4>
-            <ul className="space-y-2 mb-6">
-              <li>
-                <Link href="/beginner-adventures" className="hover:text-orange-300 transition-colors">
-                  Beginner Adventures
-                </Link>
-              </li>
-              <li>
-                <Link href="/intermediate-challenges" className="hover:text-orange-300 transition-colors">
-                  Intermediate Challenges
-                </Link>
-              </li>
-              <li>
-                <Link href="/extreme-adventures" className="hover:text-orange-300 transition-colors">
-                  Extreme Adventures
-                </Link>
-              </li>
-              <li>
-                <Link href="/family-adventures" className="hover:text-orange-300 transition-colors">
-                  Family Adventures
-                </Link>
-              </li>
-              <li>
-                <Link href="/solo-adventures" className="hover:text-orange-300 transition-colors">
-                  Solo Adventures
-                </Link>
-              </li>
-              <li>
-                <Link href="/group-adventures" className="hover:text-orange-300 transition-colors">
-                  Group Adventures
-                </Link>
-              </li>
-              <li>
-                <Link href="/adventure-courses" className="hover:text-orange-300 transition-colors">
-                  Adventure Courses
-                </Link>
-              </li>
-              <li>
-                <Link href="/safety-training" className="hover:text-orange-300 transition-colors">
-                  Safety Training
-                </Link>
-              </li>
-            </ul>
-            
-            <h4 className="text-lg font-semibold mb-4 text-white">About</h4>
-            <ul className="space-y-2">
-              <li>
-                <Link href="/about" className="hover:text-orange-300 transition-colors" rel="nofollow">
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link href="/trust" className="hover:text-orange-300 transition-colors" rel="nofollow">
-                  Trust & Credibility
-                </Link>
-              </li>
-              <li>
-                <Link href="/blog" className="hover:text-orange-300 transition-colors">
-                  Adventure Guides
-                </Link>
-              </li>
-              <li>
-                <Link href="/contact" className="hover:text-orange-300 transition-colors" rel="nofollow">
-                  Contact
-                </Link>
-              </li>
-              <li>
-                <Link href="/privacy" className="hover:text-orange-300 transition-colors" rel="nofollow">
-                  Privacy Policy
-                </Link>
-              </li>
-              <li>
-                <Link href="/terms" className="hover:text-orange-300 transition-colors" rel="nofollow">
-                  Terms of Service
-                </Link>
-              </li>
-              <li>
-                <Link href="/cookies" className="hover:text-orange-300 transition-colors" rel="nofollow">
-                  Cookie Policy
-                </Link>
-              </li>
-              <li>
-                <a href="/sitemap.xml" className="hover:text-orange-300 transition-colors" rel="nofollow">
-                  Sitemap
-                </a>
-              </li>
-            </ul>
+            <h4 className="text-lg font-semibold mb-4 text-white">About & Legal</h4>
+            <div className="space-y-4">
+              <div>
+                <h5 className="text-sm font-medium text-gray-200 mb-2">About</h5>
+                <ul className="space-y-1">
+                  <li>
+                    <Link href="/about" className="text-gray-300 hover:text-orange-300 transition-colors text-sm" rel="nofollow">
+                      About Us
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/trust" className="text-gray-300 hover:text-orange-300 transition-colors text-sm" rel="nofollow">
+                      Trust & Credibility
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/blog" className="text-gray-300 hover:text-orange-300 transition-colors text-sm">
+                      Adventure Guides
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/contact" className="text-gray-300 hover:text-orange-300 transition-colors text-sm" rel="nofollow">
+                      Contact
+                    </Link>
+                  </li>
+                  <li>
+                    <a href="/sitemap.xml" className="text-gray-300 hover:text-orange-300 transition-colors text-sm" rel="nofollow">
+                      Sitemap
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              
+              <div>
+                <h5 className="text-sm font-medium text-gray-200 mb-2">Legal</h5>
+                <ul className="space-y-1">
+                  <li>
+                    <Link href="/privacy" className="text-gray-300 hover:text-orange-300 transition-colors text-sm" rel="nofollow">
+                      Privacy Policy
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/terms" className="text-gray-300 hover:text-orange-300 transition-colors text-sm" rel="nofollow">
+                      Terms of Service
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/cookies" className="text-gray-300 hover:text-orange-300 transition-colors text-sm" rel="nofollow">
+                      Cookie Policy
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
         
-        <div className="mt-12 pt-8 border-t border-gray-700 flex flex-col md:flex-row justify-between items-center">
-          <p>&copy; {currentYear} Adventure Backpack. All rights reserved.</p>
-          <p className="mt-4 md:mt-0 text-gray-500 text-sm">Made with ❤️ by adventurers for adventurers</p>
+        <div className="mt-8 pt-6 border-t border-gray-700 flex flex-col md:flex-row justify-between items-center">
+          <p className="text-gray-400 text-sm">
+            &copy; {currentYear} Adventure Backpack. All rights reserved.
+          </p>
+          <p className="mt-2 md:mt-0 text-gray-500 text-sm">
+            Made with ❤️ by adventurers
+          </p>
         </div>
       </div>
     </footer>

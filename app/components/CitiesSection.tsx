@@ -55,7 +55,9 @@ export default function CitiesSection({ cities }: CitiesSectionProps) {
                     <Card className="h-full group hover:shadow-xl transition-all duration-300 overflow-hidden">
                       <div className="relative h-64 lg:h-80 overflow-hidden">
                         <Image
-                          src={citySection.pillarArticle.featuredImage}
+                          src={citySection.pillarArticle.featuredImage.startsWith('adventurebackpack_images/') 
+                            ? citySection.pillarArticle.featuredImage.replace('adventurebackpack_images/', '/images/')
+                            : citySection.pillarArticle.featuredImage}
                           alt={citySection.pillarArticle.title}
                           fill
                           className="object-cover group-hover:scale-105 transition-transform duration-300"
@@ -111,7 +113,9 @@ export default function CitiesSection({ cities }: CitiesSectionProps) {
                             <div className="flex items-start space-x-3">
                               <div className="relative w-16 h-16 flex-shrink-0 overflow-hidden rounded-md">
                                 <Image
-                                  src={article.featuredImage}
+                                  src={article.featuredImage.startsWith('adventurebackpack_images/') 
+                                    ? article.featuredImage.replace('adventurebackpack_images/', '/images/')
+                                    : article.featuredImage}
                                   alt={article.title}
                                   fill
                                   className="object-cover group-hover:scale-105 transition-transform duration-300"

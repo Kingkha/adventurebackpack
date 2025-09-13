@@ -36,7 +36,9 @@ export default function LatestArticles() {
                 <Card className="h-full overflow-hidden hover:shadow-md transition-shadow">
                   <div className="relative h-48 overflow-hidden">
                     <Image 
-                      src={post.featuredImage} 
+                      src={post.featuredImage.startsWith('adventurebackpack_images/') 
+                        ? post.featuredImage.replace('adventurebackpack_images/', '/images/')
+                        : post.featuredImage} 
                       alt={post.title} 
                       fill 
                       className="object-cover transition-transform duration-500 hover:scale-105"

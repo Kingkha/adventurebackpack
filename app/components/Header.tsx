@@ -70,21 +70,6 @@ export default function Header() {
         
         {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-6">
-          <Link href="/rock-climbing" className={`hover:text-orange-500 transition-colors ${
-            scrolled || isOpaqueByDefault ? 'text-gray-700' : 'text-gray-100'
-          }`}>Rock Climbing</Link>
-          <Link href="/skydiving" className={`hover:text-orange-500 transition-colors ${
-            scrolled || isOpaqueByDefault ? 'text-gray-700' : 'text-gray-100'
-          }`}>Skydiving</Link>
-          <Link href="/white-water-rafting" className={`hover:text-orange-500 transition-colors ${
-            scrolled || isOpaqueByDefault ? 'text-gray-700' : 'text-gray-100'
-          }`}>Rafting</Link>
-          <Link href="/mountain-biking" className={`hover:text-orange-500 transition-colors ${
-            scrolled || isOpaqueByDefault ? 'text-gray-700' : 'text-gray-100'
-          }`}>Mountain Biking</Link>
-          <Link href="/blog" className={`hover:text-orange-500 transition-colors ${
-            scrolled || isOpaqueByDefault ? 'text-gray-700' : 'text-gray-100'
-          }`}>Adventures</Link>
           <Link href="/adventure-planner" className={`hover:text-orange-500 transition-colors ${
             scrolled || isOpaqueByDefault ? 'text-gray-700' : 'text-gray-100'
           }`}>Adventure Planner</Link>
@@ -137,11 +122,6 @@ export default function Header() {
       {/* Mobile menu */}
       {mobileMenuOpen && (
         <div className="md:hidden absolute top-full left-0 right-0 bg-white shadow-md p-4 flex flex-col space-y-3">
-          <Link href="/rock-climbing" className="text-gray-700 hover:text-orange-500">Rock Climbing</Link>
-          <Link href="/skydiving" className="text-gray-700 hover:text-orange-500">Skydiving</Link>
-          <Link href="/white-water-rafting" className="text-gray-700 hover:text-orange-500">Rafting</Link>
-          <Link href="/mountain-biking" className="text-gray-700 hover:text-orange-500">Mountain Biking</Link>
-          <Link href="/blog" className="text-gray-700 hover:text-orange-500">Adventures</Link>
           <Link href="/adventure-planner" className="text-gray-700 hover:text-orange-500">Adventure Planner</Link>
           <Link href="/about" className="text-gray-700 hover:text-orange-500">About</Link>
           <Link href="/" className="flex items-center text-orange-600 font-medium">

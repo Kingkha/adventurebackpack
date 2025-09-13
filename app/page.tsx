@@ -4,6 +4,7 @@ import Script from 'next/script'
 import Header from './components/Header'
 import Hero from './components/Hero'
 import DestinationThemes from './components/DestinationThemes'
+import TopLinks from './components/TopLinks'
 import FeaturedArticles from './components/FeaturedArticles'
 import LatestArticles from './components/LatestArticles'
 import CitiesSection from './components/CitiesSection'
@@ -11,7 +12,7 @@ import AboutSection from './components/AboutSection'
 import NewsletterSignup from './components/NewsletterSignup'
 import FAQ from './components/FAQ'
 import Footer from './components/Footer'
-import { getCitiesWithArticles } from '@/lib/getBlogPosts'
+import { getCitiesWithArticleTypes } from '@/lib/getBlogPosts'
 
 export const metadata: Metadata = {
   title: 'Adventure Backpack - Epic Adventure Activities & Outdoor Experiences',
@@ -62,7 +63,7 @@ export const metadata: Metadata = {
 
 export default function Home() {
   // Get cities with their articles for the homepage
-  const cities = getCitiesWithArticles(8)
+  const cities = getCitiesWithArticleTypes(12)
 
   return (
     <>
@@ -213,6 +214,7 @@ export default function Home() {
           <meta itemProp="description" content="Discover thrilling adventure activities, extreme sports, hiking expeditions, and outdoor adventures worldwide." />
           <Hero />
           <DestinationThemes />
+          <TopLinks cities={cities} />
           <CitiesSection cities={cities} />
           <FeaturedArticles />
           <LatestArticles />

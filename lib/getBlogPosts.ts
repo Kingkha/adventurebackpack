@@ -374,6 +374,65 @@ export function regenerateSitemap(): void {
   }
 }
 
+// Function to get cities with their specific article type formats
+export function getCitiesWithArticleTypes(limit: number = 6): CitySection[] {
+  const allPosts = getBlogCache()
+  
+  // Article types we're looking for
+  const articleTypes = ['experiences', 'adventures', 'culture', 'landmarks', 'nightlife', 'events', 'highlights', 'activities']
+  
+  // Find all articles that match the [city-name]-[type] format
+  const cityTypeArticles = allPosts.filter(post => {
+    return articleTypes.some(type => post.slug.endsWith(`-${type}`))
+  })
+  
+  // Group articles by city
+  const cityGroups: { [citySlug: string]: { city: string; articles: BlogPostMeta[] } } = {}
+  
+  cityTypeArticles.forEach(article => {
+    // Extract city slug by removing the article type suffix
+    const citySlug = articleTypes.reduce((slug, type) => {
+      if (slug.endsWith(`-${type}`)) {
+        return slug.replace(`-${type}`, '')
+      }
+      return slug
+    }, article.slug)
+    
+    const city = citySlug.split('-').map(word => 
+      word.charAt(0).toUpperCase() + word.slice(1)
+    ).join(' ')
+    
+    if (!cityGroups[citySlug]) {
+      cityGroups[citySlug] = { city, articles: [] }
+    }
+    cityGroups[citySlug].articles.push(article)
+  })
+  
+  // Create CitySection objects
+  const citiesWithArticles: CitySection[] = []
+  
+  Object.entries(cityGroups).forEach(([citySlug, cityData]) => {
+    // Find the highlights article as the pillar article
+    const pillarArticle = cityData.articles.find(article => article.slug.endsWith('-highlights'))
+    
+    // All other articles are supporting articles
+    const supportingArticles = cityData.articles.filter(article => article.slug !== pillarArticle?.slug)
+    
+    citiesWithArticles.push({
+      city: cityData.city,
+      citySlug,
+      pillarArticle: pillarArticle || cityData.articles[0],
+      supportingArticles,
+      totalArticles: cityData.articles.length
+    })
+  })
+  
+  // Sort cities by total articles (most articles first)
+  const sortedCities = citiesWithArticles.sort((a, b) => b.totalArticles - a.totalArticles)
+  
+  return sortedCities.slice(0, limit)
+}
+
 // Function to regenerate both cache and sitemap
 export function regenerateCacheAndSitemap(): void {
   try {

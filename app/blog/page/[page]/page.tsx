@@ -22,25 +22,25 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   }
 
   return {
-    title: `Page ${page} - secretlocale.com Blog`,
-    description: `Explore travel tips, destination guides, and insights on secretlocale.com. Page ${page} of ${totalPages}.`,
+    title: `Page ${page} - adventurebackpack.com Blog`,
+    description: `Explore travel tips, destination guides, and insights on adventurebackpack.com. Page ${page} of ${totalPages}.`,
     openGraph: {
-      title: `Page ${page} - secretlocale.com Blog`,
-      description: `Explore travel tips, destination guides, and insights on secretlocale.com. Page ${page} of ${totalPages}.`,
+      title: `Page ${page} - adventurebackpack.com Blog`,
+      description: `Explore travel tips, destination guides, and insights on adventurebackpack.com. Page ${page} of ${totalPages}.`,
       type: "website",
       images: [
         {
           url: "/placeholder.svg?height=400&width=800",
           width: 800,
           height: 400,
-          alt: "secretlocale.com Blog",
+          alt: "adventurebackpack.com Blog",
         },
       ],
     },
     twitter: {
       card: "summary_large_image",
-      title: `Page ${page} - secretlocale.com Blog`,
-      description: `Explore travel tips, destination guides, and insights on secretlocale.com. Page ${page} of ${totalPages}.`,
+      title: `Page ${page} - adventurebackpack.com Blog`,
+      description: `Explore travel tips, destination guides, and insights on adventurebackpack.com. Page ${page} of ${totalPages}.`,
       images: ["/placeholder.svg?height=400&width=800"],
     },
   }
@@ -101,7 +101,7 @@ export default function BlogPage({ params }: PageProps) {
     <div className="min-h-screen flex flex-col">
       <Header />
       <main className="flex-grow container mx-auto px-4 py-12 mt-16">
-        <h1 className="text-4xl font-bold mb-8">secretlocale.com Blog</h1>
+        <h1 className="text-4xl font-bold mb-8">adventurebackpack.com Blog</h1>
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {paginatedPosts.map((post) => (
             <Link

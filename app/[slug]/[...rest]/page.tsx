@@ -88,7 +88,7 @@ export async function generateMetadata({ params }: { params: { slug: string, res
         const nestedPost = getPost([...nestedIndexPath], true)
         if (nestedPost) {
           return {
-            title: `${nestedPost.title} | secretlocale.com`,
+            title: `${nestedPost.title}`,
             description: nestedPost.metaDescription,
             openGraph: {
               title: nestedPost.title,
@@ -118,7 +118,7 @@ export async function generateMetadata({ params }: { params: { slug: string, res
     }
     
     return {
-      title: `${post.title} | secretlocale.com`,
+      title: `${post.title}`,
       description: post.metaDescription,
       openGraph: {
         title: post.title,
@@ -152,7 +152,7 @@ export async function generateMetadata({ params }: { params: { slug: string, res
       const post = getPost([...nestedPath, rest[rest.length - 1]], true)
       if (post) {
         return {
-          title: `${post.title} | secretlocale.com`,
+          title: `${post.title}`,
           description: post.metaDescription,
           openGraph: {
             title: post.title,
@@ -192,7 +192,7 @@ export async function generateMetadata({ params }: { params: { slug: string, res
   }
   
   return {
-    title: `${post.title} | secretlocale.com`,
+    title: `${post.title}`,
     description: post.metaDescription,
     openGraph: {
       title: post.title,
@@ -249,7 +249,7 @@ export default async function Post({ params }: { params: { slug: string, rest: s
         metaDescription: data.metaDescription || data.excerpt,
       };
       
-      const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://secretlocale.com";
+      const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://adventurebackpack.com";
       const url = `${baseUrl}/${folderPath.join('/')}`;
       
       // Replace relative image URLs with absolute URLs
@@ -380,7 +380,7 @@ export default async function Post({ params }: { params: { slug: string, rest: s
         metaDescription: data.metaDescription || data.excerpt,
       }
       
-      const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://secretlocale.com"
+      const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://adventurebackpack.com"
       const url = `${baseUrl}/ghost-towns/american-west`
       
       // Replace relative image URLs with absolute URLs
@@ -527,7 +527,7 @@ export default async function Post({ params }: { params: { slug: string, rest: s
     }
     
     // At this point post is guaranteed to be non-null due to the notFound() call above
-    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://secretlocale.com"
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://adventurebackpack.com"
     let url = `${baseUrl}/${slug}`
     
     // If this is a nested index file, build the correct URL
@@ -646,7 +646,7 @@ export default async function Post({ params }: { params: { slug: string, rest: s
     if (nestedIndexFileExists(nestedPath)) {
       const post = getPost([...nestedPath, rest[rest.length - 1]], true)
       if (post) {
-        const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://secretlocale.com"
+        const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://adventurebackpack.com"
         const url = `${baseUrl}/${nestedPath.join('/')}`
         
         // Replace relative image URLs with absolute URLs
@@ -752,7 +752,7 @@ export default async function Post({ params }: { params: { slug: string, rest: s
     notFound()
   }
   
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://secretlocale.com"
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://adventurebackpack.com"
   
   // Construct the full URL path from all segments
   const url = `${baseUrl}/${pathSegments.join('/')}`

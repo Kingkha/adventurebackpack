@@ -44,7 +44,7 @@ function processPostFile(filePath: string, slug: string, folder?: string, subfol
       date: data.date || "",
       excerpt: data.excerpt || "",
       featuredImage: data.featuredImage || "/placeholder.svg?height=400&width=800",
-      author: data.author || "SecretLocale Editor",
+      author: data.author || "AdventureBackpack Editor",
       tags: Array.isArray(data.tags) ? data.tags : [],
       metaDescription: data.metaDescription || data.excerpt || "",
       folder: folder,
@@ -108,7 +108,7 @@ function generateBlogCache() {
 }
 
 function generateSitemap(posts: BlogPostMeta[]) {
-  const SITE_URL = "https://secretlocale.com";
+  const SITE_URL = "https://adventurebackpack.com";
   const escapeXML = (str: string) => 
     str.replace(/&/g, "&amp;")
        .replace(/</g, "&lt;")

@@ -33,14 +33,14 @@ export default function AuthorPage({ params }: { params: { name: string } }) {
 
   const authorData = {
     name: decodedName,
-    role: decodedName === "Editor" ? "Secretlocale.com Editor" : "Secretlocale.com Contributor",
+    role: decodedName === "Editor" ? "AdventureBackpack.com Editor" : "AdventureBackpack.com Contributor",
     bio:
       decodedName === "Editor"
-        ? "As a Secretlocale.com Editor with over 10 years of travel writing experience, I'm dedicated to curating and creating high-quality travel content. With a passion for exploring new destinations and uncovering hidden gems, I've visited 50+ countries and specialize in authentic, off-the-beaten-path travel experiences. I hold certifications in travel writing and cultural tourism, and my work has been featured in major travel publications."
-        : `${decodedName} is a valued contributor to Secretlocale.com with extensive travel experience and local expertise. They share their authentic travel experiences and insights with our community, helping readers discover genuine hidden destinations worldwide.`,
-    location: "Secretlocale.com HQ",
-    email: decodedName === "Editor" ? "editor@secretlocale.com" : `${decodedName.toLowerCase()}@secretlocale.com`,
-    website: "https://secretlocale.com",
+        ? "As an AdventureBackpack.com Editor with over 10 years of travel writing experience, I'm dedicated to curating and creating high-quality travel content. With a passion for exploring new destinations and uncovering hidden gems, I've visited 50+ countries and specialize in authentic, off-the-beaten-path travel experiences. I hold certifications in travel writing and cultural tourism, and my work has been featured in major travel publications."
+        : `${decodedName} is a valued contributor to AdventureBackpack.com with extensive travel experience and local expertise. They share their authentic travel experiences and insights with our community, helping readers discover genuine hidden destinations worldwide.`,
+    location: "AdventureBackpack.com HQ",
+    email: decodedName === "Editor" ? "editor@adventurebackpack.com" : `${decodedName.toLowerCase()}@adventurebackpack.com`,
+    website: "https://adventurebackpack.com",
     image: decodedName === "Editor" ? "/apple-icon.png" : "/images/contributor-avatar.jpg",
     credentials: decodedName === "Editor" ? [
       "Professional Travel Writer Certification",

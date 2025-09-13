@@ -42,43 +42,39 @@ export default function FeaturedArticles() {
   
   // Select top pillar articles from different categories/folders
   const topPillarArticles = useMemo(() => {
-    // Get articles from different folder categories, taking the most recent from each
-    const categories = ['hidden-gem-towns', 'historic-villages', 'ghost-towns', 'scenic-train-rides', 
-                     'secret-beaches', 'island-getaways', 'spring-nature-walks', 'winter-escapes']
+    // Get articles that follow the [city-name]-[type] pattern for featured articles
+    const articleTypes = ['experiences', 'adventures', 'culture', 'landmarks', 'nightlife', 'events', 'highlights', 'activities']
     
-    // Map to get top article from each category
-    const topArticles: BlogArticle[] = []
+    // Filter for articles that end with these types and have featured images
+    const featuredArticles = blogData.filter((article: BlogArticle) => {
+      const hasValidType = articleTypes.some(type => article.slug.endsWith(`-${type}`))
+      const hasFeaturedImage = article.featuredImage && article.featuredImage !== ''
+      return hasValidType && hasFeaturedImage
+    })
     
-    // First add the main pillar landing pages for primary categories
-    const pillarLandingPages = blogData.filter((article: BlogArticle) => 
-      article.slug === 'hidden-gem-towns' || 
-      article.slug === 'historic-villages' || 
-      article.slug === 'secret-beaches' || 
-      article.slug === 'scenic-train-rides' ||
-      article.slug === 'ghost-towns'
-    )
-    
-    topArticles.push(...pillarLandingPages)
-    
-    // Then add some specific regional highlights to round out the collection
-    const regionalHighlights = blogData.filter((article: BlogArticle) => 
-      article.slug === 'usa-south' || 
-      article.slug === 'france' || 
-      article.slug === 'japan' || 
-      article.slug === 'balkans'
-    )
-    
-    topArticles.push(...regionalHighlights)
+    // Sort by date (most recent first) and take the best ones
+    const sortedArticles = featuredArticles
+      .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+      .slice(0, 9)
     
     // Convert the blog data to match our component's expected format
-    return topArticles.map((article: BlogArticle) => ({
-      title: article.title,
-      excerpt: article.excerpt,
-      category: article.folder.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' '),
-      region: determineRegion(article),
-      image: article.featuredImage || '/placeholder.jpg',
-      slug: `/${article.folder}/${article.slug}`
-    })).slice(0, 9) // Limit to 9 articles
+    return sortedArticles.map((article: BlogArticle) => {
+      // Extract city name and type from slug
+      const slugParts = article.slug.split('-')
+      const type = slugParts[slugParts.length - 1]
+      const cityName = slugParts.slice(0, -1).join(' ').replace(/\b\w/g, l => l.toUpperCase())
+      
+      return {
+        title: article.title,
+        excerpt: article.excerpt,
+        category: type.charAt(0).toUpperCase() + type.slice(1),
+        region: determineRegion(article),
+        image: article.featuredImage.startsWith('adventurebackpack_images/') 
+          ? article.featuredImage.replace('adventurebackpack_images/', '/images/')
+          : article.featuredImage,
+        slug: `/${article.slug}`
+      }
+    })
   }, [])
   
   // Helper function to determine region from tags

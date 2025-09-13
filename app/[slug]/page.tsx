@@ -84,7 +84,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   const post = await getBlogPostBySlug(slug)
   if (post) {
     return {
-      title: `${post.title} | secretlocale.com`,
+      title: `${post.title}`,
       description: post.metaDescription,
       openGraph: {
         title: post.title,
@@ -119,7 +119,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
         const nestedPost = getBlogPostFromPath([...pathSegments, pathSegments[pathSegments.length - 1]])
         if (nestedPost) {
           return {
-            title: `${nestedPost.title} | secretlocale.com`,
+            title: `${nestedPost.title}`,
             description: nestedPost.metaDescription,
             openGraph: {
               title: nestedPost.title,
@@ -149,7 +149,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 
     // If no nested index file, return standard folder metadata
     return {
-      title: `${slug.replace(/-/g, " ")} | secretlocale.com`,
+      title: `${slug.replace(/-/g, " ")}`,
       description: `Explore our collection of ${slug.replace(/-/g, " ")} articles and guides.`,
     }
   }

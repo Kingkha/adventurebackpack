@@ -63,17 +63,17 @@ function extractH2Headings(content: string): { id: string; text: string }[] {
   }
 }
 
-// Process HTML content to add IDs to H2 tags - more efficient version
-function addIdsToH2Tags(content: string, headings: { id: string; text: string }[]): string {
-  if (!content.startsWith("<") || headings.length === 0) {
+// Process HTML content to add IDs to H2 tags and inject CTA - more efficient version
+function addIdsToH2Tags(content: string, headings: { id: string; text: string }[], slug: string): string {
+  if (!content.startsWith("<")) {
     return content;
   }
   
   // Create a map of heading text to IDs for quick lookup
   const headingMap = new Map(headings.map(h => [h.text, h.id]));
   
-  // Use a single regex replacement
-  return content.replace(/<h2(?:\s[^>]*)?>(.*?)<\/h2>/g, (match, captureGroup) => {
+  // First, add IDs to H2 tags
+  let processedContent = content.replace(/<h2(?:\s[^>]*)?>(.*?)<\/h2>/g, (match, captureGroup) => {
     const text = captureGroup.replace(/<.*?>/g, '');
     const decodedText = text.replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>');
     
@@ -83,6 +83,107 @@ function addIdsToH2Tags(content: string, headings: { id: string; text: string }[
     }
     return match; // Keep original if no matching heading found
   });
+  
+  // Random contextual anchor texts optimized for SEO with "adventure planner" keyword
+  const contextualTexts = [
+    "adventure planner",
+    "professional adventure planner",
+    "expert adventure planner",
+    "personalized adventure planner",
+    "custom adventure planner",
+    "travel adventure planner",
+    "adventure planning specialist",
+    "adventure planner service",
+    "best adventure planner",
+    "adventure planner tool",
+    "adventure planner app",
+    "adventure planner website",
+    "adventure planner platform",
+    "adventure planner consultant",
+    "adventure planner expert",
+    "adventure planner guide",
+    "adventure planner assistant",
+    "adventure planner resource",
+    "adventure planner solution",
+    "adventure planner system",
+    "plan your adventure",
+    "discover adventure planner",
+    "find adventure planner",
+    "use adventure planner",
+    "try adventure planner",
+    "access adventure planner",
+    "explore adventure planner",
+    "unlock adventure planner",
+    "get adventure planner",
+    "adventure planner help"
+  ];
+  
+  const randomText = contextualTexts[Math.floor(Math.random() * contextualTexts.length)];
+  
+  // Inject the contextual link after the first paragraph or first content block
+  const ctaHtml = `
+    <p>Want to find the best travel deals for this destination? <a href="/adventure-planner">${randomText}</a> with our adventure planning specialist!</p>
+  `;
+  
+  // Insert CTA after the first paragraph or first content block
+  processedContent = processedContent.replace(
+    /(<p[^>]*>.*?<\/p>)/,
+    `$1${ctaHtml}`
+  );
+  
+  return processedContent;
+}
+
+// Process Markdown content to inject CTA
+function addCtaToMarkdown(content: string, slug: string): string {
+  if (content.startsWith("<")) {
+    return content; // Already handled by addIdsToH2Tags
+  }
+  
+  // Random contextual anchor texts optimized for SEO with "adventure planner" keyword
+  const contextualTexts = [
+    "adventure planner",
+    "professional adventure planner",
+    "expert adventure planner",
+    "personalized adventure planner",
+    "custom adventure planner",
+    "travel adventure planner",
+    "adventure planning specialist",
+    "adventure planner service",
+    "best adventure planner",
+    "adventure planner tool",
+    "adventure planner app",
+    "adventure planner website",
+    "adventure planner platform",
+    "adventure planner consultant",
+    "adventure planner expert",
+    "adventure planner guide",
+    "adventure planner assistant",
+    "adventure planner resource",
+    "adventure planner solution",
+    "adventure planner system",
+    "plan your adventure",
+    "discover adventure planner",
+    "find adventure planner",
+    "use adventure planner",
+    "try adventure planner",
+    "access adventure planner",
+    "explore adventure planner",
+    "unlock adventure planner",
+    "get adventure planner",
+    "adventure planner help"
+  ];
+  
+  const randomText = contextualTexts[Math.floor(Math.random() * contextualTexts.length)];
+  
+  const ctaMarkdown = `
+
+Want to find the best travel deals for this destination? [${randomText}](/adventure-planner) with our adventure planning specialist!
+
+`;
+  
+  // Insert CTA after the first paragraph
+  return content.replace(/^(.+)$/m, `$1${ctaMarkdown}`);
 }
 
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
@@ -93,7 +194,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   }
 
   return {
-    title: `${post.title} | secretlocale.com`,
+    title: `${post.title}`,
     description: post.metaDescription,
     openGraph: {
       title: post.title,
@@ -131,7 +232,7 @@ export default async function BlogPost({ params }: { params: { slug: string } })
   }
 
   const formattedSlug = formatSlug(params.slug)
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://secretlocale.com"
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://adventurebackpack.com"
   const isFromBlog = isFromBlogFolder(params.slug)
   const currentUrl = isFromBlog 
     ? `${baseUrl}/${params.slug}` 
@@ -141,10 +242,10 @@ export default async function BlogPost({ params }: { params: { slug: string } })
   // Extract H2 headings for table of contents
   const headings = extractH2Headings(post.content);
   
-  // Process HTML content to add IDs to H2 tags - single efficient pass
+  // Process content to add IDs to H2 tags and inject CTA - single efficient pass
   const processedContent = post.content.startsWith("<") 
-    ? addIdsToH2Tags(post.content, headings)
-    : post.content;
+    ? addIdsToH2Tags(post.content, headings, params.slug)
+    : addCtaToMarkdown(post.content, params.slug);
 
   const breadcrumbItems = [
     { label: "Blog", href: "/blog" },
@@ -216,26 +317,6 @@ export default async function BlogPost({ params }: { params: { slug: string } })
               </div>
             )}
             
-            <div className="mb-8 p-4 bg-green-50 rounded-lg shadow-md">
-              <p className="text-green-700 mb-4">
-                Want to find the best travel deals for this destination? Chat with our travel hacking specialist!
-              </p>
-              <Button asChild size="lg" className="bg-green-600 hover:bg-green-700 text-white">
-                <Link href={`/adventure-planner?adventure=${formatSlug(params.slug)}`} className="inline-flex items-center">
-                  <MessageSquare className="mr-2 h-5 w-5" />
-                  Get Travel Hacks
-                </Link>
-              </Button>
-            </div>
-            <p className="text-gray-500 mb-4">
-              Category:{" "}
-              <Link
-                href={`/adventure-planner?adventure=${formatSlug(params.slug)}`}
-                className="hover:text-green-600 transition-colors"
-              >
-                {decodeURIComponent(formatSlug(params.slug))}
-              </Link>
-            </p>
             <div className="prose prose-lg max-w-none">
               {post.content.startsWith("<") ? (
                 <div dangerouslySetInnerHTML={{ __html: processedContent }} />
@@ -249,9 +330,16 @@ export default async function BlogPost({ params }: { params: { slug: string } })
                       .replace(/[^\w\s-]/g, '')
                       .replace(/\s+/g, '-');
                     return <h2 id={id} {...props}>{children}</h2>;
+                  },
+                  div: ({node, children, ...props}) => {
+                    // Handle injected CTA divs
+                    if (props?.className?.includes('bg-green-50')) {
+                      return <div {...props}>{children}</div>;
+                    }
+                    return <div {...props}>{children}</div>;
                   }
                 }}>
-                  {post.content}
+                  {processedContent}
                 </ReactMarkdown>
               )}
             </div>

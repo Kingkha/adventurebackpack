@@ -25,7 +25,7 @@ export default function BlogIndex() {
   const searchParams = useSearchParams()
   const category = searchParams.get("category")
   const tagFromUrl = searchParams.get("tag")
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://secretlocale.com"
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://adventurebackpack.com"
 
   const [posts, setPosts] = useState<BlogPostWithSource[]>([])
   const [nextCursor, setNextCursor] = useState<string | null>(null)
@@ -75,7 +75,7 @@ export default function BlogIndex() {
       <BlogListingJsonLd posts={posts} baseUrl={baseUrl} />
       <Header />
       <main className="flex-grow container mx-auto px-4 py-12 mt-16">
-        <h1 className="text-4xl font-bold mb-8">secretlocale.com Blog</h1>
+        <h1 className="text-4xl font-bold mb-8">adventurebackpack.com Blog</h1>
         {category && (
           <div className="mb-8">
             <h2 className="text-2xl font-semibold mb-2">Category: {decodeCategory(category)}</h2>
