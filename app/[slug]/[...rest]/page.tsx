@@ -8,7 +8,6 @@ import Footer from "../../components/Footer"
 import { BlogPostJsonLd, BreadcrumbJsonLd } from "../../components/BlogJsonLd"
 import Image from "next/image"
 import Link from "next/link"
-import CityViatorBanner from "../../components/CityViatorBanner"
 
 // Set dynamic rendering to ensure we always check for the existence of the slug
 export const dynamic = "force-dynamic"
@@ -296,9 +295,9 @@ export default async function Post({ params }: { params: { slug: string, rest: s
           <Header />
           <main className="flex-grow container mx-auto px-4 py-12 mt-16">
             <div className="max-w-7xl mx-auto">
-              <div className="flex flex-col lg:flex-row gap-8">
+              <div className="flex flex-col">
                 {/* Main Content */}
-                <div className="flex-1 max-w-4xl">
+                <div className="flex-1">
                   {parentPath && (
                     <div className="mb-6">
                       <Link 
@@ -355,23 +354,6 @@ export default async function Post({ params }: { params: { slug: string, rest: s
                   )}
                 </div>
                 
-                {/* Sidebar with Viator Banner */}
-                <div className="lg:w-64 flex-shrink-0">
-                  <div className="sticky top-24">
-                    <div className="bg-gray-50 rounded-lg p-4 mb-6">
-                      <h3 className="text-lg font-semibold text-gray-900 mb-3">Plan Your Adventure</h3>
-                      <p className="text-sm text-gray-600 mb-4">
-                        Discover amazing tours and activities for your next adventure destination.
-                      </p>
-                      <CityViatorBanner 
-                        width={120}
-                        height={600}
-                        className="flex justify-center"
-                        slug={post.slug}
-                      />
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
           </main>
@@ -435,9 +417,9 @@ export default async function Post({ params }: { params: { slug: string, rest: s
           <Header />
           <main className="flex-grow container mx-auto px-4 py-12 mt-16">
             <div className="max-w-7xl mx-auto">
-              <div className="flex flex-col lg:flex-row gap-8">
+              <div className="flex flex-col">
                 {/* Main Content */}
-                <div className="flex-1 max-w-4xl">
+                <div className="flex-1">
                   <h1 className="text-4xl font-bold mb-4">{post.title}</h1>
                   
                   <div className="flex items-center justify-between mb-8">
@@ -483,23 +465,6 @@ export default async function Post({ params }: { params: { slug: string, rest: s
                   )}
                 </div>
                 
-                {/* Sidebar with Viator Banner */}
-                <div className="lg:w-64 flex-shrink-0">
-                  <div className="sticky top-24">
-                    <div className="bg-gray-50 rounded-lg p-4 mb-6">
-                      <h3 className="text-lg font-semibold text-gray-900 mb-3">Plan Your Adventure</h3>
-                      <p className="text-sm text-gray-600 mb-4">
-                        Discover amazing tours and activities for your next adventure destination.
-                      </p>
-                      <CityViatorBanner 
-                        width={120}
-                        height={600}
-                        className="flex justify-center"
-                        slug={post.slug}
-                      />
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
           </main>
@@ -637,9 +602,9 @@ export default async function Post({ params }: { params: { slug: string, rest: s
         <Header />
         <main className="flex-grow container mx-auto px-4 py-12 mt-16">
           <div className="max-w-7xl mx-auto">
-            <div className="flex flex-col lg:flex-row gap-8">
+            <div className="flex flex-col">
               {/* Main Content */}
-              <div className="flex-1 max-w-4xl">
+              <div className="flex-1">
                 <h1 className="text-4xl font-bold mb-4">{post.title}</h1>
                 
                 <div className="flex items-center justify-between mb-8">
@@ -685,23 +650,6 @@ export default async function Post({ params }: { params: { slug: string, rest: s
                 )}
               </div>
               
-              {/* Sidebar with Viator Banner */}
-              <div className="lg:w-64 flex-shrink-0">
-                <div className="sticky top-24">
-                  <div className="bg-gray-50 rounded-lg p-4 mb-6">
-                    <h3 className="text-lg font-semibold text-gray-900 mb-3">Plan Your Adventure</h3>
-                    <p className="text-sm text-gray-600 mb-4">
-                      Discover amazing tours and activities for your next adventure destination.
-                    </p>
-                    <CityViatorBanner 
-                      width={120}
-                      height={600}
-                      className="flex justify-center"
-                      slug={post.slug}
-                    />
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </main>
@@ -756,9 +704,9 @@ export default async function Post({ params }: { params: { slug: string, rest: s
             <Header />
             <main className="flex-grow container mx-auto px-4 py-12 mt-16">
               <div className="max-w-7xl mx-auto">
-                <div className="flex flex-col lg:flex-row gap-8">
+                <div className="flex flex-col">
                   {/* Main Content */}
-                  <div className="flex-1 max-w-4xl">
+                  <div className="flex-1">
                     <h1 className="text-4xl font-bold mb-4">{post.title}</h1>
                     
                     <div className="flex items-center justify-between mb-8">
@@ -804,23 +752,6 @@ export default async function Post({ params }: { params: { slug: string, rest: s
                     )}
                   </div>
                   
-                  {/* Sidebar with Viator Banner */}
-                  <div className="lg:w-64 flex-shrink-0">
-                    <div className="sticky top-24">
-                      <div className="bg-gray-50 rounded-lg p-4 mb-6">
-                        <h3 className="text-lg font-semibold text-gray-900 mb-3">Plan Your Adventure</h3>
-                        <p className="text-sm text-gray-600 mb-4">
-                          Discover amazing tours and activities for your next adventure destination.
-                        </p>
-                        <CityViatorBanner 
-                          width={120}
-                          height={600}
-                          className="flex justify-center"
-                          slug={post.slug}
-                        />
-                      </div>
-                    </div>
-                  </div>
                 </div>
               </div>
             </main>
@@ -900,9 +831,9 @@ export default async function Post({ params }: { params: { slug: string, rest: s
       <Header />
       <main className="flex-grow container mx-auto px-4 py-12 mt-16">
         <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col lg:flex-row gap-8">
+                <div className="flex flex-col">
             {/* Main Content */}
-            <div className="flex-1 max-w-4xl">
+            <div className="flex-1">
               <div className="mb-6">
                 {/* Link back to parent page */}
                 <Link 
@@ -958,23 +889,6 @@ export default async function Post({ params }: { params: { slug: string, rest: s
               )}
             </div>
             
-            {/* Sidebar with Viator Banner */}
-            <div className="lg:w-64 flex-shrink-0">
-              <div className="sticky top-24">
-                <div className="bg-gray-50 rounded-lg p-4 mb-6">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-3">Plan Your Adventure</h3>
-                  <p className="text-sm text-gray-600 mb-4">
-                    Discover amazing tours and activities for your next adventure destination.
-                  </p>
-                  <CityViatorBanner 
-                    width={120}
-                    height={600}
-                    className="flex justify-center"
-                    slug={post.slug}
-                  />
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </main>
