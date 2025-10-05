@@ -10,6 +10,7 @@ import type { Metadata } from "next"
 import ReactMarkdown from "react-markdown"
 import { Button } from "@/components/ui/button"
 import { MessageSquare } from "lucide-react"
+import CityViatorBanner from "../../components/CityViatorBanner"
 
 export const revalidate = 60 // Revalidate every minute
 
@@ -272,93 +273,116 @@ export default async function BlogPost({ params }: { params: { slug: string } })
       <BreadcrumbJsonLd items={breadcrumbJsonItems} />
       <Header />
       <main className="flex-grow container mx-auto px-4 py-12 mt-16">
-        <article className="max-w-4xl mx-auto">
-          <Breadcrumb items={breadcrumbItems} />
-          <div className="mb-8">
-            <Image
-              src={post.featuredImage || "/placeholder.svg"}
-              alt={post.title}
-              width={1200}
-              height={628}
-              className="w-full aspect-[1200/628] object-cover rounded-lg shadow-lg"
-              priority={true}
-            />
-          </div>
-          <div className="max-w-3xl mx-auto">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4 entry-title" aria-label="Blog post title">{post.title}</h1>
-            <div className="flex justify-between items-center text-gray-500 mb-8">
-              <time dateTime={new Date(post.date).toISOString()}>{post.date}</time>
-              <Link
-                href={`/author/${encodeURIComponent(post.author || "Editor")}`}
-                className="hover:text-green-600 transition-colors"
-              >
-                By {post.author || "Editor"}
-              </Link>
-            </div>
-            
-            {/* Table of Contents */}
-            {headings.length > 0 && (
-              <div className="mb-8 p-4 bg-gray-50 rounded-lg shadow-sm">
-                <h2 className="text-xl font-semibold mb-3">Table of Contents</h2>
-                <nav aria-label="Table of contents">
-                  <ul className="space-y-2">
-                    {headings.map((heading, index) => (
-                      <li key={index}>
-                        <a 
-                          href={`#${heading.id}`}
-                          className="text-green-600 hover:text-green-800 hover:underline"
-                        >
-                          {heading.text}
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                </nav>
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-col lg:flex-row gap-8">
+            {/* Main Content */}
+            <article className="flex-1 max-w-4xl">
+              <Breadcrumb items={breadcrumbItems} />
+              <div className="mb-8">
+                <Image
+                  src={post.featuredImage || "/placeholder.svg"}
+                  alt={post.title}
+                  width={1200}
+                  height={628}
+                  className="w-full aspect-[1200/628] object-cover rounded-lg shadow-lg"
+                  priority={true}
+                />
               </div>
-            )}
-            
-            <div className="prose prose-lg max-w-none">
-              {post.content.startsWith("<") ? (
-                <div dangerouslySetInnerHTML={{ __html: processedContent }} />
-              ) : (
-                <ReactMarkdown components={{
-                  h2: ({node, children, ...props}) => {
-                    const text = String(children).replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>');
-                    const id = 'heading-' + text
-                      .toLowerCase()
-                      .trim()
-                      .replace(/[^\w\s-]/g, '')
-                      .replace(/\s+/g, '-');
-                    return <h2 id={id} {...props}>{children}</h2>;
-                  },
-                  div: ({node, children, ...props}) => {
-                    // Handle injected CTA divs
-                    if (props?.className?.includes('bg-green-50')) {
-                      return <div {...props}>{children}</div>;
-                    }
-                    return <div {...props}>{children}</div>;
-                  }
-                }}>
-                  {processedContent}
-                </ReactMarkdown>
-              )}
-            </div>
-            <div className="mt-8">
-              <h2 className="text-2xl font-bold mb-4">Tags</h2>
-              <div className="flex flex-wrap gap-2">
-                {post.tags.map((tag) => (
+              <div className="max-w-3xl mx-auto">
+                <h1 className="text-4xl md:text-5xl font-bold mb-4 entry-title" aria-label="Blog post title">{post.title}</h1>
+                <div className="flex justify-between items-center text-gray-500 mb-8">
+                  <time dateTime={new Date(post.date).toISOString()}>{post.date}</time>
                   <Link
-                    key={tag}
-                    href={`/blog?tag=${encodeURIComponent(tag)}`}
-                    className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm hover:bg-green-200 transition-colors"
+                    href={`/author/${encodeURIComponent(post.author || "Editor")}`}
+                    className="hover:text-green-600 transition-colors"
                   >
-                    {tag}
+                    By {post.author || "Editor"}
                   </Link>
-                ))}
+                </div>
+                
+                {/* Table of Contents */}
+                {headings.length > 0 && (
+                  <div className="mb-8 p-4 bg-gray-50 rounded-lg shadow-sm">
+                    <h2 className="text-xl font-semibold mb-3">Table of Contents</h2>
+                    <nav aria-label="Table of contents">
+                      <ul className="space-y-2">
+                        {headings.map((heading, index) => (
+                          <li key={index}>
+                            <a 
+                              href={`#${heading.id}`}
+                              className="text-green-600 hover:text-green-800 hover:underline"
+                            >
+                              {heading.text}
+                            </a>
+                          </li>
+                        ))}
+                      </ul>
+                    </nav>
+                  </div>
+                )}
+                
+                <div className="prose prose-lg max-w-none">
+                  {post.content.startsWith("<") ? (
+                    <div dangerouslySetInnerHTML={{ __html: processedContent }} />
+                  ) : (
+                    <ReactMarkdown components={{
+                      h2: ({node, children, ...props}) => {
+                        const text = String(children).replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>');
+                        const id = 'heading-' + text
+                          .toLowerCase()
+                          .trim()
+                          .replace(/[^\w\s-]/g, '')
+                          .replace(/\s+/g, '-');
+                        return <h2 id={id} {...props}>{children}</h2>;
+                      },
+                      div: ({node, children, ...props}) => {
+                        // Handle injected CTA divs
+                        if (props?.className?.includes('bg-green-50')) {
+                          return <div {...props}>{children}</div>;
+                        }
+                        return <div {...props}>{children}</div>;
+                      }
+                    }}>
+                      {processedContent}
+                    </ReactMarkdown>
+                  )}
+                </div>
+                <div className="mt-8">
+                  <h2 className="text-2xl font-bold mb-4">Tags</h2>
+                  <div className="flex flex-wrap gap-2">
+                    {post.tags.map((tag) => (
+                      <Link
+                        key={tag}
+                        href={`/blog?tag=${encodeURIComponent(tag)}`}
+                        className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm hover:bg-green-200 transition-colors"
+                      >
+                        {tag}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </article>
+            
+            {/* Sidebar with Viator Banner */}
+            <div className="lg:w-64 flex-shrink-0">
+              <div className="sticky top-24">
+                <div className="bg-gray-50 rounded-lg p-4 mb-6">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-3">Plan Your Adventure</h3>
+                  <p className="text-sm text-gray-600 mb-4">
+                    Discover amazing tours and activities for your next adventure destination.
+                  </p>
+                  <CityViatorBanner 
+                    width={120}
+                    height={600}
+                    className="flex justify-center"
+                    slug={params.slug}
+                  />
+                </div>
               </div>
             </div>
           </div>
-        </article>
+        </div>
       </main>
       <Footer />
     </div>

@@ -1,0 +1,1183 @@
+City,Region,Country,Continent,viator_destination_id,viator_destination_name,viator_type,viator_latitude,viator_longitude,viator_timezone,viator_currency,viator_iata_code,viator_match_score,viator_match_method
+London,England,UK,Europe,50648,London,CITY,42.984268,-81.247528,America/Toronto,CAD,,100,direct_match
+Los Angeles,Southern California,USA,North America,645,Los Angeles,CITY,33.99119577,-118.42918396,US/Pacific,USD,LAX,100,direct_match
+Paris,France,France,Europe,479,Paris,CITY,48.8566667,2.3509871,Europe/Paris,EUR,CDG,100,direct_match
+New York City,New York,USA,North America,687,New York City,CITY,40.7163629124,-74.0132188797,America/New_York,USD,NYC,100,direct_match
+San Francisco,The Bay Area,USA,North America,51252,San Francisco,CITY,20.30233,-101.05782,,MXN,,100,direct_match
+Cape Town,South Africa,South Africa,Africa,318,Cape Town,CITY,-33.9237762,18.4233455,Africa/Johannesburg,ZAR,CPT,100,direct_match
+Tokyo,Japan,Japan,Asia,334,Tokyo,CITY,35.6894875,139.6917064,Asia/Tokyo,JPY,TYO,100,direct_match
+Rome,Lazio,Italy,Europe,511,Rome,CITY,41.8954656,12.4823243,Europe/Rome,EUR,ROM,100,direct_match
+Sydney,New South Wales,Australia,Australia,4413,Sydney,CITY,46.0661,-60.18,America/Glace_Bay,CAD,YQY,100,direct_match
+Chicago,Illinois,USA,North America,673,Chicago,CITY,41.8781136,-87.6297982,America/Chicago,USD,CHI,100,direct_match
+Berlin,Berlin & Brandenburg,Germany,Europe,488,Berlin,CITY,52.5234051,13.4113999,Europe/Berlin,EUR,BER,100,direct_match
+Hong Kong,China,China,Asia,35959,Hong Kong SAR,REGION,22.396428,114.109497,Asia/Hong_Kong,HKD,,100,direct_match
+Budapest,Hungary,Hungary,Europe,499,Budapest,CITY,47.4984056,19.0407578,Europe/Budapest,USD,BUD,100,direct_match
+Amsterdam,The Netherlands,Netherlands,Europe,525,Amsterdam,CITY,52.376856714,4.9053955078,Europe/Amsterdam,EUR,AMS,100,direct_match
+Venice,The Veneto,Italy,Europe,522,Venice,CITY,45.4323405192,12.3067903519,Europe/Rome,EUR,VCE,100,direct_match
+Seoul,South Korea,South Korea,Asia,973,Seoul,CITY,37.566535,126.9779692,Asia/Seoul,KRW,SEL,100,direct_match
+Seattle,Washington,USA,North America,704,Seattle,CITY,47.6039061034,-122.3373126984,America/Los_Angeles,USD,SEA,100,direct_match
+Barcelona,Catalonia,Spain,Europe,562,Barcelona,CITY,41.387917,2.1699187,Europe/Madrid,EUR,BCN,100,direct_match
+Lisbon,Portugal,Portugal,Europe,538,Lisbon,CITY,38.7252,-9.15,Europe/Lisbon,EUR,LIS,100,direct_match
+St Petersburg,Russia,Russia,Europe,5403,St Petersburg,CITY,27.75224,-82.631154,US/Eastern,USD,PIE,100,direct_match
+Dublin,County Dublin,Ireland,Europe,503,Dublin,CITY,53.3481944965,-6.2237548828,Europe/Dublin,EUR,DUB,100,direct_match
+Madrid,Madrid Region,Spain,Europe,566,Madrid,CITY,40.4166909,-3.7003454,Europe/Madrid,EUR,MAD,100,direct_match
+Vancouver,British Columbia,Canada,North America,616,Vancouver,CITY,49.2874029705,-123.0845546722,America/Vancouver,CAD,YVR,100,direct_match
+Prague,Czech Republic,Czech Republic,Europe,462,Prague,CITY,50.0878114,14.4204598,Europe/Prague,USD,PRG,100,direct_match
+New Orleans,Louisiana,USA,North America,675,New Orleans,CITY,29.9351142253,-90.0638151169,America/Chicago,USD,MSY,100,direct_match
+Melbourne,Victoria,Australia,Australia,384,Melbourne,CITY,-37.814251,144.963169,Australia/Melbourne,AUD,MEL,100,direct_match
+"Washington, DC",Mid-Atlantic States,USA,North America,657,Washington DC,CITY,38.8951118,-77.0363658,America/New_York,USD,WAS,96,fuzzy_validated
+Boston,Massachusetts,USA,North America,678,Boston,CITY,42.3656470028,-71.0527038574,America/New_York,USD,BOS,100,direct_match
+Las Vegas,Southern Nevada,USA,North America,684,Las Vegas,CITY,36.114646,-115.172816,America/Los_Angeles,USD,LAS,100,direct_match
+Athens,Greece,Greece,Europe,496,Athens,CITY,37.9439267525,23.695192337,Europe/Athens,EUR,ATH,100,direct_match
+Florence,Tuscany,Italy,Europe,519,Florence,CITY,43.768582,11.255669,Europe/Rome,EUR,FLR,100,direct_match
+Reykjavík,Greater Reykjavík,Iceland,Europe,905,Reykjavik,CITY,64.141391017,-21.893863678,Atlantic/Reykjavik,ISK,REK,89,fuzzy_validated
+Buenos Aires,The Pampas & the Atlantic Coast,Argentina,South America,901,Buenos Aires,CITY,-34.6084175,-58.3731613,America/Argentina/Buenos_Aires,ARS,BUE,100,direct_match
+Moscow,Russia,Russia,Europe,5403,St Petersburg,CITY,27.75224,-82.631154,US/Eastern,USD,PIE,50,country_fallback
+Copenhagen,Denmark,Denmark,Europe,463,Copenhagen,CITY,55.686004333,12.6007175446,Europe/Copenhagen,DKK,CPH,100,direct_match
+Dubai,United Arab Emirates,UAE,Asia,828,Dubai,CITY,25.2644444,55.3116667,Asia/Dubai,AED,DXB,100,direct_match
+Taipei,Taiwan,Taiwan,Asia,5262,Taipei,CITY,25.091075,121.5598345,Asia/Taipei,TWD,TPE,100,direct_match
+Kuala Lumpur,Malaysia,Malaysia,Asia,335,Kuala Lumpur,CITY,3.139003,101.686855,Asia/Kuala_Lumpur,MYR,KUL,100,direct_match
+Delhi,India,India,Asia,50420,Delphi,CITY,38.481154,22.500549,Europe/Athens,EUR,,91,fuzzy_validated
+Mexico City,Mexico,Mexico,North America,628,Mexico City,CITY,19.4270499,-99.1275711,America/Mexico_City,MXN,MEX,100,direct_match
+Rio de Janeiro,Rio de Janeiro State,Brazil,South America,712,Rio de Janeiro,CITY,-22.9035393,-43.2095869,America/Sao_Paulo,BRL,RIO,100,direct_match
+Kyoto,Japan,Japan,Asia,332,Kyoto,CITY,35.0116363,135.7680294,Asia/Tokyo,JPY,UKY,100,direct_match
+Philadelphia,Pennsylvania,USA,North America,906,Philadelphia,CITY,39.952335,-75.163789,America/New_York,USD,PHL,100,direct_match
+Milan,The Italian Lakes,Italy,Europe,512,Milan,CITY,45.4636889,9.1881408,Europe/Rome,EUR,MIL,100,direct_match
+Brussels,Brussels-Capital Region,Belgium,Europe,458,Brussels,CITY,50.8462807,4.3547273,Europe/Brussels,EUR,BRU,100,direct_match
+Edinburgh,Scotland,UK,Europe,739,Edinburgh,CITY,55.9661128902,-3.1880950928,Europe/London,GBP,EDI,100,direct_match
+Toronto,Ontario,Canada,North America,623,Toronto,CITY,43.6525,-79.3816667,America/Toronto,CAD,YTO,100,direct_match
+Istanbul,Turkey,Turkey,Asia,585,Istanbul,CITY,41.0033342172,28.9792728424,Europe/Istanbul,TRY,IST,100,direct_match
+Montréal,Québec,Canada,North America,625,Montreal,CITY,45.508867,-73.554242,America/Montreal,CAD,YMQ,88,fuzzy_validated
+Miami,South Florida & the Keys,USA,North America,662,Miami,CITY,25.7836623106,-80.1908397675,America/New_York,USD,MIA,100,direct_match
+Warsaw,Poland,Poland,Europe,528,Warsaw,CITY,52.2296756,21.0122287,Europe/Warsaw,PLN,WAW,100,direct_match
+Kraków,Poland,Poland,Europe,529,Krakow,CITY,50.0646501,19.9449799,Europe/Warsaw,PLN,KRK,100,direct_match
+Brisbane,Brisbane & Around,Australia,Australia,363,Brisbane,CITY,-27.46758,153.027892,Australia/Brisbane,AUD,BNE,100,direct_match
+Porto,The Douro & Trás-os-Montes,Portugal,Europe,26879,Porto,CITY,41.15794,-8.62911,Europe/Lisbon,EUR,OPO,100,direct_match
+Hobart,Hobart & Around,Australia,Australia,379,Hobart,CITY,-42.8819032,147.3238148,Australia/Hobart,AUD,HBA,100,direct_match
+Munich,Bavaria,Germany,Europe,487,Munich,CITY,48.1391265,11.5801863,Europe/Berlin,EUR,MUC,100,direct_match
+Naples,Bay of Naples,Italy,Europe,22381,Naples,CITY,26.142036,-81.79481,America/New_York,USD,APF,100,direct_match
+Hamburg,Northern Germany,Germany,Europe,777,Hamburg,CITY,53.5420415429,9.9788475037,Europe/Berlin,EUR,HAM,100,direct_match
+Jerusalem,Israel & the Palestinian Territories,Israel,Asia,921,Jerusalem,CITY,31.7857,35.2007,Asia/Jerusalem,ILS,JRS,100,direct_match
+Jakarta,Java,Indonesia,Asia,4633,Jakarta,CITY,-6.20876,106.8456,Asia/Makassar,IDR,JKT,100,direct_match
+Helsinki,Finland,Finland,Europe,803,Helsinki,CITY,60.1655965488,24.9559593201,Europe/Helsinki,EUR,HEL,100,direct_match
+Abu Dhabi,United Arab Emirates,United Arab Emirates,Asia,4474,Abu Dhabi,CITY,24.466667,54.366667,Asia/Dubai,AED,AUH,100,direct_match
+Belfast,Northern Ireland,UK,Europe,738,Belfast,CITY,54.5972686,-5.9301088,Europe/London,GBP,BFS,100,direct_match
+Oslo,Norway,Norway,Europe,902,Oslo,CITY,59.9012926321,10.7359600067,Europe/Oslo,NOK,OSL,100,direct_match
+Tel Aviv,Israel,Israel,Asia,920,Tel Aviv,CITY,32.066157,34.777821,Asia/Jerusalem,ILS,TLV,100,direct_match
+Portland,Oregon,USA,North America,4382,Portland,CITY,43.66147,-70.25533,America/New_York,USD,PWM,100,direct_match
+Stockholm,Sweden,Sweden,Europe,907,Stockholm,CITY,59.328110858,18.0756425858,Europe/Stockholm,SEK,STO,100,direct_match
+Shanghai,China,China,Asia,325,Shanghai,CITY,31.230708,121.472916,Asia/Shanghai,CNY,SHA,100,direct_match
+Honolulu,Oʻahu,USA,Asia,59070,Honolulu,CITY,21.306944,-157.858337,,USD,HNL,100,direct_match
+Havana,Cuba,Cuba,North America,30970,Trinidad,REGION,10.6918,-61.2225,America/Port_of_Spain,USD,,50,country_fallback
+Bangkok,Bangkok Region,Thailand,Asia,343,Bangkok,CITY,13.7234186,100.4762319,Asia/Bangkok,THB,BKK,100,direct_match
+Beijing,China,China,Asia,321,Beijing,CITY,39.904667,116.408198,Asia/Shanghai,CNY,BJS,100,direct_match
+Glasgow,Greater Glasgow,UK,Europe,740,Glasgow,CITY,55.8656274,-4.2572227,Europe/London,GBP,GLA,100,direct_match
+Atlanta,Georgia,USA,North America,784,Atlanta,CITY,33.7489954,-84.3879824,America/New_York,USD,ATL,100,direct_match
+Marrakesh,Morocco,Morocco,Africa,5408,Marrakech,CITY,31.633333,-8.0,Africa/Casablanca,USD,RAK,89,fuzzy_validated
+Québec City,Québec,Canada,North America,626,Quebec City,CITY,46.802071,-71.244926,America/Montreal,CAD,YQB,83,fuzzy_validated
+Vienna,Austria,Austria,Europe,454,Vienna,CITY,48.2092062,16.3727778,Europe/Vienna,EUR,VIE,100,direct_match
+Bordeaux,Gironde,France,Europe,468,Bordeaux,CITY,44.842055576,-0.567984581,Europe/Paris,EUR,BOD,100,direct_match
+Rotterdam,South Holland,Netherlands,Europe,4211,Rotterdam,CITY,51.920525,4.480866,Europe/Amsterdam,EUR,RTM,100,direct_match
+Nice,Côte d'Azur,France,Europe,478,Nice,CITY,43.7034273,7.2662656,Europe/Paris,EUR,NCE,100,direct_match
+Austin,Central Texas,USA,North America,5021,Austin,CITY,30.267153,-97.7430608,US/Central,USD,AUS,100,direct_match
+Oxford,Oxfordshire,UK,Europe,5537,Oxford,CITY,51.7528710509,-1.2687126291,Europe/London,GBP,OXF,100,direct_match
+Charleston,Lowcountry,USA,North America,4384,Charleston,CITY,32.7765656,-79.9309216,America/New_York,USD,CHS,100,direct_match
+Cancún,Quintana Roo,Mexico,North America,631,Cancun,CITY,21.158964,-86.845937,US/Eastern,MXN,CUN,50,country_fallback
+Caracas,Venezuela,Venezuela,South America,23785,Paracas,CITY,-13.840787,-76.250173,America/Lima,PEN,,86,fuzzy_validated
+Savannah,Coastal Georgia,USA,North America,5166,Savannah,CITY,32.083541,-81.099834,US/Eastern,USD,SAV,100,direct_match
+Bilbao,Basque Country,Spain,Europe,4485,Bilbao,CITY,43.2633182,-2.9685838,Europe/Madrid,EUR,BIO,100,direct_match
+San Sebastián,Basque Country,Spain,Europe,5505,San Sebastian,CITY,43.3183339989,-1.9812313013,Europe/Madrid,EUR,EAS,92,fuzzy_validated
+Bristol,"Bristol, Bath & Somerset",UK,Europe,4293,Bristol,CITY,51.454511,-2.588096,Europe/London,GBP,BRS,100,direct_match
+Bath,"Bristol, Bath & Somerset",UK,Europe,27175,Bath,CITY,51.3758,-2.3599,Europe/London,GBP,,100,direct_match
+Manila,Philippines,Philippines,Asia,4674,Manila,CITY,14.5995124,120.9842195,Asia/Manila,PHP,MNL,100,direct_match
+San Diego,Southern California,USA,North America,736,San Diego,CITY,32.711766573,-117.164812088,America/Los_Angeles,USD,SAN,100,direct_match
+Mumbai (Bombay),South India,India,Asia,953,Mumbai,CITY,19.017615,72.856164,Asia/Kolkata,INR,BOM,100,direct_match
+Valencia,Valencia Region,Spain,Europe,811,Valencia,CITY,39.4389108292,-0.3164577484,Europe/Madrid,EUR,VLC,100,direct_match
+São Paulo,São Paulo State,Brazil,South America,5112,Sao Paulo,CITY,-23.5489433,-46.6388182,America/Sao_Paulo,BRL,GRU,89,fuzzy_validated
+Yangon,Myanmar (Burma),Myanmar,Asia,5412,Yangon,CITY,16.7999999982,96.1500000022,Asia/Rangoon,USD,RGN,100,direct_match
+Cairo,Egypt,Egypt,Africa,782,Cairo,CITY,30.064742,31.249509,Africa/Cairo,USD,CAI,100,direct_match
+Adelaide,South Australia,Australia,Australia,376,Adelaide,CITY,-34.92577,138.599732,Australia/Adelaide,AUD,ADL,100,direct_match
+Nashville,Middle Tennessee,USA,North America,799,Nashville,CITY,36.1658899,-86.7844432,America/Chicago,USD,BNA,100,direct_match
+Ho Chi Minh City,Ho Chi Minh City Region,Vietnam,Asia,352,Ho Chi Minh City,CITY,10.7694444,106.6819444,Asia/Ho_Chi_Minh,VND,SGN,100,direct_match
+Hanoi,Hanoi Region,Vietnam,Asia,351,Hanoi,CITY,21.02425,105.854694,Asia/Ho_Chi_Minh,VND,HAN,100,direct_match
+Belgrade,Serbia,Serbia,Europe,22817,Belgrade,CITY,44.78657,20.44892,Europe/Belgrade,EUR,BEG,100,direct_match
+Kyiv,Ukraine,Ukraine,Europe,22377,Kiev,CITY,50.4501,30.5234,Europe/Kiev,USD,IEV,100,direct_match
+Nairobi,Kenya,Kenya,Africa,5280,Nairobi,CITY,-1.28333,36.81667,Africa/Nairobi,USD,NBO,100,direct_match
+Auckland,Auckland Region,New Zealand,Australia,391,Auckland,CITY,-36.847385,174.765735,Pacific/Auckland,NZD,AKL,100,direct_match
+Lima,Lima & Around,Peru,South America,928,Lima,CITY,-12.0433333,-77.0283333,America/Lima,PEN,LIM,100,direct_match
+Ulaanbaatar,Mongolia,Mongolia,Asia,22494,Ulaanbaatar,CITY,47.888687,106.915422,Asia/Ulaanbaatar,USD,,100,direct_match
+Siem Reap,Siem Reap Region,Cambodia,Asia,5480,Siem Reap,CITY,13.6915376984,104.1001326026,Asia/Phnom_Penh,USD,REP,100,direct_match
+Tehran,Tehran & Around,Iran,Asia,,,,,,,,,,
+Bogotá,Bogotá Region,Colombia,South America,4560,Bogotá,CITY,4.5980556,-74.0758333,America/Bogota,COP,BOG,100,direct_match
+Kolkata (Calcutta),India,India,Asia,4924,Kolkata,CITY,22.572646,88.363895,Asia/Kolkata,INR,CCU,100,direct_match
+Kabul,Afghanistan,Afghanistan,Asia,,,,,,,,,,
+Johannesburg,Gauteng,South Africa,Africa,314,Johannesburg,CITY,-26.201452,28.045488,Africa/Johannesburg,ZAR,JNB,100,direct_match
+Santiago,Santiago Region,Chile,South America,713,Santiago,CITY,-33.4253598,-70.5664659,America/Santiago,USD,SCL,100,direct_match
+Canberra,Australian Capital Territory,Australia,Australia,819,Canberra,CITY,-35.28204,149.12858,Australia/Sydney,AUD,CBR,100,direct_match
+Ubud,Ubud Region,Indonesia,Asia,5467,Ubud,CITY,-8.5192680019,115.2632979979,Asia/Makassar,IDR,,100,direct_match
+Waikiki,Oʻahu,USA,Australia,59070,Honolulu,CITY,21.306944,-157.858337,,USD,HNL,100,direct_match
+Thimphu,Bhutan,Bhutan,Asia,22284,Thimphu,CITY,27.473,89.639,Asia/Thimphu,USD,QJC,100,direct_match
+Osaka,Kansai,Japan,Asia,333,Osaka,CITY,34.6937378,135.5021651,Asia/Tokyo,JPY,OSA,100,direct_match
+Addis Ababa,Ethiopia,Ethiopia,Africa,24099,Addis Ababa,CITY,8.982396,38.762594,Africa/Addis_Ababa,USD,ADD,100,direct_match
+Tallinn,Estonia,Estonia,Europe,4147,Tallinn,CITY,59.4473003211,24.7710800171,Europe/Tallinn,EUR,TLL,100,direct_match
+Hilo,Hawaiʻi the Big Island,USA,North America,51004,Hilo,CITY,19.698059,-155.076152,,USD,,100,direct_match
+Kathmandu,Nepal,Nepal,Asia,5109,Kathmandu,CITY,27.7,85.3333333,Asia/Kathmandu,USD,KTM,100,direct_match
+San José,Costa Rica,Costa Rica,North America,25463,San Jose,CITY,37.33939,-121.89496,America/Los_Angeles,USD,SJC,88,fuzzy_validated
+Melaka City,Melaka,Malaysia,Asia,36678,Melaka,CITY,2.2373723,102.1114169,Asia/Kuala_Lumpur,MYR,,100,direct_match
+Rīga,Latvia,Latvia,Europe,4480,Riga,CITY,56.94965,24.10519,Europe/Riga,EUR,RIX,100,direct_match
+Darwin,Top End,Australia,Australia,360,Darwin,CITY,-12.4628198,130.8417694,Australia/Darwin,AUD,DRW,100,direct_match
+Amman,Jordan,Jordan,Asia,5503,Amman,CITY,31.949381,35.932911,Asia/Amman,USD,AMM,100,direct_match
+Bruges,West Flanders,Belgium,Europe,4836,Bruges,CITY,51.2108365,3.2248692,Europe/Brussels,EUR,OST,100,direct_match
+Lhasa,Tibet,China,Asia,22453,Lhasa,CITY,29.652491,91.17211,Asia/Kathmandu,CNY,LXA,100,direct_match
+Quito,Ecuador,Ecuador,South America,735,Quito,CITY,-0.229498,-78.524277,America/Guayaquil,USD,UIO,100,direct_match
+Wellington,Wellington Region,New Zealand,Australia,51285,Wellington,CITY,-33.645801,19.013452,,ZAR,,100,direct_match
+Denver,Front Range,USA,North America,4837,Denver,CITY,39.737567,-104.9847179,America/Denver,USD,DEN,100,direct_match
+Doha,Qatar,Qatar,Asia,4453,Doha,CITY,25.28545,51.53104,Asia/Qatar,USD,DOH,100,direct_match
+Seville,Sevilla Province,Spain,Europe,556,Seville,CITY,37.38264,-5.9962951,Europe/Madrid,EUR,SVQ,100,direct_match
+Antigua,Guatemala,Guatemala,North America,4599,Antigua,CITY,14.553405,-90.735255,America/Guatemala,USD,,100,direct_match
+Macau,China,China,Asia,4460,Macau SAR,CITY,22.198745,113.543873,Asia/Macau,CNY,MFM,100,direct_match
+Nicosia (Lefkosia),Cyprus,Cyprus,Europe,26434,Nicosia,CITY,35.186621,33.382893,Asia/Nicosia,EUR,NIC,100,direct_match
+Luxor,Egypt,Egypt,Africa,826,Luxor,CITY,25.7006,32.6392,Africa/Cairo,USD,LXR,100,direct_match
+Dhaka,Dhaka Division,Bangladesh,Asia,22495,Dhaka,CITY,23.81033,90.41252,Asia/Dhaka,USD,,100,direct_match
+Palermo,Palermo Region,Italy,Europe,4815,Palermo,CITY,38.11564,13.3614059,Europe/Rome,EUR,PMO,100,direct_match
+Cardiff,Wales,UK,Europe,5158,Cardiff,CITY,51.481581,-3.17909,Europe/London,GBP,CWL,100,direct_match
+Lahaina,Maui,USA,Australia,51005,Lahaina,CITY,20.880053,-156.668693,,USD,,100,direct_match
+Panama City,Panama,Panama,North America,950,Panama City,CITY,8.983005,-79.515332,America/Panama,USD,PTY,100,direct_match
+Muscat,Oman,Oman,Asia,4389,Muscat,CITY,23.61,58.54,Asia/Muscat,USD,MCT,100,direct_match
+Vilnius,Lithuania,Lithuania,Europe,5479,Vilnius,CITY,54.6871554997,25.2796514001,Europe/Vilnius,EUR,VNO,100,direct_match
+Split,Central Dalmatia,Croatia,Europe,4185,Split,CITY,43.5139,16.4558,Europe/Zagreb,USD,SPU,100,direct_match
+Malmö,Skåne,Sweden,Europe,680,Malmö,CITY,55.604981,13.003822,Europe/Stockholm,SEK,,100,direct_match
+Dubrovnik,Southern Dalmatia,Croatia,Europe,904,Dubrovnik,CITY,42.6590223479,18.083024025,Europe/Zagreb,USD,DBV,100,direct_match
+Geneva,Switzerland,Switzerland,Europe,578,Geneva,CITY,46.2038099,6.1399589,Europe/Zurich,USD,GVA,100,direct_match
+Port Moresby,Papua New Guinea,Papua New Guinea,Australia,50345,Port Moresby,CITY,-9.4438,147.1803,Pacific/Port_Moresby,USD,,100,direct_match
+Medellín,Medellín & Zona Cafetera,Colombia,South America,4563,Medellín,CITY,6.235925,-75.575137,America/Bogota,COP,MDE,100,direct_match
+Cebu City,Cebu,Philippines,Asia,5172,Cebu,CITY,10.3156992,123.8854366,Asia/Manila,PHP,CEB,100,direct_match
+Bucharest,Romania,Romania,Europe,22134,Bucharest,CITY,44.42677,26.10254,Europe/Bucharest,USD,BUH,100,direct_match
+Dar es Salaam,Tanzania,Tanzania,Africa,22688,Dar es Salaam,CITY,-6.792091,39.210921,Africa/Dar_es_Salaam,USD,DAR,100,direct_match
+Managua,Nicaragua,Nicaragua,North America,4500,Managua,CITY,12.1363889,-86.2513889,America/Managua,USD,MGA,100,direct_match
+Tashkent,Uzbekistan,Uzbekistan,Asia,26668,Tashkent,CITY,41.2995,69.24007,Asia/Tashkent,USD,TAS,100,direct_match
+Greater Phoenix,Arizona,USA,North America,639,Phoenix,CITY,33.4483771,-112.0740373,America/Phoenix,USD,PHX,100,direct_match
+Zagreb,Croatia,Croatia,Europe,5391,Zagreb,CITY,45.8167,15.9833,Europe/Zagreb,USD,ZAG,100,direct_match
+Aarhus,Central Jutland,Denmark,Europe,4187,Aarhus,CITY,56.16294,10.20392,Europe/Copenhagen,DKK,AAR,100,direct_match
+Frankfurt am Main,Frankfurt Region,Germany,Europe,489,Frankfurt,CITY,50.1115118,8.6805059,Europe/Berlin,EUR,FRA,100,direct_match
+Sarajevo,Eastern Bosnia,Bosnia and Herzegovina,Europe,22427,Sarajevo,CITY,43.85626,18.41308,Europe/Sarajevo,USD,SJJ,100,direct_match
+Bergen,Bergen & the Southwestern Fjords,Norway,Europe,4318,Bergen,CITY,60.391149,5.322327,Europe/Oslo,NOK,BGO,100,direct_match
+Guatemala City,Guatemala,Guatemala,North America,4595,Guatemala City,CITY,14.624795,-90.532818,America/Guatemala,USD,GUA,100,direct_match
+San Juan,Puerto Rico,USA,North America,50300,San Juan,CITY,-31.5351,-68.5386,America/Argentina/San_Juan,ARS,,100,direct_match
+Phnom Penh,Phnom Penh & Around,Cambodia,Asia,5425,Phnom Penh,CITY,11.558831,104.9174449977,Asia/Phnom_Penh,USD,PNH,100,direct_match
+Manchester,Northwest England,UK,Europe,4056,Manchester,CITY,53.479251,-2.247926,Europe/London,GBP,MAN,100,direct_match
+Hanover,Hanover & the East,Germany,Europe,28614,Hannover,CITY,52.37589,9.73201,Europe/Berlin,EUR,HAJ,93,fuzzy_validated
+Pittsburgh,Western Pennsylvania,USA,North America,22639,Pittsburgh,CITY,40.44062,-79.99589,America/New_York,USD,PIT,100,direct_match
+Luang Prabang,Luang Prabang Region,Laos,Asia,5466,Luang Prabang,CITY,19.8833959016,102.1346874005,Asia/Vientiane,USD,LPQ,100,direct_match
+Brasília,Brazil,Brazil,South America,37223,Brasilia,CITY,-15.721751,-56.9022031,America/Cuiaba,BRL,,88,fuzzy_validated
+Pokhara,Nepal,Nepal,Asia,22291,Pokhara,CITY,28.240086,84.002438,Asia/Kathmandu,USD,PKR,100,direct_match
+Sofia,Bulgaria,Bulgaria,Europe,5630,Sofia,CITY,42.697708,23.321868,Europe/Sofia,USD,SOF,100,direct_match
+Tangier,Mediterranean Coast & the Rif Mountains,Morocco,Africa,4388,Tangier,CITY,35.75947,-5.83395,Africa/Casablanca,USD,TNG,100,direct_match
+Gothenburg,Southwestern Sweden,Sweden,Europe,4280,Gothenburg,CITY,57.7088699989,11.9745599991,Europe/Stockholm,SEK,GOT,100,direct_match
+Newport,Rhode Island,USA,North America,4380,Newport,CITY,41.4901024,-71.3128285,US/Eastern,USD,PVD,100,direct_match
+Victoria,Vancouver Island,Canada,North America,23304,Victoria,CITY,-4.619357,55.451737,Indian/Mahe,USD,SEZ,100,direct_match
+Valletta,Malta,Malta,Europe,4142,Valletta,CITY,35.9009224695,14.5093989372,Europe/Malta,EUR,MLA,100,direct_match
+Durban,KwaZulu-Natal,South Africa,Africa,315,Durban,CITY,-29.8570032,31.0247936,Africa/Johannesburg,ZAR,DUR,100,direct_match
+Boulder,Front Range,USA,North America,22773,Boulder,CITY,40.014986,-105.270546,America/Denver,USD,,100,direct_match
+Granada,Granada Province,Spain,Europe,4853,Granada,CITY,11.934407,-85.956001,America/Managua,USD,GRA,100,direct_match
+Bratislava,Slovakia,Slovakia,Europe,5561,Bratislava,CITY,48.145892,17.107137,Europe/Bratislava,EUR,BTS,100,direct_match
+Bremen City,Bremen & the East Frisian Coast,Germany,Europe,25165,Bremen,CITY,53.07874,8.802027,Europe/Berlin,EUR,BRE,100,direct_match
+Providence,Rhode Island,USA,North America,22849,Providence,CITY,41.8234,-71.412288,America/New_York,USD,PVD,100,direct_match
+Winnipeg,Manitoba,Canada,North America,50494,Winnipeg,CITY,49.895138,-97.138374,America/Winnipeg,CAD,,100,direct_match
+Dunedin,Dunedin & Otago,New Zealand,Australia,758,Dunedin & The Otago Peninsula,CITY,-45.8787605,170.5027976,Pacific/Auckland,NZD,DUD,100,direct_match
+Cologne,Cologne & Northern Rhineland,Germany,Europe,923,Cologne,CITY,50.9406645,6.9599115,Europe/Berlin,EUR,CGN,100,direct_match
+Port Vila,Efate,Vanuatu,Australia,4781,Port Vila,CITY,-17.732353,168.328741,Pacific/Efate,USD,VLI,100,direct_match
+North Nicosia (Lefkoşa),Cyprus,Cyprus,Europe,26434,Nicosia,CITY,35.186621,33.382893,Asia/Nicosia,EUR,NIC,50,country_fallback
+Odense,Funen,Denmark,Europe,463,Copenhagen,CITY,55.686004333,12.6007175446,Europe/Copenhagen,DKK,CPH,50,country_fallback
+Kailua-Kona,Kona Coast,USA,Australia,645,Los Angeles,CITY,33.99119577,-118.42918396,US/Pacific,USD,LAX,50,country_fallback
+Baltimore,Maryland,USA,North America,4375,Baltimore,CITY,39.290385,-76.612189,America/New_York,USD,BWI,100,direct_match
+Salzburg,Salzburg & Salzburgerland,Austria,Europe,451,Salzburg,CITY,47.800499,13.04441,Europe/Vienna,EUR,SZG,100,direct_match
+Perth,West Coast Australia,Australia,Australia,389,Perth,CITY,-31.9554,115.85859,Australia/Perth,AUD,PER,100,direct_match
+Richmond,The Piedmont,USA,North America,23016,Richmond,CITY,37.54072,-77.43605,America/New_York,USD,RIC,100,direct_match
+Fez,Middle Atlas,Morocco,Africa,22151,Fez,CITY,34.033333,-5.0,Africa/Casablanca,USD,FEZ,100,direct_match
+Den Haag,South Holland,Netherlands,Europe,5436,The Hague,CITY,52.0704978,4.3006999,Europe/Amsterdam,EUR,HAG,100,direct_match
+Stuttgart,Stuttgart & the Black Forest,Germany,Europe,28716,Stuttgart,CITY,48.77585,9.18293,Europe/Berlin,EUR,STR,100,direct_match
+Cairns,Cairns & Far North Queensland,Australia,Australia,4413,Sydney,CITY,46.0661,-60.18,America/Glace_Bay,CAD,YQY,50,country_fallback
+Chiang Mai,Chiang Mai Province,Thailand,Asia,5267,Chiang Mai,CITY,18.790977,98.9607756,Asia/Bangkok,THB,CNX,100,direct_match
+George Town,Penang,Malaysia,Asia,51052,George Town,CITY,5.407652,100.308282,,MYR,,100,direct_match
+La Paz,La Paz & Around,Bolivia,South America,22173,La Paz,CITY,24.14264,-110.31275,America/Mazatlan,MXN,,100,direct_match
+Cuzco,Cuzco & the Sacred Valley,Peru,South America,928,Lima,CITY,-12.0433333,-77.0283333,America/Lima,PEN,LIM,50,country_fallback
+Dallas,Dallas & the Panhandle Plains,USA,North America,918,Dallas,CITY,32.802955,-96.769923,America/Chicago,USD,DFW,100,direct_match
+Tunis,Tunisia,Tunisia,Africa,30157,Tunis,CITY,36.80649,10.18153,Africa/Tunis,USD,TUN,100,direct_match
+Vientiane,Vientiane Region,Laos,Asia,5481,Vientiane,CITY,17.9666667,102.6,Asia/Vientiane,USD,VTE,100,direct_match
+Houston,East Texas,USA,North America,5186,Houston,CITY,29.762778,-95.383056,US/Central,USD,HOU,100,direct_match
+Lviv,Western Ukraine,Ukraine,Europe,26299,Lviv,CITY,49.841683,24.033339,Europe/Kiev,USD,LWO,100,direct_match
+Oaxaca City,Oaxaca,Mexico,North America,50491,Oaxaca City,CITY,17.05423,-96.713226,America/Mexico_City,MXN,,100,direct_match
+Santo Domingo,Dominican Republic,Dominican Republic,North America,5622,Santo Domingo,CITY,18.466667,-69.95,America/Santo_Domingo,USD,SDQ,100,direct_match
+Beirut,Lebanon,Lebanon,Asia,4215,Beirut,CITY,33.8925049145,35.4976844788,Asia/Beirut,USD,BEY,100,direct_match
+Bengaluru (Bangalore),Karnataka,India,Asia,5310,Bangalore,CITY,12.9715987,77.5945627,Asia/Kolkata,INR,BLR,100,direct_match
+Baku,Azerbaijan,Azerbaijan,Asia,22974,Baku,CITY,40.408234,49.867135,Asia/Baku,USD,BAK,100,direct_match
+Santa Fe,Santa Fe Region,Argentina,South America,22369,Santa Fe,CITY,35.686975,-105.937799,America/Denver,USD,,100,direct_match
+Hyderabad,Telangana,India,Asia,22442,Hyderabad,CITY,17.38504,78.48667,Asia/Kolkata,INR,HYD,100,direct_match
+Bishkek,Kyrgyzstan,Kyrgyzstan,Asia,50202,Bishkek,CITY,42.874622,74.569763,Asia/Bishkek,USD,,100,direct_match
+Chengdu,Central Sichuan,China,Asia,322,Chengdu,CITY,30.658602,104.064857,Asia/Chongqing,CNY,CTU,100,direct_match
+Santa Barbara,Santa Barbara County,USA,North America,4372,Santa Barbara,CITY,34.425833,-119.714167,America/Los_Angeles,USD,SBA,100,direct_match
+Marseille,Bouches-du-Rhône,France,Europe,485,Marseille,CITY,43.2961052028,5.3653621674,Europe/Paris,EUR,MRS,100,direct_match
+Kuching,Sarawak,Malaysia,Asia,4172,Kuching,CITY,1.530976,110.3442199,Asia/Kuching,MYR,KCH,100,direct_match
+Lyon,Lyon & the Rhône Valley,France,Europe,829,Lyon,CITY,45.767299,4.8343287,Europe/Paris,EUR,LYS,100,direct_match
+Palma de Mallorca,Palma & the Badia de Palma,Spain,Europe,60462,Palma de Mallorca,CITY,39.6091199711274,2.64065706643924,Etc/GMT+2,EUR,PMI,100,direct_match
+Funchal,Madeira,Portugal,Europe,22388,Funchal,CITY,32.66693,-16.92406,Atlantic/Madeira,EUR,FNC,100,direct_match
+Thessaloniki,Macedonia,Greece,Europe,23853,Thessaloniki,CITY,40.64006,22.94442,Europe/Athens,EUR,SKG,100,direct_match
+Santiago de Cuba,Santiago de Cuba Province,Cuba,North America,565,Santiago de Compostela,CITY,42.8804471,-8.5463034,Europe/Madrid,EUR,SCQ,74,fuzzy_validated
+Zürich,Canton of Zürich,Switzerland,Europe,577,Zurich,CITY,47.3690239,8.5380326,Europe/Zurich,USD,ZRH,100,direct_match
+Galway City,County Galway,Ireland,Europe,5156,Galway,CITY,53.2705588,-9.0566677,Europe/Dublin,EUR,GWY,100,direct_match
+Almaty,Kazakhstan,Kazakhstan,Asia,32977,Almaty,CITY,43.224137,76.851951,Asia/Almaty,USD,ALA,100,direct_match
+Byron Bay,Byron Bay & Northern NSW,Australia,Australia,5259,Byron Bay,CITY,-28.6441616,153.6123788,Australia/Brisbane,AUD,BNK,100,direct_match
+Guadalajara,Guadalajara Region,Mexico,North America,5299,Guadalajara,CITY,20.67359,-103.343803,America/Mexico_City,MXN,GDL,100,direct_match
+Chennai (Madras),Tamil Nadu,India,Asia,4624,Chennai,CITY,13.060422,80.249583,Asia/Kolkata,INR,MAA,100,direct_match
+Tbilisi,Georgia,Georgia,Europe,22516,Tbilisi,CITY,41.71514,44.8271,Asia/Tbilisi,USD,TBS,100,direct_match
+Christchurch,Christchurch & Canterbury,New Zealand,Australia,400,Christchurch,CITY,-43.531637,172.636645,Pacific/Auckland,NZD,CHC,100,direct_match
+Bologna,Emilia-Romagna,Italy,Europe,791,Bologna,CITY,44.4942191,11.3464815,Europe/Rome,EUR,BLQ,100,direct_match
+Launceston,Launceston & Around,Australia,Australia,939,Launceston,CITY,-41.45,147.166667,Australia/Hobart,AUD,LST,100,direct_match
+Arequipa,Arequipa & Canyon Country,Peru,South America,5020,Arequipa,CITY,-16.3988222,-71.5368861,America/Lima,PEN,AQP,100,direct_match
+Antwerp,Antwerp Province,Belgium,Europe,764,Antwerp,CITY,51.2194,4.4025,Europe/Brussels,EUR,ANR,100,direct_match
+Mérida,Yucatán State & the Maya Heartland,Mexico,North America,631,Cancun,CITY,21.158964,-86.845937,US/Eastern,MXN,CUN,50,country_fallback
+Montevideo,Uruguay,Uruguay,South America,4515,Montevideo,CITY,-34.8836111,-56.1819444,America/Montevideo,USD,MVD,100,direct_match
+Kota Kinabalu,Sabah,Malaysia,Asia,4171,Kota Kinabalu,CITY,5.976474,116.115777,Asia/Kuching,MYR,BKI,100,direct_match
+Trondheim,Trøndelag,Norway,Europe,4363,Trondheim,CITY,63.4167,10.4167,Europe/Oslo,NOK,TRD,100,direct_match
+Queenstown,Queenstown & Wanaka,New Zealand,Australia,407,Queenstown,CITY,-45.031104,168.662731,Pacific/Auckland,NZD,ZQN,100,direct_match
+Corfu Town,Corfu,Greece,Europe,4279,Corfu,CITY,39.624984,19.922346,Europe/Athens,EUR,CFU,100,direct_match
+Cork City,County Cork,Ireland,Europe,22039,Cork,CITY,51.96926,-8.46469,Europe/Dublin,EUR,ORK,100,direct_match
+Kampala,Uganda,Uganda,Africa,5576,Kampala,CITY,0.313611,32.581111,Africa/Kampala,USD,EBB,100,direct_match
+Cagliari,Southeastern Sardinia,Italy,Europe,4229,Cagliari,CITY,39.2253834,9.058338,Europe/Rome,EUR,CAG,100,direct_match
+Jaipur,Eastern Rajasthan,India,Asia,4627,Jaipur,CITY,26.9124165,75.7872879,Asia/Kolkata,INR,JAI,100,direct_match
+Arusha,Northern Tanzania,Tanzania,Africa,5593,Arusha,CITY,-3.372301,36.694414,Africa/Dar_es_Salaam,USD,JRO,100,direct_match
+Nha Trang,Southeast Coast,Vietnam,Asia,4682,Nha Trang,CITY,12.238791,109.196749,Asia/Ho_Chi_Minh,VND,NHA,100,direct_match
+Yogyakarta,Central Java,Indonesia,Asia,22560,Yogyakarta,CITY,-7.79558,110.36949,Asia/Jakarta,IDR,JOG,100,direct_match
+Turin,Piedmont,Italy,Europe,802,Turin,CITY,45.0705621,7.6866186,Europe/Rome,EUR,TRN,100,direct_match
+Zanzibar Town,Zanzibar Island,Tanzania,Africa,24350,Zanzibar City,CITY,-6.169657,39.202575,Africa/Dar_es_Salaam,USD,ZNZ,100,direct_match
+Kaohsiung,Taiwan's Southwest Coast,Taiwan,Asia,4676,Kaohsiung,CITY,22.634666,120.301118,Asia/Taipei,TWD,KHH,100,direct_match
+Catania,Ionian Coast,Italy,Europe,22664,Catania,CITY,37.507877,15.08303,Europe/Rome,EUR,CTA,100,direct_match
+Tainan,Taiwan's Southwest Coast,Taiwan,Asia,5262,Taipei,CITY,25.091075,121.5598345,Asia/Taipei,TWD,TPE,50,country_fallback
+San Antonio,San Antonio & Hill Country,USA,North America,50583,San Antonio,CITY,-33.58865,-71.608994,America/Santiago,USD,,100,direct_match
+Kuwait City,Kuwait,Kuwait,Asia,4918,Kuwait City,CITY,29.376961,47.982443,Asia/Kuwait,USD,KWI,100,direct_match
+Hania,Hania Province,Greece,Europe,4251,Chania,CITY,35.51383,24.01804,Europe/Athens,EUR,CHQ,91,fuzzy_validated
+Santiago de Compostela,Galicia,Spain,Europe,565,Santiago de Compostela,CITY,42.8804471,-8.5463034,Europe/Madrid,EUR,SCQ,100,direct_match
+Ghent,East Flanders,Belgium,Europe,23079,Ghent,CITY,51.054342,3.717424,Europe/Brussels,EUR,GNE,100,direct_match
+Trieste,Friuli Venezia Giulia,Italy,Europe,4239,Trieste,CITY,45.64953,13.77682,Europe/Rome,EUR,TRS,100,direct_match
+Salvador,Bahia,Brazil,South America,5142,San Salvador,CITY,-0.2619838,-90.7152749,Pacific/Galapagos,USD,GPS,80,fuzzy_validated
+Windhoek,Namibia,Namibia,Africa,5574,Windhoek,CITY,-22.57,17.083611,Africa/Windhoek,USD,WDH,100,direct_match
+Poznań,Wielkopolska,Poland,Europe,25742,Poznan,CITY,52.40648,16.927205,Europe/Warsaw,PLN,POZ,100,direct_match
+Taupo,Lake Taupo Region,New Zealand,Australia,5241,Taupo,CITY,-38.7931307,175.971322,Pacific/Auckland,NZD,TUO,100,direct_match
+Fort Worth,Dallas & the Panhandle Plains,USA,North America,33749,Fort Worth,CITY,32.755182,-97.326263,America/Chicago,USD,DFW,100,direct_match
+Siena,Central Tuscany,Italy,Europe,944,Siena,CITY,43.32024477,11.3214969635,Europe/Rome,EUR,SAY,100,direct_match
+Hoi An,South-Central Vietnam,Vietnam,Asia,5229,Hoi An,CITY,15.5097,108.297501,Asia/Ho_Chi_Minh,VND,DAD,100,direct_match
+Yerevan,Armenia,Armenia,Asia,22425,Yerevan,CITY,40.181246,44.500056,Asia/Yerevan,USD,EVN,100,direct_match
+Basel,Northwestern Switzerland,Switzerland,Europe,5010,Basel,CITY,47.557421,7.5925727,Europe/Zurich,USD,ZDH,100,direct_match
+Syracuse,Southeastern Sicily,Italy,Europe,23062,Syracuse,CITY,43.0481,-76.1474,America/New_York,USD,SYR,100,direct_match
+Mandalay,Mandalay Region,Myanmar,Asia,22815,Mandalay,CITY,21.95883,96.0891,Asia/Yangon,USD,,100,direct_match
+Busan,Gyeongsangnam-do,South Korea,Asia,4615,Busan,CITY,35.1794,129.0756,Etc/GMT+9,KRW,PUS,100,direct_match
+Negril,Negril & West Coast,Jamaica,North America,433,Negril,CITY,18.311018,-78.339386,America/Jamaica,USD,NEG,100,direct_match
+Galle,The South,Sri Lanka,Asia,22288,Galle,CITY,6.05352,80.22098,Asia/Colombo,USD,KCT,100,direct_match
+Varanasi,Uttar Pradesh,India,Asia,22015,Varanasi,CITY,25.31765,82.97391,Asia/Kolkata,INR,VNS,100,direct_match
+Dushanbe,Tajikistan,Tajikistan,Asia,50471,Dushanbe,CITY,38.557671,68.775917,Asia/Dushanbe,USD,,100,direct_match
+San Salvador,El Salvador,El Salvador,North America,5142,San Salvador,CITY,-0.2619838,-90.7152749,Pacific/Galapagos,USD,GPS,100,direct_match
+Cochabamba,Central Highlands,Bolivia,South America,50383,Cochabamba,CITY,-17.414,-66.1653,America/La_Paz,USD,CBB,100,direct_match
+Leh,Ladakh,India,Asia,22569,Leh,CITY,31.579695,77.167371,Asia/Kolkata,INR,IXL,100,direct_match
+El Nido,Palawan,Philippines,Asia,25946,El Nido,CITY,11.209703,119.4661,Asia/Manila,PHP,,100,direct_match
+Sucre,Central Highlands,Bolivia,South America,23958,Sucre,CITY,-19.019663,-65.265976,America/La_Paz,USD,,100,direct_match
+Antananarivo,Madagascar,Madagascar,Africa,30760,Antananarivo,CITY,-18.87919,47.50791,Indian/Antananarivo,USD,TNR,100,direct_match
+Santa Cruz de Tenerife,Tenerife,Spain,Europe,5404,Tenerife,CITY,28.291565,-16.629129,Europe/Madrid,EUR,TFS,100,direct_match
+Perugia,Umbria,Italy,Europe,22034,Perugia,CITY,43.11072,12.39083,Europe/Rome,EUR,PEG,100,direct_match
+Bukhara,Central Uzbekistan,Uzbekistan,Asia,50479,Bukhara,CITY,39.768951,64.430038,Asia/Samarkand,USD,,100,direct_match
+Córdoba,Córdoba Province,Argentina,South America,22281,Córdoba,CITY,-31.3993438,-64.3344291,America/Argentina/Cordoba,ARS,COR,100,direct_match
+Port Douglas,Cairns & Far North Queensland,Australia,Australia,787,Port Douglas,CITY,-16.483986,145.46582,Australia/Lindeman,AUD,PTI,100,direct_match
+Oakland,East Bay,USA,North America,22040,Oakland,CITY,37.804364,-122.271114,America/Los_Angeles,USD,OAK,100,direct_match
+Burlington,Northern Vermont,USA,North America,23484,Burlington,CITY,44.475882,-73.212072,America/New_York,USD,BTV,100,direct_match
+Ahmedabad (Amdavad),Eastern Gujarat,India,Asia,24558,Ahmedabad,CITY,23.021445,72.572353,Asia/Kolkata,INR,AMD,100,direct_match
+Kuta & Legian,Kuta & Southwest Beaches,Indonesia,Asia,22290,Kuta,CITY,-8.7238,115.17523,Asia/Makassar,IDR,DPS,100,direct_match
+Swakopmund,Namibia,Namibia,Africa,5541,Swakopmund,CITY,-22.68333,14.53333,Africa/Windhoek,USD,SWP,100,direct_match
+Verona,The Veneto,Italy,Europe,945,Verona,CITY,45.4262289,10.9224915,Europe/Rome,EUR,VRN,100,direct_match
+Memphis,Tennessee,USA,North America,783,Memphis,CITY,35.1495343,-90.0489801,America/Chicago,USD,MEM,100,direct_match
+Lilongwe,Malawi,Malawi,Africa,25512,Lilongwe,CITY,-13.9833,33.7833,Africa/Blantyre,USD,,100,direct_match
+Kigali,Rwanda,Rwanda,Africa,22362,Kigali,CITY,-1.970579,30.104429,Africa/Kigali,USD,KGL,100,direct_match
+Utrecht,Utrecht Province,Netherlands,Europe,24976,Utrecht,CITY,52.090258,5.12326,Europe/Amsterdam,EUR,,100,direct_match
+Lahore,Punjab (Pakistan),Pakistan,Asia,50344,Lahore,CITY,31.5204,74.3587,Asia/Karachi,USD,LHE,100,direct_match
+Alexandria,Mediterranean Coast,Egypt,Africa,4376,Alexandria,CITY,31.2455729,29.9993086,Africa/Cairo,USD,HBE,100,direct_match
+Gdańsk,Gdańsk & Pomerania,Poland,Europe,4213,Gdansk,CITY,54.351858,18.63957,Europe/Warsaw,PLN,GDN,100,direct_match
+Valparaíso,Valparaíso & the Central Coast,Chile,South America,22148,Valparaíso,CITY,-33.047238,-71.612688,America/Santiago,USD,VAP,100,direct_match
+Málaga,Costa del Sol,Spain,Europe,566,Madrid,CITY,40.4166909,-3.7003454,Europe/Madrid,EUR,MAD,50,country_fallback
+San Cristóbal de las Casas,San Cristóbal Region,Mexico,North America,23477,San Cristóbal de las Casas,CITY,16.73609,-92.637122,America/Mexico_City,MXN,,100,direct_match
+Seminyak,Kuta & Southwest Beaches,Indonesia,Asia,34198,Seminyak,CITY,-8.68877,115.161267,Asia/Makassar,IDR,,100,direct_match
+Bern,Mittelland,Switzerland,Europe,23275,Bern,CITY,46.94797,7.44745,Europe/Zurich,USD,BRN,100,direct_match
+Ayuthaya,Central Thailand,Thailand,Asia,343,Bangkok,CITY,13.7234186,100.4762319,Asia/Bangkok,THB,BKK,50,country_fallback
+Nur-Sultan (Astana),Northern Kazakhstan,Kazakhstan,Asia,50520,Nur-Sultan,CITY,51.177601,71.432999,Asia/Almaty,USD,,71,fuzzy_validated
+Albuquerque,Central New Mexico,USA,North America,28131,Albuquerque,CITY,35.08533,-106.60555,America/Denver,USD,ABQ,100,direct_match
+Esfahan,Central Iran,Iran,Asia,,,,,,,,,,
+Pécs,Lake Balaton & Southern Transdanubia,Hungary,Europe,26474,Pécs,CITY,46.0804,18.22,Europe/Budapest,USD,,100,direct_match
+Mendoza,Mendoza & the Central Andes,Argentina,South America,931,Mendoza,CITY,-32.890183,-68.8440498,America/Argentina/Mendoza,ARS,MDZ,100,direct_match
+Cuenca,Southern Highlands,Ecuador,South America,50290,Cuenca,CITY,40.0703,-2.1374,America/Guayaquil,EUR,,100,direct_match
+Wrocław,Lower Silesia,Poland,Europe,24500,Wroclaw,CITY,51.107607,17.038769,Europe/Warsaw,PLN,WRO,86,fuzzy_validated
+Noumea,Grande Terre,New Caledonia,Australia,4780,Noumea,CITY,-22.25582,166.45052,Pacific/Noumea,USD,GEA,100,direct_match
+Dalat,Southwest Highlands,Vietnam,Asia,60461,Da Lat,CITY,11.9455611704786,108.458446794947,Asia/Ho_Chi_Minh,VND,DLI,91,fuzzy_validated
+Coimbra,Beira Litoral,Portugal,Europe,23421,Coimbra,CITY,40.20331,-8.41026,Europe/Lisbon,EUR,,100,direct_match
+Cartagena,Cartagena & Around,Colombia,South America,4498,Cartagena,CITY,10.3873369,-75.5196631,America/Bogota,COP,CTG,100,direct_match
+Las Palmas de Gran Canaria,Gran Canaria,Spain,Europe,566,Madrid,CITY,40.4166909,-3.7003454,Europe/Madrid,EUR,MAD,50,country_fallback
+Tirana,Albania,Albania,Europe,23957,Tirana,CITY,41.32755,19.8187,Europe/Tirane,USD,TIA,100,direct_match
+Harare,Zimbabwe,Zimbabwe,Africa,31762,Harare,CITY,-17.823489,31.03454,Africa/Harare,USD,HRE,100,direct_match
+St Louis,Missouri,USA,North America,24780,St Louis,CITY,38.627003,-90.199404,America/Chicago,USD,STL,100,direct_match
+Hua Hin,Hua Hin & the Upper Gulf,Thailand,Asia,22968,Hua Hin,CITY,12.582338,99.945141,Asia/Bangkok,THB,,100,direct_match
+Noosa,Sunshine Coast,Australia,Australia,4413,Sydney,CITY,46.0661,-60.18,America/Glace_Bay,CAD,YQY,50,country_fallback
+Flagstaff,Central Arizona,USA,North America,21450,Flagstaff,CITY,35.19828,-111.6513,America/Phoenix,USD,FLG,100,direct_match
+Sihanoukville,South Coast,Cambodia,Asia,24634,Sihanoukville,CITY,10.62541,103.523386,Asia/Phnom_Penh,USD,,100,direct_match
+Pafos,Pafos & the West,Cyprus,Europe,26434,Nicosia,CITY,35.186621,33.382893,Asia/Nicosia,EUR,NIC,50,country_fallback
+Nagasaki,Central Kyūshū,Japan,Asia,4665,Nagasaki,CITY,32.75029,129.87767,Asia/Tokyo,JPY,NGS,100,direct_match
+Fukuoka,Northern Kyūshū,Japan,Asia,4660,Fukuoka,CITY,33.59035,130.40172,Asia/Tokyo,JPY,FUK,100,direct_match
+Manaus,Amazonas,Brazil,South America,4441,Manaus,CITY,-3.1064093,-60.0264297,America/Manaus,BRL,MAO,100,direct_match
+Camagüey,Camagüey Province,Cuba,North America,30970,Trinidad,REGION,10.6918,-61.2225,America/Port_of_Spain,USD,,50,country_fallback
+Moab,Southeastern Utah,USA,North America,5600,Moab,CITY,38.573315,-109.54984,US/Mountain,USD,CNY,100,direct_match
+Fira,Santorini,Greece,Europe,496,Athens,CITY,37.9439267525,23.695192337,Europe/Athens,EUR,ATH,50,country_fallback
+Pretoria,Gauteng,South Africa,Africa,22819,Pretoria,CITY,-25.74787,28.22927,Africa/Johannesburg,ZAR,,100,direct_match
+San Miguel de Allende,Guanajuato State,Mexico,North America,26115,San Miguel de Allende,CITY,20.913607,-100.74303,America/Mexico_City,MXN,BJX,100,direct_match
+Minsk,Belarus,Belarus,Europe,,,,,,,,,,
+Puerto Vallarta,Central Pacific Coast,Mexico,North America,630,Puerto Vallarta,CITY,20.6237072161,-105.2309560776,America/Mexico_City,MXN,PVR,100,direct_match
+Phuket Town,Phuket,Thailand,Asia,349,Phuket,CITY,7.9843109,98.3307468,Asia/Bangkok,THB,HKT,100,direct_match
+Liverpool,Northwest England,UK,Europe,940,Liverpool,CITY,53.416667,-3.0,Europe/London,GBP,LPL,100,direct_match
+Alghero,Northwestern Sardinia,Italy,Europe,4222,Alghero,CITY,40.55795,8.31929,Europe/Rome,EUR,AHO,100,direct_match
+León,León & Northwestern Nicaragua,Nicaragua,North America,22384,León,CITY,12.430042,-86.868211,America/Managua,USD,BJX,100,direct_match
+Iraklio,Iraklio Province,Greece,Europe,496,Athens,CITY,37.9439267525,23.695192337,Europe/Athens,EUR,ATH,50,country_fallback
+Detroit,Michigan,USA,North America,22934,Detroit,CITY,42.33143,-83.04575,America/Detroit,USD,DTT,100,direct_match
+Dresden,Saxony,Germany,Europe,22375,Dresden,CITY,51.05041,13.73726,Europe/Berlin,EUR,DRS,100,direct_match
+Dharamsala,Western Himachal Pradesh,India,Asia,25979,Dharamsala,CITY,11.983502,75.378319,Asia/Kolkata,INR,,100,direct_match
+Agra,Agra & the Taj Mahal,India,Asia,4547,Agra,CITY,27.176034,78.006241,Asia/Kolkata,INR,AGR,100,direct_match
+Quetzaltenango,Western Highlands,Guatemala,North America,25292,Quetzaltenango,CITY,14.851577,-91.523542,America/Guatemala,USD,,100,direct_match
+Shiraz,Central Iran,Iran,Asia,,,,,,,,,,
+Manama,Bahrain,Bahrain,Asia,31482,Manama,CITY,26.22852,50.58605,Asia/Bahrain,USD,BAH,100,direct_match
+Genoa,The Italian Riviera,Italy,Europe,805,Genoa,CITY,44.414375,8.918817,Europe/Rome,EUR,GOA,100,direct_match
+Puerto Galera,Mindoro,Philippines,Asia,50927,Puerto Galera,CITY,13.5006,120.9548,,PHP,,100,direct_match
+Salt Lake City,Salt Lake Region,USA,North America,5200,Salt Lake City,CITY,40.762581,-111.90102,US/Mountain,USD,SLC,100,direct_match
+Key West,Florida Keys,USA,North America,661,Key West,CITY,24.5557025,-81.7825914,America/New_York,USD,EYW,100,direct_match
+Battambang,Battambang Province,Cambodia,Asia,27515,Battambang,CITY,13.09573,103.20221,Asia/Phnom_Penh,USD,,100,direct_match
+Wanaka,Queenstown & Wanaka,New Zealand,Australia,409,Wanaka,CITY,-44.703181,169.132098,Pacific/Auckland,NZD,WKA,100,direct_match
+Kochi (Cochin),Central Kerala,India,Asia,4691,Kochi,CITY,33.5589,133.5312,Asia/Tokyo,JPY,KCZ,100,direct_match
+Hangzhou,Zhejiang,China,Asia,4437,Hangzhou,CITY,30.334953882,120.3002929688,Asia/Shanghai,CNY,HGH,100,direct_match
+Kailua,Windward Coast,USA,Australia,645,Los Angeles,CITY,33.99119577,-118.42918396,US/Pacific,USD,LAX,50,country_fallback
+Rhodes Town,Rhodes,Greece,Europe,4272,Rhodes,CITY,36.4349630984,28.2174829021,Europe/Athens,EUR,RHO,100,direct_match
+Mazatlán,Central Pacific Coast,Mexico,North America,4151,Mazatlan,CITY,23.2247832989,-106.407618,America/Mazatlan,MXN,MZT,88,fuzzy_validated
+Male,Maldives,Maldives,Asia,,,,,,,,,,
+Tampere,Tampere & Häme,Finland,Europe,50903,Tampere,CITY,61.62611,23.88146,,EUR,,100,direct_match
+Guanajuato,Guanajuato State,Mexico,North America,50523,Guanajuato City,CITY,21.01585,-101.25287,America/Mexico_City,MXN,,100,direct_match
+Belize City,Belize District,Belize,North America,5094,Belize City,CITY,17.497713,-88.186654,America/Belize,USD,BZE,100,direct_match
+Haifa,North Coast,Israel,Asia,4472,Haifa,CITY,32.794264,34.990766,Asia/Jerusalem,ILS,HFA,100,direct_match
+Liège,Liège Province,Belgium,Europe,25978,Liège,CITY,50.632505,5.581828,Europe/Brussels,EUR,LGG,100,direct_match
+Luxembourg City,Luxembourg,Luxembourg,Europe,36689,Luxembourg City,CITY,49.6075997,6.1008508,Europe/Luxembourg,EUR,,100,direct_match
+Lagos,Nigeria,Nigeria,Africa,24049,Lagos,CITY,6.522823,3.382503,Africa/Lagos,USD,LOS,100,direct_match
+York,North Yorkshire,UK,Europe,5446,York,CITY,53.9618514,-1.0875509,Europe/London,GBP,,100,direct_match
+Chişinău,Moldova,Moldova,Europe,25271,Chisinau,CITY,47.010787,28.873443,Europe/Chisinau,USD,KIV,50,country_fallback
+Kandy,The Hill Country,Sri Lanka,Asia,22283,Kandy,CITY,7.29057,80.63373,Asia/Colombo,USD,,100,direct_match
+Tucson,Southern Arizona,USA,North America,808,Tucson,CITY,32.2217429,-110.926479,America/Phoenix,USD,TUS,100,direct_match
+Suva,"Nadi, Suva & Viti Levu",Fiji,Australia,4797,Suva,CITY,-18.124649,178.450345,Pacific/Fiji,FJD,SUV,100,direct_match
+Broome,Dampier Peninsula,Australia,Australia,789,Broome,CITY,-17.955123,122.241457,Australia/Perth,AUD,BME,100,direct_match
+Akureyri,Greater Akureyri,Iceland,Europe,4341,Akureyri,CITY,65.6833333,-18.1,Atlantic/Reykjavik,ISK,AEY,100,direct_match
+Santa Cruz,Santa Cruz & Gran Chiquitania,Bolivia,South America,50952,Santa Cruz,CITY,32.687916,-16.790386,,EUR,,100,direct_match
+Khartoum,Sudan,Sudan,Africa,,,,,,,,,,
+Samarkand,Central Uzbekistan,Uzbekistan,Asia,27664,Samarkand,CITY,39.62701,66.97497,Asia/Samarkand,USD,SKD,100,direct_match
+Panaji,Panaji & Central Goa,India,Asia,953,Mumbai,CITY,19.017615,72.856164,Asia/Kolkata,INR,BOM,50,country_fallback
+Cali,Cali & Southwest Colombia,Colombia,South America,5562,Cali,CITY,3.420556,-76.522222,America/Bogota,COP,CLO,100,direct_match
+Cambridge,Cambridgeshire,UK,Europe,22327,Cambridge,CITY,52.20534,0.12182,Europe/London,GBP,,100,direct_match
+Montego Bay,Montego Bay & Northwest Coast,Jamaica,North America,432,Montego Bay,CITY,18.46936,-77.921387,America/Jamaica,USD,MBJ,100,direct_match
+Piran,Slovenian Coast,Slovenia,Europe,28586,Piran,CITY,45.52832,13.56829,Europe/Ljubljana,EUR,POW,100,direct_match
+Puerto Princesa,Palawan,Philippines,Asia,25948,Puerto Princesa,CITY,9.953175,118.781289,Asia/Manila,PHP,,100,direct_match
+Hora (Naxos),Naxos,Greece,Europe,496,Athens,CITY,37.9439267525,23.695192337,Europe/Athens,EUR,ATH,50,country_fallback
+Belo Horizonte,Minas Gerais,Brazil,South America,26539,Belo Horizonte,CITY,-19.80307,-43.94651,America/Sao_Paulo,BRL,BHZ,100,direct_match
+Avignon,Vaucluse,France,Europe,483,Avignon,CITY,43.9486126,4.8059666,Europe/Paris,EUR,AVN,100,direct_match
+Matera,Basilicata,Italy,Europe,22632,Matera,CITY,40.66638,16.60432,Europe/Rome,EUR,,100,direct_match
+Salta,Salta & Jujuy Provinces,Argentina,South America,5484,Salta,CITY,-24.7829322983,-65.4121552018,America/Argentina/Salta,ARS,SLA,100,direct_match
+Bozeman & Gallatin Valley,Montana,USA,North America,645,Los Angeles,CITY,33.99119577,-118.42918396,US/Pacific,USD,LAX,50,country_fallback
+Huaraz,Huaraz & the Cordilleras,Peru,South America,22813,Huaraz,CITY,-9.526519,-77.527536,America/Lima,PEN,,100,direct_match
+Darjeeling,West Bengal Hills,India,Asia,22035,Darjeeling,CITY,27.035752,88.264717,Asia/Kolkata,INR,IXB,100,direct_match
+Puebla,East of Mexico City,Mexico,North America,50490,Puebla City,CITY,19.041439,-98.206276,America/Mexico_City,MXN,,100,direct_match
+Toledo,Castilla-La Mancha,Spain,Europe,50899,Toledo,CITY,41.673695,-83.563738,,USD,,100,direct_match
+Larnaka,Larnaka & the East,Cyprus,Europe,22376,Larnaca,CITY,34.902708,33.624044,Asia/Nicosia,EUR,LCA,86,fuzzy_validated
+Zadar,Northern Dalmatia,Croatia,Europe,22433,Zadar,CITY,44.11937,15.23136,Europe/Zagreb,USD,ZAD,100,direct_match
+Lucca,Northwestern Tuscany,Italy,Europe,22436,Lucca,CITY,43.83762,10.495,Europe/Rome,EUR,,100,direct_match
+Holguín,Holguín Province,Cuba,North America,30970,Trinidad,REGION,10.6918,-61.2225,America/Port_of_Spain,USD,,50,country_fallback
+Iloilo,Panay,Philippines,Asia,51009,Iloilo City,CITY,10.69694,122.56444,,PHP,,100,direct_match
+Hiroshima,Hiroshima Region,Japan,Asia,4661,Hiroshima,CITY,34.403462,132.466588,Asia/Tokyo,JPY,HIJ,100,direct_match
+Trinidad,Sancti Spíritus Province,Cuba,North America,30970,Trinidad,REGION,10.6918,-61.2225,America/Port_of_Spain,USD,,100,direct_match
+Aspen,Aspen & the Maroon Bells,USA,North America,26395,Aspen,CITY,39.191098,-106.817539,America/Denver,USD,ASE,100,direct_match
+Aswan,Southern Nile Valley,Egypt,Africa,796,Aswan,CITY,24.0818,32.9108,Africa/Cairo,USD,ASW,100,direct_match
+Palenque,Chiapas,Mexico,North America,23479,Palenque,CITY,17.511178,-91.993108,America/Mexico_City,MXN,,100,direct_match
+Kerobokan,Kuta & Southwest Beaches,Indonesia,Asia,4633,Jakarta,CITY,-6.20876,106.8456,Asia/Makassar,IDR,JKT,50,country_fallback
+Groningen,Groningen Province,Netherlands,Europe,26476,Groningen,CITY,53.219269,6.566681,Europe/Amsterdam,EUR,GRQ,100,direct_match
+Aix-en-Provence,Pays d’Aix,France,Europe,5228,Aix-en-Provence,CITY,43.529742,5.447427,Europe/Paris,EUR,,100,direct_match
+Maputo,Mozambique,Mozambique,Africa,30759,Maputo,CITY,-25.89197,32.60514,Africa/Maputo,USD,MPM,100,direct_match
+Fort Lauderdale,Gold Coast,USA,North America,660,Fort Lauderdale,CITY,26.1224594401,-80.1282691956,America/New_York,USD,FLL,100,direct_match
+Gangtok,East Sikkim,India,Asia,953,Mumbai,CITY,19.017615,72.856164,Asia/Kolkata,INR,BOM,50,country_fallback
+Skopje,North Macedonia,North Macedonia,Europe,26711,Skopje,CITY,41.99735,21.428,Europe/Skopje,EUR,SKP,100,direct_match
+Jaisalmer,"Jaisalmer, Jodhpur & Western Rajasthan",India,Asia,24761,Jaisalmer,CITY,26.915667,70.909793,Asia/Kolkata,INR,,100,direct_match
+Placencia,Stann Creek District,Belize,North America,23725,Placencia,CITY,16.521055,-88.370202,America/Belize,USD,,100,direct_match
+Salamanca,Southwest Castilla y León,Spain,Europe,25935,Salamanca,CITY,40.969979,-5.661359,Europe/Madrid,EUR,,100,direct_match
+Turku,Turku & Finland's South Coast,Finland,Europe,50907,Turku,CITY,60.398454,22.185732,,EUR,,100,direct_match
+Lusaka,Zambia,Zambia,Africa,50366,Lusaka,CITY,-15.3875,28.3228,Africa/Lusaka,USD,,100,direct_match
+Guayaquil,South Coast,Ecuador,South America,4511,Guayaquil,CITY,-2.152381,-80.1199484,America/Guayaquil,USD,GYE,100,direct_match
+Gili Trawangan,Gili Islands,Indonesia,Asia,50505,Gili Trawangan,CITY,-8.35097,116.037292,Asia/Makassar,IDR,,100,direct_match
+Puerto Escondido,Oaxaca Coast,Mexico,North America,23875,Puerto Escondido,CITY,15.871418,-97.075966,America/Mexico_City,MXN,PXM,100,direct_match
+Diani Beach,South of Mombasa,Kenya,Africa,27403,Diani Beach,CITY,-4.27976,39.5947,Africa/Nairobi,USD,UKA,100,direct_match
+Derry (Londonderry),County Londonderry,UK,Europe,4207,Derry-Londonderry,CITY,54.997292,-7.305339,Etc/GMT,GBP,LDY,97,fuzzy_validated
+Ushuaia,Tierra del Fuego,Argentina,South America,933,Ushuaia,CITY,-54.7916794,-68.229248,America/Argentina/Ushuaia,ARS,USH,100,direct_match
+Morelia,Inland Michoacán,Mexico,North America,50525,Morelia,CITY,19.70187,-101.192337,America/Mexico_City,MXN,,100,direct_match
+Dakar,Senegal,Senegal,Africa,4449,Dakar,CITY,14.764449,-17.364224,Africa/Dakar,USD,DKR,100,direct_match
+Rethymno,Rethymno Province,Greece,Europe,496,Athens,CITY,37.9439267525,23.695192337,Europe/Athens,EUR,ATH,50,country_fallback
+Leeds,West Yorkshire,UK,Europe,26342,Leeds,CITY,53.800446,-1.541407,Europe/London,GBP,LBA,100,direct_match
+Belém,Pará,Brazil,South America,5112,Sao Paulo,CITY,-23.5489433,-46.6388182,America/Sao_Paulo,BRL,GRU,50,country_fallback
+Mysuru (Mysore),Karnataka,India,Asia,953,Mumbai,CITY,19.017615,72.856164,Asia/Kolkata,INR,BOM,50,country_fallback
+Veracruz City,Central Veracruz,Mexico,North America,5434,Veracruz,CITY,19.173773,-96.134224,America/Mexico_City,MXN,VER,100,direct_match
+Abidjan,Côte d'Ivoire,Côte d'Ivoire,Africa,26753,Abidjan,CITY,5.35995,-4.00826,Africa/Abidjan,USD,ABJ,100,direct_match
+Cienfuegos,Cienfuegos Province,Cuba,North America,30970,Trinidad,REGION,10.6918,-61.2225,America/Port_of_Spain,USD,,50,country_fallback
+Minneapolis,Minnesota,USA,North America,645,Los Angeles,CITY,33.99119577,-118.42918396,US/Pacific,USD,LAX,50,country_fallback
+Davao,Southern Mindanao,Philippines,Asia,50843,Davao City,CITY,7.1885650236,125.4414211002,,PHP,,100,direct_match
+Łódź,Western Mazovia,Poland,Europe,32671,Lodz,CITY,51.759314,19.455066,Europe/Warsaw,PLN,LCJ,100,direct_match
+Ibiza Town,Ibiza,Spain,Europe,4217,Ibiza,CITY,38.9082999695,1.432299614,Europe/Madrid,EUR,IBZ,100,direct_match
+Sharm El Sheikh,Sinai Coast,Egypt,Africa,827,Sharm el Sheikh,CITY,27.935877251,34.3686676025,Africa/Cairo,USD,SSH,100,direct_match
+Tegucigalpa,Honduras,Honduras,North America,23163,Tegucigalpa,CITY,14.072275,-87.192136,America/Tegucigalpa,USD,TGU,100,direct_match
+Anuradhapura,The Ancient Cities,Sri Lanka,Asia,27018,Anuradhapura,CITY,8.34519,80.38813,Asia/Colombo,USD,,100,direct_match
+Leipzig,Leipzig & Western Saxony,Germany,Europe,29263,Leipzig,CITY,51.3397,12.37307,Europe/Berlin,EUR,LEJ,100,direct_match
+Vladivostok,Eastern Trans-Siberian,Russia,Asia,5403,St Petersburg,CITY,27.75224,-82.631154,US/Eastern,USD,PIE,50,country_fallback
+Patan,The Southern Valley,Nepal,Asia,5109,Kathmandu,CITY,27.7,85.3333333,Asia/Kathmandu,USD,KTM,50,country_fallback
+Jodhpur,"Jaisalmer, Jodhpur & Western Rajasthan",India,Asia,22142,Jodhpur,CITY,26.23895,73.02431,Asia/Kolkata,INR,JDH,100,direct_match
+Kanchanaburi,Kanchanaburi Province,Thailand,Asia,22285,Kanchanaburi,CITY,14.02278,99.53281,Asia/Bangkok,THB,,100,direct_match
+Cáceres,Extremadura,Spain,Europe,50465,Caceres,CITY,39.476219,-6.37086,Europe/Madrid,EUR,,86,fuzzy_validated
+Accra,Ghana,Ghana,Africa,5517,Accra,CITY,5.5500000001,-0.1999999996,Africa/Accra,USD,ACC,100,direct_match
+Montpellier,Bas-Languedoc,France,Europe,22037,Montpellier,CITY,43.61077,3.87672,Europe/Paris,EUR,MPL,100,direct_match
+Udaipur,Udaipur & Southern Rajasthan,India,Asia,5106,Udaipur,CITY,24.5712699,73.6915439,Asia/Kolkata,INR,UDR,100,direct_match
+Beppu,Northern Kyūshū,Japan,Asia,4659,Beppu,CITY,33.2845,131.4907,Asia/Tokyo,JPY,BPU,100,direct_match
+Lucerne,Central Switzerland,Switzerland,Europe,576,Lucerne,CITY,47.045546,8.308017,Europe/Zurich,USD,QLJ,100,direct_match
+Cleveland,Ohio,USA,North America,22926,Cleveland,CITY,41.49932,-81.69436,America/New_York,USD,,100,direct_match
+Victoria Falls (town),Western Zimbabwe,Zimbabwe,Africa,5309,Victoria Falls,CITY,-17.9318052,25.8255575,Africa/Nairobi,USD,VFA,82,fuzzy_validated
+Berkeley,East Bay,USA,North America,645,Los Angeles,CITY,33.99119577,-118.42918396,US/Pacific,USD,LAX,50,country_fallback
+Hydra Town,Hydra,Greece,Africa,496,Athens,CITY,37.9439267525,23.695192337,Europe/Athens,EUR,ATH,50,country_fallback
+Novi Sad,Vojvodina,Serbia,Europe,22817,Belgrade,CITY,44.78657,20.44892,Europe/Belgrade,EUR,BEG,50,country_fallback
+Banff Town,Banff National Park,Canada,North America,611,Banff,CITY,51.1780556,-115.5719444,America/Edmonton,CAD,YBA,100,direct_match
+Strasbourg,Alsace,France,Europe,5502,Strasbourg,CITY,48.5831480015,7.7478820021,Europe/Paris,EUR,SXB,100,direct_match
+Iquitos,Amazon Basin,Peru,South America,4725,Iquitos,CITY,-3.75,-73.25,America/Lima,PEN,IQT,100,direct_match
+Srinagar,Srinagar & the Kashmir Valley,India,Asia,23017,Srinagar,CITY,34.083752,74.79833,Asia/Kolkata,INR,SXR,100,direct_match
+Lausanne,Lake Geneva & Vaud,Switzerland,Europe,23235,Lausanne,CITY,46.519786,6.632924,Europe/Zurich,USD,,100,direct_match
+Kilkenny City,County Kilkenny,Ireland,Europe,24499,Kilkenny,CITY,52.654096,-7.244014,Europe/Dublin,EUR,,100,direct_match
+Pune,Maharashtra,India,Asia,26473,Pune,CITY,18.520333,73.860377,Asia/Kolkata,INR,PNQ,100,direct_match
+Sanur,South Bali & the Islands,Indonesia,Asia,4633,Jakarta,CITY,-6.20876,106.8456,Asia/Makassar,IDR,JKT,50,country_fallback
+Chefchaouen,Rif Mountains,Morocco,Africa,50203,Chefchaouen,CITY,35.17072,-5.27059,Africa/Casablanca,USD,,100,direct_match
+Arles,Camargue,France,Europe,28884,Arles,CITY,43.67665,4.62778,Europe/Paris,EUR,FNI,100,direct_match
+Agrigento,Mediterranean Coast,Italy,Europe,27852,Agrigento,CITY,37.31109,13.57655,Europe/Rome,EUR,,100,direct_match
+Wadi Musa,Petra,Jordan,Asia,5503,Amman,CITY,31.949381,35.932911,Asia/Amman,USD,AMM,50,country_fallback
+Lalibela,Northern Ethiopia,Ethiopia,Africa,40601,Lalibela,CITY,12.0319748,39.0292095,Africa/Addis_Ababa,USD,,100,direct_match
+Hue,South-Central Vietnam,Vietnam,Asia,5219,Hue,CITY,16.463461,107.584702,Asia/Ho_Chi_Minh,VND,HUI,100,direct_match
+Acapulco,Central Pacific Coast,Mexico,North America,629,Acapulco,CITY,16.8611856698,-99.8809146881,America/Mazatlan,MXN,ACA,100,direct_match
+Kansas City,Missouri,USA,North America,28609,Kansas City,CITY,39.11405,-94.62746,America/Chicago,USD,KCK,100,direct_match
+Uppsala,Central Sweden,Sweden,Europe,26512,Uppsala,CITY,59.858564,17.638927,Europe/Stockholm,SEK,,100,direct_match
+Plovdiv,Bulgarian Thrace,Bulgaria,Europe,22041,Plovdiv,CITY,42.137417,24.744047,Europe/Sofia,USD,PDV,100,direct_match
+Como,Lake Como,Italy,Europe,511,Rome,CITY,41.8954656,12.4823243,Europe/Rome,EUR,ROM,50,country_fallback
+Port Louis,Mauritius,Mauritius,Africa,4464,Port Louis,CITY,-20.160953,57.503749,Indian/Mauritius,USD,MRU,100,direct_match
+Santander,Cantabria,Spain,Europe,50292,Santander,CITY,43.4623,-3.81,Europe/Madrid,EUR,SDR,100,direct_match
+Newcastle,Sydney Region,Australia,Australia,25551,Newcastle,CITY,-32.8453,151.815,Australia/Sydney,AUD,NTL,100,direct_match
+Apia,Upolu,Samoa,Australia,50458,Apia,CITY,-13.83282,-171.760056,Pacific/Apia,USD,,100,direct_match
+Newcastle-upon-Tyne,Northeast England,UK,Europe,23189,Newcastle-upon-Tyne,CITY,55.0022917,-1.7969253,Europe/London,GBP,NCL,100,direct_match
+Aberdeen,Aberdeenshire,UK,Europe,26304,Aberdeen,CITY,57.149865,-2.094372,Europe/London,GBP,ABZ,100,direct_match
+Tromsø,Troms,Norway,Europe,902,Oslo,CITY,59.9012926321,10.7359600067,Europe/Oslo,NOK,OSL,50,country_fallback
+Indianapolis,Indiana,USA,North America,25792,Indianapolis,CITY,39.768403,-86.158068,America/Indiana/Indianapolis,USD,IND,100,direct_match
+Varadero,Northern Matanzas,Cuba,North America,30970,Trinidad,REGION,10.6918,-61.2225,America/Port_of_Spain,USD,,50,country_fallback
+Coron Town,Busuanga & the Calamian Islands,Philippines,Asia,25947,Coron,CITY,12.048935,120.176316,Asia/Manila,PHP,,100,direct_match
+Puducherry (Pondicherry),Tamil Nadu,India,Asia,953,Mumbai,CITY,19.017615,72.856164,Asia/Kolkata,INR,BOM,50,country_fallback
+Stellenbosch,Winelands,South Africa,Africa,23419,Stellenbosch,CITY,-33.9321,18.86015,Africa/Johannesburg,ZAR,,100,direct_match
+Zihuatanejo,Central Pacific Coast,Mexico,North America,50697,Zihuatanejo,CITY,17.63866,-101.558701,America/Mexico_City,MXN,,100,direct_match
+Aqaba,Southern Jordan,Jordan,Asia,4392,Aqaba,CITY,29.53192,35.006084,Asia/Amman,USD,AQJ,100,direct_match
+Anchorage,Anchorage Region,USA,North America,4152,Anchorage,CITY,61.2180556,-149.9002778,US/Alaska,USD,ANC,100,direct_match
+Heimaey,Vestmannaeyjar,Iceland,Europe,905,Reykjavik,CITY,64.141391017,-21.893863678,Atlantic/Reykjavik,ISK,REK,50,country_fallback
+Bend,Central Oregon & the Oregon Cascades,USA,North America,22372,Bend,CITY,44.05817,-121.31531,America/Los_Angeles,USD,,100,direct_match
+Rijeka,Kvarner,Croatia,Europe,5391,Zagreb,CITY,45.8167,15.9833,Europe/Zagreb,USD,ZAG,50,country_fallback
+Sedona,Central Arizona,USA,North America,750,Sedona,CITY,34.85867,-111.76321,America/Phoenix,USD,FLG,100,direct_match
+Rincón,Rincón & West Coast,Puerto Rico,North America,25616,Rincón,CITY,18.340289,-67.250843,America/Puerto_Rico,USD,MAZ,100,direct_match
+Maastricht,Limburg,Netherlands,Europe,22820,Maastricht,CITY,50.851588,5.692747,Europe/Amsterdam,EUR,MST,100,direct_match
+Cluj-Napoca,Northern Transylvania,Romania,Europe,22043,Cluj-Napoca,CITY,46.77121,23.62364,Europe/Bucharest,USD,CLJ,100,direct_match
+Mombasa,South Coast,Kenya,Africa,22167,Mombasa,CITY,-4.043833,39.67005,Africa/Nairobi,USD,MBA,100,direct_match
+Yellowknife,Northwest Territories,Canada,North America,23637,Yellowknife,CITY,62.454053,-114.371151,America/Yellowknife,CAD,YZF,100,direct_match
+Sorrento,Sorrento Peninsula,Italy,Europe,947,Sorrento,CITY,40.6262925,14.3757985,Europe/Rome,EUR,RRO,100,direct_match
+Chandigarh,Punjab & Haryana,India,Asia,24420,Chandigarh,CITY,30.72,76.78,Asia/Kolkata,INR,,100,direct_match
+Lübeck,Schleswig-Holstein,Germany,Europe,488,Berlin,CITY,52.5234051,13.4113999,Europe/Berlin,EUR,BER,50,country_fallback
+Trier,Moselle Valley,Germany,Europe,25744,Trier,CITY,49.74999,6.63714,Europe/Berlin,EUR,,100,direct_match
+Tampa,Tampa Bay,USA,North America,666,Tampa,CITY,27.9424741768,-82.4541950226,America/New_York,USD,TPA,100,direct_match
+Amritsar,Punjab (India),India,Asia,22306,Amritsar,CITY,31.63398,74.87226,Asia/Kolkata,INR,ATQ,100,direct_match
+Campeche,Campeche State,Mexico,North America,51528,Campeche,CITY,19.835017,-90.519526,,MXN,,100,direct_match
+Port-au-Prince & Around,Haiti,Haiti,North America,,,,,,,,,,
+Naha,Okinawa-hontō,Japan,Asia,4666,Naha,CITY,26.212312,127.679157,Asia/Tokyo,JPY,OKA,100,direct_match
+Eger,Northern Hungary,Hungary,Europe,499,Budapest,CITY,47.4984056,19.0407578,Europe/Budapest,USD,BUD,50,country_fallback
+Zaragoza,Aragón,Spain,Europe,28720,Zaragoza,CITY,41.64882,-0.88909,Europe/Madrid,EUR,ZAZ,100,direct_match
+Braga,The Minho,Portugal,Europe,27331,Braga,CITY,41.54545,-8.42651,Europe/Lisbon,EUR,,100,direct_match
+Jaffna,Jaffna & the North,Sri Lanka,Asia,28058,Jaffna,CITY,9.6615,80.02555,Asia/Colombo,USD,,100,direct_match
+Seward,Kenai Peninsula,USA,North America,4368,Seward,CITY,60.124444,-149.433333,America/Juneau,USD,SWD,100,direct_match
+Hanalei,Hanalei Bay & the North Shore,USA,Australia,645,Los Angeles,CITY,33.99119577,-118.42918396,US/Pacific,USD,LAX,50,country_fallback
+St-Tropez,Presqu'île de St-Tropez,France,Europe,4195,St-Tropez,CITY,43.26768,6.64071,Europe/Paris,EUR,LTT,100,direct_match
+Santa Cruz de la Palma,La Palma,Spain,Europe,566,Madrid,CITY,40.4166909,-3.7003454,Europe/Madrid,EUR,MAD,50,country_fallback
+Juneau,Northern Panhandle,USA,North America,941,Juneau,CITY,58.3023188838,-134.4306850433,America/Anchorage,USD,JNU,100,direct_match
+Livorno,Central Coast & Elba,Italy,Europe,22138,Livorno,CITY,43.546403,10.298085,Europe/Rome,EUR,,100,direct_match
+Parma,Emilia-Romagna,Italy,Europe,27234,Parma,CITY,44.80875,10.32481,Europe/Rome,EUR,,100,direct_match
+Baracoa,Guantánamo Province,Cuba,North America,30970,Trinidad,REGION,10.6918,-61.2225,America/Port_of_Spain,USD,,50,country_fallback
+Faro,The Algarve,Portugal,Europe,23402,Faro,CITY,37.01935,-7.93044,Europe/Lisbon,EUR,FAO,100,direct_match
+Ferrara,Emilia-Romagna,Italy,Europe,27187,Ferrara,CITY,44.83812,11.61979,Europe/Rome,EUR,,100,direct_match
+Kampot,Kampot Province,Cambodia,Asia,5425,Phnom Penh,CITY,11.558831,104.9174449977,Asia/Phnom_Penh,USD,PNH,50,country_fallback
+Ohrid,Lake Ohrid,North Macedonia,Europe,28588,Ohrid,CITY,41.1231,20.80165,Europe/Skopje,EUR,OHD,100,direct_match
+Lille,"Lille, Flanders & the Somme",France,Europe,824,Lille,CITY,50.6371834,3.0630174,Europe/Paris,EUR,LIL,100,direct_match
+Grand Baie,The North,Mauritius,Africa,23971,Grand Baie,CITY,-20.007281,57.586106,Indian/Mauritius,USD,,100,direct_match
+Stavanger,Bergen & the Southwestern Fjords,Norway,Europe,4361,Stavanger,CITY,58.969832,5.733273,Europe/Oslo,NOK,SVG,100,direct_match
+Townsville,Townsville Region,Australia,Australia,4739,Townsville,CITY,-19.257622,146.817879,Australia/Brisbane,AUD,TSV,100,direct_match
+Regensburg,Regensburg & the Danube,Germany,Europe,24098,Regensburg,CITY,49.01343,12.10162,Europe/Berlin,EUR,,100,direct_match
+Matsumoto,Matsumoto & the Northern Japan Alps,Japan,Asia,50821,Matsumoto,CITY,36.2013701444,137.8144947508,,JPY,,100,direct_match
+Nadi,Nadi & the West,Fiji,Australia,4795,Nadi,CITY,-17.77654,177.43562,Pacific/Fiji,FJD,NAN,100,direct_match
+Dili,Timor-Leste,East Timor,Asia,,,,,,,,,,
+Labuan Bajo,Flores,Indonesia,Asia,50484,Labuan Bajo,CITY,-8.46292,119.873619,Asia/Makassar,IDR,,100,direct_match
+Reno,Reno-Tahoe Area,USA,North America,23010,Reno,CITY,39.529633,-119.813803,America/Los_Angeles,USD,RNO,100,direct_match
+Khajuraho,Madhya Pradesh & Chhattisgarh,India,Asia,25032,Khajuraho,CITY,24.831752,79.920129,Asia/Kolkata,INR,,100,direct_match
+New Haven,Connecticut,USA,North America,23481,New Haven,CITY,41.308274,-72.927884,America/New_York,USD,HVN,100,direct_match
+Rosario,Along the Río Paraná,Argentina,South America,26133,Rosarito,CITY,32.365858,-117.062985,America/Tijuana,MXN,,93,fuzzy_validated
+Paraty,Rio de Janeiro State,Brazil,South America,5426,Paraty,CITY,-23.2158995,-44.7116881,Brazil/East,BRL,GIG,100,direct_match
+Shimla,Southern Himachal Pradesh,India,Asia,25944,Shimla,CITY,31.104955,77.173523,Asia/Kolkata,INR,,100,direct_match
+Panajachel,Lago de Atitlán,Guatemala,North America,22279,Panajachel,CITY,14.740636,-91.150154,America/Guatemala,USD,,100,direct_match
+Segovia,Castilla y León's Central Plateau,Spain,Europe,26564,Segovia,CITY,40.9429,-4.10881,Europe/Madrid,EUR,,100,direct_match
+Buffalo,Western New York,USA,North America,23066,Buffalo,CITY,42.886447,-78.878369,America/New_York,USD,BUF,100,direct_match
+Livingstone,Western Zambia,Zambia,Africa,5313,Livingstone,CITY,-17.8519791,25.8285153,Africa/Dar_es_Salaam,USD,LVI,100,direct_match
+Tulum,Riviera Maya,Mexico,North America,23012,Tulum,CITY,20.21142,-87.46535,America/Cancun,MXN,,100,direct_match
+El Paso,West Texas,USA,North America,50135,El Paso,CITY,31.8108262,-106.7047064,America/Denver,USD,,100,direct_match
+Riyadh,Saudi Arabia,Saudi Arabia,Asia,50285,Riyadh,CITY,24.7136,46.6753,Asia/Riyadh,USD,,100,direct_match
+Cannes,Côte d'Azur,France,Europe,786,Cannes,CITY,43.5456553092,7.0130109787,Europe/Paris,EUR,CEQ,100,direct_match
+Solo,Central Java,Indonesia,Asia,4633,Jakarta,CITY,-6.20876,106.8456,Asia/Makassar,IDR,JKT,50,country_fallback
+Louisville,Central Kentucky,USA,North America,25791,Louisville,CITY,38.252665,-85.758456,America/Kentucky/Louisville,USD,SDF,100,direct_match
+Park City,Wasatch Mountains,USA,North America,22368,Park City,CITY,40.646062,-111.497973,America/Denver,USD,,100,direct_match
+Canggu,Canggu Region,Indonesia,Asia,4633,Jakarta,CITY,-6.20876,106.8456,Asia/Makassar,IDR,JKT,50,country_fallback
+Košice,Eastern Slovakia,Slovakia,Europe,5561,Bratislava,CITY,48.145892,17.107137,Europe/Bratislava,EUR,BTS,50,country_fallback
+San Ignacio,Cayo District,Belize,North America,5083,San Ignacio,CITY,17.1522786,-89.0800227,America/Belize,USD,SQS,100,direct_match
+Puerto Natales,Última Esperanza,Chile,South America,23619,Puerto Natales,CITY,-51.730894,-72.497741,America/Santiago,USD,,100,direct_match
+St Augustine,First Coast,USA,North America,823,St Augustine,CITY,29.8942639,-81.3132083,America/New_York,USD,UST,100,direct_match
+Hat Patong,Phuket,Thailand,Asia,343,Bangkok,CITY,13.7234186,100.4762319,Asia/Bangkok,THB,BKK,50,country_fallback
+Kanazawa,Kanazawa & the Hokuriku Coast,Japan,Asia,4699,Kanazawa,CITY,36.56133,136.65621,Asia/Tokyo,JPY,KMQ,100,direct_match
+Cuernavaca,South of Mexico City,Mexico,North America,23885,Cuernavaca,CITY,18.923952,-99.220699,America/Mexico_City,MXN,,100,direct_match
+Taormina,Ionian Coast,Italy,Europe,4237,Taormina,CITY,37.8530665,15.2879163,Europe/Rome,EUR,TFC,100,direct_match
+Lemesos (Limassol),Lemesos & the South,Cyprus,Europe,26434,Nicosia,CITY,35.186621,33.382893,Asia/Nicosia,EUR,NIC,50,country_fallback
+Khiva,Khorezm,Uzbekistan,Asia,50862,Khiva,CITY,41.7105740632,60.2735412518,,USD,,100,direct_match
+Jeju-si,Jeju-do,South Korea,Asia,973,Seoul,CITY,37.566535,126.9779692,Asia/Seoul,KRW,SEL,50,country_fallback
+Pyongyang,North Korea,North Korea,Asia,,,,,,,,,,
+Bergamo,Central Lombardy,Italy,Europe,27538,Bergamo,CITY,45.69826,9.67727,Europe/Rome,EUR,,100,direct_match
+Monterrey,Northeast Mexico,Mexico,North America,5504,Monterrey,CITY,25.686614201,-100.3161125985,America/Monterrey,MXN,MTY,100,direct_match
+Reims,Champagne,France,Europe,5049,Reims,CITY,49.258329,4.031696,Europe/Paris,EUR,RHE,100,direct_match
+Jeddah,Hejaz,Saudi Arabia,Asia,50462,Jeddah,CITY,21.485811,39.192505,Asia/Riyadh,USD,,100,direct_match
+Asheville,North Carolina Mountains,USA,North America,22561,Asheville,CITY,35.59506,-82.55149,America/New_York,USD,AVL,100,direct_match
+Nagoya,Nagoya Region,Japan,Asia,4701,Nagoya,CITY,35.18145,136.9064,Asia/Tokyo,JPY,NGO,100,direct_match
+Bayamo,Granma Province,Cuba,North America,30970,Trinidad,REGION,10.6918,-61.2225,America/Port_of_Spain,USD,,50,country_fallback
+Napier,Hawke's Bay,New Zealand,Australia,4760,Napier,CITY,-39.492844,176.912018,Pacific/Auckland,NZD,NPE,100,direct_match
+Georgetown,Guyana,Guyana,South America,28060,Georgetown,CITY,6.80128,-58.15513,America/Guyana,USD,,100,direct_match
+Whitby,North York Moors National Park,UK,Europe,50648,London,CITY,42.984268,-81.247528,America/Toronto,CAD,,50,country_fallback
+Boquete,Highlands,Panama,North America,33432,Boquete,CITY,8.777346,-82.4466,America/Panama,USD,,100,direct_match
+Gyeongju,Gyeongsangbuk-do,South Korea,Asia,22145,Gyeongju,CITY,35.8557,129.2249,Asia/Seoul,KRW,,100,direct_match
+Kinshasa,Democratic Republic of Congo,Democratic Republic of the Congo,Africa,34417,Kinshasa,CITY,-4.443117,15.262688,Africa/Kinshasa,USD,FIH,100,direct_match
+Évora,Alto Alentejo,Portugal,Europe,538,Lisbon,CITY,38.7252,-9.15,Europe/Lisbon,EUR,LIS,50,country_fallback
+Hualien,Eastern Taiwan & Taroko National Park,Taiwan,Asia,4675,Hualien,CITY,23.9943068,121.5323973,Asia/Taipei,TWD,HUN,100,direct_match
+Brighton & Hove,East Sussex,UK,Europe,50648,London,CITY,42.984268,-81.247528,America/Toronto,CAD,,50,country_fallback
+Milwaukee,Southeast Wisconsin,USA,North America,22412,Milwaukee,CITY,43.0389,-87.90647,America/Chicago,USD,MKE,100,direct_match
+Pristina,Kosovo,Kosovo,Europe,26853,Pristina,CITY,42.66291,21.1655,Europe/Belgrade,EUR,PRN,100,direct_match
+Foz do Iguaçu,Paraná,Brazil,South America,970,Foz do Iguacu,CITY,-25.5468978,-54.5881716,America/Sao_Paulo,BRL,IGU,92,fuzzy_validated
+Hurghada,Red Sea Coast,Egypt,Africa,800,Hurghada,CITY,27.2574,33.8097,Africa/Cairo,USD,HRG,100,direct_match
+Kashgar,Southwest Xinjiang,China,Asia,36669,Kashgar,CITY,37.8316651,68.1966667,Asia/Dushanbe,CNY,,100,direct_match
+Ipoh,Perak,Malaysia,Asia,25511,Ipoh,CITY,4.593513,101.090046,Asia/Kuala_Lumpur,MYR,,100,direct_match
+Gaborone,Botswana,Botswana,Africa,50578,Gaborone,CITY,-24.66118,25.911751,Africa/Gaborone,USD,,100,direct_match
+Düsseldorf,Northern Rhineland,Germany,Europe,5631,Düsseldorf,CITY,51.227741,6.773456,Europe/Berlin,EUR,DUS,100,direct_match
+Ísafjörður,Ísafjarðardjúp,Iceland,Europe,905,Reykjavik,CITY,64.141391017,-21.893863678,Atlantic/Reykjavik,ISK,REK,50,country_fallback
+Port Elizabeth,Sunshine Coast,South Africa,Africa,313,Port Elizabeth,CITY,-33.71392,25.52074,Africa/Johannesburg,ZAR,PLZ,100,direct_match
+Heidelberg,Heidelberg Region,Germany,Europe,24030,Heidelberg,CITY,49.39875,8.67243,Europe/Berlin,EUR,,100,direct_match
+Sapporo,Hokkaidō,Japan,Asia,5559,Sapporo,CITY,43.062096,141.354376,Asia/Tokyo,JPY,SPK,100,direct_match
+Ayacucho,Central Highlands,Peru,South America,50613,Ayacucho,CITY,-13.16001,-74.223892,America/Lima,PEN,,100,direct_match
+South Lake Tahoe & Stateline,Lake Tahoe,USA,North America,816,Lake Tahoe,CITY,39.1272558,-120.0202964,America/Los_Angeles,USD,RNO,77,fuzzy_validated
+Oviedo,Asturias,Spain,Europe,50357,Oviedo,CITY,43.3619,-5.8494,Europe/Madrid,EUR,OVD,100,direct_match
+Aalborg,Northern Jutland,Denmark,Europe,4186,Aalborg,CITY,57.04882,9.921747,Europe/Copenhagen,DKK,AAL,100,direct_match
+Rovaniemi,Southern Lapland,Finland,Europe,22130,Rovaniemi,CITY,66.497022,25.724999,Europe/Oslo,EUR,RVN,100,direct_match
+Mcleod Ganj,Dharamsala,India,Asia,953,Mumbai,CITY,19.017615,72.856164,Asia/Kolkata,INR,BOM,50,country_fallback
+Xalapa,Central Veracruz,Mexico,North America,631,Cancun,CITY,21.158964,-86.845937,US/Eastern,MXN,CUN,50,country_fallback
+Innsbruck,Tyrol,Austria,Europe,5173,Innsbruck,CITY,47.269212,11.404102,Europe/Vienna,EUR,INN,100,direct_match
+Birmingham,The Midlands & the Marches,UK,Europe,34184,Birmingham,CITY,33.520046,-86.795242,America/Chicago,USD,BHM,100,direct_match
+Can Tho,Mekong Delta,Vietnam,Asia,50569,Can Tho,CITY,10.0362,105.78803,Asia/Ho_Chi_Minh,VND,,100,direct_match
+Ávila,Southwest Castilla y León,Spain,Europe,566,Madrid,CITY,40.4166909,-3.7003454,Europe/Madrid,EUR,MAD,50,country_fallback
+Chamonix,Savoie,France,Europe,24269,Chamonix,CITY,45.9237,6.86943,Europe/Paris,EUR,,100,direct_match
+La Laguna,Northeast Tenerife,Spain,Europe,566,Madrid,CITY,40.4166909,-3.7003454,Europe/Madrid,EUR,MAD,50,country_fallback
+Daegu,Gyeongsangbuk-do,South Korea,Asia,50878,Daegu,CITY,35.889078,128.610003,,KRW,,100,direct_match
+Conakry,Guinea,Guinea,Africa,,,,,,,,,,
+Puerto Madryn,Coastal Patagonia,Argentina,South America,4414,Puerto Madryn,CITY,-42.769452,-65.033005,America/Argentina/Catamarca,ARS,PMY,100,direct_match
+Kumamoto,Central Kyūshū,Japan,Asia,50823,Kumamoto,CITY,32.8847295949,130.6832151558,,JPY,,100,direct_match
+Playa del Carmen,Riviera Maya,Mexico,North America,5501,Playa del Carmen,CITY,20.6295585978,-87.0738850994,US/Eastern,MXN,PCM,100,direct_match
+Bocas del Toro Town,Isla Colón,Panama,North America,28408,Bocas del Toro,REGION,9.4048,-82.26919,America/Panama,USD,,100,direct_match
+Honiara,Guadalcanal,Solomon Islands,Australia,,,,,,,,,,
+Hampi,Karnataka,India,Asia,50426,Hampi,CITY,15.33488,76.462044,Asia/Kolkata,INR,,100,direct_match
+Visby,Gotland,Sweden,Europe,4283,Visby,CITY,57.6348,18.29484,Europe/Stockholm,SEK,VBY,100,direct_match
+Sacramento,Sacramento Valley,USA,North America,22319,Sacramento,CITY,38.58157,-121.4944,America/Los_Angeles,USD,SAC,100,direct_match
+Sandakan,Eastern Sabah,Malaysia,Asia,32652,Sandakan,CITY,5.839538,118.116712,Asia/Kuching,MYR,SDK,100,direct_match
+Monterey,Central Coast,USA,North America,5504,Monterrey,CITY,25.686614201,-100.3161125985,America/Monterrey,MXN,MTY,94,fuzzy_validated
+Lomé,Togo,Togo,Africa,4426,Lome,CITY,6.172234,1.230797,Africa/Lome,USD,LFW,50,country_fallback
+Colmar,Alsace,France,Europe,22940,Colmar,CITY,48.07936,7.35851,Europe/Paris,EUR,,100,direct_match
+Namur,Namur Province,Belgium,Europe,458,Brussels,CITY,50.8462807,4.3547273,Europe/Brussels,EUR,BRU,50,country_fallback
+Whistler,British Columbia,Canada,North America,618,Whistler,CITY,50.116168,-122.959423,America/Vancouver,CAD,YWS,100,direct_match
+Lecce,Salento,Italy,Europe,22769,Lecce,CITY,40.351018,18.175882,Europe/Rome,EUR,,100,direct_match
+Bolzano (Bozen),Trentino & South Tyrol,Italy,Europe,511,Rome,CITY,41.8954656,12.4823243,Europe/Rome,EUR,ROM,50,country_fallback
+Puerto Varas,The Lakes District,Chile,South America,24025,Puerto Varas,CITY,-41.3167,-72.9833,America/Santiago,USD,,100,direct_match
+Pistoia,Northwestern Tuscany,Italy,Europe,511,Rome,CITY,41.8954656,12.4823243,Europe/Rome,EUR,ROM,50,country_fallback
+La Fortuna,Arenal & Around,Costa Rica,North America,821,La Fortuna,CITY,10.4699398,-84.657898,America/Guatemala,USD,,100,direct_match
+Pai,Mae Hong Son Province,Thailand,Asia,343,Bangkok,CITY,13.7234186,100.4762319,Asia/Bangkok,THB,BKK,50,country_fallback
+San Juan Del Sur,Pacific Beaches,Nicaragua,North America,23011,San Juan del Sur,CITY,11.263938,-85.86271,America/Managua,USD,,100,direct_match
+Arezzo,Eastern Tuscany,Italy,Europe,22631,Arezzo,CITY,43.46328,11.87963,Europe/Rome,EUR,,100,direct_match
+Orchha,Madhya Pradesh & Chhattisgarh,India,Asia,953,Mumbai,CITY,19.017615,72.856164,Asia/Kolkata,INR,BOM,50,country_fallback
+Punta Arenas,Magallanes Region,Chile,South America,4416,Punta Arenas,CITY,-53.154478,-70.916476,America/Santiago,USD,PUQ,100,direct_match
+Trujillo,North Coast,Peru,South America,51242,Trujillo,CITY,39.458784,-5.880444,,EUR,,100,direct_match
+Kinsale,The West Cork Coast,Ireland,Europe,503,Dublin,CITY,53.3481944965,-6.2237548828,Europe/Dublin,EUR,DUB,50,country_fallback
+Nazareth,Lower Galilee,Israel,Asia,36686,Nazareth,CITY,32.7141741,35.2547979,Asia/Jerusalem,ILS,,100,direct_match
+Sintra,Sintra Region,Portugal,Europe,50861,Sintra,CITY,38.8114131686,-9.3826139872,,EUR,,100,direct_match
+Colorado Springs,Southern Front Range,USA,North America,22201,Colorado Springs,CITY,38.833882,-104.821363,America/Denver,USD,COS,100,direct_match
+Miri,Central Sarawak,Malaysia,Asia,36685,Miri,CITY,3.9495261,113.2480741,Asia/Kuching,MYR,MYY,100,direct_match
+Varna,Black Sea Coast,Bulgaria,Europe,4286,Varna,CITY,43.21405,27.91473,Europe/Sofia,USD,VAR,100,direct_match
+Nusa Lembongan,Nusa Lembongan & Islands,Indonesia,Asia,23621,Nusa Lembongan,CITY,-8.677027,115.457999,Asia/Makassar,IDR,,100,direct_match
+Montepulciano,Central Tuscany,Italy,Europe,27742,Montepulciano,CITY,43.09869,11.78725,Europe/Rome,EUR,,100,direct_match
+Dumaguete,Negros,Philippines,Asia,51010,Dumaguete City,CITY,9.307,123.3074,,PHP,,100,direct_match
+Pula,Istria's West Coast,Croatia,Europe,51035,Pula,CITY,39.00999,8.999902,,EUR,,100,direct_match
+Taos,Central New Mexico,USA,North America,33082,Taos,CITY,36.407222,-105.572533,America/Denver,USD,,100,direct_match
+Thiruvananthapuram (Trivandrum),Southern Kerala,India,Asia,953,Mumbai,CITY,19.017615,72.856164,Asia/Kolkata,INR,BOM,50,country_fallback
+Aveiro,Beira Litoral,Portugal,Europe,538,Lisbon,CITY,38.7252,-9.15,Europe/Lisbon,EUR,LIS,50,country_fallback
+Ketchikan,Southern Panhandle,USA,North America,942,Ketchikan,CITY,55.3394208967,-131.6416168213,America/Anchorage,USD,KTN,100,direct_match
+Modena,Emilia-Romagna,Italy,Europe,25818,Modena,CITY,44.646614,10.925935,Europe/Rome,EUR,,100,direct_match
+Trento,Trentino & South Tyrol,Italy,Europe,29399,Trento,CITY,46.07478,11.12175,Europe/Rome,EUR,ZIA,100,direct_match
+Kyrenia (Girne),Kyrenia (Girne) & the North,Cyprus,Europe,26434,Nicosia,CITY,35.186621,33.382893,Asia/Nicosia,EUR,NIC,50,country_fallback
+Ravenna,Emilia-Romagna,Italy,Europe,4236,Ravenna,CITY,44.41836,12.20353,Europe/Rome,EUR,RAN,100,direct_match
+Veliko Târnovo,Veliko Târnovo & Central Mountains,Bulgaria,Europe,50388,Veliko Tarnovo,CITY,43.0757,25.6172,Europe/Sofia,USD,,93,fuzzy_validated
+Popayán,Cauca & Huila,Colombia,South America,5562,Cali,CITY,3.420556,-76.522222,America/Bogota,COP,CLO,50,country_fallback
+Pisa,Northwestern Tuscany,Italy,Europe,520,Pisa,CITY,43.7161354,10.3965843,Europe/Rome,EUR,PSA,100,direct_match
+El Calafate,Inland Patagonia,Argentina,South America,935,El Calafate,CITY,-50.2803,-72.0531,America/Argentina/Rio_Gallegos,ARS,RZA,100,direct_match
+İzmir,İzmir & the North Aegean,Turkey,Europe,581,Izmir,CITY,38.41885,27.12872,Europe/Istanbul,TRY,IZM,91,fuzzy_validated
+Cafayate,Salta & Jujuy Provinces,Argentina,South America,31320,Cafayate,CITY,-26.07308,-65.97605,America/Argentina/Salta,ARS,,100,direct_match
+Otavalo,Northern Highlands,Ecuador,South America,33748,Otavalo,CITY,0.234188,-78.260787,America/Guayaquil,USD,,100,direct_match
+Nara,Nara Prefecture,Japan,Asia,50510,Nara,CITY,34.685085,135.804993,Asia/Tokyo,JPY,,100,direct_match
+Kagoshima,Southern Kyūshū,Japan,Asia,4663,Kagoshima,CITY,31.59655,130.55712,Asia/Tokyo,JPY,KOJ,100,direct_match
+Malindi,North Coast,Kenya,Africa,25668,Malindi,CITY,-3.21,40.1,Africa/Nairobi,USD,MYD,100,direct_match
+Puno,Lake Titicaca,Peru,South America,4726,Puno,CITY,-15.8433333,-70.0236111,America/Lima,PEN,JUL,100,direct_match
+Zermatt,Upper Valais,Switzerland,Europe,5014,Zermatt,CITY,46.0210726,7.7479372,Europe/Zurich,USD,,100,direct_match
+Nashik,Maharashtra,India,Asia,50879,Nashik,CITY,19.991966,73.775826,,INR,,100,direct_match
+Almería,Almería Province,Spain,Europe,4483,Almeria,CITY,36.833898,-2.462932,Europe/Madrid,EUR,LEI,86,fuzzy_validated
+Tauranga,Bay of Plenty,New Zealand,Australia,4761,Tauranga,CITY,-37.686769,176.166344,Pacific/Auckland,NZD,TRG,100,direct_match
+Lovina,North Bali,Indonesia,Asia,4633,Jakarta,CITY,-6.20876,106.8456,Asia/Makassar,IDR,JKT,50,country_fallback
+Rotorua,Rotorua & the Bay of Plenty,New Zealand,Australia,395,Rotorua,CITY,-38.139826,176.247073,Pacific/Auckland,NZD,ROT,100,direct_match
+Porto Alegre,Rio Grande do Sul,Brazil,South America,29098,Porto Alegre,CITY,-30.03465,-51.21766,America/Sao_Paulo,BRL,POA,100,direct_match
+Jinja,Eastern Uganda,Uganda,Africa,27151,Jinja,CITY,0.44786,33.20261,Africa/Kampala,USD,JIN,100,direct_match
+Podgorica,Central Montenegro,Montenegro,Europe,26108,Podgorica,CITY,42.430901,19.260416,Europe/Podgorica,EUR,TGD,100,direct_match
+Niš,Eastern & Southern Serbia,Serbia,Europe,22817,Belgrade,CITY,44.78657,20.44892,Europe/Belgrade,EUR,BEG,50,country_fallback
+Kuantan,Pahang & Tioman Island,Malaysia,Asia,4669,Kuantan,CITY,3.83,103.32,Asia/Tokyo,MYR,KUA,100,direct_match
+Braşov,Transylvania,Romania,Europe,22134,Bucharest,CITY,44.42677,26.10254,Europe/Bucharest,USD,BUH,50,country_fallback
+Rishikesh,Uttarakhand,India,Asia,22733,Rishikesh,CITY,30.086732,78.268159,Asia/Kolkata,INR,,100,direct_match
+Rimini,Emilia-Romagna,Italy,Europe,30027,Rimini,CITY,44.06783,12.56952,Europe/Rome,EUR,RMI,100,direct_match
+Curitiba,Paraná,Brazil,South America,23058,Curitiba,CITY,-25.42895,-49.26714,America/Sao_Paulo,BRL,CWB,100,direct_match
+Playa Tamarindo,Northern Peninsula,Costa Rica,North America,25463,San Jose,CITY,37.33939,-121.89496,America/Los_Angeles,USD,SJC,50,country_fallback
+Tijuana,Northern Baja,Mexico,North America,26217,Tijuana,CITY,32.5,-117.08,America/Tijuana,MXN,TIJ,100,direct_match
+Troyes,Aube,France,Europe,479,Paris,CITY,48.8566667,2.3509871,Europe/Paris,EUR,CDG,50,country_fallback
+Ostend,Belgian Coast,Belgium,Europe,458,Brussels,CITY,50.8462807,4.3547273,Europe/Brussels,EUR,BRU,50,country_fallback
+Burgos,East Castilla y León,Spain,Europe,36284,Burgos,CITY,42.3441047,-3.7647329,Europe/Madrid,EUR,,100,direct_match
+Limerick City,County Limerick,Ireland,Europe,23186,Limerick,CITY,52.66802,-8.6305,Europe/Dublin,EUR,,100,direct_match
+Bastia,The Northeast Coast,France,Europe,479,Paris,CITY,48.8566667,2.3509871,Europe/Paris,EUR,CDG,50,country_fallback
+Erfurt,"Erfurt, Weimar & Thuringia",Germany,Europe,488,Berlin,CITY,52.5234051,13.4113999,Europe/Berlin,EUR,BER,50,country_fallback
+Meknes,Middle Atlas,Morocco,Africa,4396,Casablanca,CITY,33.534035,-7.585212,Africa/Casablanca,USD,CAS,50,country_fallback
+Nottingham,Nottinghamshire,UK,Europe,32685,Nottingham,CITY,52.9703,-1.17,Europe/London,GBP,,100,direct_match
+Nuremberg,Nuremberg & Franconia,Germany,Europe,5628,Nuremberg,CITY,49.45203,11.07675,Europe/Berlin,EUR,NUE,100,direct_match
+Karlovy Vary,Bohemia,Czech Republic,Europe,32983,Karlovy Vary,CITY,50.231701,12.870063,Europe/Prague,USD,KLV,100,direct_match
+Búzios,Rio de Janeiro State,Brazil,South America,23057,Búzios,CITY,-22.758323,-41.889726,America/Sao_Paulo,BRL,BZC,100,direct_match
+Viseu,Beira Alta,Portugal,Europe,538,Lisbon,CITY,38.7252,-9.15,Europe/Lisbon,EUR,LIS,50,country_fallback
+Dijon,Côte d'Or,France,Europe,5030,Dijon,CITY,47.322047,5.04148,Europe/Paris,EUR,DIJ,100,direct_match
+Matanzas,Northern Matanzas,Cuba,North America,30970,Trinidad,REGION,10.6918,-61.2225,America/Port_of_Spain,USD,,50,country_fallback
+Clermont-Ferrand,Auvergne,France,Europe,479,Paris,CITY,48.8566667,2.3509871,Europe/Paris,EUR,CDG,50,country_fallback
+Bhaktapur,The Eastern Valley,Nepal,Asia,5109,Kathmandu,CITY,27.7,85.3333333,Asia/Kathmandu,USD,KTM,50,country_fallback
+Leticia,Amazon Basin,Colombia,South America,51209,Leticia,CITY,-4.216667,-69.933333,,COP,,100,direct_match
+San Andrés,San Andrés & Providencia,Colombia,South America,28673,San Andrés,CITY,12.57685,-81.70505,America/Bogota,COP,ADZ,100,direct_match
+Kaunas,Central Lithuania,Lithuania,Europe,24093,Kaunas,CITY,54.89852,23.9036,Europe/Vilnius,EUR,,100,direct_match
+Budva,Adriatic Coast,Montenegro,Europe,26540,Budva,CITY,42.29115,18.84029,Europe/Podgorica,EUR,,100,direct_match
+Denpasar,South Bali & the Islands,Indonesia,Asia,4633,Jakarta,CITY,-6.20876,106.8456,Asia/Makassar,IDR,JKT,50,country_fallback
+Ålesund,The Northern Fjords,Norway,Europe,4312,Alesund,CITY,62.472128,6.150203,Europe/Oslo,NOK,AES,86,fuzzy_validated
+Tortuguero Village,Northern Caribbean,Costa Rica,North America,50227,Tortuguero,CITY,10.5425,-83.5024,America/Costa_Rica,USD,,71,fuzzy_validated
+Ioannina,Epiros,Greece,Europe,51530,Ioannina,CITY,39.664031,20.849911,,EUR,,100,direct_match
+São Luís,Maranhão,Brazil,South America,5112,Sao Paulo,CITY,-23.5489433,-46.6388182,America/Sao_Paulo,BRL,GRU,50,country_fallback
+Sapa,Northwest Vietnam,Vietnam,Asia,50492,Sapa,CITY,22.356464,103.873802,Asia/Ho_Chi_Minh,VND,,100,direct_match
+Bandung,West Java,Indonesia,Asia,24417,Bandung,CITY,-6.91746,107.61912,Asia/Jakarta,IDR,,100,direct_match
+Yakutsk,Sakha Republic & Magadan Region,Russia,Asia,5403,St Petersburg,CITY,27.75224,-82.631154,US/Eastern,USD,PIE,50,country_fallback
+Nuwara Eliya,The Hill Country,Sri Lanka,Asia,33889,Nuwara Eliya,CITY,6.950811,80.790774,Asia/Colombo,USD,,100,direct_match
+Alicante,Costa Blanca,Spain,Europe,23519,Alicante,CITY,38.344032,-0.484558,Europe/Madrid,EUR,ALC,100,direct_match
+Tarifa,Southeast Cádiz Province & the Costa de la Luz,Spain,Europe,50288,Tarifa,CITY,36.0143,-5.6044,Europe/Madrid,EUR,,100,direct_match
+Girona,Costa Brava,Spain,Europe,23015,Girona,CITY,41.9794,2.82143,Europe/Madrid,EUR,,100,direct_match
+Takayama,Hida Region,Japan,Asia,25943,Takayama,CITY,36.161045,137.253952,Asia/Tokyo,JPY,,100,direct_match
+Punta del Este,Eastern Uruguay,Uruguay,South America,4906,Punta del Este,CITY,-34.9666667,-54.95,America/Montevideo,USD,PDP,100,direct_match
+Lucknow,Uttar Pradesh,India,Asia,23770,Lucknow,CITY,26.845406,80.955373,Asia/Kolkata,INR,LKO,100,direct_match
+Kota Bharu,Kelantan,Malaysia,Asia,335,Kuala Lumpur,CITY,3.139003,101.686855,Asia/Kuala_Lumpur,MYR,KUL,50,country_fallback
+Guwahati,Assam,India,Asia,24307,Guwahati,CITY,26.144059,91.730506,Asia/Kolkata,INR,GAU,100,direct_match
+Kamakura,Around Tokyo,Japan,Asia,26734,Kamakura,CITY,35.31923,139.54669,Asia/Tokyo,JPY,,100,direct_match
+Airlie Beach,The Whitsundays,Australia,Australia,28628,Airlie Beach,CITY,-20.26872,148.71846,Australia/Brisbane,AUD,JHQ,100,direct_match
+Kotor,Bay of Kotor,Montenegro,Europe,23078,Kotor,CITY,42.42466,18.77123,Europe/Podgorica,EUR,,100,direct_match
+Semarang,North Coast,Indonesia,Asia,24870,Semarang,CITY,-7.004836,110.442278,Asia/Jakarta,IDR,,100,direct_match
+Valladolid,Eastern Yucatán State,Mexico,North America,36285,Valladolid,CITY,41.7031684,-4.948896,Europe/Madrid,EUR,VLL,100,direct_match
+Noto,Southeastern Sicily,Italy,Europe,511,Rome,CITY,41.8954656,12.4823243,Europe/Rome,EUR,ROM,50,country_fallback
+Gokarna,Karnataka,India,Asia,953,Mumbai,CITY,19.017615,72.856164,Asia/Kolkata,INR,BOM,50,country_fallback
+Centro & the Mainland,Florianópolis & Ilha de Santa Catarina,Brazil,South America,5112,Sao Paulo,CITY,-23.5489433,-46.6388182,America/Sao_Paulo,BRL,GRU,50,country_fallback
+Maribor,Eastern Slovenia,Slovenia,Europe,50920,Maribor,CITY,46.544724,15.650578,,EUR,,100,direct_match
+Agia Napa,Larnaka & the East,Cyprus,Europe,31182,Ayia Napa,CITY,34.99228,34.01401,Asia/Famagusta,EUR,QNP,89,fuzzy_validated
+Puerto Iguazú,Iguazú Falls,Argentina,South America,971,Puerto Iguazu,CITY,-25.5971635,-54.578599,America/Argentina/Cordoba,ARS,IGU,92,fuzzy_validated
+San Gimignano,Central Tuscany,Italy,Europe,29096,San Gimignano,CITY,43.46763,11.04349,Europe/Rome,EUR,,100,direct_match
+Münster,Münster & Osnabrück,Germany,Europe,26396,Münster,CITY,51.959696,7.632469,Europe/Berlin,EUR,FMO,100,direct_match
+Neuchâtel,Drei-Seen-Land,Switzerland,Europe,26380,Neuchâtel,CITY,46.999,6.923,Europe/Zurich,USD,QNC,100,direct_match
+Nijmegen,Gelderland,Netherlands,Europe,26498,Nijmegen,CITY,51.812287,5.837403,Europe/Amsterdam,EUR,,100,direct_match
+Salento,Zona Cafetera,Colombia,South America,26165,Salento,CITY,40.250401,15.197395,Europe/Rome,COP,,100,direct_match
+Máncora,North Coast,Peru,South America,928,Lima,CITY,-12.0433333,-77.0283333,America/Lima,PEN,LIM,50,country_fallback
+El Valle,Coclé Province,Panama,North America,4510,Colon,CITY,9.33529,-79.94165,America/Panama,USD,ONX,50,country_fallback
+Lund,Skåne,Sweden,Europe,907,Stockholm,CITY,59.328110858,18.0756425858,Europe/Stockholm,SEK,STO,50,country_fallback
+Brno,Moravia,Czech Republic,Europe,26301,Brno,CITY,49.2004,16.61,Europe/Prague,USD,BRQ,100,direct_match
+Skagen,Northern Jutland,Denmark,Europe,4190,Skagen,CITY,57.725359,10.562245,Europe/Copenhagen,DKK,CNL,100,direct_match
+Puerto Viejo de Talamanca,Southern Caribbean,Costa Rica,North America,25463,San Jose,CITY,37.33939,-121.89496,America/Los_Angeles,USD,SJC,50,country_fallback
+Paramaribo,Suriname,Suriname,South America,26849,Paramaribo,CITY,5.85204,-55.20383,America/Paramaribo,USD,,100,direct_match
+Dahab,Sinai Coast,Egypt,Asia,24528,Dahab,CITY,28.50914,34.51363,Africa/Cairo,USD,,100,direct_match
+Cincinnati,Ohio,USA,North America,27186,Cincinnati,CITY,39.10312,-84.51202,America/New_York,USD,CVG,100,direct_match
+Puerto de la Cruz,North Coast Tenerife,Spain,Europe,566,Madrid,CITY,40.4166909,-3.7003454,Europe/Madrid,EUR,MAD,50,country_fallback
+Keswick,The Lake District,UK,Europe,26224,Keswick,CITY,54.601182,-3.133563,Europe/London,GBP,,100,direct_match
+Padua,The Veneto,Italy,Europe,23521,Padua,CITY,45.40643,11.87676,Europe/Rome,EUR,,100,direct_match
+Chester,Northwest England,UK,Europe,36691,Chester,CITY,53.1924838,-3.4481848,Europe/London,GBP,,100,direct_match
+Quepos,Parque Nacional Manuel Antonio & Around,Costa Rica,North America,4507,Quepos,CITY,9.43183,-84.161018,America/Costa_Rica,USD,XQP,100,direct_match
+Cahuita,Southern Caribbean,Costa Rica,North America,25463,San Jose,CITY,37.33939,-121.89496,America/Los_Angeles,USD,SJC,50,country_fallback
+Bikaner,"Jaisalmer, Jodhpur & Western Rajasthan",India,Asia,50339,Bikaner,CITY,28.0229,73.3119,Asia/Kolkata,INR,,100,direct_match
+Kirkwall,Orkney,UK,Europe,4252,Kirkwall,CITY,58.982174,-2.960248,Europe/London,GBP,KOI,100,direct_match
+Vicenza,The Veneto,Italy,Europe,28582,Vicenza,CITY,45.54548,11.53542,Europe/Rome,EUR,VIC,100,direct_match
+Yulara,Uluru-Kata Tjuta National Park,Australia,Australia,4413,Sydney,CITY,46.0661,-60.18,America/Glace_Bay,CAD,YQY,50,country_fallback
+Seyðisfjörður,The Eastfjords,Iceland,Europe,905,Reykjavik,CITY,64.141391017,-21.893863678,Atlantic/Reykjavik,ISK,REK,50,country_fallback
+Český Krumlov,Bohemia,Czech Republic,Europe,22456,Cesky Krumlov,CITY,48.813037,14.324287,Europe/Prague,USD,,85,fuzzy_validated
+Potsdam,Around Berlin,Germany,Europe,28717,Potsdam,CITY,52.39057,13.06447,Europe/Berlin,EUR,XXP,100,direct_match
+Polonnaruwa,The Ancient Cities,Sri Lanka,Asia,4619,Colombo,CITY,6.9218374,79.8211859,Asia/Colombo,USD,CMB,50,country_fallback
+Inverness,Inverness & the Great Glen,UK,Europe,5051,Inverness,CITY,57.477773,-4.224721,Europe/London,GBP,INV,100,direct_match
+Algiers,Algeria,Algeria,Africa,25745,Algiers,CITY,36.7631,3.0506,Africa/Algiers,USD,,100,direct_match
+Bosa,Western Sardinia,Italy,Europe,511,Rome,CITY,41.8954656,12.4823243,Europe/Rome,EUR,ROM,50,country_fallback
+Kuala Terengganu,Terengganu,Malaysia,Asia,50606,Kuala Terengganu,CITY,5.31965,103.132103,Asia/Kuala_Lumpur,MYR,,100,direct_match
+Danang,Danang Region,Vietnam,Asia,4680,Da Nang,CITY,16.05441,108.20217,Asia/Ho_Chi_Minh,VND,DAD,92,fuzzy_validated
+Skiathos Town,Skiathos,Greece,Europe,50332,Skiathos,CITY,39.1635,23.4902,Europe/Athens,EUR,JSI,100,direct_match
+Manizales,Zona Cafetera,Colombia,South America,50311,Manizales,CITY,5.063,-75.5028,America/Bogota,COP,,100,direct_match
+Querétaro,Querétaro State,Mexico,North America,26155,Queretaro,REGION,20.5833,-100.3833,America/Mexico_City,MXN,,89,fuzzy_validated
+Recife,Pernambuco,Brazil,South America,4456,Recife,CITY,-11.010933,-41.88968,America/Recife,BRL,REC,100,direct_match
+Flic en Flac,The West,Mauritius,Africa,4464,Port Louis,CITY,-20.160953,57.503749,Indian/Mauritius,USD,MRU,50,country_fallback
+Mostar,Hercegovina,Bosnia and Herzegovina,Europe,22322,Mostar,CITY,43.34377,17.80776,Europe/Sarajevo,USD,OMO,100,direct_match
+Plzeň,Bohemia,Czech Republic,Europe,462,Prague,CITY,50.0878114,14.4204598,Europe/Prague,USD,PRG,50,country_fallback
+Colonia del Sacramento,Western Uruguay,Uruguay,South America,22385,Colonia del Sacramento,CITY,-34.48,-57.84,America/Montevideo,USD,,100,direct_match
+Vevey,The Lavaux,Switzerland,Europe,37221,Vevey,CITY,46.4495897,6.7020639,Europe/Zurich,USD,,100,direct_match
+Delphi,Delphi & Sterea Ellada,Greece,Europe,50420,Delphi,CITY,38.481154,22.500549,Europe/Athens,EUR,,100,direct_match
+Baños,Central Highlands,Ecuador,South America,22150,Baños,CITY,-1.39283,-78.42688,America/Guayaquil,USD,,100,direct_match
+Surabaya,East Java,Indonesia,Asia,23060,Surabaya,CITY,-7.257927,112.762149,Asia/Jakarta,IDR,SUB,100,direct_match
+Balikpapan,East & North Kalimantan,Indonesia,Asia,4633,Jakarta,CITY,-6.20876,106.8456,Asia/Makassar,IDR,JKT,50,country_fallback
+Mammoth Lakes,Mammoth Lakes Region,USA,North America,25075,Mammoth Lakes,CITY,37.648546,-118.972079,America/Los_Angeles,USD,,100,direct_match
+Arica,Norte Grande,Chile,South America,4503,Arica,CITY,-18.478244,-70.311339,America/Santiago,USD,ARI,100,direct_match
+Merano (Meran),Trentino & South Tyrol,Italy,Europe,511,Rome,CITY,41.8954656,12.4823243,Europe/Rome,EUR,ROM,50,country_fallback
+Kep,Kampot Province,Cambodia,Asia,5425,Phnom Penh,CITY,11.558831,104.9174449977,Asia/Phnom_Penh,USD,PNH,50,country_fallback
+Bovec,Soča Valley,Slovenia,Europe,24351,Bovec,CITY,46.337559,13.550918,Europe/Ljubljana,EUR,,100,direct_match
+Pucón,La Araucanía,Chile,South America,25034,Pucón,CITY,-39.2731,-71.9778,America/Santiago,USD,,100,direct_match
+Nafplio,Argolis,Greece,Europe,60481,Nafplio,CITY,37.5693251339341,22.8017731428599,Etc/GMT+2,EUR,ATH,100,direct_match
+Sighişoara,Saxon Land,Romania,Europe,22626,Sighisoara,CITY,46.2197,24.79639,Europe/Bucharest,USD,,90,fuzzy_validated
+Ypres,West Flanders,Belgium,Europe,22129,Ypres,CITY,50.86913,2.98128,Europe/Brussels,EUR,,100,direct_match
+Boise,Idaho,USA,North America,32778,Boise,CITY,43.618774,-116.214554,America/Boise,USD,BOI,100,direct_match
+Madaba,Central Jordan,Jordan,Asia,28019,Madaba,CITY,31.71954,35.79411,Asia/Amman,USD,,100,direct_match
+Cascais,Greater Lisbon,Portugal,Europe,28587,Cascais,CITY,38.69706,-9.42229,Europe/Lisbon,EUR,,100,direct_match
+Koper,Slovenian Coast,Slovenia,Europe,4170,Koper,CITY,45.5482731,13.731213,Europe/Ljubljana,EUR,TRS,100,direct_match
+Yokohama,Around Tokyo,Japan,Asia,25747,Yokohama,CITY,35.462209,139.578735,Asia/Tokyo,JPY,YOK,100,direct_match
+Baguio,The Cordillera,Philippines,Asia,4674,Manila,CITY,14.5995124,120.9842195,Asia/Manila,PHP,MNL,50,country_fallback
+Kodaikanal (Kodai),The Western Ghats,India,Asia,50888,Kodaikanal,CITY,10.242736,77.493475,,INR,,74,fuzzy_validated
+Assisi,Umbria,Italy,Europe,27667,Assisi,CITY,43.0707,12.6196,Europe/Rome,EUR,PEG,100,direct_match
+Freiburg,The Black Forest,Germany,Europe,34163,Freiburg,CITY,47.999633,7.845849,Europe/Berlin,EUR,MLH,100,direct_match
+Manali,Central Himachal Pradesh,India,Asia,22496,Manali,CITY,32.23963,77.18871,Asia/Kolkata,INR,,100,direct_match
+Uyuni,Uyuni & the Southwest Circuit,Bolivia,South America,22256,Uyuni,CITY,-20.461027,-66.825071,America/La_Paz,USD,,100,direct_match
+Jerez de la Frontera,The Sherry Triangle,Spain,Europe,566,Madrid,CITY,40.4166909,-3.7003454,Europe/Madrid,EUR,MAD,50,country_fallback
+Gili Air,Gili Islands,Indonesia,Asia,4633,Jakarta,CITY,-6.20876,106.8456,Asia/Makassar,IDR,JKT,50,country_fallback
+Lençóis,Bahia,Brazil,South America,5112,Sao Paulo,CITY,-23.5489433,-46.6388182,America/Sao_Paulo,BRL,GRU,50,country_fallback
+Zacatecas,Zacatecas State,Mexico,North America,32422,Zacatecas,REGION,22.770732,-102.580208,America/Monterrey,MXN,,100,direct_match
+Interlaken,Bernese Oberland,Switzerland,Europe,5011,Interlaken,CITY,46.6859853,7.8673189,Europe/Zurich,USD,ZIN,100,direct_match
+Udine,Friuli Venezia Giulia,Italy,Europe,511,Rome,CITY,41.8954656,12.4823243,Europe/Rome,EUR,ROM,50,country_fallback
+Napa,Napa Valley,USA,North America,645,Los Angeles,CITY,33.99119577,-118.42918396,US/Pacific,USD,LAX,50,country_fallback
+Knysna,Garden Route,South Africa,Africa,50538,Knysna,CITY,-34.03577,23.0519,Africa/Johannesburg,ZAR,,100,direct_match
+Tavira,The Algarve,Portugal,Europe,538,Lisbon,CITY,38.7252,-9.15,Europe/Lisbon,EUR,LIS,50,country_fallback
+Makassar,South Sulawesi,Indonesia,Asia,50590,Makassar,CITY,-5.13732,119.428238,Asia/Makassar,IDR,,100,direct_match
+A Coruña,Rías Altas,Spain,Europe,566,Madrid,CITY,40.4166909,-3.7003454,Europe/Madrid,EUR,MAD,50,country_fallback
+Manzanillo,Central Pacific Coast,Mexico,North America,4337,Manzanillo,CITY,19.11381,-104.33846,America/Mexico_City,MXN,ZLO,100,direct_match
+Isla Bastimentos,Archipiélago de Bocas del Toro,Panama,North America,4510,Colon,CITY,9.33529,-79.94165,America/Panama,USD,ONX,50,country_fallback
+Stratford-upon-Avon,Warwickshire,UK,Europe,22393,Stratford-upon-Avon,CITY,52.19173,-1.7083,Europe/London,GBP,,100,direct_match
+Volterra,Central Tuscany,Italy,Europe,511,Rome,CITY,41.8954656,12.4823243,Europe/Rome,EUR,ROM,50,country_fallback
+Ella,The Hill Country,Sri Lanka,Asia,60470,Ella,CITY,6.86888758931032,81.0461450212671,Indian/Antananarivo,LKR,,100,direct_match
+Murcia,Murcia Province,Spain,Europe,50360,Murcia,CITY,37.9922,-1.1307,Europe/Madrid,EUR,MJV,100,direct_match
+Alter do Chão,Pará,Brazil,South America,5112,Sao Paulo,CITY,-23.5489433,-46.6388182,America/Sao_Paulo,BRL,GRU,50,country_fallback
+Grenoble,Dauphiné,France,Europe,27067,Grenoble,CITY,45.18853,5.72452,Europe/Paris,EUR,GNB,100,direct_match
+Puerto Jiménez,To Corcovado via Puerto Jiménez,Costa Rica,North America,23316,Puerto Jiménez,CITY,8.527274,-83.303112,America/Costa_Rica,USD,PJM,100,direct_match
+Mantua,Central Lombardy,Italy,Europe,26732,Mantua,CITY,45.15642,10.79138,Europe/Rome,EUR,,100,direct_match
+Loja,Southern Highlands,Ecuador,South America,735,Quito,CITY,-0.229498,-78.524277,America/Guayaquil,USD,UIO,50,country_fallback
+Charlotte,Central North Carolina,USA,North America,5284,Charlotte,CITY,35.22709,-80.84313,US/Eastern,USD,CLT,100,direct_match
+Épernay,Marne,France,Europe,51197,Epernay,CITY,49.039801,3.955169,,EUR,,86,fuzzy_validated
+Ragusa,Southeastern Sicily,Italy,Europe,26225,Ragusa,CITY,36.92693,14.72551,Europe/Rome,EUR,,100,direct_match
+Kingston,"Kingston, Blue Mountains & the Southeast Coast",Jamaica,North America,22634,Kingston,CITY,18.018593,-76.80874,America/Jamaica,USD,ISO,100,direct_match
+Gili Meno,Gili Islands,Indonesia,Asia,4633,Jakarta,CITY,-6.20876,106.8456,Asia/Makassar,IDR,JKT,50,country_fallback
+Ronda,Málaga Province,Spain,Europe,566,Madrid,CITY,40.4166909,-3.7003454,Europe/Madrid,EUR,MAD,50,country_fallback
+Jerash,Northwestern Jordan,Jordan,Asia,5503,Amman,CITY,31.949381,35.932911,Asia/Amman,USD,AMM,50,country_fallback
+Viñales,Valle de Viñales,Cuba,North America,30970,Trinidad,REGION,10.6918,-61.2225,America/Port_of_Spain,USD,,50,country_fallback
+Leeuwarden,Friesland,Netherlands,Europe,26514,Leeuwarden,CITY,53.201424,5.795928,Europe/Amsterdam,EUR,,100,direct_match
+Peniche,Estremadura,Portugal,Europe,538,Lisbon,CITY,38.7252,-9.15,Europe/Lisbon,EUR,LIS,50,country_fallback
+Villa de Leyva,Boyacá,Colombia,South America,50397,Villa de Leyva,CITY,5.6365,-73.5271,America/Bogota,COP,,100,direct_match
+Jacó,Puntarenas to Quepos,Costa Rica,North America,25463,San Jose,CITY,37.33939,-121.89496,America/Los_Angeles,USD,SJC,50,country_fallback
+Moalboal,Cebu,Philippines,Asia,4674,Manila,CITY,14.5995124,120.9842195,Asia/Manila,PHP,MNL,50,country_fallback
+Fairbanks,Fairbanks Region,USA,North America,5269,Fairbanks,CITY,64.837778,-147.716389,America/Anchorage,USD,FAI,100,direct_match
+Haarlem,North Holland,Netherlands,Europe,26223,Haarlem,CITY,52.387385,4.64794,Europe/Amsterdam,EUR,,100,direct_match
+Phitsanulok,Phitsanulok Province,Thailand,Asia,343,Bangkok,CITY,13.7234186,100.4762319,Asia/Bangkok,THB,BKK,50,country_fallback
+Modica,Southeastern Sicily,Italy,Europe,511,Rome,CITY,41.8954656,12.4823243,Europe/Rome,EUR,ROM,50,country_fallback
+Cholula,East of Mexico City,Mexico,North America,631,Cancun,CITY,21.158964,-86.845937,US/Eastern,MXN,CUN,50,country_fallback
+Franschhoek,Winelands,South Africa,Africa,24379,Franschhoek,CITY,-33.89748,19.15233,Africa/Johannesburg,ZAR,,100,direct_match
+Montezuma,Southern Peninsula,Costa Rica,North America,25463,San Jose,CITY,37.33939,-121.89496,America/Los_Angeles,USD,SJC,50,country_fallback
+Metz,Lorraine,France,Europe,479,Paris,CITY,48.8566667,2.3509871,Europe/Paris,EUR,CDG,50,country_fallback
+Diu,Gujarat & Diu,India,Asia,52178,Diu,CITY,20.397373,72.832802,,INR,,100,direct_match
+Aurangabad,Maharashtra,India,Asia,23226,Aurangabad,CITY,19.87545,75.345016,Asia/Kolkata,INR,IXU,100,direct_match
+Szentendre,Danube Bend & Western Transdanubia,Hungary,Europe,25268,Szentendre,CITY,47.67953,19.06686,Europe/Budapest,USD,,100,direct_match
+Salalah,Dhofar,Oman,Asia,4391,Salalah,CITY,17.0563199,53.972339,Asia/Muscat,USD,SLL,100,direct_match
+Rockhampton,Capricorn Coast & the Southern Reef Islands,Australia,Australia,4413,Sydney,CITY,46.0661,-60.18,America/Glace_Bay,CAD,YQY,50,country_fallback
+Santa Marta,Santa Marta & Around,Colombia,South America,4520,Santa Marta,CITY,11.241944,-74.205278,America/Bogota,COP,SMR,100,direct_match
+Besançon,The Jura Mountains,France,Europe,5044,Besancon,CITY,47.242859,6.020023,Europe/Paris,EUR,DLE,88,fuzzy_validated
+Oban,"Oban, Mull & Tiree",UK,Europe,4255,Oban,CITY,56.41516,-5.47105,Europe/London,GBP,OBN,100,direct_match
+Ancona,Le Marche,Italy,Europe,33315,Ancona,CITY,43.615383,13.520901,Europe/Rome,EUR,AOI,100,direct_match
+Taichung,Western Taiwan,Taiwan,Asia,4678,Taichung,CITY,24.151424,120.665195,Asia/Taipei,TWD,TXG,100,direct_match
+Positano,The Amalfi Coast,Italy,Europe,33602,Positano,CITY,40.62803,14.484938,Europe/Rome,EUR,,100,direct_match
+Shymkent,Southern Kazakhstan,Kazakhstan,Asia,51582,Shymkent,CITY,42.339282,69.574815,,USD,,100,direct_match
+Nazaré,Estremadura,Portugal,Europe,538,Lisbon,CITY,38.7252,-9.15,Europe/Lisbon,EUR,LIS,50,country_fallback
+Oristano,Western Sardinia,Italy,Europe,511,Rome,CITY,41.8954656,12.4823243,Europe/Rome,EUR,ROM,50,country_fallback
+Den Bosch,Noord Brabant,Netherlands,Europe,,,,,,,,,,
+Nancy,Lorraine,France,Europe,50411,Nancy,CITY,48.690781,6.18246,Europe/Paris,EUR,ENC,100,direct_match
+Chau Doc,Mekong Delta,Vietnam,Asia,352,Ho Chi Minh City,CITY,10.7694444,106.6819444,Asia/Ho_Chi_Minh,VND,SGN,50,country_fallback
+Viana do Castelo,The Minho,Portugal,Europe,538,Lisbon,CITY,38.7252,-9.15,Europe/Lisbon,EUR,LIS,50,country_fallback
+Puerto Montt,The Lakes District,Chile,South America,4415,Puerto Montt,CITY,-41.468917,-72.941136,America/Santiago,USD,PMC,100,direct_match
+Chattanooga,East Tennessee,USA,North America,27404,Chattanooga,CITY,35.04563,-85.30968,America/New_York,USD,CHA,100,direct_match
+Baden-Baden,The Black Forest,Germany,Europe,488,Berlin,CITY,52.5234051,13.4113999,Europe/Berlin,EUR,BER,50,country_fallback
+Tozeur,The Jerid,Tunisia,Africa,50631,Tozeur,CITY,33.921452,8.12964,Africa/Tunis,USD,,100,direct_match
+Malabo,Bioko Island,Equatorial Guinea,Africa,,,,,,,,,,
+Taxco,South of Mexico City,Mexico,North America,50698,Taxco,CITY,18.54857,-99.60853,America/Mexico_City,MXN,,100,direct_match
+Uvita,Quepos to Uvita,Costa Rica,North America,25463,San Jose,CITY,37.33939,-121.89496,America/Los_Angeles,USD,SJC,50,country_fallback
+Carcassonne,Bas-Languedoc,France,Europe,22036,Carcassonne,CITY,43.212003,2.355987,Europe/Paris,EUR,CCF,100,direct_match
+Treviso,The Veneto,Italy,Europe,29720,Treviso,CITY,45.66689,12.24304,Europe/Rome,EUR,TSF,100,direct_match
+Ponce,Ponce & South Coast,Puerto Rico,North America,50300,San Juan,CITY,-31.5351,-68.5386,America/Argentina/San_Juan,ARS,,50,country_fallback
+Hora (Mykonos),Mykonos,Greece,Europe,496,Athens,CITY,37.9439267525,23.695192337,Europe/Athens,EUR,ATH,50,country_fallback
+Unawatuna,The South,Sri Lanka,Asia,4619,Colombo,CITY,6.9218374,79.8211859,Asia/Colombo,USD,CMB,50,country_fallback
+Madurai,Tamil Nadu,India,Asia,26847,Madurai,CITY,9.9252,78.11978,Asia/Kolkata,INR,IXM,100,direct_match
+San Gil,Santander,Colombia,South America,50399,San Gil,CITY,6.5548,-73.1341,America/Bogota,COP,,100,direct_match
+Leuven,Flemish Brabant,Belgium,Europe,458,Brussels,CITY,50.8462807,4.3547273,Europe/Brussels,EUR,BRU,50,country_fallback
+Stirling,Stirling Region,UK,Europe,22938,Stirling,CITY,56.11652,-3.9369,Europe/London,GBP,,100,direct_match
+Ayvalık,İzmir & the North Aegean,Turkey,Europe,585,Istanbul,CITY,41.0033342172,28.9792728424,Europe/Istanbul,TRY,IST,50,country_fallback
+Malang,East Java,Indonesia,Asia,50503,Malang,CITY,-7.96662,112.632629,Asia/Jakarta,IDR,,100,direct_match
+Tetouan,Rif Mountains,Morocco,Africa,50439,Tetouan,CITY,35.567211,-5.37162,Africa/Casablanca,USD,,100,direct_match
+Mar del Plata,Atlantic Coast,Argentina,South America,36397,Mar del Plata,CITY,-38.0174836,-59.8417537,America/Argentina/Buenos_Aires,ARS,MDQ,100,direct_match
+Pollença,Northern Mallorca,Spain,Europe,566,Madrid,CITY,40.4166909,-3.7003454,Europe/Madrid,EUR,MAD,50,country_fallback
+Fort William,West Highlands,UK,Europe,22391,Fort William,CITY,56.819864,-5.103285,Europe/London,GBP,,100,direct_match
+Mainz,Frankfurt Region,Germany,Europe,28883,Mainz,CITY,49.99286,8.24725,Europe/Berlin,EUR,QMZ,100,direct_match
+Johor Bahru,Johor,Malaysia,Asia,34206,Johor Bahru,CITY,1.492855,103.742403,Asia/Kuala_Lumpur,MYR,,100,direct_match
+Padang,West Sumatra,Indonesia,Asia,50844,Padang,CITY,-0.9452244693,100.4211366013,,IDR,,100,direct_match
+Petropavlovsk-Kamchatsky,Kamchatka,Russia,Asia,5403,St Petersburg,CITY,27.75224,-82.631154,US/Eastern,USD,PIE,50,country_fallback
+Tralee,Northern Kerry,Ireland,Europe,24332,Tralee,CITY,52.271288,-9.699363,Europe/Dublin,EUR,KIR,100,direct_match
+Berchtesgaden,Bavarian Alps,Germany,Europe,50870,Berchtesgaden,CITY,47.6365255086,13.000035201,,EUR,,100,direct_match
+Kilifi,North Coast,Kenya,Africa,5280,Nairobi,CITY,-1.28333,36.81667,Africa/Nairobi,USD,NBO,50,country_fallback
+Ulcinj,Adriatic Coast,Montenegro,Europe,26108,Podgorica,CITY,42.430901,19.260416,Europe/Podgorica,EUR,TGD,50,country_fallback
+Ericeira,Greater Lisbon,Portugal,Europe,4539,Terceira,CITY,38.722602,-27.214643,Atlantic/Azores,EUR,TER,88,fuzzy_validated
+Corralejo,Northern Fuerteventura,Spain,Africa,566,Madrid,CITY,40.4166909,-3.7003454,Europe/Madrid,EUR,MAD,50,country_fallback
+Ulm,Swabian Alps Region,Germany,Europe,488,Berlin,CITY,52.5234051,13.4113999,Europe/Berlin,EUR,BER,50,country_fallback
+Mae Sot,Tak Province,Thailand,Asia,343,Bangkok,CITY,13.7234186,100.4762319,Asia/Bangkok,THB,BKK,50,country_fallback
+Sassari,Northwestern Sardinia,Italy,Europe,511,Rome,CITY,41.8954656,12.4823243,Europe/Rome,EUR,ROM,50,country_fallback
+Burgas,Black Sea Coast,Bulgaria,Europe,50308,Burgas,CITY,42.5048,27.4626,Europe/Sofia,USD,,100,direct_match
+Elounda,Lasithi Province,Greece,Europe,496,Athens,CITY,37.9439267525,23.695192337,Europe/Athens,EUR,ATH,50,country_fallback
+Playa Sámara,Central Peninsula,Costa Rica,North America,25463,San Jose,CITY,37.33939,-121.89496,America/Los_Angeles,USD,SJC,50,country_fallback
+Mindelo,São Vicente,Cape Verde,Africa,50310,Mindelo,CITY,16.8765,-24.9813,Atlantic/Cape_Verde,USD,,100,direct_match
+Aachen,Northern Rhineland,Germany,Europe,488,Berlin,CITY,52.5234051,13.4113999,Europe/Berlin,EUR,BER,50,country_fallback
+Spoleto,Umbria,Italy,Europe,511,Rome,CITY,41.8954656,12.4823243,Europe/Rome,EUR,ROM,50,country_fallback
+Sibiu,Saxon Land,Romania,Europe,22624,Sibiu,CITY,45.79833,24.12558,Europe/Bucharest,USD,SBZ,100,direct_match
+Puerto Maldonado,Amazon Basin,Peru,South America,23267,Puerto Maldonado,CITY,-12.591268,-69.195715,America/Lima,PEN,PEM,100,direct_match
+Kupang,West Timor,Indonesia,Asia,4633,Jakarta,CITY,-6.20876,106.8456,Asia/Makassar,IDR,JKT,50,country_fallback
+Cabo San Lucas,Southern Baja,Mexico,North America,50859,Cabo San Lucas,CITY,22.8923509454,-109.9162612547,,MXN,,100,direct_match
+Kunming,Central Yunnan,China,Asia,22633,Kunming,CITY,24.88763,102.854847,Asia/Shanghai,CNY,,100,direct_match
+Óbidos,Estremadura,Portugal,Europe,538,Lisbon,CITY,38.7252,-9.15,Europe/Lisbon,EUR,LIS,50,country_fallback
+Senggigi,West Lombok,Indonesia,Asia,4633,Jakarta,CITY,-6.20876,106.8456,Asia/Makassar,IDR,JKT,50,country_fallback
+Sóller,Serra de Tramuntana,Spain,Europe,566,Madrid,CITY,40.4166909,-3.7003454,Europe/Madrid,EUR,MAD,50,country_fallback
+Guilin,Guangxi,China,Asia,323,Guilin,CITY,25.273567,110.290195,Asia/Chongqing,CNY,KWL,100,direct_match
+Tangalla & Around,The South,Sri Lanka,Asia,773,Niagara Falls & Around,CITY,43.086007,-79.097866,America/Toronto,CAD,IAG,72,fuzzy_original_validated
+Nikkō,Around Tokyo,Japan,Asia,334,Tokyo,CITY,35.6894875,139.6917064,Asia/Tokyo,JPY,TYO,50,country_fallback
+Santa Catalina,Veraguas Province,Panama,North America,24784,Santa Catalina,CITY,7.639288,-81.261703,America/Panama,USD,,100,direct_match
+Munnar,Kerala's Western Ghats,India,Asia,25293,Munnar,CITY,10.0806491,77.0466683,Asia/Kolkata,INR,,100,direct_match
+Chamarel,The West,Mauritius,Africa,40690,Chamarel,CITY,-20.4252935,57.3892198,Indian/Mauritius,USD,,100,direct_match
+Esztergom,Danube Bend & Western Transdanubia,Hungary,Europe,499,Budapest,CITY,47.4984056,19.0407578,Europe/Budapest,USD,BUD,50,country_fallback
+Chetumal,Costa Maya & Southern Caribbean Coast,Mexico,North America,631,Cancun,CITY,21.158964,-86.845937,US/Eastern,MXN,CUN,50,country_fallback
+Manado,North Sulawesi,Indonesia,Asia,50663,Manado,CITY,1.46938,124.84433,Asia/Makassar,IDR,,100,direct_match
+Ollantaytambo,The Sacred Valley,Peru,South America,928,Lima,CITY,-12.0433333,-77.0283333,America/Lima,PEN,LIM,50,country_fallback
+Orvieto,Umbria,Italy,Europe,22810,Orvieto,CITY,42.71851,12.11074,Europe/Rome,EUR,PEG,100,direct_match
+Nusa Penida,Nusa Lembongan & Islands,Indonesia,Asia,60448,Nusa Penida,CITY,-8.7238535721829,115.545021410152,Asia/Makassar,IDR,,100,direct_match
+San Luis Potosí,San Luis Potosí State,Mexico,North America,22826,San Luis Potosí,REGION,22.1515,-100.9796,America/Mexico_City,MXN,,100,direct_match
+Beaune,Côte d'Or,France,Europe,22737,Beaune,CITY,47.02603,4.84,Europe/Paris,EUR,,100,direct_match
+Trapani,Western Sicily,Italy,Europe,23401,Trapani,CITY,38.017618,12.537202,Europe/Rome,EUR,TPS,100,direct_match
+Oia,Santorini,Greece,Europe,28080,Oita,CITY,33.23956,131.60927,Asia/Tokyo,JPY,OIT,86,fuzzy_validated
+Seogwipo,Southern Jeju-do,South Korea,Asia,50287,Seogwipo,CITY,33.2541,126.5601,Asia/Seoul,KRW,,100,direct_match
+Nizwa,Hajar Mountains,Oman,Asia,50446,Nizwa,CITY,22.91745,57.6325,Asia/Muscat,USD,,100,direct_match
+Prachuap Khiri Khan,Hua Hin & the Upper Gulf,Thailand,Asia,343,Bangkok,CITY,13.7234186,100.4762319,Asia/Bangkok,THB,BKK,50,country_fallback
+Vigan,North Luzon,Philippines,Asia,4674,Manila,CITY,14.5995124,120.9842195,Asia/Manila,PHP,MNL,50,country_fallback
+Viña Del Mar,Valparaíso & the Central Coast,Chile,South America,50627,Vina del Mar,CITY,-33.02463,-71.55181,America/Santiago,USD,,92,fuzzy_validated
+Katowice,Upper Silesia,Poland,Europe,528,Warsaw,CITY,52.2296756,21.0122287,Europe/Warsaw,PLN,WAW,50,country_fallback
+Ramallah,West Bank,Palestine,Asia,,,,,,,,,,
+Fortaleza,Ceará,Brazil,South America,830,Fortaleza,CITY,-3.7183943,-38.5433948,America/Fortaleza,BRL,FOR,100,direct_match
+Vejer de la Frontera,Southeast Cádiz Province & the Costa de la Luz,Spain,Europe,566,Madrid,CITY,40.4166909,-3.7003454,Europe/Madrid,EUR,MAD,50,country_fallback
+Chur,Graubünden,Switzerland,Europe,24631,Chur,CITY,46.85068,9.532369,Europe/Zurich,USD,,100,direct_match
+Tomar,Ribatejo,Portugal,Europe,538,Lisbon,CITY,38.7252,-9.15,Europe/Lisbon,EUR,LIS,50,country_fallback
+Toluca,West of Mexico City,Mexico,North America,631,Cancun,CITY,21.158964,-86.845937,US/Eastern,MXN,CUN,50,country_fallback
+Constanţa,Black Sea Coast & Littoral,Romania,Europe,23890,Constanta,CITY,44.160076,28.636966,Europe/Bucharest,USD,,89,fuzzy_validated
+Port of Spain,Trinidad,Trinidad and Tobago,South America,4378,Port Said,CITY,31.268302,32.309885,Africa/Cairo,USD,PSD,73,fuzzy_validated
+Herceg Novi,Bay of Kotor,Montenegro,Europe,50433,Herceg-Novi Municipality,CITY,42.45306,18.53724,Europe/Podgorica,EUR,,100,fuzzy_validated
+Libreville,Gabon,Gabon,Africa,51613,Libreville,CITY,0.394217,9.449357,,USD,,100,direct_match
+Bucaramanga,Santander,Colombia,South America,33622,Bucaramanga,CITY,7.11912,-73.118645,America/Bogota,COP,BGA,100,direct_match
+Cefalù,Tyrrhenian Coast,Italy,Europe,26110,Cefalù,CITY,38.033676,14.018093,Europe/Rome,EUR,,100,direct_match
+Keszthely,Lake Balaton & Southern Transdanubia,Hungary,Europe,499,Budapest,CITY,47.4984056,19.0407578,Europe/Budapest,USD,BUD,50,country_fallback
+Sopot,Gdańsk & Pomerania,Poland,Europe,528,Warsaw,CITY,52.2296756,21.0122287,Europe/Warsaw,PLN,WAW,50,country_fallback
+Marsala,Western Sicily,Italy,Europe,511,Rome,CITY,41.8954656,12.4823243,Europe/Rome,EUR,ROM,50,country_fallback
+St John's,Newfoundland & Labrador,Canada,North America,28792,St John's,CITY,47.56054,-52.71283,America/St_Johns,CAD,YYT,100,direct_match
+Margaret River,Margaret River Region,Australia,Australia,24851,Margaret River,CITY,-33.955192,115.077405,Australia/Perth,AUD,MQZ,100,direct_match
+Olomouc,Moravia,Czech Republic,Europe,462,Prague,CITY,50.0878114,14.4204598,Europe/Prague,USD,PRG,50,country_fallback
+Iquique,Norte Grande,Chile,South America,22811,Iquique,CITY,-20.2448127,-70.1738689,America/Santiago,USD,IQQ,100,direct_match
+Zipolite,Oaxaca Coast,Mexico,North America,631,Cancun,CITY,21.158964,-86.845937,US/Eastern,MXN,CUN,50,country_fallback
+Orléans,Orléanais,France,Europe,479,Paris,CITY,48.8566667,2.3509871,Europe/Paris,EUR,CDG,50,country_fallback
+Taiping,Perak,Malaysia,Asia,335,Kuala Lumpur,CITY,3.139003,101.686855,Asia/Kuala_Lumpur,MYR,KUL,50,country_fallback
+Valldemossa,Serra de Tramuntana,Spain,Europe,566,Madrid,CITY,40.4166909,-3.7003454,Europe/Madrid,EUR,MAD,50,country_fallback
+Tena,The Northern Oriente,Ecuador,South America,24270,Tena,CITY,-0.996444,-77.812815,America/Guayaquil,USD,,100,direct_match
+Lugano,Lago di Lugano,Switzerland,Europe,26381,Lugano,CITY,46.00347,8.953681,Europe/Zurich,USD,LUG,100,direct_match
+Guatapé,Around Medellín,Colombia,South America,5562,Cali,CITY,3.420556,-76.522222,America/Bogota,COP,CLO,50,country_fallback
+Vaduz,Liechtenstein,Liechtenstein,Europe,50933,Vaduz,CITY,47.167938,9.512335,,CHF,,100,direct_match
+Puerto Morelos,Riviera Maya,Mexico,North America,631,Cancun,CITY,21.158964,-86.845937,US/Eastern,MXN,CUN,50,country_fallback
+Brazzaville,Republic of Congo,Republic of the Congo,Africa,,,,,,,,,,
+Halifax,Nova Scotia,Canada,North America,4403,Halifax,CITY,44.854444,-63.199167,America/Halifax,CAD,YHZ,100,direct_match
+Pushkar,Eastern Rajasthan,India,Asia,50259,Pushkar,CITY,26.4886,74.5509,Asia/Kolkata,INR,,100,direct_match
+Mussoorie,Uttarakhand,India,Asia,953,Mumbai,CITY,19.017615,72.856164,Asia/Kolkata,INR,BOM,50,country_fallback
+Klaipėda,Western Lithuania,Lithuania,Europe,4209,Klaipeda,CITY,55.703664,21.145953,Etc/GMT,EUR,PLQ,88,fuzzy_validated
+San Pedro de Atacama,Norte Grande,Chile,South America,5499,San Pedro de Atacama,CITY,-22.908707,-68.199716,America/Santiago,USD,CJC,100,direct_match
+Amboise,Touraine,France,Europe,479,Paris,CITY,48.8566667,2.3509871,Europe/Paris,EUR,CDG,50,country_fallback
+Bamberg,Nuremberg & Franconia,Germany,Europe,4964,Bamberg,CITY,49.891861,10.89353,Europe/Berlin,EUR,NUE,100,direct_match
+Sigiriya,The Ancient Cities,Sri Lanka,Asia,25903,Sigiriya,CITY,7.954125,80.755114,Asia/Colombo,USD,,100,direct_match
+Praia da Pipa,Rio Grande do Norte,Brazil,South America,51023,Praia da Vitória,CITY,38.729286,-27.060999,,EUR,,76,fuzzy_validated
+Tepoztlán,South of Mexico City,Mexico,North America,631,Cancun,CITY,21.158964,-86.845937,US/Eastern,MXN,CUN,50,country_fallback
+Cobán,Alta & Baja Verapaz,Guatemala,North America,25292,Quetzaltenango,CITY,14.851577,-91.523542,America/Guatemala,USD,,50,country_fallback
+Taitung,Eastern Taiwan & Taroko National Park,Taiwan,Asia,51554,Taitung,CITY,22.88361,121.04833,,TWD,,100,direct_match
+San Antonio de Areco,Northern Pampas,Argentina,South America,50316,San Antonio De Belen,CITY,9.98,-84.1853,America/Costa_Rica,USD,,80,fuzzy_validated
+Ajaccio,The Northwest Coast,France,Europe,4192,Ajaccio,CITY,41.917915,8.74102,Etc/GMT+1,EUR,CCI,100,direct_match
+Ravello,The Amalfi Coast,Italy,Europe,511,Rome,CITY,41.8954656,12.4823243,Europe/Rome,EUR,ROM,50,country_fallback
+Aguas Calientes,Cuzco & the Sacred Valley,Peru,South America,928,Lima,CITY,-12.0433333,-77.0283333,America/Lima,PEN,LIM,50,country_fallback
+Guimarães,The Minho,Portugal,Europe,538,Lisbon,CITY,38.7252,-9.15,Europe/Lisbon,EUR,LIS,50,country_fallback
+Agios Nikolaos,Lasithi Province,Greece,Europe,50331,Agios Nikolaos,CITY,35.19,25.7164,Europe/Athens,EUR,,100,direct_match
+Sagres,Costa Vicentina,Portugal,Europe,538,Lisbon,CITY,38.7252,-9.15,Europe/Lisbon,EUR,LIS,50,country_fallback
+Hermanus,The Overberg,South Africa,Africa,23347,Hermanus,CITY,-34.409303,19.250575,Africa/Johannesburg,ZAR,,100,direct_match
+Ciutadella,Menorca,Spain,Europe,566,Madrid,CITY,40.4166909,-3.7003454,Europe/Madrid,EUR,MAD,50,country_fallback
+Çanakkale,Thrace & Marmara,Turkey,Europe,24273,Canakkale,CITY,40.147617,26.413778,Europe/Istanbul,TRY,,89,fuzzy_validated
+Pereira,Zona Cafetera,Colombia,South America,28161,Pereira,CITY,4.80872,-75.6906,America/Bogota,COP,PEI,100,direct_match
+Karachi,Karachi & Sindh,Pakistan,Asia,50447,Karachi,CITY,24.860735,67.001137,Asia/Karachi,USD,,100,direct_match
+Šibenik,Šibenik-Knin Region,Croatia,Europe,28791,Šibenik,CITY,43.73502,15.8952,Europe/Zagreb,USD,,100,direct_match
+Bonn,Northern Rhineland,Germany,Europe,27429,Bonn,CITY,50.73743,7.09821,Europe/Berlin,EUR,,100,direct_match
+Vung Tau,Southeast Coast,Vietnam,Asia,25711,Vung Tau,CITY,10.411284,107.139116,Asia/Ho_Chi_Minh,VND,,100,direct_match
+Tofino,Vancouver Island,Canada,North America,623,Toronto,CITY,43.6525,-79.3816667,America/Toronto,CAD,YTO,50,country_fallback
+Puerto Ayora,Isla Santa Cruz (Indefatigable),Ecuador,South America,50235,Puerto Ayora,CITY,-0.7433,-90.3157,Pacific/Galapagos,USD,,100,direct_match
+Tapachula,Tapachula Region,Mexico,North America,631,Cancun,CITY,21.158964,-86.845937,US/Eastern,MXN,CUN,50,country_fallback
+Marsa Alam,Red Sea Coast,Egypt,Africa,25556,Marsa Alam,CITY,25.068096,34.88114,Africa/Cairo,USD,RMF,100,direct_match
+Ensenada,Northern Baja,Mexico,North America,26218,Ensenada,CITY,31.864706,-116.591901,America/Tijuana,MXN,,100,direct_match
+Canterbury,Kent,UK,Europe,25980,Canterbury,CITY,-43.6,172.0,Pacific/Auckland,NZD,,100,direct_match
+Suzhou,Jiangsu,China,Asia,28824,Suzhou,CITY,31.29898,120.58529,Asia/Shanghai,CNY,SZV,100,direct_match
+Calgary,Alberta,Canada,North America,817,Calgary,CITY,51.045,-114.0572222,America/Edmonton,CAD,YYC,100,direct_match
+Pinhão,Alto Douro,Portugal,Europe,538,Lisbon,CITY,38.7252,-9.15,Europe/Lisbon,EUR,LIS,50,country_fallback
+Graz,Styria,Austria,Europe,452,Graz,CITY,47.070714,15.439504,Europe/Vienna,EUR,GRZ,100,direct_match
+Olbia,Northeastern Sardinia,Italy,Europe,4231,Olbia,CITY,40.922207,9.5003,Europe/Rome,EUR,OLB,100,direct_match
+Szczecin,Northern & Western Pomerania,Poland,Europe,4537,Szczecin,CITY,53.428982,14.553775,Europe/Warsaw,PLN,SZZ,100,direct_match
+Saint John,New Brunswick,Canada,North America,22871,Saint John,CITY,45.27332,-66.06331,America/Moncton,CAD,YSJ,100,direct_match
+Sousse,East Coast,Tunisia,Africa,4466,Sousse,CITY,35.825921,10.628352,Africa/Tunis,USD,QSO,100,direct_match
+Ankara,Central Anatolia,Turkey,Asia,584,Ankara,CITY,39.92077,32.85411,Europe/Istanbul,TRY,ANK,100,direct_match
+Gangneung,Gangwon-do,South Korea,Asia,973,Seoul,CITY,37.566535,126.9779692,Asia/Seoul,KRW,SEL,50,country_fallback
+Manarola,Cinque Terre,Italy,Europe,51037,Manarola,CITY,41.285599,13.627724,,EUR,,100,direct_match
+Annecy,Savoie,France,Europe,5437,Annecy,CITY,45.898879,6.128787,Europe/Paris,EUR,NCY,100,direct_match
+Armenia,Zona Cafetera,Colombia,South America,29967,Armenia,CITY,4.535,-75.67569,America/Bogota,COP,AXM,100,direct_match
+Enna,Central Sicily,Italy,Europe,511,Rome,CITY,41.8954656,12.4823243,Europe/Rome,EUR,ROM,50,country_fallback
+Rovinj,Istria's West Coast,Croatia,Europe,32799,Rovinj,CITY,45.081023,13.639539,Europe/Zagreb,USD,,100,direct_match
+Kumasi,Ghana,Ghana,Africa,5535,Kumasi,CITY,6.688831287,-1.6183833126,Africa/Accra,USD,KMS,100,direct_match
+Mamallapuram (Mahabalipuram),Tamil Nadu,India,Asia,953,Mumbai,CITY,19.017615,72.856164,Asia/Kolkata,INR,BOM,50,country_fallback
+Walvis Bay,Namibia,Namibia,Africa,4467,Walvis Bay,CITY,-22.939369,14.526119,Africa/Windhoek,USD,WVB,100,direct_match
+Guangzhou,Guangdong,China,Asia,4451,Guangzhou,CITY,23.129163,113.264435,Asia/Shanghai,CNY,CAN,100,direct_match
+Hammamet,Cap Bon,Tunisia,Africa,4457,Hammamet,CITY,36.406923,10.620003,Africa/Tunis,USD,NBE,100,direct_match
+Varkala,Southern Kerala,India,Asia,953,Mumbai,CITY,19.017615,72.856164,Asia/Kolkata,INR,BOM,50,country_fallback
+Grindelwald,Bernese Oberland,Switzerland,Europe,34153,Grindelwald,CITY,46.62407,8.042141,Europe/Zurich,USD,,100,direct_match
+Ierapetra,Lasithi Province,Greece,Europe,496,Athens,CITY,37.9439267525,23.695192337,Europe/Athens,EUR,ATH,50,country_fallback
+Portorož,Slovenian Coast,Slovenia,Europe,26879,Porto,CITY,41.15794,-8.62911,Europe/Lisbon,EUR,OPO,77,fuzzy_validated
+Antibes,Côte d'Azur,France,Europe,21941,Antibes,CITY,43.580333,7.127761,Europe/Paris,EUR,,100,direct_match
+Mahahual,Costa Maya & Southern Caribbean Coast,Mexico,North America,631,Cancun,CITY,21.158964,-86.845937,US/Eastern,MXN,CUN,50,country_fallback
+Shillong,Meghalaya,India,Asia,51511,Shillong,CITY,25.575272,91.888212,,INR,,100,direct_match
+Garmisch-Partenkirchen,Bavarian Alps,Germany,Europe,22133,Garmisch-Partenkirchen,CITY,47.491944,11.121738,Europe/Berlin,EUR,,100,direct_match
+Douz,Southern Tunisia,Tunisia,Africa,50632,Douz,CITY,33.459759,9.0244,Africa/Tunis,USD,,100,direct_match
+Bari,Puglia,Italy,Europe,4226,Bari,CITY,41.11714,16.87187,Europe/Rome,EUR,BRI,100,direct_match
+Amalfi,The Amalfi Coast,Italy,Europe,33601,Amalfi,CITY,40.633984,14.602795,Europe/Rome,EUR,,100,direct_match
+Kos Town,Kos,Greece,Europe,24036,Kos,CITY,36.889924,27.284936,Europe/Athens,EUR,KGS,100,direct_match
+Vang Vieng,Vientiane Region,Laos,Asia,24349,Vang Vieng,CITY,18.9194,102.4477,Asia/Vientiane,USD,,100,direct_match
+Nagarkot,The Valley Fringe,Nepal,Asia,5109,Kathmandu,CITY,27.7,85.3333333,Asia/Kathmandu,USD,KTM,50,country_fallback
+Kovalam,Southern Kerala,India,Asia,953,Mumbai,CITY,19.017615,72.856164,Asia/Kolkata,INR,BOM,50,country_fallback
+Mokpo,Jeollanam-do,South Korea,Asia,973,Seoul,CITY,37.566535,126.9779692,Asia/Seoul,KRW,SEL,50,country_fallback
+Patra,Achaïa,Greece,Europe,51222,Patras,CITY,38.237639,21.736168,,EUR,,91,fuzzy_validated
+Konstanz,Lake Constance,Germany,Europe,50871,Konstanz,CITY,47.6863861867,9.1723032108,,EUR,,100,direct_match
+Ashgabat,Turkmenistan,Turkmenistan,Asia,,,,,,,,,,
+Nassau,New Providence,Bahamas,North America,420,Nassau,CITY,25.0776696965,-77.3380851746,America/Nassau,USD,NAS,100,direct_match
+Ruse,The Danube & Northern Plains,Bulgaria,Europe,51627,Ruse,CITY,43.836669,25.960555,,USD,,100,direct_match
+Blois,Blésois,France,Europe,50324,Blois,CITY,47.5861,1.3359,Europe/Paris,EUR,,100,direct_match
+Pattaya,Ko Chang & Eastern Seaboard,Thailand,Asia,344,Pattaya,CITY,12.949117,100.888042,Asia/Bangkok,THB,PYX,100,direct_match
+Albarracín,South Aragón,Spain,Europe,51254,Albarracin,CITY,40.408367,-1.439763,,EUR,,90,fuzzy_validated
+Liberia,Interamericana Norte,Costa Rica,North America,22740,Liberia,CITY,10.634982,-85.440589,America/Costa_Rica,CRC,LIR,100,direct_match
+Thanjavur (Tanjore),Tamil Nadu,India,Asia,953,Mumbai,CITY,19.017615,72.856164,Asia/Kolkata,INR,BOM,50,country_fallback
+Banda Aceh,Aceh,Indonesia,Asia,4633,Jakarta,CITY,-6.20876,106.8456,Asia/Makassar,IDR,JKT,50,country_fallback
+Pemba,Northern Mozambique,Mozambique,Africa,,,,,,,,,,
+Antiparos,Cyclades,Greece,Europe,51216,Antiparos,CITY,37.041881,25.081787,,EUR,,100,direct_match
+Setúbal,Setúbal Peninsula,Portugal,Europe,538,Lisbon,CITY,38.7252,-9.15,Europe/Lisbon,EUR,LIS,50,country_fallback
+Edirne,Thrace & Marmara,Turkey,Europe,585,Istanbul,CITY,41.0033342172,28.9792728424,Europe/Istanbul,TRY,IST,50,country_fallback
+Bursa,Western Anatolia,Turkey,Asia,50877,Bursa,CITY,40.19167,29.06111,,TRY,,100,direct_match
+Chiang Rai,Chiang Rai Province,Thailand,Asia,5268,Chiang Rai,CITY,19.9071656,99.830955,Asia/Bangkok,THB,CEI,100,direct_match
+Sur,Eastern Coast,Oman,Asia,,,,,,,,,,
+Cape Coast,Ghana,Ghana,Africa,50502,Cape Coast,CITY,-38.370731,141.401505,Australia/Currie,USD,,100,direct_match
+Poreč,Istria's West Coast,Croatia,Europe,5391,Zagreb,CITY,45.8167,15.9833,Europe/Zagreb,USD,ZAG,50,country_fallback
+Mataram,West Lombok,Indonesia,Asia,4633,Jakarta,CITY,-6.20876,106.8456,Asia/Makassar,IDR,JKT,50,country_fallback
+Cabarete,North Coast,Dominican Republic,North America,31317,Cabarete,CITY,19.75092,-70.41442,America/Santo_Domingo,USD,POP,100,direct_match
+Padangbai,East Bali,Indonesia,Asia,4633,Jakarta,CITY,-6.20876,106.8456,Asia/Makassar,IDR,JKT,50,country_fallback
+Vittoriosa,The Three Cities,Malta,Europe,4142,Valletta,CITY,35.9009224695,14.5093989372,Europe/Malta,EUR,MLA,50,country_fallback
+Qingdao,Shandong,China,Asia,324,Qingdao,CITY,36.067117,120.382612,Asia/Shanghai,CNY,TAO,100,direct_match
+Alcúdia,Northern Mallorca,Spain,Europe,51003,Alcudia,CITY,39.86072,3.118993,,EUR,,86,fuzzy_validated
+Sayulita,Central Pacific Coast,Mexico,North America,24342,Sayulita,CITY,20.868782,-105.440508,America/Bahia_Banderas,MXN,PVR,100,direct_match
+Portobelo,Colón Province,Panama,North America,4445,Porto Belo,CITY,-27.154703,-48.575912,America/Sao_Paulo,BRL,NVT,95,fuzzy_validated
+Ocho Rios,"Ocho Rios, Port Antonio & the North Coast",Jamaica,North America,434,Ocho Rios,CITY,18.4076319856,-77.0749282837,America/Jamaica,USD,OCJ,100,direct_match
+Göreme,Cappadocia,Turkey,Europe,585,Istanbul,CITY,41.0033342172,28.9792728424,Europe/Istanbul,TRY,IST,50,country_fallback
+Candidasa,East Bali,Indonesia,Asia,42862,Candidasa,CITY,-8.4993763,115.5652961,Asia/Makassar,IDR,,100,direct_match
+Rothenburg ob der Tauber,The Romantic Road,Germany,Europe,36690,Rothenburg,CITY,49.3658091,10.1274898,Europe/Berlin,EUR,,100,direct_match
+Trat,Ko Chang & Eastern Seaboard,Thailand,Asia,343,Bangkok,CITY,13.7234186,100.4762319,Asia/Bangkok,THB,BKK,50,country_fallback
+Jericoacoara,Ceará,Brazil,South America,33466,Jericoacoara,CITY,-2.795917,-40.513403,America/Sao_Paulo,BRL,,100,direct_match
+Providencia,San Andrés & Providencia,Colombia,South America,969,Providenciales,REGION,21.773765,-72.271908,America/Grand_Turk,USD,,88,fuzzy_validated
+Edmonton,Alberta,Canada,North America,28470,Edmonton,CITY,53.54439,-113.49093,America/Edmonton,CAD,YEA,100,direct_match
+Augsburg,The Romantic Road,Germany,Europe,34164,Augsburg,CITY,48.371316,10.902288,Europe/Berlin,EUR,AGB,100,direct_match
+Haiphong,Northeast Vietnam,Vietnam,Asia,352,Ho Chi Minh City,CITY,10.7694444,106.6819444,Asia/Ho_Chi_Minh,VND,SGN,50,country_fallback
+Tripoli,Northern Lebanon,Lebanon,Asia,4215,Beirut,CITY,33.8925049145,35.4976844788,Asia/Beirut,USD,BEY,50,country_fallback
+Bizerte,Northern Tunisia,Tunisia,Africa,30157,Tunis,CITY,36.80649,10.18153,Africa/Tunis,USD,TUN,50,country_fallback
+Sitges,Costa Daurada & Around,Spain,Europe,566,Madrid,CITY,40.4166909,-3.7003454,Europe/Madrid,EUR,MAD,50,country_fallback
+Piraeus,Around Athens,Greece,Europe,496,Athens,CITY,37.9439267525,23.695192337,Europe/Athens,EUR,ATH,50,country_fallback
+Passau,Regensburg & the Danube,Germany,Europe,25665,Passau,CITY,48.566583,13.430078,Europe/Berlin,EUR,,100,direct_match
+Todos Santos,Southern Baja,Mexico,North America,24418,Todos Santos,CITY,23.44636,-110.22651,America/Mazatlan,MXN,,100,direct_match
+Angers,Anjou,France,Europe,24202,Angers,CITY,47.478358,-0.563238,Europe/Paris,EUR,,100,direct_match
+Trabzon,Black Sea Coast,Turkey,Europe,4305,Trabzon,CITY,41.002669,39.716291,Europe/Istanbul,TRY,TZX,100,direct_match
+Dangriga,Stann Creek District,Belize,North America,25877,Dangriga,CITY,16.969441,-88.230906,America/Belize,USD,,100,direct_match
+Nanjing,Jiangsu,China,Asia,25496,Nanjing,CITY,32.063121,118.812029,Asia/Shanghai,CNY,NKG,100,direct_match
+San José del Cabo,Southern Baja,Mexico,North America,50860,San Jose del Cabo,CITY,23.0686140743,-109.7024298083,,MXN,,94,fuzzy_validated
+Haridwar,Uttarakhand,India,Asia,22303,Haridwar,CITY,29.94569,78.16425,Asia/Kolkata,INR,,100,direct_match
+Zagora,Draa Valley,Morocco,Africa,52177,Zagora,CITY,30.33241,-5.8384,,USD,,100,direct_match
+Asilah,Northern Atlantic Coast,Morocco,Africa,4396,Casablanca,CITY,33.534035,-7.585212,Africa/Casablanca,USD,CAS,50,country_fallback
+Niseko,Central Hokkaidō,Japan,Asia,334,Tokyo,CITY,35.6894875,139.6917064,Asia/Tokyo,JPY,TYO,50,country_fallback
+Asunción,Paraguay,Paraguay,South America,22635,Asunción,CITY,-25.263541,-57.573459,America/Asuncion,USD,ASU,100,direct_match
+Arrecife,Central Lanzarote,Spain,Europe,4486,Arrecife,CITY,28.965169,-13.555036,Europe/Madrid,EUR,ACE,100,direct_match
+Billund,The Interior,Denmark,Europe,33140,Billund,CITY,55.728635,9.112189,Europe/Copenhagen,DKK,BLL,100,direct_match
+Xi'an,Shaanxi,China,Asia,326,Xian,CITY,34.26488,108.944265,Asia/Chongqing,CNY,SIA,89,fuzzy_validated
+Aínsa,The Aragón Pyrenees,Spain,Europe,566,Madrid,CITY,40.4166909,-3.7003454,Europe/Madrid,EUR,MAD,50,country_fallback
+Pamplona,Navarra,Spain,Europe,22689,Pamplona,CITY,42.813116,-1.645902,Europe/Madrid,EUR,PNA,100,direct_match
+Mazunte,Oaxaca Coast,Mexico,North America,631,Cancun,CITY,21.158964,-86.845937,US/Eastern,MXN,CUN,50,country_fallback
+Nerja,Costa del Sol,Spain,Europe,566,Madrid,CITY,40.4166909,-3.7003454,Europe/Madrid,EUR,MAD,50,country_fallback
+Reggio Calabria,Calabria,Italy,Europe,511,Rome,CITY,41.8954656,12.4823243,Europe/Rome,EUR,ROM,50,country_fallback
+Bodø,Nordland Coast,Norway,Europe,902,Oslo,CITY,59.9012926321,10.7359600067,Europe/Oslo,NOK,OSL,50,country_fallback
+Ubon Ratchathani,Ubon Ratchathani Province,Thailand,Asia,343,Bangkok,CITY,13.7234186,100.4762319,Asia/Bangkok,THB,BKK,50,country_fallback
+Pakse,Pakse Region,Laos,Asia,28360,Pakse,CITY,15.11051,105.81729,Asia/Vientiane,USD,PKZ,100,direct_match
+Poprad,Tatra Mountains,Slovakia,Europe,24205,Poprad,CITY,49.050968,20.296544,Europe/Bratislava,EUR,,100,direct_match
+Incheon,Incheon Metropolitan City,South Korea,Asia,4623,Incheon,CITY,37.4761,126.6422,Asia/Seoul,KRW,ICN,100,direct_match
+Tafraoute,Anti Atlas Mountains,Morocco,Africa,51293,Tafraoute,CITY,29.716667,-8.966667,,USD,,100,direct_match
+Würzburg,The Romantic Road,Germany,Europe,31761,Wurzburg,CITY,49.79246,9.955387,Europe/Berlin,EUR,QWU,88,fuzzy_validated
+Chumphon,Hua Hin & the Upper Gulf,Thailand,Asia,343,Bangkok,CITY,13.7234186,100.4762319,Asia/Bangkok,THB,BKK,50,country_fallback
+Locarno,Lago Maggiore,Switzerland,Europe,577,Zurich,CITY,47.3690239,8.5380326,Europe/Zurich,USD,ZRH,50,country_fallback
+Ha Tien,Mekong Delta,Vietnam,Asia,352,Ho Chi Minh City,CITY,10.7694444,106.6819444,Asia/Ho_Chi_Minh,VND,SGN,50,country_fallback
+Chambéry,Savoie,France,Europe,50409,Chambery,CITY,45.5667,5.92085,Europe/Paris,EUR,CMF,88,fuzzy_validated
+Sanlúcar de Barrameda,The Sherry Triangle,Spain,Europe,566,Madrid,CITY,40.4166909,-3.7003454,Europe/Madrid,EUR,MAD,50,country_fallback
+Tianjin,China,China,Asia,25272,Tianjin,CITY,39.351305,117.368803,Asia/Shanghai,CNY,TSN,100,direct_match
+Lake Louise,Banff National Park,Canada,North America,27406,Lake Bolsena,CITY,42.606,11.95763,Europe/Rome,EUR,,70,fuzzy_validated
+Wiesbaden,Frankfurt Region,Germany,Europe,488,Berlin,CITY,52.5234051,13.4113999,Europe/Berlin,EUR,BER,50,country_fallback
+Sukhothai,Sukhothai Province,Thailand,Asia,343,Bangkok,CITY,13.7234186,100.4762319,Asia/Bangkok,THB,BKK,50,country_fallback
+Versailles,Île-de-France,France,Europe,763,Versailles,CITY,48.80233,2.1298227,Europe/Paris,EUR,,100,direct_match
+Loreto,Southern Baja,Mexico,North America,50695,Loreto,CITY,22.272261,-101.988029,America/Mexico_City,MXN,,100,direct_match
+Dakhla,Western Sahara,Morocco,Africa,51256,Dakhla,REGION,23.68477,-15.95798,,USD,,100,direct_match
+Taroudant,Souss Valley,Morocco,Africa,4396,Casablanca,CITY,33.534035,-7.585212,Africa/Casablanca,USD,CAS,50,country_fallback
+Khasab,Musandam,Oman,Asia,33746,Khasab,CITY,26.164916,56.243536,Asia/Muscat,USD,KHS,100,direct_match
+Linz,Upper Austria,Austria,Europe,28062,Linz,CITY,48.30694,14.28583,Europe/Vienna,EUR,LNZ,100,direct_match
+Mwanza,Lake Victoria,Tanzania,Africa,51451,Dar Es Salaam Region,REGION,-6.844396,39.197505,,USD,,50,country_fallback
+Willemstad,Curaçao,Netherlands,South America,50233,Willemstad,CITY,12.1224,-68.8824,America/Curacao,USD,,100,direct_match
+Las Terrenas,Península de Samaná,Dominican Republic,North America,24290,Las Terrenas,CITY,19.299599,-69.556049,America/Santo_Domingo,USD,,100,direct_match
+Zakopane,Tatras,Poland,Europe,528,Warsaw,CITY,52.2296756,21.0122287,Europe/Warsaw,PLN,WAW,50,country_fallback
+Vilcabamba,Southern Highlands,Ecuador,South America,735,Quito,CITY,-0.229498,-78.524277,America/Guayaquil,USD,UIO,50,country_fallback
+Perpignan,Roussillon,France,Europe,26343,Perpignan,CITY,42.688621,2.893383,Europe/Paris,EUR,PGF,100,direct_match
+Sirmione,Lake Garda,Italy,Europe,511,Rome,CITY,41.8954656,12.4823243,Europe/Rome,EUR,ROM,50,country_fallback
+San Patricio-Melaque,Bahía de Navidad,Mexico,North America,631,Cancun,CITY,21.158964,-86.845937,US/Eastern,MXN,CUN,50,country_fallback
+Puri,Southeastern Odisha,India,Asia,953,Mumbai,CITY,19.017615,72.856164,Asia/Kolkata,INR,BOM,50,country_fallback
+Helsingør,Northeastern Zealand,Denmark,Europe,25614,Helsingør,CITY,56.0345,12.6136,Europe/Copenhagen,DKK,AGH,100,direct_match
+Chartres,Île-de-France,France,Europe,479,Paris,CITY,48.8566667,2.3509871,Europe/Paris,EUR,CDG,50,country_fallback
+Tivat,Bay of Kotor,Montenegro,Europe,26108,Podgorica,CITY,42.430901,19.260416,Europe/Podgorica,EUR,TGD,50,country_fallback
+Cremona,Central Lombardy,Italy,Europe,51102,Carmona,CITY,37.4686,-5.649351,,EUR,,86,fuzzy_validated
+Montreux,Lake Geneva & Vaud,Switzerland,Europe,5012,Montreux,CITY,46.4333,6.9167,Europe/Zurich,USD,,100,direct_match
+Semporna,Eastern Sabah,Malaysia,Asia,50605,Semporna,CITY,4.47875,118.61084,Asia/Kuching,MYR,,100,direct_match
+Morro de São Paulo,Bahia,Brazil,South America,5112,Sao Paulo,CITY,-23.5489433,-46.6388182,America/Sao_Paulo,BRL,GRU,50,country_fallback
+Chichicastenango,Quiché,Guatemala,North America,25292,Quetzaltenango,CITY,14.851577,-91.523542,America/Guatemala,USD,,50,country_fallback
+Hvar Town,Hvar Island,Croatia,Europe,22146,Hvar,CITY,43.17295,16.44111,Europe/Zagreb,USD,,100,direct_match
+Udon Thani,Udon Thani Province,Thailand,Asia,343,Bangkok,CITY,13.7234186,100.4762319,Asia/Bangkok,THB,BKK,50,country_fallback
+Şanlıurfa,Southeastern Anatolia,Turkey,Asia,585,Istanbul,CITY,41.0033342172,28.9792728424,Europe/Istanbul,TRY,IST,50,country_fallback
+Shenzhen,Guangdong,China,Asia,27516,Shenzhen,CITY,22.5431,114.05787,Asia/Shanghai,CNY,SZX,100,direct_match
+Tarragona,Costa Daurada & Around,Spain,Europe,23038,Tarragona,CITY,41.11888,1.24449,Europe/Madrid,EUR,,100,direct_match
+Milazzo,Tyrrhenian Coast,Italy,Europe,511,Rome,CITY,41.8954656,12.4823243,Europe/Rome,EUR,ROM,50,country_fallback
+Fontainebleau,Île-de-France,France,Europe,50925,Fontainebleau,CITY,48.407104,2.704043,,EUR,,100,direct_match
+Menton,Côte d'Azur,France,Europe,23076,Menton,CITY,43.774454,7.497565,Europe/Paris,EUR,,100,direct_match
+Calvi,La Balagne,France,Europe,5562,Cali,CITY,3.420556,-76.522222,America/Bogota,COP,CLO,89,fuzzy_validated
+Orta San Giulio,Lake Orta,Italy,Europe,511,Rome,CITY,41.8954656,12.4823243,Europe/Rome,EUR,ROM,50,country_fallback
+Ullapool,North & West Coast,UK,Europe,50648,London,CITY,42.984268,-81.247528,America/Toronto,CAD,,50,country_fallback
+Batumi,Adjara,Georgia,Asia,24045,Batumi,CITY,41.618598,41.639566,Asia/Tbilisi,USD,BUS,100,direct_match
+El Puerto de Santa María,The Sherry Triangle,Spain,Europe,566,Madrid,CITY,40.4166909,-3.7003454,Europe/Madrid,EUR,MAD,50,country_fallback
+Coyhaique,Northern Patagonia,Chile,South America,50852,Santiago,REGION,15.1002186276,-23.6196009703,Atlantic/Cape_Verde,USD,,50,country_fallback
+Kelowna,Okanagan Valley,Canada,North America,623,Toronto,CITY,43.6525,-79.3816667,America/Toronto,CAD,YTO,50,country_fallback
+Whitehorse,Yukon Territory,Canada,North America,5420,Whitehorse,CITY,60.716667,-135.05,Canada/Yukon,CAD,YXY,100,direct_match
+Chongqing City,Chongqing,China,Asia,24779,Chongqing,CITY,29.56301,106.55156,Asia/Shanghai,CNY,,100,direct_match
+Silves,The Algarve,Portugal,Europe,538,Lisbon,CITY,38.7252,-9.15,Europe/Lisbon,EUR,LIS,50,country_fallback
+Plettenberg Bay,Garden Route,South Africa,Africa,51198,Plettenberg Bay,CITY,-34.050045,23.374956,Africa/Johannesburg,ZAR,,100,direct_match
+Füssen,Bavarian Alps,Germany,Europe,23184,Füssen,CITY,47.569553,10.700857,Europe/Berlin,EUR,,100,direct_match
+Al Ula,Northern Saudi Arabia,Saudi Arabia,Asia,51269,AlUla,CITY,26.523779,37.926924,,USD,,91,fuzzy_validated
+Bukit Lawang,North Sumatra,Indonesia,Asia,4633,Jakarta,CITY,-6.20876,106.8456,Asia/Makassar,IDR,JKT,50,country_fallback
+Vila Nova De Milfontes,Coastal Alentejo,Portugal,Europe,538,Lisbon,CITY,38.7252,-9.15,Europe/Lisbon,EUR,LIS,50,country_fallback
+Grado,The Friulian Coast,Italy,Europe,511,Rome,CITY,41.8954656,12.4823243,Europe/Rome,EUR,ROM,50,country_fallback
+Medan,North Sumatra,Indonesia,Asia,4866,Medan,CITY,3.594306,98.679263,Asia/Jakarta,IDR,MES,100,direct_match
+Brescia,Central Lombardy,Italy,Europe,27188,Brescia,CITY,45.54155,10.2118,Europe/Rome,EUR,,100,direct_match
+Troncones,Central Pacific Coast,Mexico,North America,631,Cancun,CITY,21.158964,-86.845937,US/Eastern,MXN,CUN,50,country_fallback
+Harbin,Heilongjiang,China,Asia,27431,Harbin,CITY,45.80378,126.53497,Asia/Shanghai,CNY,HRB,100,direct_match
+Kars,Far Northeast,Turkey,Asia,25936,Kars,CITY,40.601423,43.091836,Europe/Istanbul,TRY,KYS,100,direct_match
+Niagara Falls,Niagara Peninsula,Canada,North America,773,Niagara Falls & Around,CITY,43.086007,-79.097866,America/Toronto,CAD,IAG,100,direct_match
+Parga,Epiros,Greece,Europe,496,Athens,CITY,37.9439267525,23.695192337,Europe/Athens,EUR,ATH,50,country_fallback
+Dambulla,The Ancient Cities,Sri Lanka,Asia,4619,Colombo,CITY,6.9218374,79.8211859,Asia/Colombo,USD,CMB,50,country_fallback
+Cala Gonone,Golfo di Orosei,Italy,Europe,511,Rome,CITY,41.8954656,12.4823243,Europe/Rome,EUR,ROM,50,country_fallback
+Nong Khai,Nong Khai Province,Thailand,Asia,343,Bangkok,CITY,13.7234186,100.4762319,Asia/Bangkok,THB,BKK,50,country_fallback
+Alanya,Eastern Mediterranean,Turkey,Europe,4289,Alanya,CITY,36.54444,31.99541,Europe/Istanbul,TRY,ADF,100,direct_match
+Port Antonio,"Ocho Rios, Port Antonio & the North Coast",Jamaica,North America,50121,Port Antonio,CITY,18.178136,-76.4618185,America/Jamaica,USD,,100,direct_match
+Ürgüp,Cappadocia,Turkey,Asia,585,Istanbul,CITY,41.0033342172,28.9792728424,Europe/Istanbul,TRY,IST,50,country_fallback
+La Serena,Norte Chico,Chile,South America,4504,La Serena,CITY,-29.902859,-71.252499,America/Santiago,USD,LSC,100,direct_match
+Dortmund,The Ruhrgebiet,Germany,Europe,34197,Dortmund,CITY,51.512502,7.47094,Europe/Berlin,EUR,DTM,100,direct_match
+Viterbo,Lazio,Italy,Europe,511,Rome,CITY,41.8954656,12.4823243,Europe/Rome,EUR,ROM,50,country_fallback
+Cortina d’Ampezzo,Veneto Dolomites,Italy,Europe,25557,Cortina d'Ampezzo,CITY,46.54047,12.13565,Europe/Rome,EUR,,100,fuzzy_validated
+Mal País & Santa Teresa,Southern Peninsula,Costa Rica,North America,25463,San Jose,CITY,37.33939,-121.89496,America/Los_Angeles,USD,SJC,50,country_fallback
+Argostoli,Kefallonia,Greece,Europe,496,Athens,CITY,37.9439267525,23.695192337,Europe/Athens,EUR,ATH,50,country_fallback
+Dénia,Costa Blanca,Spain,Europe,566,Madrid,CITY,40.4166909,-3.7003454,Europe/Madrid,EUR,MAD,50,country_fallback
+Mali Lošinj,Lošinj Island,Croatia,Europe,5391,Zagreb,CITY,45.8167,15.9833,Europe/Zagreb,USD,ZAG,50,country_fallback
+Mangaluru (Mangalore),Karnataka,India,Asia,953,Mumbai,CITY,19.017615,72.856164,Asia/Kolkata,INR,BOM,50,country_fallback
+Carvoeiro,The Algarve,Portugal,Europe,538,Lisbon,CITY,38.7252,-9.15,Europe/Lisbon,EUR,LIS,50,country_fallback
+Lampang,Lampang Province,Thailand,Asia,343,Bangkok,CITY,13.7234186,100.4762319,Asia/Bangkok,THB,BKK,50,country_fallback
+Mdina,Central Malta,Malta,Europe,60460,Mdina,CITY,35.8868563010054,14.4031357754741,Etc/UTC,EUR,MLA,100,direct_match
+Peso da Régua,The Douro,Portugal,Europe,50451,Peso Da Regua,CITY,41.16552,-7.78618,Europe/Lisbon,EUR,,92,fuzzy_validated
+Concepción,Southern Heartland,Chile,South America,50580,Concepcion,CITY,-36.817371,-73.063629,America/Santiago,USD,,90,fuzzy_validated
+Bandipur,Kathmandu to Pokhara,Nepal,Asia,5109,Kathmandu,CITY,27.7,85.3333333,Asia/Kathmandu,USD,KTM,50,country_fallback
+Sidi Ifni,Southern Atlantic Coast,Morocco,Africa,4396,Casablanca,CITY,33.534035,-7.585212,Africa/Casablanca,USD,CAS,50,country_fallback
+Gaziantep,Southeastern Anatolia,Turkey,Asia,50887,Gaziantep,CITY,37.05944,37.3825,,TRY,,100,direct_match
+San Marcos La Laguna,Lago de Atitlán,Guatemala,North America,24370,San Pedro La Laguna,CITY,14.68886,-91.26864,America/Guatemala,USD,,82,fuzzy_validated
+Bellagio,Triangolo Lariano,Italy,Europe,511,Rome,CITY,41.8954656,12.4823243,Europe/Rome,EUR,ROM,50,country_fallback
+Mecca,Hejaz,Saudi Arabia,Asia,50285,Riyadh,CITY,24.7136,46.6753,Asia/Riyadh,USD,,50,country_fallback
+Alaçatı,İzmir & the North Aegean,Turkey,Europe,585,Istanbul,CITY,41.0033342172,28.9792728424,Europe/Istanbul,TRY,IST,50,country_fallback
+Puyo,The Northern Oriente,Ecuador,South America,52105,Puyo,CITY,-1.4869953,-78.016272,,USD,,100,direct_match
+Ooty (Udhagamandalam),The Western Ghats,India,Asia,953,Mumbai,CITY,19.017615,72.856164,Asia/Kolkata,INR,BOM,50,country_fallback
+Dover,Kent,UK,Europe,32552,Dover,CITY,51.127955,1.313396,Europe/London,GBP,,100,direct_match
+Rostock,Coastal Mecklenburg – Western Pomerania,Germany,Europe,22778,Rostock,CITY,54.092789,12.103599,Europe/Berlin,EUR,RLG,100,direct_match
