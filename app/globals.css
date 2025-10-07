@@ -355,5 +355,131 @@ body {
   .prose tr:nth-child(even) {
     background-color: #f3f4f6;
   }
+
+  /* Sidebar banner styles */
+  .sidebar-banner-container {
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    width: 300px;
+    z-index: 1000;
+    max-height: 80vh;
+    overflow-y: auto;
+    transition: all 0.3s ease;
+    visibility: visible !important;
+    opacity: 1 !important;
+    display: block !important;
+  }
+
+  /* Ensure fixed positioning on desktop */
+  @media (min-width: 1025px) {
+    .sidebar-banner-container {
+      position: fixed !important;
+      top: 50% !important;
+      right: 20px !important;
+      transform: translateY(-50%) !important;
+      width: 300px !important;
+    }
+  }
+
+  /* Mobile styles - show at end of article */
+  @media (max-width: 1024px) {
+    .sidebar-banner-container {
+      position: static;
+      transform: none;
+      width: 100%;
+      max-width: 100%;
+      max-height: none;
+      margin: 2rem 0;
+      padding: 0 1rem;
+      z-index: auto;
+    }
+  }
+
+  .sidebar-banner-container .text-center {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border: 1px solid #e5e7eb;
+    transition: all 0.3s ease;
+    visibility: visible !important;
+    opacity: 1 !important;
+    display: block !important;
+  }
+
+  .sidebar-banner-container .text-center:hover {
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+  }
+
+  /* Mobile banner styles */
+  @media (max-width: 1024px) {
+    .sidebar-banner-container .text-center {
+      padding: 16px;
+      margin: 0;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .sidebar-banner-container .text-center:hover {
+      transform: none;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+  }
+
+
+  /* Adjust main content when sidebar is present - desktop only */
+  @media (min-width: 1025px) {
+    .prose:has(.sidebar-banner-container) {
+      margin-right: 340px;
+    }
+
+    /* Alternative approach for browsers that don't support :has() */
+    .has-sidebar .prose {
+      margin-right: 340px;
+    }
+  }
+
+  /* Ensure sidebar doesn't interfere with other fixed elements */
+  .sidebar-banner-container {
+    pointer-events: auto;
+  }
+
+  /* Force banner visibility - override any JavaScript hiding */
+  .sidebar-banner-container *,
+  .sidebar-banner-container div,
+  .sidebar-banner-container [data-id="viator-banner"] {
+    visibility: visible !important;
+    opacity: 1 !important;
+    display: block !important;
+  }
+
+  /* Ensure Viator banner stays visible */
+  [data-id="viator-banner"] {
+    visibility: visible !important;
+    opacity: 1 !important;
+    display: block !important;
+  }
+
+  /* Smooth scrolling for sidebar content */
+  .sidebar-banner-container::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .sidebar-banner-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 3px;
+  }
+
+  .sidebar-banner-container::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 3px;
+  }
+
+  .sidebar-banner-container::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+  }
 }
 

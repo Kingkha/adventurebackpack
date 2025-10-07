@@ -332,7 +332,7 @@ export default async function Post({ params }: { params: { slug: string, rest: s
                   />
                   
                   <div 
-                    className="prose max-w-none prose-lg prose-green"
+                    className={`prose max-w-none prose-lg prose-green ${post.content.includes('sidebar-banner-container') ? 'has-sidebar' : ''}`}
                     dangerouslySetInnerHTML={{ __html: contentWithAbsoluteUrls }}
                   />
                   
@@ -443,7 +443,7 @@ export default async function Post({ params }: { params: { slug: string, rest: s
                   />
                   
                   <div 
-                    className="prose max-w-none prose-lg prose-green"
+                    className={`prose max-w-none prose-lg prose-green ${post.content.includes('sidebar-banner-container') ? 'has-sidebar' : ''}`}
                     dangerouslySetInnerHTML={{ __html: contentWithAbsoluteUrls }}
                   />
                   
@@ -628,7 +628,7 @@ export default async function Post({ params }: { params: { slug: string, rest: s
                 />
                 
                 <div 
-                  className="prose max-w-none prose-lg prose-green"
+                  className={`prose max-w-none prose-lg prose-green ${post.content.includes('sidebar-banner-container') ? 'has-sidebar' : ''}`}
                   dangerouslySetInnerHTML={{ __html: contentWithAbsoluteUrls }}
                 />
                 
@@ -730,7 +730,7 @@ export default async function Post({ params }: { params: { slug: string, rest: s
                     />
                     
                     <div 
-                      className="prose max-w-none prose-lg prose-green"
+                      className={`prose max-w-none prose-lg prose-green ${post.content.includes('sidebar-banner-container') ? 'has-sidebar' : ''}`}
                       dangerouslySetInnerHTML={{ __html: contentWithAbsoluteUrls }}
                     />
                     
@@ -867,7 +867,7 @@ export default async function Post({ params }: { params: { slug: string, rest: s
               />
               
               <div 
-                className="prose max-w-none prose-lg prose-green"
+                className={`prose max-w-none prose-lg prose-green ${post.content.includes('sidebar-banner-container') ? 'has-sidebar' : ''}`}
                 dangerouslySetInnerHTML={{ __html: contentWithAbsoluteUrls }}
               />
               
