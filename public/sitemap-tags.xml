@@ -1,17 +1,112 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://adventurebackpack.com/tag/united-states</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://adventurebackpack.com/tag/albuquerque</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://adventurebackpack.com/tag/new-mexico</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://adventurebackpack.com/tag/nightlife</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://adventurebackpack.com/tag/history</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://adventurebackpack.com/tag/route-66</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://adventurebackpack.com/tag/family-travel</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://adventurebackpack.com/tag/netherlands</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://adventurebackpack.com/tag/amsterdam</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://adventurebackpack.com/tag/itinerary</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://adventurebackpack.com/tag/budget-travel</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://adventurebackpack.com/tag/old-town</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://adventurebackpack.com/tag/united-kingdom</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://adventurebackpack.com/tag/nottingham</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://adventurebackpack.com/tag/lace-market</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://adventurebackpack.com/tag/robin-hood</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://adventurebackpack.com/tag/wollaton-hall</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://adventurebackpack.com/tag/uk</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://adventurebackpack.com/tag/nottingham-castle</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://adventurebackpack.com/tag/nottinghamshire</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://adventurebackpack.com/tag/denmark</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://adventurebackpack.com/tag/aalborg</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://adventurebackpack.com/tag/uk</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -86,11 +181,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://adventurebackpack.com/tag/albuquerque</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://adventurebackpack.com/tag/alcudia</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -122,16 +212,6 @@
   </url>
   <url>
     <loc>https://adventurebackpack.com/tag/amman</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://adventurebackpack.com/tag/netherlands</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://adventurebackpack.com/tag/amsterdam</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -2261,11 +2341,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://adventurebackpack.com/tag/nightlife</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://adventurebackpack.com/tag/vung-tau</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -2902,11 +2977,6 @@
   </url>
   <url>
     <loc>https://adventurebackpack.com/tag/noosa</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://adventurebackpack.com/tag/nottingham</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
