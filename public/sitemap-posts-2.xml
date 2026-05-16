@@ -1,16 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
-    <loc>https://adventurebackpack.com/wadi-musa-highlights</loc>
-    <lastmod>2025-09-09T00:00:00.000Z</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    <image:image>
-      <image:loc>https://adventurebackpack.com/images/wadi-musa-highlights.webp</image:loc>
-      <image:title>Wadi Musa Highlights: Discover the Best Experiences</image:title>
-    </image:image>
-  </url>
-  <url>
     <loc>https://adventurebackpack.com/walvis-bay-highlights</loc>
     <lastmod>2025-09-09T00:00:00.000Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -2518,16 +2508,6 @@
     <image:image>
       <image:loc>https://adventurebackpack.com/images/nikko-nightlife.webp</image:loc>
       <image:title>Nikkō Nightlife: Top 10 Unforgettable Experiences</image:title>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://adventurebackpack.com/nottingham-landmarks</loc>
-    <lastmod>2025-09-08T00:00:00.000Z</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    <image:image>
-      <image:loc>https://adventurebackpack.com/images/nottingham-landmarks.webp</image:loc>
-      <image:title>Nottingham Landmarks: Explore 10 Iconic Sites</image:title>
     </image:image>
   </url>
   <url>
@@ -9998,6 +9978,26 @@
     <image:image>
       <image:loc>https://adventurebackpack.com/images/mandalay-activities.webp</image:loc>
       <image:title>Mandalay Activities: Top 10 Must-Do Experiences</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://adventurebackpack.com/mangaluru-mangalore-events</loc>
+    <lastmod>2025-09-06T00:00:00.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://adventurebackpack.com/images/mangaluru-mangalore-events.webp</image:loc>
+      <image:title>Mangaluru Events: Top 10 Unmissable Experiences</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://adventurebackpack.com/mangaluru-mangalore-nightlife</loc>
+    <lastmod>2025-09-06T00:00:00.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://adventurebackpack.com/images/mangaluru-mangalore-nightlife.webp</image:loc>
+      <image:title>Mangaluru Nightlife: Top 10 Experiences You Can&amp;#8217;t Miss</image:title>
     </image:image>
   </url>
 </urlset>

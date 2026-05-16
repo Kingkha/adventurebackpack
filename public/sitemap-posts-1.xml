@@ -1,16 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
-    <loc>https://adventurebackpack.com/guadalajara-culture</loc>
-    <lastmod>2025-09-11T00:00:00.000Z</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    <image:image>
-      <image:loc>https://adventurebackpack.com/images/guadalajara-culture.webp</image:loc>
-      <image:title>Guadalajara Culture: Discover 10 Authentic Experiences</image:title>
-    </image:image>
-  </url>
-  <url>
     <loc>https://adventurebackpack.com/guangzhou-highlights</loc>
     <lastmod>2025-09-11T00:00:00.000Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -9998,6 +9988,16 @@
     <image:image>
       <image:loc>https://adventurebackpack.com/images/vladivostok-highlights.webp</image:loc>
       <image:title>Vladivostok Highlights: 10 Unmissable Experiences</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://adventurebackpack.com/wadi-musa-highlights</loc>
+    <lastmod>2025-09-09T00:00:00.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://adventurebackpack.com/images/wadi-musa-highlights.webp</image:loc>
+      <image:title>Wadi Musa Highlights: Discover the Best Experiences</image:title>
     </image:image>
   </url>
 </urlset>

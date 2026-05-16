@@ -1,26 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
-    <loc>https://adventurebackpack.com/dili-events</loc>
-    <lastmod>2025-09-03T00:00:00.000Z</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    <image:image>
-      <image:loc>https://adventurebackpack.com/images/dili-events.webp</image:loc>
-      <image:title>Dili Events: 10 Unmissable Experiences in Timor-Leste</image:title>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://adventurebackpack.com/dover-events</loc>
-    <lastmod>2025-09-03T00:00:00.000Z</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    <image:image>
-      <image:loc>https://adventurebackpack.com/images/dover-events.webp</image:loc>
-      <image:title>Dover Events: Top 10 Unmissable Activities This Year</image:title>
-    </image:image>
-  </url>
-  <url>
     <loc>https://adventurebackpack.com/dresden-itinerary</loc>
     <lastmod>2025-09-03T00:00:00.000Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -9421,16 +9401,6 @@
     </image:image>
   </url>
   <url>
-    <loc>https://adventurebackpack.com/nottingham-culture</loc>
-    <lastmod>2025-09-01T00:00:00.000Z</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    <image:image>
-      <image:loc>https://adventurebackpack.com/images/nottingham-culture.webp</image:loc>
-      <image:title>Nottingham Culture: 10 Must-Experience Highlights</image:title>
-    </image:image>
-  </url>
-  <url>
     <loc>https://adventurebackpack.com/oakland-activities</loc>
     <lastmod>2025-09-01T00:00:00.000Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -9998,6 +9968,36 @@
     <image:image>
       <image:loc>https://adventurebackpack.com/images/san-ignacio-adventures.webp</image:loc>
       <image:title>San Ignacio Adventures: Top 10 Thrilling Experiences</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://adventurebackpack.com/san-jose-nightlife</loc>
+    <lastmod>2025-09-01T00:00:00.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://adventurebackpack.com/images/san-jose-nightlife.webp</image:loc>
+      <image:title>San José Nightlife: Unforgettable Experiences in the City</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://adventurebackpack.com/san-juan-culture</loc>
+    <lastmod>2025-09-01T00:00:00.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://adventurebackpack.com/images/san-juan-culture.webp</image:loc>
+      <image:title>San Juan Culture: 10 Unique Experiences to Explore</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://adventurebackpack.com/san-juan-del-sur-events</loc>
+    <lastmod>2025-09-01T00:00:00.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://adventurebackpack.com/images/san-juan-del-sur-events.webp</image:loc>
+      <image:title>San Juan Del Sur Events: Unforgettable Experiences Await</image:title>
     </image:image>
   </url>
 </urlset>

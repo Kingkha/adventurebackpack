@@ -7211,16 +7211,6 @@
     </image:image>
   </url>
   <url>
-    <loc>https://adventurebackpack.com/nottingham-nightlife</loc>
-    <lastmod>2025-09-12T00:00:00.000Z</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    <image:image>
-      <image:loc>https://adventurebackpack.com/images/nottingham-nightlife.webp</image:loc>
-      <image:title>Nottingham Nightlife: Top 10 Experiences You Can&amp;#8217;t Miss</image:title>
-    </image:image>
-  </url>
-  <url>
     <loc>https://adventurebackpack.com/novi-sad-nightlife</loc>
     <lastmod>2025-09-12T00:00:00.000Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -10048,6 +10038,16 @@
     <image:image>
       <image:loc>https://adventurebackpack.com/images/greater-phoenix-itinerary.webp</image:loc>
       <image:title>Greater Phoenix Itinerary: Explore the Desert Oasis</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://adventurebackpack.com/guadalajara-culture</loc>
+    <lastmod>2025-09-11T00:00:00.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://adventurebackpack.com/images/guadalajara-culture.webp</image:loc>
+      <image:title>Guadalajara Culture: Discover 10 Authentic Experiences</image:title>
     </image:image>
   </url>
 </urlset>

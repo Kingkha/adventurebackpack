@@ -39,6 +39,23 @@ const nextConfig = {
   },
   async redirects() {
     return [
+      // Amsterdam cluster MERGE consolidation
+      {
+        source: '/amsterdam-adventures',
+        destination: '/amsterdam-activities',
+        permanent: true,
+      },
+      {
+        source: '/amsterdam-experiences',
+        destination: '/amsterdam-activities',
+        permanent: true,
+      },
+      {
+        source: '/amsterdam-highlights',
+        destination: '/amsterdam-activities',
+        permanent: true,
+      },
+
       // Kanazawa cluster MERGE consolidation — 2026-05-11
       { source: "/kanazawa-2-day-itinerary", destination: "/2-day-kanazawa-itinerary-for-authentic-cultural-experiences", permanent: true },
       { source: "/kanazawa-activities", destination: "/kanazawa-attractions", permanent: true },
@@ -214,6 +231,17 @@ const nextConfig = {
       { source: '/takayama-highlights',       destination: '/takayama-attractions', permanent: true },
       { source: '/takayama-landmarks',        destination: '/takayama-attractions', permanent: true },
       { source: '/things-to-do-in-takayama',  destination: '/takayama-attractions', permanent: true },
+    
+      // Nottingham cluster MERGE consolidation (2026-05-16) — synonym-pillar cannibalization
+      // Synonym hubs targeting the same SERP intent consolidated into canonical destinations.
+      { source: '/nottingham-adventures',    destination: '/nottingham-activities', permanent: true },
+      { source: '/nottingham-culture',       destination: '/nottingham-activities', permanent: true },
+      { source: '/nottingham-events',        destination: '/nottingham-events-this-weekend', permanent: true },
+      { source: '/nottingham-experiences',   destination: '/nottingham-activities', permanent: true },
+      { source: '/nottingham-highlights',    destination: '/nottingham-activities', permanent: true },
+      { source: '/nottingham-itinerary',     destination: '/nottingham-2-day-itinerary', permanent: true },
+      { source: '/nottingham-landmarks',     destination: '/nottingham-attractions-complete-guide', permanent: true },
+      { source: '/nottingham-nightlife',     destination: '/nottingham-things-to-do-at-night', permanent: true },
     ]
   },
 }
