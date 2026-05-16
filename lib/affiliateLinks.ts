@@ -107,6 +107,18 @@ function buildAffiliateContext(tags: string[]): AffiliateContext | null {
   };
 }
 
+// Strip aggressive inline Viator deep-link anchors sprinkled into prose by the
+// content generator (e.g. <a href="https://www.viator.com/Bangkok/d343?pid=…">
+// guided tours</a>). These tank readability + commission rate vs. the curated
+// search widgets we inject below, so we unwrap them and keep just the anchor
+// text. Runs on every article (including hub pages) via processAffiliateLinks.
+function stripInlineViatorLinks(html: string): string {
+  return html.replace(
+    /<a[^>]*href=["']https?:\/\/(?:www\.)?viator\.com\/[^"']*["'][^>]*>([\s\S]*?)<\/a>/gi,
+    '$1'
+  );
+}
+
 function removeExistingWidgets(html: string): string {
   // Strip prior sponsoredSlot wrappers (re-injected fresh below). Use a
   // balanced-ish match — affiliate slots contain nested divs, so a non-greedy
@@ -152,9 +164,10 @@ export function insertAffiliateLinks(
 
   let processedHtml = removeExistingWidgets(htmlContent);
 
-  // GYG city widget after the first H1 (or before first paragraph as fallback).
-  // Mirrors tourismattractions placement so the city widget anchors the intro
-  // rather than crowding the first body section.
+  // Top of article (after H1): GYG city widget only. The Viator widget moves
+  // deeper into the article (mid-content slot) so it doesn't crowd the
+  // intro — placing it directly under or near the GYG city widget reads as
+  // aggressive ad stacking.
   const cityWidget = generateGYGCityWidget(gygLocationId, pageSlug);
   const h1Match = processedHtml.match(/<h1[^>]*>[\s\S]*?<\/h1>/i);
   if (h1Match) {
@@ -175,17 +188,10 @@ export function insertAffiliateLinks(
     return processedHtml;
   }
 
-  // Viator auto widget before the first H2 — gives Viator the prime mid-page
-  // slot and balances the GYG city widget above.
-  const firstH2 = h2Matches[0][0];
-  const preH2Widget = generateViatorAutoWidget(cityName, pageSlug);
-  processedHtml = processedHtml.replace(firstH2, preH2Widget + '\n' + firstH2);
-
-  // Mid-content widgets: only at H2 #1 and H2 #3, max 2 mid-page slots
-  // regardless of article length. With 1 GYG city + 1 Viator pre-H2 +
-  // 2 mid widgets = 4 total per page (was 8+ on long articles).
-  // Mid rotation favors Viator (1 GYG : 1 Viator) so the page mix lands
-  // at 2 GYG : 2 Viator overall instead of the prior 6 GYG : 2 Viator.
+  // Mid-content widgets: H2 #1 → GYG activities, H2 #3 → Viator auto.
+  // Layout: GYG city at top + GYG activities mid + Viator auto deeper.
+  // Drops the previous "pre-first-H2 Viator" slot that read as crowding the
+  // GYG city widget above it. Total = 3 widgets per page (down from 4).
   const widgetSlots: Array<{ h2Index: number; type: 'viator_auto' | 'gyg_activities' }> = [
     { h2Index: 1, type: 'gyg_activities' },
     { h2Index: 3, type: 'viator_auto' },
@@ -242,7 +248,10 @@ export function processAffiliateLinks(
   }
 
   try {
-    return insertAffiliateLinks(content, tags, pageSlug);
+    // Strip inline Viator deep-link anchors first so they're removed even on
+    // hub-page articles (where insertAffiliateLinks short-circuits).
+    const stripped = stripInlineViatorLinks(content);
+    return insertAffiliateLinks(stripped, tags, pageSlug);
   } catch (error) {
     console.error('❌ Error processing affiliate links:', error);
     return content;
