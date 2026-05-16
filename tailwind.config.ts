@@ -10,6 +10,10 @@ const config: Config = {
   ],
   theme: {
   	extend: {
+  		fontFamily: {
+  			sans: ['var(--font-sans)', '"Segoe UI"', 'Arial', 'sans-serif'],
+  			editorial: ['var(--font-editorial)', 'Georgia', 'serif'],
+  		},
   		colors: {
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',

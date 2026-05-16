@@ -1,12 +1,7 @@
-'use client'
-
 import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { Card, CardContent } from '@/components/ui/card'
-import { Badge } from '@/components/ui/badge'
-import { Button } from '@/components/ui/button'
-import { ArrowRight, MapPin } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 import { CitySection } from '@/lib/getBlogPosts'
 
 interface CitiesSectionProps {
@@ -14,163 +9,81 @@ interface CitiesSectionProps {
 }
 
 export default function CitiesSection({ cities }: CitiesSectionProps) {
-  if (!cities || cities.length === 0) {
-    return null
-  }
+  if (!cities || cities.length === 0) return null
 
   return (
-    <section className="py-16 bg-gradient-to-b from-gray-50 to-white">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Discover Hidden Gems in Amazing Cities
-          </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Explore off-the-beaten-path destinations and authentic experiences in cities around the world
-          </p>
+    <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#f8f7f3]">
+      <div className="container mx-auto">
+
+        <div className="flex items-end justify-between mb-10">
+          <div className="border-l-2 border-sky-600 pl-4">
+            <p className="text-xs tracking-[0.2em] uppercase text-sky-700 font-semibold">City guides</p>
+            <h2 className="font-editorial mt-1 text-3xl md:text-4xl text-slate-900">
+              Featured Cities
+            </h2>
+          </div>
+          <Link
+            href="/blog"
+            className="hidden sm:inline-flex items-center text-sm font-semibold text-sky-700 hover:text-sky-800 transition-colors"
+          >
+            All cities <ArrowRight className="ml-1 h-4 w-4" />
+          </Link>
         </div>
 
-        <div className="space-y-20">
-          {cities.map((citySection, index) => (
-            <div key={citySection.citySlug} className="city-section">
-              {/* City Header */}
-              <div className="text-center mb-12">
-                <h3 className="text-3xl font-bold text-gray-900 mb-4">
-                  {citySection.city} Hidden Gems
-                </h3>
-                <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                  Discover the secret spots, local favorites, and authentic experiences that make {citySection.city} truly special
-                </p>
-                <Badge variant="secondary" className="mt-4">
-                  <MapPin className="w-4 h-4 mr-2" />
-                  {citySection.totalArticles} articles about {citySection.city}
-                </Badge>
-              </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {cities.map((citySection) => {
+            const image = citySection.pillarArticle?.featuredImage
+            const href = citySection.pillarArticle
+              ? `/${citySection.pillarArticle.slug}`
+              : `/blog?q=${encodeURIComponent(citySection.city)}`
 
-              {/* Main Content Grid */}
-              <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                {/* Pillar Article - Takes up 2 columns on desktop */}
-                <div className="lg:col-span-2">
-                  {citySection.pillarArticle && (
-                    <Card className="h-full group hover:shadow-xl transition-all duration-300 overflow-hidden">
-                      <div className="relative h-64 lg:h-80 overflow-hidden">
-                        <Image
-                          src={citySection.pillarArticle.featuredImage.startsWith('adventurebackpack_images/') 
-                            ? citySection.pillarArticle.featuredImage.replace('adventurebackpack_images/', '/images/')
-                            : citySection.pillarArticle.featuredImage}
-                          alt={citySection.pillarArticle.title}
-                          fill
-                          className="object-cover group-hover:scale-105 transition-transform duration-300"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                        <div className="absolute bottom-4 left-4 right-4">
-                          <Badge variant="outline" className="mb-2 bg-white/90 text-gray-900">
-                            Pillar Article
-                          </Badge>
-                          <h4 className="text-2xl font-bold text-white">
-                            {citySection.pillarArticle.title}
-                          </h4>
-                        </div>
-                      </div>
-                      <CardContent className="p-6">
-                        <p className="text-gray-600 mb-4 line-clamp-3">
-                          {citySection.pillarArticle.excerpt}
-                        </p>
-                        <div className="flex items-center justify-between">
-                          <Link 
-                            href={`/${citySection.pillarArticle.slug}`}
-                            className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium group/link"
-                          >
-                            Read the complete guide
-                            <ArrowRight className="w-4 h-4 ml-1 group-hover/link:translate-x-1 transition-transform" />
-                          </Link>
-                          <Button 
-                            asChild 
-                            variant="outline" 
-                            className="group/btn"
-                          >
-                            <Link href={`/${citySection.citySlug}-hidden-gems`}>
-                              Explore {citySection.city}
-                              <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
-                            </Link>
-                          </Button>
-                        </div>
-                      </CardContent>
-                    </Card>
+            return (
+              <Link
+                key={citySection.citySlug}
+                href={href}
+                className="group relative overflow-hidden rounded-2xl block"
+              >
+                <div className="relative aspect-[3/2]">
+                  {image ? (
+                    <Image
+                      src={image}
+                      alt={citySection.city}
+                      fill
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      className="object-cover transition-transform duration-700 group-hover:scale-105"
+                    />
+                  ) : (
+                    <div className="absolute inset-0 bg-slate-700" />
                   )}
-                </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent" />
 
-                {/* Supporting Articles - Takes up 1 column on desktop */}
-                <div className="lg:col-span-1">
-                  <div className="space-y-4">
-                    <h5 className="text-lg font-semibold text-gray-900 mb-4">
-                      More About {citySection.city}
-                    </h5>
-                    {citySection.supportingArticles.length > 0 ? (
-                      citySection.supportingArticles.map((article) => (
-                        <Card key={article.slug} className="group hover:shadow-lg transition-all duration-300">
-                          <CardContent className="p-4">
-                            <div className="flex items-start space-x-3">
-                              <div className="relative w-16 h-16 flex-shrink-0 overflow-hidden rounded-md">
-                                <Image
-                                  src={article.featuredImage.startsWith('adventurebackpack_images/') 
-                                    ? article.featuredImage.replace('adventurebackpack_images/', '/images/')
-                                    : article.featuredImage}
-                                  alt={article.title}
-                                  fill
-                                  className="object-cover group-hover:scale-105 transition-transform duration-300"
-                                />
-                              </div>
-                              <div className="flex-1 min-w-0">
-                                <h6 className="font-medium text-gray-900 line-clamp-2 mb-1 group-hover:text-blue-600 transition-colors">
-                                  <Link href={`/${article.slug}`}>
-                                    {article.title}
-                                  </Link>
-                                </h6>
-                                <p className="text-sm text-gray-600 line-clamp-2">
-                                  {article.excerpt}
-                                </p>
-                              </div>
-                            </div>
-                          </CardContent>
-                        </Card>
-                      ))
-                    ) : (
-                      <div className="text-center py-8 text-gray-500">
-                        <p>More articles coming soon!</p>
-                      </div>
-                    )}
+                  <div className="absolute bottom-0 left-0 right-0 p-6">
+                    <h3 className="text-xl font-bold text-white leading-tight">
+                      {citySection.city}
+                    </h3>
+                    <p className="mt-1 text-xs font-semibold text-sky-300 tracking-wide">
+                      {citySection.totalArticles} guides
+                    </p>
+                    <span className="mt-3 inline-flex items-center text-xs font-semibold text-sky-300 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      Explore city <ArrowRight className="ml-1 h-3 w-3" />
+                    </span>
                   </div>
                 </div>
-              </div>
-
-              {/* Bottom CTA */}
-              <div className="text-center mt-12">
-                <Button 
-                  asChild 
-                  size="lg" 
-                  className="bg-blue-600 hover:bg-blue-700"
-                >
-                  <Link href={`/${citySection.citySlug}-hidden-gems`}>
-                    Discover All {citySection.city} Hidden Gems
-                    <ArrowRight className="w-5 h-5 ml-2" />
-                  </Link>
-                </Button>
-              </div>
-            </div>
-          ))}
+              </Link>
+            )
+          })}
         </div>
 
-        {/* Global CTA */}
-        <div className="text-center mt-20">
-          <Button asChild size="lg" variant="outline" className="bg-white hover:bg-gray-50">
-            <Link href="/blog">
-              Explore All Cities
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </Link>
-          </Button>
+        <div className="mt-4 sm:hidden text-center">
+          <Link
+            href="/blog"
+            className="inline-flex items-center text-sm font-semibold text-sky-700 hover:text-sky-800"
+          >
+            All cities <ArrowRight className="ml-1 h-4 w-4" />
+          </Link>
         </div>
+
       </div>
     </section>
   )
-} 
+}

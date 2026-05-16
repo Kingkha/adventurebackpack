@@ -1,107 +1,83 @@
-"use client"
-
-import { useEffect, useState } from "react"
-import { useSearchParams } from "next/navigation"
-import Link from "next/link"
-import Header from "../components/Header"
+import { redirect } from "next/navigation"
+import type { Metadata } from "next"
 import Footer from "../components/Footer"
-import TagSearch from "../components/TagSearch"
-import { BlogListingJsonLd } from "../components/BlogJsonLd"
 import BlogCard from "../components/BlogCard"
-import type { BlogPostMeta } from "@/lib/getBlogPosts"
+import Pagination from "../components/Pagination"
+import { BlogListingJsonLd } from "../components/BlogJsonLd"
+import { getBlogCache } from "@/lib/getBlogPosts"
+import { getBaseUrl, siteConfig } from "@/lib/siteConfig"
+import { tagToSlug } from "@/lib/utils"
 
-// Extended interface to include the isFromBlogFolder flag and folder name
-interface BlogPostWithSource extends BlogPostMeta {
-  isFromBlogFolder?: boolean;
-  folder?: string;
-  subfolders?: string[]; // Add subfolders for deeper nesting
+const POSTS_PER_PAGE = 12
+
+export const metadata: Metadata = {
+  title: `Blog`,
+  description: `${siteConfig.brand.description} Browse the latest guides and articles.`,
+  alternates: {
+    canonical: `${getBaseUrl()}/blog`,
+  },
+  openGraph: {
+    title: `${siteConfig.brand.name} Blog | ${siteConfig.brand.tagline}`,
+    description: `${siteConfig.brand.description} Browse the latest guides and articles.`,
+    url: `${getBaseUrl()}/blog`,
+    siteName: siteConfig.brand.name,
+    locale: "en_US",
+    type: "website",
+    images: [
+      {
+        url: siteConfig.seo.ogImage,
+        width: 1200,
+        height: 630,
+        alt: `${siteConfig.brand.name} Blog`,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${siteConfig.brand.name} Blog | ${siteConfig.brand.tagline}`,
+    description: `${siteConfig.brand.description} Browse the latest guides and articles.`,
+    images: [siteConfig.seo.ogImage],
+  },
 }
 
-function decodeCategory(category: string): string {
-  return decodeURIComponent(category).replace(/-/g, " ")
+interface BlogIndexProps {
+  searchParams?: {
+    tag?: string
+  }
 }
 
-export default function BlogIndex() {
-  const searchParams = useSearchParams()
-  const category = searchParams.get("category")
-  const tagFromUrl = searchParams.get("tag")
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://adventurebackpack.com"
-
-  const [posts, setPosts] = useState<BlogPostWithSource[]>([])
-  const [nextCursor, setNextCursor] = useState<string | null>(null)
-  const [isLoading, setIsLoading] = useState(false)
-  const [selectedTag, setSelectedTag] = useState<string | null>(tagFromUrl)
-  const [topTags, setTopTags] = useState<{ tag: string; count: number }[]>([])
-
-  const fetchPosts = async (
-    cursor: string | null = null,
-    tag: string | null = selectedTag,
-    cat: string | null = category,
-  ) => {
-    setIsLoading(true)
-    const queryParams = new URLSearchParams()
-    if (cursor) queryParams.append("cursor", cursor)
-    if (tag) queryParams.append("tag", tag)
-    if (cat) queryParams.append("category", cat)
-
-    try {
-      const res = await fetch(`/api/blog-posts?${queryParams.toString()}`)
-      const data = await res.json()
-      setPosts((prevPosts) => (cursor ? [...prevPosts, ...data.posts] : data.posts))
-      setNextCursor(data.nextCursor)
-      if (data.topTags && Array.isArray(data.topTags)) {
-        setTopTags(data.topTags)
-      }
-    } catch (error) {
-      console.error("Failed to fetch posts:", error)
-    } finally {
-      setIsLoading(false)
-    }
+export default function BlogIndex({ searchParams }: BlogIndexProps) {
+  const selectedTag = searchParams?.tag ? decodeURIComponent(searchParams.tag) : null
+  if (selectedTag) {
+    redirect(`/tag/${tagToSlug(selectedTag)}`)
   }
-
-  useEffect(() => {
-    fetchPosts(null, tagFromUrl, category)
-  }, [category, tagFromUrl])
-
-  const handleTagSelect = (tag: string | null) => {
-    setSelectedTag(tag)
-    setPosts([])
-    setNextCursor(null)
-    fetchPosts(null, tag, category)
-  }
+  const allPosts = getBlogCache()
+  const filteredPosts = selectedTag
+    ? allPosts.filter((post) => post.tags.includes(selectedTag))
+    : allPosts
+  const posts = selectedTag ? filteredPosts : filteredPosts.slice(0, POSTS_PER_PAGE)
+  const totalPages = Math.ceil(filteredPosts.length / POSTS_PER_PAGE)
 
   return (
     <div className="min-h-screen flex flex-col">
-      <BlogListingJsonLd posts={posts} baseUrl={baseUrl} />
-      <Header />
+      <BlogListingJsonLd posts={posts} baseUrl={getBaseUrl()} />
       <main className="flex-grow container mx-auto px-4 py-12 mt-16">
-        <h1 className="text-4xl font-bold mb-8">adventurebackpack.com Blog</h1>
-        {category && (
+        <h1 className="text-4xl font-bold mb-8">{siteConfig.brand.name} Blog</h1>
+        {selectedTag ? (
           <div className="mb-8">
-            <h2 className="text-2xl font-semibold mb-2">Category: {decodeCategory(category)}</h2>
-            <Link href="/blog" className="text-green-600 hover:underline">
-              ← Back to all categories
-            </Link>
+            <p className="text-lg text-gray-700">
+              Showing posts tagged with: <span className="font-semibold">{selectedTag}</span>
+            </p>
           </div>
-        )}
-        <TagSearch tags={topTags} selectedTag={selectedTag} onTagSelect={handleTagSelect} />
+        ) : null}
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {posts.map((post) => (
             <BlogCard key={post.slug} post={post} />
           ))}
         </div>
-        {nextCursor && (
-          <button
-            onClick={() => fetchPosts(nextCursor, selectedTag, category)}
-            disabled={isLoading}
-            className="mt-8 px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600 disabled:bg-gray-400"
-          >
-            {isLoading ? "Loading..." : "Load More"}
-          </button>
-        )}
+        {selectedTag ? null : <Pagination currentPage={1} totalPages={totalPages} />}
       </main>
       <Footer />
     </div>
   )
 }
-

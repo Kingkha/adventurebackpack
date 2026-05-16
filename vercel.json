@@ -1,6 +1,0 @@
-{
-  "crons": [{
-    "path": "/api/cron/generate-cache",
-    "schedule": "0 0 * * *"
-  }]
-} 

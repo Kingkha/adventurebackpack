@@ -1,10 +1,54 @@
 import { notFound } from "next/navigation"
 import Image from "next/image"
+import Script from "next/script"
 import Header from "../../components/Header"
 import Footer from "../../components/Footer"
 import AuthorPosts from "../../components/AuthorPosts"
 import { getBlogPostsMeta } from "@/lib/getBlogPosts"
+import { getBlogCache } from "@/lib/blogCache"
 import { MapPin, Mail, Globe } from "lucide-react"
+import { siteConfig, getBaseUrl } from '@/lib/siteConfig'
+import type { Metadata } from "next"
+
+export function generateStaticParams() {
+  const posts = getBlogCache()
+  const authors = [...new Set(posts.map((p) => p.author).filter(Boolean))]
+  return authors.map((name) => ({ name }))
+}
+
+export function generateMetadata({ params }: { params: { name: string } }): Metadata {
+  const decodedName = decodeURIComponent(params.name)
+  const authorUrl = `${getBaseUrl()}/author/${encodeURIComponent(decodedName)}`
+  return {
+    title: `${decodedName} — Author`,
+    description: `Read ${decodedName}'s travel guides and articles on ${siteConfig.brand.name}.`,
+    alternates: {
+      canonical: authorUrl,
+    },
+    openGraph: {
+      title: `${decodedName} | Author at ${siteConfig.brand.name}`,
+      description: `Read ${decodedName}'s travel guides and articles on ${siteConfig.brand.name}.`,
+      url: authorUrl,
+      siteName: siteConfig.brand.name,
+      locale: 'en_US',
+      type: 'profile',
+      images: [
+        {
+          url: siteConfig.seo.ogImage,
+          width: 1200,
+          height: 630,
+          alt: `${decodedName} – ${siteConfig.brand.name}`,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${decodedName} | Author at ${siteConfig.brand.name}`,
+      description: `Read ${decodedName}'s travel guides and articles on ${siteConfig.brand.name}.`,
+      images: [siteConfig.seo.ogImage],
+    },
+  }
+}
 
 export default function AuthorPage({ params }: { params: { name: string } }) {
   const decodedName = decodeURIComponent(params.name)
@@ -12,61 +56,68 @@ export default function AuthorPage({ params }: { params: { name: string } }) {
   const authorPosts = posts.filter((post) => post.author === decodedName)
 
   if (authorPosts.length === 0) {
-    return (
-      <div className="min-h-screen flex flex-col bg-gray-50">
-        <Header />
-        <main className="flex-grow container mx-auto px-4 py-12 mt-16">
-          <div className="bg-white shadow-lg rounded-lg overflow-hidden p-8">
-            <h1 className="text-3xl font-bold mb-4">Author Not Found</h1>
-            <p>We couldn't find any posts by an author named "{decodedName}". This might be because:</p>
-            <ul className="list-disc list-inside mt-2">
-              <li>The author name is misspelled</li>
-              <li>This author hasn't published any posts yet</li>
-              <li>The author's posts have been removed or are no longer available</li>
-            </ul>
-          </div>
-        </main>
-        <Footer />
-      </div>
-    )
+    notFound()
   }
 
   const authorData = {
     name: decodedName,
-    role: decodedName === "Editor" ? "AdventureBackpack.com Editor" : "AdventureBackpack.com Contributor",
-    bio:
-      decodedName === "Editor"
-        ? "As an AdventureBackpack.com Editor with over 10 years of travel writing experience, I'm dedicated to curating and creating high-quality travel content. With a passion for exploring new destinations and uncovering hidden gems, I've visited 50+ countries and specialize in authentic, off-the-beaten-path travel experiences. I hold certifications in travel writing and cultural tourism, and my work has been featured in major travel publications."
-        : `${decodedName} is a valued contributor to AdventureBackpack.com with extensive travel experience and local expertise. They share their authentic travel experiences and insights with our community, helping readers discover genuine hidden destinations worldwide.`,
-    location: "AdventureBackpack.com HQ",
-    email: decodedName === "Editor" ? "editor@adventurebackpack.com" : `${decodedName.toLowerCase()}@adventurebackpack.com`,
-    website: "https://adventurebackpack.com",
-    image: decodedName === "Editor" ? "/apple-icon.png" : "/images/contributor-avatar.jpg",
-    credentials: decodedName === "Editor" ? [
-      "Professional Travel Writer Certification",
-      "Cultural Tourism Specialist",
-      "10+ Years Travel Writing Experience",
-      "50+ Countries Explored",
-      "Featured in Major Travel Publications"
-    ] : [
-      "Local Destination Expert",
-      "Authentic Travel Experience",
-      "Cultural Immersion Specialist"
-    ],
-    expertise: decodedName === "Editor" ? [
-      "Hidden Travel Destinations",
-      "Cultural Immersion",
-      "Sustainable Tourism",
-      "Local Travel Experiences",
-      "Off-the-Beaten-Path Exploration"
-    ] : [
-      "Local Culture & Traditions",
-      "Authentic Travel Experiences",
-      "Hidden Gems Discovery"
-    ]
+    role: decodedName === "Editor" ? `${siteConfig.brand.name} Editor` : `${siteConfig.brand.name} Contributor`,
+    description: decodedName === "Editor" 
+      ? `As a ${siteConfig.brand.name} Editor ${siteConfig.authorPage.editorDescription}`
+      : `${decodedName} ${siteConfig.authorPage.contributorDescription}`,
+    location: siteConfig.contact.location,
+    email: siteConfig.contact.email,
+    website: getBaseUrl(),
+    image: "/placeholder-user.jpg",
+    credentials: decodedName === "Editor" 
+      ? siteConfig.authorPage.editorCredentials 
+      : siteConfig.authorPage.contributorCredentials,
+    expertise: decodedName === "Editor" 
+      ? siteConfig.authorPage.editorExpertise 
+      : siteConfig.authorPage.contributorExpertise
   }
 
+  const personSchema = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": authorData.name,
+    "jobTitle": authorData.role,
+    "description": authorData.description,
+    "url": `${getBaseUrl()}/author/${encodeURIComponent(authorData.name)}`,
+    "image": `${getBaseUrl()}${authorData.image}`,
+    "email": authorData.email,
+    "worksFor": {
+      "@type": "Organization",
+      "name": siteConfig.brand.name,
+      "url": getBaseUrl(),
+    },
+    "knowsAbout": authorData.expertise,
+    "hasCredential": authorData.credentials,
+    // Only emit sameAs when editorSameAs is populated with real, verified profile URLs.
+    // An empty array means no sameAs claim — safer than broken/unverified claims for a
+    // cold-launch domain (see lib/siteConfig.ts editorSameAs comment).
+    ...(decodedName === "Editor" && siteConfig.authorPage.editorSameAs.length > 0
+      ? { "sameAs": siteConfig.authorPage.editorSameAs }
+      : {}),
+  }
+
+  // rel=me links for author identity verification. Emitted only when the
+  // editorSameAs array is populated with real, verified profile URLs.
+  // Crucial for Mastodon/Bluesky/IndieWeb identity resolution and AI-surface
+  // author confidence. Skipped for contributors (they don't have editorSameAs).
+  const relMeLinks =
+    decodedName === "Editor" ? siteConfig.authorPage.editorSameAs : []
+
   return (
+    <>
+    {relMeLinks.map((href) => (
+      <link key={href} rel="me" href={href} />
+    ))}
+    <Script
+      id="schema-org-person"
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+    />
     <div className="min-h-screen flex flex-col bg-gray-50">
       <Header />
       <main className="flex-grow container mx-auto px-4 py-12 mt-16">
@@ -84,7 +135,7 @@ export default function AuthorPage({ params }: { params: { name: string } }) {
             <div className="p-8">
               <div className="uppercase tracking-wide text-sm text-green-500 font-semibold">{authorData.role}</div>
               <h1 className="mt-1 text-4xl font-bold text-gray-900">{authorData.name}</h1>
-              <p className="mt-2 text-gray-600">{authorData.bio}</p>
+              <p className="mt-2 text-gray-600">{authorData.description}</p>
               
               {/* Credentials Section */}
               <div className="mt-6">
@@ -136,6 +187,6 @@ export default function AuthorPage({ params }: { params: { name: string } }) {
       </main>
       <Footer />
     </div>
+    </>
   )
 }
-

@@ -11,14 +11,16 @@ export default function TagSearch({ tags, selectedTag, onTagSelect }: TagSearchP
   return (
     <div className="mb-8">
       <h2 className="text-xl font-semibold mb-4 flex items-center">
-        <Tag className="mr-2" />
+        <Tag className="mr-2" aria-hidden="true" />
         Filter by Top Tags
       </h2>
-      <div className="flex flex-wrap gap-2">
+      <div className="flex flex-wrap gap-2" role="group" aria-label="Filter by tag">
         <button
+          type="button"
           onClick={() => onTagSelect(null)}
-          className={`px-3 py-1 rounded-full text-sm ${
-            selectedTag === null ? "bg-green-500 text-white" : "bg-gray-200 text-gray-700 hover:bg-gray-300"
+          aria-pressed={selectedTag === null}
+          className={`inline-flex items-center min-h-[36px] px-3 py-1.5 rounded-full text-sm touch-manipulation ${
+            selectedTag === null ? "bg-green-700 text-white" : "bg-gray-200 text-gray-700 hover:bg-gray-300"
           }`}
         >
           All
@@ -26,9 +28,11 @@ export default function TagSearch({ tags, selectedTag, onTagSelect }: TagSearchP
         {tags.map(({ tag, count }) => (
           <button
             key={tag}
+            type="button"
             onClick={() => onTagSelect(tag)}
-            className={`px-3 py-1 rounded-full text-sm ${
-              selectedTag === tag ? "bg-green-500 text-white" : "bg-gray-200 text-gray-700 hover:bg-gray-300"
+            aria-pressed={selectedTag === tag}
+            className={`inline-flex items-center min-h-[36px] px-3 py-1.5 rounded-full text-sm touch-manipulation ${
+              selectedTag === tag ? "bg-green-700 text-white" : "bg-gray-200 text-gray-700 hover:bg-gray-300"
             }`}
           >
             {tag} ({count})

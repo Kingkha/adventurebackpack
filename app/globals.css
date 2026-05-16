@@ -3,7 +3,11 @@
 @tailwind utilities;
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), "Segoe UI", Arial, sans-serif;
+}
+
+.font-editorial {
+  font-family: var(--font-editorial), Georgia, serif;
 }
 
 @layer utilities {
@@ -148,9 +152,9 @@ body {
     scroll-behavior: smooth;
   }
   
-  /* Remove outline but still indicate focus */
-  .focus\:outline-none:focus {
-    box-shadow: inset 0 0 0 2px rgba(59, 130, 246, 0.1);
+  /* Remove default outline but still indicate focus with a visible ring */
+  .focus\:outline-none:focus-visible {
+    box-shadow: inset 0 0 0 2px rgba(14, 165, 233, 0.85);
   }
   
   /* Ensure interactive elements have enough padding for touch */
@@ -240,6 +244,15 @@ body {
   body {
     @apply bg-background text-foreground;
   }
+
+  /* Site-wide focus-visible ring for keyboard navigation (WCAG 2.4.7 / 1.4.11).
+     Any interactive element gets a visible ring unless it explicitly opts out
+     (e.g., components that already style their own focus-visible state). */
+  :where(a, button, [role="button"], input, select, textarea, summary, [tabindex]:not([tabindex="-1"])):focus-visible {
+    outline: 2px solid #0ea5e9; /* sky-500 */
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
 }
 
 @layer components {
@@ -277,6 +290,12 @@ body {
     background-color: #059669;
   }
 
+  .prose h2,
+  .prose h3,
+  .prose h4 {
+    scroll-margin-top: 6rem;
+  }
+
   .prose h3 {
     font-size: 1.5rem;
     font-weight: 600;
@@ -292,13 +311,13 @@ body {
   }
 
   .prose a {
-    color: #059669;
+    color: #047857; /* green-700 — 5.58:1 on white (WCAG AA) */
     text-decoration: none;
     transition: all 0.2s ease;
   }
 
   .prose a:hover {
-    color: #047857;
+    color: #065f46; /* green-800 */
     text-decoration: underline;
   }
 
@@ -355,131 +374,163 @@ body {
   .prose tr:nth-child(even) {
     background-color: #f3f4f6;
   }
+}
 
-  /* Sidebar banner styles */
+
+/* Sidebar banner styles for affiliate ads */
+.sidebar-banner-container {
+  position: static;
+  transform: none;
+  width: 100%;
+  z-index: auto;
+  max-height: none;
+  overflow-y: visible;
+  transition: all 0.3s ease;
+  visibility: visible !important;
+  opacity: 1 !important;
+  display: block !important;
+}
+
+/* Match sidebar card width when banner is mounted inside the sidebar slot */
+.affiliate-sidebar-slot .sidebar-banner-container {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+
+.affiliate-sidebar-slot .sidebar-banner-container .text-center {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.affiliate-sidebar-slot .sidebar-banner-container [data-id="viator-banner"] {
+  width: 100%;
+}
+
+/* Mobile styles - show at end of article */
+@media (max-width: 1024px) {
   .sidebar-banner-container {
-    position: fixed;
-    top: 50%;
-    right: 20px;
-    transform: translateY(-50%);
-    width: 300px;
-    z-index: 1000;
-    max-height: 80vh;
-    overflow-y: auto;
-    transition: all 0.3s ease;
-    visibility: visible !important;
-    opacity: 1 !important;
-    display: block !important;
-  }
-
-  /* Ensure fixed positioning on desktop */
-  @media (min-width: 1025px) {
-    .sidebar-banner-container {
-      position: fixed !important;
-      top: 50% !important;
-      right: 20px !important;
-      transform: translateY(-50%) !important;
-      width: 300px !important;
-    }
-  }
-
-  /* Mobile styles - show at end of article */
-  @media (max-width: 1024px) {
-    .sidebar-banner-container {
-      position: static;
-      transform: none;
-      width: 100%;
-      max-width: 100%;
-      max-height: none;
-      margin: 2rem 0;
-      padding: 0 1rem;
-      z-index: auto;
-    }
-  }
-
-  .sidebar-banner-container .text-center {
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    border: 1px solid #e5e7eb;
-    transition: all 0.3s ease;
-    visibility: visible !important;
-    opacity: 1 !important;
-    display: block !important;
-  }
-
-  .sidebar-banner-container .text-center:hover {
-    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
-    transform: translateY(-2px);
-  }
-
-  /* Mobile banner styles */
-  @media (max-width: 1024px) {
-    .sidebar-banner-container .text-center {
-      padding: 16px;
-      margin: 0;
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    }
-
-    .sidebar-banner-container .text-center:hover {
-      transform: none;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    }
-  }
-
-
-  /* Adjust main content when sidebar is present - desktop only */
-  @media (min-width: 1025px) {
-    .prose:has(.sidebar-banner-container) {
-      margin-right: 340px;
-    }
-
-    /* Alternative approach for browsers that don't support :has() */
-    .has-sidebar .prose {
-      margin-right: 340px;
-    }
-  }
-
-  /* Ensure sidebar doesn't interfere with other fixed elements */
-  .sidebar-banner-container {
-    pointer-events: auto;
-  }
-
-  /* Force banner visibility - override any JavaScript hiding */
-  .sidebar-banner-container *,
-  .sidebar-banner-container div,
-  .sidebar-banner-container [data-id="viator-banner"] {
-    visibility: visible !important;
-    opacity: 1 !important;
-    display: block !important;
-  }
-
-  /* Ensure Viator banner stays visible */
-  [data-id="viator-banner"] {
-    visibility: visible !important;
-    opacity: 1 !important;
-    display: block !important;
-  }
-
-  /* Smooth scrolling for sidebar content */
-  .sidebar-banner-container::-webkit-scrollbar {
-    width: 6px;
-  }
-
-  .sidebar-banner-container::-webkit-scrollbar-track {
-    background: #f1f1f1;
-    border-radius: 3px;
-  }
-
-  .sidebar-banner-container::-webkit-scrollbar-thumb {
-    background: #c1c1c1;
-    border-radius: 3px;
-  }
-
-  .sidebar-banner-container::-webkit-scrollbar-thumb:hover {
-    background: #a8a8a8;
+    position: static;
+    transform: none;
+    width: 100%;
+    max-width: 100%;
+    max-height: none;
+    margin: 2rem 0;
+    padding: 0 1rem;
+    z-index: auto;
   }
 }
 
+.sidebar-banner-container .text-center {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border: 1px solid #e5e7eb;
+  transition: all 0.3s ease;
+  visibility: visible !important;
+  opacity: 1 !important;
+  display: block !important;
+}
+
+.sidebar-banner-container .text-center:hover {
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+/* Force banner visibility - override any JavaScript hiding */
+.sidebar-banner-container *,
+.sidebar-banner-container div,
+.sidebar-banner-container [data-id="viator-banner"] {
+  visibility: visible !important;
+  opacity: 1 !important;
+  display: block !important;
+}
+
+/* Ensure Viator banner stays visible */
+[data-id="viator-banner"] {
+  visibility: visible !important;
+  opacity: 1 !important;
+  display: block !important;
+}
+
+/* Reserved-height shell for in-article affiliate widgets — prevents CLS when
+   the GYG/Viator scripts hydrate and inject iframes that paint hundreds of
+   pixels tall. Inline style="min-height:Npx" on .affiliate-slot supplies the
+   per-widget reserved height. */
+@layer components {
+  .affiliate-slot {
+    position: relative;
+    border: 1px solid rgba(2, 132, 199, 0.22);
+    background: linear-gradient(135deg, rgba(240, 249, 255, 0.85) 0%, rgba(236, 253, 245, 0.85) 55%, rgba(255, 251, 235, 0.85) 100%);
+    border-radius: 1rem;
+    padding: 1.1rem;
+    margin: 2rem 0;
+    overflow: hidden;
+    box-shadow:
+      0 1px 2px rgba(15, 23, 42, 0.06),
+      0 12px 30px rgba(15, 23, 42, 0.08);
+  }
+
+  .affiliate-inner {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    place-items: center;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .affiliate-inner > div {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .affiliate-inner iframe,
+  .affiliate-inner img {
+    max-width: 100%;
+  }
+
+  .affiliate-badge {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    z-index: 2;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    padding: 0.2rem 0.55rem;
+    border-radius: 9999px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: #0f172a;
+    background: rgba(255, 255, 255, 0.92);
+    border: 1px solid rgba(2, 132, 199, 0.25);
+    box-shadow: 0 1px 2px rgba(15, 23, 42, 0.08);
+  }
+
+  .affiliate-skeleton {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    border-radius: 0.75rem;
+    background: linear-gradient(
+      90deg,
+      rgba(226, 232, 240, 0.4),
+      rgba(248, 250, 252, 0.9),
+      rgba(226, 232, 240, 0.4)
+    );
+    background-size: 200% 100%;
+    animation: affiliate-shimmer 1.2s ease-in-out infinite;
+    pointer-events: none;
+  }
+
+  .affiliate-slot.is-loaded .affiliate-skeleton {
+    display: none;
+  }
+}
+
+@keyframes affiliate-shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}

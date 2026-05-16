@@ -1,3 +1,5 @@
+import { siteConfig } from '@/lib/siteConfig'
+
 export default function CookiePolicy() {
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
@@ -6,17 +8,14 @@ export default function CookiePolicy() {
         
         <div className="prose prose-green max-w-none">
           <h2>1. What Are Cookies</h2>
-          <p>Cookies are small text files stored on your device that help Adventure Backpack provide a better adventure activity discovery experience.</p>
+          <p>Cookies are small text files stored on your device that help {siteConfig.brand.name} {siteConfig.policies.cookies.intro}</p>
 
-          <h2>2. How Adventure Backpack Uses Cookies</h2>
+          <h2>2. How {siteConfig.brand.name} Uses Cookies</h2>
           <p>We use cookies to:</p>
           <ul>
-            <li>Maintain secure user sessions</li>
-            <li>Remember your adventure activity preferences</li>
-            <li>Track favorite extreme sports and activities</li>
-            <li>Analyze site performance</li>
-            <li>Personalize your adventure experience</li>
-            <li>Provide relevant adventure activity recommendations</li>
+            {siteConfig.policies.cookies.usage.map((item, index) => (
+              <li key={index}>{item}</li>
+            ))}
           </ul>
 
           <h2>3. Types of Cookies We Use</h2>
@@ -31,19 +30,17 @@ export default function CookiePolicy() {
           <h3>Functional Cookies</h3>
           <p>Enhance your experience by remembering:</p>
           <ul>
-            <li>Language preferences</li>
-            <li>Adventure activity preferences</li>
-            <li>Saved extreme sports and activities</li>
-            <li>Recent adventure activity searches</li>
+            {siteConfig.policies.cookies.functionalCookies.map((item, index) => (
+              <li key={index}>{item}</li>
+            ))}
           </ul>
 
           <h3>Analytics Cookies</h3>
           <p>Help us improve by tracking:</p>
           <ul>
-            <li>Usage patterns</li>
-            <li>Popular adventure activities</li>
-            <li>Content engagement</li>
-            <li>Site performance</li>
+            {siteConfig.policies.cookies.analyticsCookies.map((item, index) => (
+              <li key={index}>{item}</li>
+            ))}
           </ul>
 
           <h2>4. Third-Party Cookies</h2>
@@ -61,10 +58,10 @@ export default function CookiePolicy() {
             <li>Use our cookie preference center</li>
             <li>Opt-out of non-essential cookies</li>
           </ul>
-          <p>Note: Disabling essential cookies may limit your ability to use Adventure Backpack's adventure activity discovery features.</p>
+          <p>Note: Disabling essential cookies may limit your ability to use {siteConfig.brand.name}'s {siteConfig.policies.cookies.limitationNote}</p>
           
-          <h2>6. Contact Information</h2>
-          <p>For questions about our Cookie Policy, please contact us at <a href="mailto:globalaiagents@gmail.com">globalaiagents@gmail.com</a>.</p>
+          <h2>6. Contact Us</h2>
+          <p>For questions about our Cookie Policy, please contact us at <a href={`mailto:${siteConfig.contact.email}`}>{siteConfig.contact.email}</a>.</p>
         </div>
       </div>
     </section>

@@ -7,9 +7,10 @@ interface PaginationProps {
   currentPage: number
   totalPages: number
   basePath?: string
+  page1Href?: string
 }
 
-export default function Pagination({ currentPage, totalPages, basePath = "/blog/page" }: PaginationProps) {
+export default function Pagination({ currentPage, totalPages, basePath = "/blog/page", page1Href = "/blog" }: PaginationProps) {
   // Generate array of page numbers to display
   const getPageNumbers = () => {
     const pages = []
@@ -50,42 +51,48 @@ export default function Pagination({ currentPage, totalPages, basePath = "/blog/
   }
   
   return (
-    <nav className="flex justify-center mt-12">
+    <nav className="flex justify-center mt-12" aria-label="Pagination">
       <ul className="flex space-x-2">
         {/* Previous button */}
         {currentPage > 1 && (
           <li>
-            <Link 
-              href={currentPage === 2 ? "/blog" : `${basePath}/${currentPage - 1}`} 
+            <Link
+              href={currentPage === 2 ? page1Href : `${basePath}/${currentPage - 1}`}
               className="px-3 py-2 rounded bg-gray-200 hover:bg-gray-300 transition-colors"
+              rel="prev"
+              aria-label="Go to previous page"
             >
               Previous
             </Link>
           </li>
         )}
-        
+
         {/* Page numbers */}
         {pageNumbers.map((page, index) => (
           <li key={index}>
             {page === '...' ? (
-              <span className="px-3 py-2">...</span>
+              <span className="px-3 py-2" aria-hidden="true">...</span>
             ) : page === 1 ? (
-              <Link 
-                href="/blog" 
+              <Link
+                href={page1Href}
+                aria-current={currentPage === 1 ? 'page' : undefined}
+                aria-label={`Go to page ${page}`}
                 className={`px-3 py-2 rounded ${
-                  currentPage === 1 
-                    ? 'bg-green-500 text-white' 
+                  currentPage === 1
+                    ? 'bg-green-700 text-white'
                     : 'bg-gray-200 hover:bg-gray-300 transition-colors'
                 }`}
               >
                 {page}
               </Link>
             ) : (
-              <Link 
-                href={`${basePath}/${page}`} 
+              <Link
+                href={`${basePath}/${page}`}
+                aria-current={currentPage === page ? 'page' : undefined}
+                aria-label={`Go to page ${page}`}
                 className={`px-3 py-2 rounded ${
-                  currentPage === page 
-                    ? 'bg-green-500 text-white' 
+                  currentPage === page
+                    ? 'bg-green-700 text-white'
                     : 'bg-gray-200 hover:bg-gray-300 transition-colors'
                 }`}
               >
@@ -94,13 +101,15 @@ export default function Pagination({ currentPage, totalPages, basePath = "/blog/
             )}
           </li>
         ))}
-        
+
         {/* Next button */}
         {currentPage < totalPages && (
           <li>
-            <Link 
-              href={`${basePath}/${currentPage + 1}`} 
+            <Link
+              href={`${basePath}/${currentPage + 1}`}
               className="px-3 py-2 rounded bg-gray-200 hover:bg-gray-300 transition-colors"
+              rel="next"
+              aria-label="Go to next page"
             >
               Next
             </Link>

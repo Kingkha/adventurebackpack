@@ -1,80 +1,102 @@
-'use client'
-
-import { Button } from "../../components/ui/button"
 import Image from 'next/image'
 import Link from 'next/link'
+import { ArrowRight } from 'lucide-react'
+import { getHomepageCollections } from '@/lib/homepageCollections'
 
 export default function Hero() {
+  const { heroQuickLinks } = getHomepageCollections()
+  const quickLinks = heroQuickLinks.length
+    ? heroQuickLinks
+    : [
+        { label: 'Hanoi', href: '/hanoi-adventures' },
+        { label: 'Bangkok', href: '/bangkok-adventures' },
+        { label: 'Chiang Mai', href: '/chiang-mai-adventures' },
+        { label: 'La Paz', href: '/la-paz-adventures' },
+      ]
+
   return (
-    <section 
-      className="relative h-screen min-h-[600px] overflow-hidden" 
+    <section
+      className="relative min-h-[680px] overflow-hidden bg-slate-900"
       aria-labelledby="hero-heading"
-      role="banner"
     >
-      {/* Background image - a hidden scenic location */}
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 z-0" aria-hidden="true">
         <Image
           src="/og-image.webp"
-          alt="Epic mountain adventure scene showcasing the type of thrilling outdoor activities and extreme sports featured on Adventure Backpack"
+          alt=""
           fill
           priority
-          className="object-cover"
+          className="object-cover object-center"
           sizes="100vw"
           loading="eager"
           fetchPriority="high"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-gray-900/80 to-gray-900/50 mix-blend-multiply" />
+        {/* Base scrim ensures ≥4.5:1 contrast for text even over bright photo regions */}
+        <div className="absolute inset-0 bg-slate-900/70" />
+        <div className="absolute inset-0 bg-[linear-gradient(120deg,rgba(10,23,39,0.90)_5%,rgba(10,23,39,0.75)_60%,rgba(10,23,39,0.55)_100%)]" />
       </div>
-      
-      <div className="container mx-auto relative z-10 h-full flex items-center px-4 sm:px-6 lg:px-8">
-        <div className="max-w-3xl">
-          <div className="inline-flex items-center justify-center mb-6 bg-orange-500/20 backdrop-blur-sm px-6 py-2 rounded-full">
-            <span className="text-orange-300 font-medium">Epic adventure activities & extreme sports</span>
-          </div>
-          
-          <h1 
-            id="hero-heading" 
-            className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-6 text-white leading-tight"
-          >
-            Unleash Your <span className="text-orange-400">Adventure Spirit</span>
-          </h1>
-          
-          <p className="text-xl md:text-2xl text-gray-200 mb-8 max-w-2xl">
-            Discover thrilling adventure activities, extreme sports, and epic outdoor experiences that will push your limits.
-          </p>
-          
-          <Link href="/adventure-activities" aria-label="Start exploring epic adventure activities worldwide">
-            <Button 
-              size="lg" 
-              className="py-6 px-8 text-lg rounded-lg bg-orange-500 hover:bg-orange-600 text-white shadow-lg font-semibold"
+
+      <div className="container mx-auto relative z-10 px-4 sm:px-6 lg:px-8 pt-28 pb-20 lg:pb-28">
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_300px] gap-12 items-center">
+
+          {/* Left — editorial statement */}
+          <div className="max-w-2xl">
+            <p className="text-xs font-bold tracking-[0.22em] uppercase text-sky-300 mb-5">
+              Adventure Backpacking Travel Guides
+            </p>
+            <h1
+              id="hero-heading"
+              className="font-editorial text-4xl sm:text-5xl md:text-[3.5rem] leading-[1.06] text-white"
             >
-              Start Your Adventure
-            </Button>
-          </Link>
-          
-          <div className="flex flex-wrap items-center mt-12 gap-x-6 gap-y-2" aria-label="Key features of Adventure Backpack">
-            <span className="flex items-center">
-              <svg className="h-5 w-5 text-orange-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
-              </svg>
-              <span className="ml-1 text-gray-200 text-sm">Extreme sports & activities</span>
-            </span>
-            <span className="flex items-center">
-              <svg className="h-5 w-5 text-orange-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
-              </svg>
-              <span className="ml-1 text-gray-200 text-sm">Adrenaline-pumping experiences</span>
-            </span>
-            <span className="flex items-center">
-              <svg className="h-5 w-5 text-orange-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
-              </svg>
-              <span className="ml-1 text-gray-200 text-sm">Expert adventure guides</span>
-            </span>
+              The world&apos;s best backpacking routes, guided by travelers who actually went.
+            </h1>
+            <p className="mt-6 text-lg text-slate-200 leading-relaxed max-w-xl">
+              Practical route guides, hostel picks, hiking tips, and budget itineraries — organized by destination so you can plan faster.
+            </p>
+            <div className="mt-9 flex flex-wrap gap-4">
+              <Link
+                href="/blog"
+                className="inline-flex items-center gap-2 rounded-md bg-sky-700 px-7 py-3.5 text-base font-semibold text-white hover:bg-sky-800 transition-colors"
+                aria-label="Browse adventure backpacking travel guides"
+              >
+                Browse Destinations
+                <ArrowRight className="h-4 w-4" />
+              </Link>
+              <Link
+                href="/hanoi-adventures"
+                className="inline-flex items-center gap-2 rounded-md border border-white/40 bg-white/10 px-7 py-3.5 text-base font-semibold text-white hover:bg-white/20 transition-colors backdrop-blur-sm"
+              >
+                Hanoi Guides
+              </Link>
+            </div>
           </div>
+
+          {/* Right — editor picks card */}
+          <aside className="rounded-2xl border border-white/20 bg-white/[0.10] p-6 backdrop-blur-md">
+            <p className="text-xs font-bold tracking-[0.18em] uppercase text-sky-300 mb-4">
+              On Our Radar
+            </p>
+            <div className="space-y-2">
+              {quickLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="group flex items-center justify-between rounded-lg border border-white/10 bg-white/[0.06] px-4 py-3 text-white hover:bg-white/15 transition-colors"
+                >
+                  <p className="text-sm font-semibold">{link.label}</p>
+                  <ArrowRight className="h-3.5 w-3.5 text-sky-300 opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0" />
+                </Link>
+              ))}
+            </div>
+            <Link
+              href="/blog"
+              className="mt-5 inline-flex items-center text-xs font-semibold tracking-wide text-sky-200 hover:text-white transition-colors"
+            >
+              All destinations <ArrowRight className="ml-1 h-3.5 w-3.5" />
+            </Link>
+          </aside>
+
         </div>
       </div>
     </section>
   )
 }
-

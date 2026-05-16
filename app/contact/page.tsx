@@ -4,10 +4,27 @@ import type { Metadata } from "next"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
+import { siteConfig, getBaseUrl } from '@/lib/siteConfig'
 
 export const metadata: Metadata = {
-  title: "Contact Us | Adventure Backpack",
-  description: "Get in touch with the Adventure Backpack team for adventure activity inquiries, extreme sports questions, or partnership opportunities.",
+  title: `Contact Us`,
+  description: `${siteConfig.contactPage.metaDescription} - ${siteConfig.brand.name}`,
+  alternates: {
+    canonical: `${getBaseUrl()}/contact`,
+  },
+  openGraph: {
+    title: `Contact ${siteConfig.brand.name} | ${siteConfig.brand.tagline}`,
+    description: `${siteConfig.contactPage.metaDescription} - ${siteConfig.brand.name}`,
+    url: `${getBaseUrl()}/contact`,
+    siteName: siteConfig.brand.name,
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `Contact ${siteConfig.brand.name} | ${siteConfig.brand.tagline}`,
+    description: `${siteConfig.contactPage.metaDescription} - ${siteConfig.brand.name}`,
+  },
 }
 
 export default function ContactPage() {
@@ -15,11 +32,10 @@ export default function ContactPage() {
     <div className="min-h-screen flex flex-col">
       <Header />
       <main className="flex-grow container mx-auto px-4 py-12 mt-16">
-        <h1 className="text-4xl font-bold mb-8 text-center">Contact Us</h1>
+        <h1 className="text-4xl font-bold mb-8 text-center">Contact {siteConfig.brand.name}</h1>
         <div className="max-w-2xl mx-auto">
           <p className="text-lg text-gray-600 mb-8 text-center">
-            Have questions about adventure activities or extreme sports? We'd love to hear from you! Fill out the form below, and we'll get back to you
-            as soon as possible. You can also reach us directly at <a href="mailto:hello@adventurebackpack.com" className="text-orange-500">hello@adventurebackpack.com</a>.
+            {siteConfig.contactPage.intro} You can also reach us directly at <a href={`mailto:${siteConfig.contact.email}`} className="text-blue-700 hover:text-blue-800 underline">{siteConfig.contact.email}</a>.
           </p>
           <form className="space-y-6">
             <div>
@@ -56,4 +72,3 @@ export default function ContactPage() {
     </div>
   )
 }
-

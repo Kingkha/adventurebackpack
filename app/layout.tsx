@@ -1,46 +1,133 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Inter, Libre_Baskerville } from 'next/font/google'
 import './globals.css'
-import { getServerSession } from "next-auth/next"
-import { authOptions } from "@/auth"
-import AuthProvider from './components/AuthProvider'
 import Header from './components/Header'
 import GoogleAnalytics from './components/GoogleAnalytics'
 import { Analytics } from "@vercel/analytics/next"
+import { Suspense } from 'react'
+import { siteConfig, getBaseUrl } from '@/lib/siteConfig'
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ['latin'], variable: '--font-sans', display: 'swap' })
 
-export const metadata: Metadata = {
-  title: 'Adventure Backpack - Epic Adventure Activities & Extreme Sports Worldwide',
-  description: 'Discover thrilling adventure activities, extreme sports, and epic outdoor experiences across the globe. From rock climbing to skydiving, find your next adrenaline rush and plan your ultimate adventure.',
-  icons: {
-    icon: '/favicon.ico',
-    apple: '/apple-icon.png',
-  },
+const libreBaskerville = Libre_Baskerville({
+  subsets: ['latin'],
+  weight: ['400', '700'],
+  variable: '--font-editorial',
+  display: 'swap',
+})
+
+const SITE_URL = getBaseUrl()
+const SITE_NAME = siteConfig.brand.name
+
+const verification = {
+  google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
+  yandex: process.env.NEXT_PUBLIC_YANDEX_VERIFICATION,
+  yahoo: process.env.NEXT_PUBLIC_YAHOO_VERIFICATION,
+}
+const otherVerification: Record<string, string | string[]> = {}
+if (process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION) {
+  otherVerification['msvalidate.01'] = process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION
 }
 
-export default async function RootLayout({
+export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: siteConfig.seo.defaultTitle,
+    template: `%s | ${SITE_NAME}`,
+  },
+  description: siteConfig.seo.defaultDescription,
+  keywords: siteConfig.seo.defaultKeywords.split(', '),
+  applicationName: SITE_NAME,
+  authors: [{ name: siteConfig.author.defaultName }],
+  generator: 'Next.js',
+  referrer: 'origin-when-cross-origin',
+  formatDetection: {
+    telephone: false,
+    email: false,
+    address: false,
+  },
+  icons: {
+    icon: siteConfig.seo.favicon,
+    apple: siteConfig.seo.appleIcon,
+  },
+  alternates: {
+    canonical: SITE_URL,
+    languages: {
+      'x-default': SITE_URL,
+      'en': SITE_URL,
+    },
+    types: {
+      'application/rss+xml': `${SITE_URL}/feed.xml`,
+    },
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: SITE_URL,
+    siteName: SITE_NAME,
+    title: siteConfig.seo.defaultTitle,
+    description: siteConfig.seo.defaultDescription,
+    images: [
+      {
+        url: siteConfig.seo.ogImage,
+        width: 1200,
+        height: 630,
+        alt: `${SITE_NAME} – ${siteConfig.brand.tagline}`,
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: siteConfig.seo.defaultTitle,
+    description: siteConfig.seo.defaultDescription,
+    images: [siteConfig.seo.ogImage],
+    ...(siteConfig.social.twitter
+      ? { site: siteConfig.social.twitter, creator: siteConfig.social.twitter }
+      : {}),
+  },
+  robots: {
+    index: true,
+    follow: true,
+    'max-snippet': -1,
+    'max-image-preview': 'large',
+    'max-video-preview': -1,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-snippet': -1,
+      'max-image-preview': 'large',
+      'max-video-preview': -1,
+    },
+  },
+  verification: {
+    ...(verification.google ? { google: verification.google } : {}),
+    ...(verification.yandex ? { yandex: verification.yandex } : {}),
+    ...(verification.yahoo ? { yahoo: verification.yahoo } : {}),
+    ...(Object.keys(otherVerification).length > 0 ? { other: otherVerification } : {}),
+  },
+  category: siteConfig.content.industry,
+}
+
+export default function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
-  const session = await getServerSession(authOptions)
-
   return (
     <html lang="en" className="scroll-smooth">
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="apple-touch-icon" href="/apple-icon.png" />
+        <link rel="alternate" type="application/rss+xml" title={`${SITE_NAME} RSS Feed`} href="/feed.xml" />
       </head>
-      <body className={`${inter.className} bg-gradient-to-br from-gray-50 to-orange-50 text-gray-800`}>
-        <AuthProvider session={session}>
-          <Header />
-          {children}
-        </AuthProvider>
-        <GoogleAnalytics GA_MEASUREMENT_ID={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || ''} />
+      <body className={`${inter.variable} ${libreBaskerville.variable} font-sans bg-white text-gray-800`}>
+        <Header />
+        {children}
+        <Suspense fallback={null}>
+          <GoogleAnalytics GA_MEASUREMENT_ID={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || ''} />
+        </Suspense>
         <Analytics />
       </body>
     </html>
   )
 }
-

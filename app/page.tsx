@@ -1,94 +1,66 @@
-import { Metadata } from 'next'
-import React from 'react'
+import type { Metadata } from 'next'
 import Script from 'next/script'
-import Header from './components/Header'
 import Hero from './components/Hero'
-import DestinationThemes from './components/DestinationThemes'
-import TopLinks from './components/TopLinks'
-import FeaturedArticles from './components/FeaturedArticles'
-import LatestArticles from './components/LatestArticles'
+import StatsBar from './components/StatsBar'
+import TopDestinations from './components/TopDestinations'
+import RegionNavigator from './components/RegionNavigator'
+import EditorialFeed from './components/EditorialFeed'
+import CitiesGrid from './components/CitiesGrid'
 import CitiesSection from './components/CitiesSection'
-import AboutSection from './components/AboutSection'
-import NewsletterSignup from './components/NewsletterSignup'
+import FreshnessSection from './components/FreshnessSection'
+import TrustStrip from './components/TrustStrip'
 import FAQ from './components/FAQ'
 import Footer from './components/Footer'
-import { getCitiesWithArticleTypes } from '@/lib/getBlogPosts'
+import { getBlogCache, getCitiesWithArticles } from '@/lib/getBlogPosts'
+import { getHomepageCollections } from '@/lib/homepageCollections'
+import { siteConfig, getBaseUrl, getVerifiedSameAs } from '@/lib/siteConfig'
+
+const SITE_URL = getBaseUrl()
+const SITE_NAME = siteConfig.brand.name
+const verifiedSameAs = getVerifiedSameAs()
 
 export const metadata: Metadata = {
-  title: 'Adventure Backpack - Epic Adventure Activities & Outdoor Experiences',
-  description: 'Discover thrilling adventure activities, extreme sports, hiking expeditions, and outdoor adventures worldwide. Your ultimate guide to adrenaline-pumping experiences and epic backpacking journeys.',
-  keywords: 'adventure activities, extreme sports, hiking, backpacking, outdoor adventures, rock climbing, mountain biking, white water rafting, skydiving, bungee jumping, adventure travel, wilderness exploration, trekking, camping, adventure tours',
   alternates: {
-    canonical: 'https://adventurebackpack.com',
-  },
-  openGraph: {
-    title: 'Adventure Backpack - Epic Adventure Activities & Outdoor Experiences',
-    description: 'Discover thrilling adventure activities, extreme sports, and outdoor adventures worldwide. Your ultimate guide to adrenaline-pumping experiences and epic backpacking journeys.',
-    url: 'https://adventurebackpack.com',
-    siteName: 'Adventure Backpack',
-    locale: 'en_US',
-    type: 'website',
-    images: [
-      {
-        url: '/og-image.webp',
-        width: 1200,
-        height: 630,
-        alt: 'Adventure Backpack - Epic Adventure Activities',
-      }
-    ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Adventure Backpack - Epic Adventure Activities & Outdoor Experiences',
-    description: 'Discover thrilling adventure activities, extreme sports, and outdoor adventures worldwide. Your ultimate guide to adrenaline-pumping experiences.',
-    images: ['/og-image.webp'],
-    creator: '@adventurebackpack',
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-  verification: {
-    google: 'your-google-verification-code',
-    yandex: 'your-yandex-verification-code',
-    yahoo: 'your-yahoo-verification-code',
+    canonical: SITE_URL,
   },
 }
 
 export default function Home() {
-  // Get cities with their articles for the homepage
-  const cities = getCitiesWithArticleTypes(12)
+  const cities = getCitiesWithArticles(6)
+  const allPosts = getBlogCache()
+  const { topDestinations, popularGuides, featuredGuides, latestGuides } = getHomepageCollections()
+  const homepageSample = [...topDestinations, ...popularGuides, ...featuredGuides, ...latestGuides]
+  const uniqueSample = Array.from(new Map(homepageSample.map((post) => [post.slug, post])).values()).slice(0, 20)
+  const collectionSample = uniqueSample.map((post) => ({
+    "@type": "BlogPosting",
+    "headline": post.title,
+    "url": `${SITE_URL}${post.url.startsWith('/') ? post.url : `/${post.url}`}`,
+  }))
 
   return (
     <>
-      {/* WebSite Schema.org data */}
-      <Script 
+      {/* WebSite Schema */}
+      <Script
         id="schema-org-website"
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "WebSite",
-            "name": "Adventure Backpack",
-            "url": "https://adventurebackpack.com",
-            "description": "Discover epic adventure activities, extreme sports, hiking expeditions, and thrilling outdoor experiences worldwide.",
+            "name": SITE_NAME,
+            "url": SITE_URL,
+            "description": siteConfig.brand.description,
             "potentialAction": {
               "@type": "SearchAction",
-              "target": "https://adventurebackpack.com/search?q={search_term_string}",
+              "target": `${SITE_URL}/blog?tag={search_term_string}`,
               "query-input": "required name=search_term_string"
             },
             "publisher": {
               "@type": "Organization",
-              "name": "Adventure Backpack",
+              "name": SITE_NAME,
               "logo": {
                 "@type": "ImageObject",
-                "url": "https://adventurebackpack.com/apple-icon.png",
+                "url": `${SITE_URL}/apple-icon.png`,
                 "width": 180,
                 "height": 180
               }
@@ -96,48 +68,26 @@ export default function Home() {
           })
         }}
       />
-      
-      {/* Organization Schema.org data */}
-      <Script 
+
+      {/* Organization Schema */}
+      <Script
         id="schema-org-organization"
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Organization",
-            "name": "Adventure Backpack",
-            "url": "https://adventurebackpack.com",
-            "logo": "https://adventurebackpack.com/apple-icon.png",
-            "description": "Your ultimate guide to adventure activities, extreme sports, and thrilling outdoor experiences worldwide.",
-            "foundingDate": "2024",
-            "numberOfEmployees": "5-10",
-            "industry": "Adventure Travel & Outdoor Recreation",
-            "knowsAbout": [
-              "Adventure activities",
-              "Extreme sports",
-              "Hiking and trekking",
-              "Backpacking expeditions",
-              "Rock climbing",
-              "Mountain biking",
-              "White water rafting",
-              "Outdoor adventures",
-              "Wilderness exploration"
-            ],
-            "award": [
-              "Featured in adventure sports publications",
-              "Trusted by thousands of adventure seekers worldwide"
-            ],
-            "sameAs": [
-              "https://facebook.com/adventurebackpack", 
-              "https://twitter.com/adventurebackpack",
-              "https://instagram.com/adventurebackpack",
-              "https://pinterest.com/adventurebackpack"
-            ],
+            "name": SITE_NAME,
+            "url": SITE_URL,
+            "logo": `${SITE_URL}/apple-icon.png`,
+            "description": siteConfig.brand.description,
+            "foundingDate": siteConfig.organization?.foundingDate,
+            "knowsAbout": siteConfig.content.themes,
+            ...(verifiedSameAs.length > 0 ? { "sameAs": verifiedSameAs } : {}),
             "contactPoint": {
               "@type": "ContactPoint",
-              "telephone": "+1-555-123-4567",
               "contactType": "customer service",
-              "email": "hello@adventurebackpack.com",
+              "email": siteConfig.contact.email,
               "availableLanguage": "English"
             },
             "address": {
@@ -148,83 +98,69 @@ export default function Home() {
         }}
       />
 
-      {/* Person Schema for Editor/Author */}
-      <Script 
+      {/* Person Schema */}
+      <Script
         id="schema-org-person"
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Person",
-            "name": "Adventure Backpack Editor",
-            "jobTitle": "Adventure Content Editor",
+            "name": siteConfig.author.defaultName,
+            "jobTitle": siteConfig.author.jobTitle,
             "worksFor": {
               "@type": "Organization",
-              "name": "Adventure Backpack"
+              "name": SITE_NAME
             },
-            "description": "Experienced adventure sports enthusiast and content creator with expertise in extreme sports and outdoor activities.",
-            "knowsAbout": [
-              "Adventure activities",
-              "Extreme sports",
-              "Hiking and mountaineering",
-              "Rock climbing",
-              "Backpacking expeditions",
-              "Outdoor safety",
-              "Wilderness survival"
-            ],
-            "hasCredential": [
-              "Wilderness First Aid certification",
-              "Rock climbing instructor certification",
-              "Adventure travel guide training"
-            ],
-            "alumniOf": {
-              "@type": "Organization",
-              "name": "Adventure Travel Trade Association"
-            },
-            "url": "https://adventurebackpack.com/author/Editor",
-            "image": "https://adventurebackpack.com/apple-icon.png"
+            "description": siteConfig.author.description,
+            "knowsAbout": siteConfig.content.themes,
+            "url": `${SITE_URL}/author/Editor`,
+            "image": `${SITE_URL}/apple-icon.png`
           })
         }}
       />
 
-      {/* BreadcrumbList Schema.org data */}
-      <Script 
-        id="schema-org-breadcrumbs"
+      {/* Article Collection Schema */}
+      <Script
+        id="schema-org-article-collection"
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            "itemListElement": [
-              {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Home",
-                "item": "https://adventurebackpack.com"
-              }
-            ]
+            "@type": "Collection",
+            "name": `${SITE_NAME} Guides`,
+            "description": siteConfig.brand.description,
+            "url": SITE_URL,
+            "publisher": {
+              "@type": "Organization",
+              "name": SITE_NAME
+            },
+            "about": siteConfig.content.themes,
+            "audience": {
+              "@type": "Audience",
+              "audienceType": siteConfig.content.audience
+            },
+            "numberOfItems": allPosts.length,
+            "hasPart": collectionSample
           })
         }}
       />
-      
+
       <div className="min-h-screen">
-        <Header />
-        <main itemScope itemType="https://schema.org/WebPage">
-          <meta itemProp="name" content="Adventure Backpack - Epic Adventure Activities & Outdoor Experiences" />
-          <meta itemProp="description" content="Discover thrilling adventure activities, extreme sports, hiking expeditions, and outdoor adventures worldwide." />
+        <main>
           <Hero />
-          <DestinationThemes />
-          <TopLinks cities={cities} />
+          <StatsBar />
+          <FreshnessSection />
+          <TopDestinations />
+          <EditorialFeed />
+          <RegionNavigator />
+          <CitiesGrid />
           <CitiesSection cities={cities} />
-          <FeaturedArticles />
-          <LatestArticles />
-          <AboutSection />
+          <TrustStrip />
           <FAQ />
-          <NewsletterSignup />
         </main>
-        <Footer topCities={cities} />
+        <Footer />
       </div>
     </>
   )
 }
-

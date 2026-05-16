@@ -1,3 +1,5 @@
+import { siteConfig } from '@/lib/siteConfig'
+
 export default function PrivacyPolicy() {
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
@@ -6,25 +8,19 @@ export default function PrivacyPolicy() {
         
         <div className="prose prose-green max-w-none">
           <h2>1. Information We Collect</h2>
-          <p>At Adventure Backpack, we collect and process the following information:</p>
+          <p>At {siteConfig.brand.name}, we collect and process the following information:</p>
           <ul>
-            <li>Account information (name, email, profile picture)</li>
-            <li>Adventure preferences (activity types, skill levels, adrenaline tolerance)</li>
-            <li>Activity bookmarks and saved adventure experiences</li>
-            <li>Interactions with our adventure activity finder</li>
-            <li>Device information and usage statistics</li>
-            <li>Location data (when permitted) for local adventure activity recommendations</li>
+            {siteConfig.policies.privacy.dataCollected.map((item, index) => (
+              <li key={index}>{item}</li>
+            ))}
           </ul>
 
           <h2>2. How We Use Your Information</h2>
           <p>Your information enables us to:</p>
           <ul>
-            <li>Recommend personalized adventure activities based on your skill level</li>
-            <li>Provide location-specific extreme sports and adventure information</li>
-            <li>Save and manage your adventure activity wishlist</li>
-            <li>Improve our adventure activity discovery algorithms</li>
-            <li>Send relevant adventure activity updates and safety information</li>
-            <li>Analyze usage patterns to enhance our adventure recommendations</li>
+            {siteConfig.policies.privacy.dataUsage.map((item, index) => (
+              <li key={index}>{item}</li>
+            ))}
           </ul>
 
           <h2>3. Data Storage and Security</h2>
@@ -50,7 +46,7 @@ export default function PrivacyPolicy() {
           <ul>
             <li>Access your personal data</li>
             <li>Request data correction or deletion</li>
-            <li>Export your saved adventure activities history</li>
+            <li>Export your saved history</li>
             <li>Opt-out of marketing communications</li>
             <li>Control your privacy settings</li>
           </ul>
@@ -59,7 +55,7 @@ export default function PrivacyPolicy() {
           <p>We may update this policy periodically. Users will be notified of significant changes via email or app notifications.</p>
           
           <h2>7. Contact Information</h2>
-          <p>For privacy-related inquiries, please contact our Data Protection Officer at <a href="mailto:privacy@adventurebackpack.com">privacy@adventurebackpack.com</a>.</p>
+          <p>For privacy-related inquiries, please contact our Data Protection Officer at <a href={`mailto:${siteConfig.contact.email}`}>{siteConfig.contact.email}</a>.</p>
         </div>
       </div>
     </section>
