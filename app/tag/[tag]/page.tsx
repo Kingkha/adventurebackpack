@@ -49,7 +49,8 @@ function getAllTagSlugs(): { slug: string }[] {
 }
 
 export async function generateStaticParams() {
-  return getAllTagSlugs()
+  // Skip build-time prerender for ~1,200 tag hubs — ISR-cached on first hit.
+  return []
 }
 
 export async function generateMetadata({ params }: { params: { tag: string } }): Promise<Metadata> {
@@ -59,7 +60,7 @@ export async function generateMetadata({ params }: { params: { tag: string } }):
   const { displayTag, posts } = resolved
   const canonicalUrl = `${getBaseUrl()}/tag/${params.tag}`
   const description = TAG_DESCRIPTIONS[params.tag]
-    || `Browse ${posts.length} ${displayTag} travel guides on ${siteConfig.brand.name}. Find practical tips, itineraries, and local recommendations for Japan travel.`
+    || `Browse ${posts.length} ${displayTag} travel guides on ${siteConfig.brand.name}. Find practical tips, itineraries, and local recommendations for adventure backpacking travel.`
 
   return {
     title: `${displayTag} Travel Guides — ${posts.length} Articles`,

@@ -21,27 +21,8 @@ export const dynamicParams = true
 export const revalidate = 86400 // 1 day
 
 export async function generateStaticParams(): Promise<{ slug: string; rest: string[] }[]> {
-  const contentDir = path.join(process.cwd(), "content")
-  const params: { slug: string; rest: string[] }[] = []
-
-  function walk(dir: string, segments: string[]) {
-    if (!fs.existsSync(dir)) return
-    const entries = fs.readdirSync(dir, { withFileTypes: true })
-    for (const entry of entries) {
-      if (entry.isDirectory()) {
-        // Skip the blog folder — blog posts are served at root by app/[slug]/page.tsx
-        if (segments.length === 0 && entry.name === "blog") continue
-        walk(path.join(dir, entry.name), [...segments, entry.name])
-      } else if (entry.isFile() && entry.name.endsWith(".html")) {
-        const slug = entry.name.replace(/\.html$/, "")
-        if (segments.length === 0) return // handled by [slug]/page.tsx
-        params.push({ slug: segments[0], rest: [...segments.slice(1), slug] })
-      }
-    }
-  }
-
-  walk(contentDir, [])
-  return params
+  // Skip build-time prerender — nested content URLs are ISR-cached on first hit.
+  return []
 }
 
 // Helper function to build the path for nested content

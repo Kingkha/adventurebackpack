@@ -14,46 +14,14 @@ import { processAffiliateLinks } from "@/lib/affiliateLinks"
 import BlogPostPage from "../components/BlogPostPage"
 
 // Set this page to be dynamic to ensure it always checks for the existence of the slug
+// Skip build-time prerender for the 11K+ blog slugs — they're ISR-cached on
+// first request (revalidate = 86400). Saves ~4 minutes per Vercel deploy.
 export const dynamic = "force-static";
 export const dynamicParams = true;
 export const revalidate = 86400;
 
 export async function generateStaticParams(): Promise<{ slug: string }[]> {
-  const contentRoot = path.join(process.cwd(), "content")
-  const params: { slug: string }[] = []
-
-  if (fs.existsSync(contentRoot)) {
-    const entries = fs.readdirSync(contentRoot, { withFileTypes: true })
-    for (const entry of entries) {
-      if (entry.isDirectory()) {
-        // Skip the blog folder here to avoid generating /blog as a slug
-        if (entry.name === "blog") continue
-        params.push({ slug: entry.name })
-      }
-    }
-
-    // Also expose blog posts at root ("/post-slug")
-    const blogDir = path.join(contentRoot, "blog")
-    if (fs.existsSync(blogDir)) {
-      const blogFiles = fs.readdirSync(blogDir, { withFileTypes: true })
-      for (const file of blogFiles) {
-        if (file.isFile() && file.name.endsWith(".html")) {
-          const slug = file.name.replace(/\.html$/, "")
-          params.push({ slug })
-        }
-      }
-    }
-  }
-
-  // De-duplicate slugs
-  const seen = new Set<string>()
-  const unique = params.filter(({ slug }) => {
-    if (seen.has(slug)) return false
-    seen.add(slug)
-    return true
-  })
-
-  return unique
+  return []
 }
 
 // Function to check if a folder exists in the content directory

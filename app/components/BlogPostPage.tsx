@@ -43,7 +43,7 @@ function estimateReadingMinutes(content: string): number {
 function extractH2Headings(content: string): { id: string; text: string }[] {
     if (!content) return []
 
-    if (content.startsWith("<")) {
+    if (/^\s*</.test(content)) {
         const regex = /<h2(?:\s[^>]*)?>(.*?)<\/h2>/g
         const headings: { id: string; text: string }[] = []
         let match
@@ -147,14 +147,19 @@ export default async function BlogPostPage({ slug }: { slug: string }) {
     const authorUrl = `${baseUrl}/author/${encodeURIComponent(post.author || "Editor")}`
     const imageUrl = post.featuredImage || "/placeholder.svg?height=400&width=800"
 
-    const normalizedSourceContent = post.content.startsWith("<")
+    // Detect HTML-source articles by the first non-whitespace char — affiliate
+    // processing can leave leading newlines after stripping prior widgets, and
+    // a raw `.startsWith("<")` then misroutes HTML content into the
+    // ReactMarkdown branch, which escapes it on render.
+    const isHtmlSource = /^\s*</.test(post.content)
+    const normalizedSourceContent = isHtmlSource
         ? normalizeHtmlHeadings(post.content)
         : stripLeadingMarkdownH1(post.content)
 
     const contentWithAffiliateLinks = processAffiliateLinks(normalizedSourceContent, post.tags, slug)
     const headings = extractH2Headings(contentWithAffiliateLinks)
-    const processedContent = contentWithAffiliateLinks.startsWith("<")
-        ? addIdsToH2Tags(contentWithAffiliateLinks, headings)
+    const processedContent = isHtmlSource
+        ? addIdsToH2Tags(contentWithAffiliateLinks.replace(/^\s+/, ""), headings)
         : contentWithAffiliateLinks
 
     const readingMinutes = estimateReadingMinutes(processedContent)
