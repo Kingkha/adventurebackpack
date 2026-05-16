@@ -8,10 +8,12 @@ export default function Hero() {
   const quickLinks = heroQuickLinks.length
     ? heroQuickLinks
     : [
-        { label: 'Hanoi', href: '/hanoi-adventures' },
+        // Newly blueprinted clusters first — homepage hero is the strongest
+        // internal-link source for Google's "discovered" → "crawled" transition.
+        { label: 'Nottingham · NEW', href: '/nottingham-activities' },
+        { label: 'Albuquerque · NEW', href: '/things-to-do-in-albuquerque' },
+        { label: 'Amsterdam · NEW', href: '/amsterdam-activities' },
         { label: 'Bangkok', href: '/bangkok-adventures' },
-        { label: 'Chiang Mai', href: '/chiang-mai-adventures' },
-        { label: 'La Paz', href: '/la-paz-adventures' },
       ]
 
   return (

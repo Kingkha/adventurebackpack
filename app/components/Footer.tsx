@@ -141,6 +141,12 @@ export default function Footer() {
           </div>
 
           <div>
+            <h4 className="text-lg font-semibold mb-4 text-white">Featured Guides</h4>
+            <ul className="space-y-2 mb-6">
+              <li><Link href="/nottingham-activities" className="text-blue-300 hover:text-blue-200 font-semibold">Nottingham · NEW</Link></li>
+              <li><Link href="/things-to-do-in-albuquerque" className="text-blue-300 hover:text-blue-200 font-semibold">Albuquerque · NEW</Link></li>
+              <li><Link href="/amsterdam-activities" className="text-blue-300 hover:text-blue-200 font-semibold">Amsterdam · NEW</Link></li>
+            </ul>
             <h4 className="text-lg font-semibold mb-4 text-white">Top Destinations</h4>
             <ul className="space-y-2">
               <li><Link href="/hanoi-adventures" className="text-gray-300 hover:text-blue-300">Hanoi</Link></li>

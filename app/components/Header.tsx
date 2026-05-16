@@ -9,6 +9,10 @@ import { usePathname } from 'next/navigation'
 import { siteConfig } from '@/lib/siteConfig'
 
 const destinations = [
+  // Recently blueprinted clusters surfaced first for Googlebot discovery.
+  { name: 'Nottingham', href: '/nottingham-activities' },
+  { name: 'Albuquerque', href: '/things-to-do-in-albuquerque' },
+  { name: 'Amsterdam', href: '/amsterdam-activities' },
   { name: 'Hanoi', href: '/hanoi-adventures' },
   { name: 'Bangkok', href: '/bangkok-adventures' },
   { name: 'Chiang Mai', href: '/chiang-mai-adventures' },

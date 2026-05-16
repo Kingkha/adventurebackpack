@@ -1,16 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
-    <loc>https://adventurebackpack.com/where-to-rent-cycling-gear-nikko-japan</loc>
-    <lastmod>2025-09-09T00:00:00.000Z</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    <image:image>
-      <image:loc>https://adventurebackpack.com/images/where-to-rent-cycling-gear-nikko-japan.webp</image:loc>
-      <image:title>Where to Rent Cycling Gear in Nikkō, Japan</image:title>
-    </image:image>
-  </url>
-  <url>
     <loc>https://adventurebackpack.com/where-to-rent-surfboards-vung-tau-back-beach</loc>
     <lastmod>2025-09-09T00:00:00.000Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -9998,6 +9988,16 @@
     <image:image>
       <image:loc>https://adventurebackpack.com/images/maribor-events.webp</image:loc>
       <image:title>Maribor Events: Top 10 Must-See Festivals and Activities</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://adventurebackpack.com/maribor-itinerary</loc>
+    <lastmod>2025-09-06T00:00:00.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://adventurebackpack.com/images/maribor-itinerary.webp</image:loc>
+      <image:title>Maribor Itinerary: Explore Slovenia&amp;#8217;s Hidden Gem</image:title>
     </image:image>
   </url>
 </urlset>

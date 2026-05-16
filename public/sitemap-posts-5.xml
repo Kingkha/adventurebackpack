@@ -1,46 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
-    <loc>https://adventurebackpack.com/san-salvador-nightlife</loc>
-    <lastmod>2025-09-01T00:00:00.000Z</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    <image:image>
-      <image:loc>https://adventurebackpack.com/images/san-salvador-nightlife.webp</image:loc>
-      <image:title>San Salvador Nightlife: Top 10 Must-Experience Hotspots</image:title>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://adventurebackpack.com/santa-fe-landmarks</loc>
-    <lastmod>2025-09-01T00:00:00.000Z</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    <image:image>
-      <image:loc>https://adventurebackpack.com/images/santa-fe-landmarks.webp</image:loc>
-      <image:title>Santa Fe Landmarks: Discover 10 Iconic Sites Today</image:title>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://adventurebackpack.com/santa-marta-nightlife</loc>
-    <lastmod>2025-09-01T00:00:00.000Z</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    <image:image>
-      <image:loc>https://adventurebackpack.com/images/santa-marta-nightlife.webp</image:loc>
-      <image:title>Santa Marta Nightlife: Unforgettable Experiences Await</image:title>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://adventurebackpack.com/santander-experiences</loc>
-    <lastmod>2025-09-01T00:00:00.000Z</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    <image:image>
-      <image:loc>https://adventurebackpack.com/images/santander-experiences.webp</image:loc>
-      <image:title>Santander Experiences: Top 10 Unforgettable Adventures</image:title>
-    </image:image>
-  </url>
-  <url>
     <loc>https://adventurebackpack.com/santiago-events</loc>
     <lastmod>2025-09-01T00:00:00.000Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -858,16 +818,6 @@
     <image:image>
       <image:loc>https://adventurebackpack.com/images/amritsar-adventures.webp</image:loc>
       <image:title>Amritsar Adventures: Top 10 Experiences in the Golden City</image:title>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://adventurebackpack.com/amsterdam-nightlife</loc>
-    <lastmod>2025-08-31T00:00:00.000Z</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    <image:image>
-      <image:loc>https://adventurebackpack.com/images/amsterdam-nightlife.webp</image:loc>
-      <image:title>Amsterdam Nightlife: Your Ultimate Guide to Fun</image:title>
     </image:image>
   </url>
   <url>
@@ -9998,6 +9948,56 @@
     <image:image>
       <image:loc>https://adventurebackpack.com/images/lahaina-itinerary.webp</image:loc>
       <image:title>Lahaina Itinerary: A Perfect 4-Day Island Escape</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://adventurebackpack.com/lahore-landmarks</loc>
+    <lastmod>2025-08-29T00:00:00.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://adventurebackpack.com/images/lahore-landmarks.webp</image:loc>
+      <image:title>Lahore Landmarks: Top 10 Must-See Historical Sites</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://adventurebackpack.com/lalibela-itinerary</loc>
+    <lastmod>2025-08-29T00:00:00.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://adventurebackpack.com/images/lalibela-itinerary.webp</image:loc>
+      <image:title>Lalibela Itinerary: Uncover Ancient Wonders</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://adventurebackpack.com/las-palmas-de-gran-canaria-landmarks</loc>
+    <lastmod>2025-08-29T00:00:00.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://adventurebackpack.com/placeholder.svg?height=400&amp;width=800</image:loc>
+      <image:title>Las Palmas de Gran Canaria Landmarks: Top 10 Must-See Sights</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://adventurebackpack.com/las-terrenas-activities</loc>
+    <lastmod>2025-08-29T00:00:00.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://adventurebackpack.com/images/las-terrenas-activities.webp</image:loc>
+      <image:title>Las Terrenas Activities: Top 10 Exciting Adventures</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://adventurebackpack.com/las-terrenas-itinerary</loc>
+    <lastmod>2025-08-29T00:00:00.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://adventurebackpack.com/images/las-terrenas-itinerary.webp</image:loc>
+      <image:title>Las Terrenas Itinerary: Your Perfect Beach Getaway</image:title>
     </image:image>
   </url>
 </urlset>

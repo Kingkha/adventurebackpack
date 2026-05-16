@@ -911,16 +911,6 @@
     </image:image>
   </url>
   <url>
-    <loc>https://adventurebackpack.com/amsterdam-itinerary</loc>
-    <lastmod>2025-09-13T00:00:00.000Z</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    <image:image>
-      <image:loc>https://adventurebackpack.com/images/amsterdam-itinerary.webp</image:loc>
-      <image:title>Amsterdam Itinerary: A Perfect 3-Day Plan (2026 Guide)</image:title>
-    </image:image>
-  </url>
-  <url>
     <loc>https://adventurebackpack.com/arezzo-adventures</loc>
     <lastmod>2025-09-13T00:00:00.000Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -10048,6 +10038,16 @@
     <image:image>
       <image:loc>https://adventurebackpack.com/images/guilin-culture.webp</image:loc>
       <image:title>Guilin Culture: Discover 10 Unique Local Experiences</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://adventurebackpack.com/haarlem-itinerary</loc>
+    <lastmod>2025-09-11T00:00:00.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://adventurebackpack.com/images/haarlem-itinerary.webp</image:loc>
+      <image:title>Haarlem Itinerary: Explore This Charming Dutch City</image:title>
     </image:image>
   </url>
 </urlset>

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Script from 'next/script'
 import Hero from './components/Hero'
+import FeaturedClusterGuides from './components/FeaturedClusterGuides'
 import StatsBar from './components/StatsBar'
 import TopDestinations from './components/TopDestinations'
 import RegionNavigator from './components/RegionNavigator'
@@ -149,6 +150,7 @@ export default function Home() {
       <div className="min-h-screen">
         <main>
           <Hero />
+          <FeaturedClusterGuides />
           <StatsBar />
           <FreshnessSection />
           <TopDestinations />

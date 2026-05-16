@@ -1,56 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
-    <loc>https://adventurebackpack.com/lahore-landmarks</loc>
-    <lastmod>2025-08-29T00:00:00.000Z</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    <image:image>
-      <image:loc>https://adventurebackpack.com/images/lahore-landmarks.webp</image:loc>
-      <image:title>Lahore Landmarks: Top 10 Must-See Historical Sites</image:title>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://adventurebackpack.com/lalibela-itinerary</loc>
-    <lastmod>2025-08-29T00:00:00.000Z</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    <image:image>
-      <image:loc>https://adventurebackpack.com/images/lalibela-itinerary.webp</image:loc>
-      <image:title>Lalibela Itinerary: Uncover Ancient Wonders</image:title>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://adventurebackpack.com/las-palmas-de-gran-canaria-landmarks</loc>
-    <lastmod>2025-08-29T00:00:00.000Z</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    <image:image>
-      <image:loc>https://adventurebackpack.com/placeholder.svg?height=400&amp;width=800</image:loc>
-      <image:title>Las Palmas de Gran Canaria Landmarks: Top 10 Must-See Sights</image:title>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://adventurebackpack.com/las-terrenas-activities</loc>
-    <lastmod>2025-08-29T00:00:00.000Z</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    <image:image>
-      <image:loc>https://adventurebackpack.com/images/las-terrenas-activities.webp</image:loc>
-      <image:title>Las Terrenas Activities: Top 10 Exciting Adventures</image:title>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://adventurebackpack.com/las-terrenas-itinerary</loc>
-    <lastmod>2025-08-29T00:00:00.000Z</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    <image:image>
-      <image:loc>https://adventurebackpack.com/images/las-terrenas-itinerary.webp</image:loc>
-      <image:title>Las Terrenas Itinerary: Your Perfect Beach Getaway</image:title>
-    </image:image>
-  </url>
-  <url>
     <loc>https://adventurebackpack.com/las-vegas-highlights</loc>
     <lastmod>2025-08-29T00:00:00.000Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -9998,6 +9948,56 @@
     <image:image>
       <image:loc>https://adventurebackpack.com/images/austin-highlights.webp</image:loc>
       <image:title>Austin Highlights: Top 10 Must-See Attractions</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://adventurebackpack.com/avignon-experiences</loc>
+    <lastmod>2025-08-26T00:00:00.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://adventurebackpack.com/images/avignon-experiences.webp</image:loc>
+      <image:title>Avignon Experiences: Top 10 Things to Do in the City</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://adventurebackpack.com/ayuthaya-highlights</loc>
+    <lastmod>2025-08-26T00:00:00.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://adventurebackpack.com/images/ayuthaya-highlights.webp</image:loc>
+      <image:title>Ayuthaya Highlights: Discover the Top Must-See Attractions</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://adventurebackpack.com/baden-baden-highlights</loc>
+    <lastmod>2025-08-26T00:00:00.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://adventurebackpack.com/images/baden-baden-highlights.webp</image:loc>
+      <image:title>Baden-Baden Highlights: Unveiling the Best Attractions</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://adventurebackpack.com/baguio-nightlife</loc>
+    <lastmod>2025-08-26T00:00:00.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://adventurebackpack.com/images/baguio-nightlife.webp</image:loc>
+      <image:title>Baguio Nightlife: Top 10 Experiences to Enjoy</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://adventurebackpack.com/balikpapan-experiences</loc>
+    <lastmod>2025-08-26T00:00:00.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://adventurebackpack.com/images/balikpapan-experiences.webp</image:loc>
+      <image:title>Balikpapan Experiences: 10 Must-See Adventures</image:title>
     </image:image>
   </url>
 </urlset>

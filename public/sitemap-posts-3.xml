@@ -1,16 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
-    <loc>https://adventurebackpack.com/maribor-itinerary</loc>
-    <lastmod>2025-09-06T00:00:00.000Z</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    <image:image>
-      <image:loc>https://adventurebackpack.com/images/maribor-itinerary.webp</image:loc>
-      <image:title>Maribor Itinerary: Explore Slovenia&amp;#8217;s Hidden Gem</image:title>
-    </image:image>
-  </url>
-  <url>
     <loc>https://adventurebackpack.com/marrakesh-experiences</loc>
     <lastmod>2025-09-06T00:00:00.000Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -1828,16 +1818,6 @@
     <image:image>
       <image:loc>https://adventurebackpack.com/images/amboise-highlights.webp</image:loc>
       <image:title>Amboise Highlights: Discover the Charm of Loire Valley</image:title>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://adventurebackpack.com/amsterdam-events</loc>
-    <lastmod>2025-09-05T00:00:00.000Z</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    <image:image>
-      <image:loc>https://adventurebackpack.com/images/amsterdam-events.webp</image:loc>
-      <image:title>Amsterdam Events: Top 10 Festivals You Can&amp;#8217;t Miss</image:title>
     </image:image>
   </url>
   <url>
@@ -5748,26 +5728,6 @@
     <image:image>
       <image:loc>https://adventurebackpack.com/images/amritsar-itinerary.webp</image:loc>
       <image:title>Amritsar Itinerary: A 3-Day Cultural Journey</image:title>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://adventurebackpack.com/amsterdam-culture</loc>
-    <lastmod>2025-09-04T00:00:00.000Z</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    <image:image>
-      <image:loc>https://adventurebackpack.com/images/amsterdam-culture.webp</image:loc>
-      <image:title>Amsterdam Culture: 12 Unique Experiences to Explore</image:title>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://adventurebackpack.com/amsterdam-landmarks</loc>
-    <lastmod>2025-09-04T00:00:00.000Z</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    <image:image>
-      <image:loc>https://adventurebackpack.com/images/amsterdam-landmarks.webp</image:loc>
-      <image:title>Amsterdam Landmarks: 12 Essential Sites to Visit</image:title>
     </image:image>
   </url>
   <url>
@@ -9998,6 +9958,46 @@
     <image:image>
       <image:loc>https://adventurebackpack.com/images/dubai-activities.webp</image:loc>
       <image:title>Dubai Activities: 12 Exciting Adventures to Experience</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://adventurebackpack.com/dumaguete-highlights</loc>
+    <lastmod>2025-09-03T00:00:00.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://adventurebackpack.com/images/dumaguete-highlights.webp</image:loc>
+      <image:title>Dumaguete Highlights: 10 Unmissable Experiences in the City</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://adventurebackpack.com/durban-activities</loc>
+    <lastmod>2025-09-03T00:00:00.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://adventurebackpack.com/images/durban-activities.webp</image:loc>
+      <image:title>Durban Activities: 10 Exciting Experiences to Enjoy</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://adventurebackpack.com/durban-landmarks</loc>
+    <lastmod>2025-09-03T00:00:00.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://adventurebackpack.com/images/durban-landmarks.webp</image:loc>
+      <image:title>Durban Landmarks: Top 10 Must-See Attractions</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://adventurebackpack.com/edinburgh-activities</loc>
+    <lastmod>2025-09-03T00:00:00.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://adventurebackpack.com/images/edinburgh-activities.webp</image:loc>
+      <image:title>Edinburgh Activities: Top 10 Experiences You Can&amp;#8217;t Miss</image:title>
     </image:image>
   </url>
 </urlset>

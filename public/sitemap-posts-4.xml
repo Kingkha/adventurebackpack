@@ -1,46 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
-    <loc>https://adventurebackpack.com/dumaguete-highlights</loc>
-    <lastmod>2025-09-03T00:00:00.000Z</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    <image:image>
-      <image:loc>https://adventurebackpack.com/images/dumaguete-highlights.webp</image:loc>
-      <image:title>Dumaguete Highlights: 10 Unmissable Experiences in the City</image:title>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://adventurebackpack.com/durban-activities</loc>
-    <lastmod>2025-09-03T00:00:00.000Z</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    <image:image>
-      <image:loc>https://adventurebackpack.com/images/durban-activities.webp</image:loc>
-      <image:title>Durban Activities: 10 Exciting Experiences to Enjoy</image:title>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://adventurebackpack.com/durban-landmarks</loc>
-    <lastmod>2025-09-03T00:00:00.000Z</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    <image:image>
-      <image:loc>https://adventurebackpack.com/images/durban-landmarks.webp</image:loc>
-      <image:title>Durban Landmarks: Top 10 Must-See Attractions</image:title>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://adventurebackpack.com/edinburgh-activities</loc>
-    <lastmod>2025-09-03T00:00:00.000Z</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    <image:image>
-      <image:loc>https://adventurebackpack.com/images/edinburgh-activities.webp</image:loc>
-      <image:title>Edinburgh Activities: Top 10 Experiences You Can&amp;#8217;t Miss</image:title>
-    </image:image>
-  </url>
-  <url>
     <loc>https://adventurebackpack.com/eger-adventures</loc>
     <lastmod>2025-09-03T00:00:00.000Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -9998,6 +9958,46 @@
     <image:image>
       <image:loc>https://adventurebackpack.com/images/san-miguel-de-allende-culture.webp</image:loc>
       <image:title>San Miguel de Allende Culture: 10 Unique Experiences</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://adventurebackpack.com/san-salvador-nightlife</loc>
+    <lastmod>2025-09-01T00:00:00.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://adventurebackpack.com/images/san-salvador-nightlife.webp</image:loc>
+      <image:title>San Salvador Nightlife: Top 10 Must-Experience Hotspots</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://adventurebackpack.com/santa-fe-landmarks</loc>
+    <lastmod>2025-09-01T00:00:00.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://adventurebackpack.com/images/santa-fe-landmarks.webp</image:loc>
+      <image:title>Santa Fe Landmarks: Discover 10 Iconic Sites Today</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://adventurebackpack.com/santa-marta-nightlife</loc>
+    <lastmod>2025-09-01T00:00:00.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://adventurebackpack.com/images/santa-marta-nightlife.webp</image:loc>
+      <image:title>Santa Marta Nightlife: Unforgettable Experiences Await</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://adventurebackpack.com/santander-experiences</loc>
+    <lastmod>2025-09-01T00:00:00.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://adventurebackpack.com/images/santander-experiences.webp</image:loc>
+      <image:title>Santander Experiences: Top 10 Unforgettable Adventures</image:title>
     </image:image>
   </url>
 </urlset>
