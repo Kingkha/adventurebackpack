@@ -39,6 +39,13 @@ const nextConfig = {
   },
   async redirects() {
     return [
+      // Amsterdam cluster MERGE consolidation — generic spokes (2026-05-16)
+      { source: '/amsterdam-culture', destination: '/amsterdam-activities', permanent: true },
+      { source: '/amsterdam-events', destination: '/amsterdam-activities', permanent: true },
+      { source: '/amsterdam-itinerary', destination: '/amsterdam-3-day-itinerary', permanent: true },
+      { source: '/amsterdam-landmarks', destination: '/best-museums-in-amsterdam', permanent: true },
+      { source: '/amsterdam-nightlife', destination: '/amsterdam-red-light-district', permanent: true },
+
       // Amsterdam cluster MERGE consolidation
       {
         source: '/amsterdam-adventures',
