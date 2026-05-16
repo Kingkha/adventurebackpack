@@ -1,26 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
-    <loc>https://adventurebackpack.com/dresden-itinerary</loc>
-    <lastmod>2025-09-03T00:00:00.000Z</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    <image:image>
-      <image:loc>https://adventurebackpack.com/images/dresden-itinerary.webp</image:loc>
-      <image:title>Dresden Itinerary: 4 Days of Discovery</image:title>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://adventurebackpack.com/dubai-activities</loc>
-    <lastmod>2025-09-03T00:00:00.000Z</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    <image:image>
-      <image:loc>https://adventurebackpack.com/images/dubai-activities.webp</image:loc>
-      <image:title>Dubai Activities: 12 Exciting Adventures to Experience</image:title>
-    </image:image>
-  </url>
-  <url>
     <loc>https://adventurebackpack.com/dumaguete-highlights</loc>
     <lastmod>2025-09-03T00:00:00.000Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -9998,6 +9978,26 @@
     <image:image>
       <image:loc>https://adventurebackpack.com/images/san-juan-del-sur-events.webp</image:loc>
       <image:title>San Juan Del Sur Events: Unforgettable Experiences Await</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://adventurebackpack.com/san-marcos-la-laguna-highlights</loc>
+    <lastmod>2025-09-01T00:00:00.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://adventurebackpack.com/images/san-marcos-la-laguna-highlights.webp</image:loc>
+      <image:title>San Marcos La Laguna Highlights: 10 Unforgettable Experiences</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://adventurebackpack.com/san-miguel-de-allende-culture</loc>
+    <lastmod>2025-09-01T00:00:00.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://adventurebackpack.com/images/san-miguel-de-allende-culture.webp</image:loc>
+      <image:title>San Miguel de Allende Culture: 10 Unique Experiences</image:title>
     </image:image>
   </url>
 </urlset>

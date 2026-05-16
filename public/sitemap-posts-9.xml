@@ -1,36 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
-    <loc>https://adventurebackpack.com/jodhpur-activities</loc>
-    <lastmod>2025-08-21T00:00:00.000Z</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    <image:image>
-      <image:loc>https://adventurebackpack.com/images/jodhpur-activities.webp</image:loc>
-      <image:title>Jodhpur Activities: 10 Unforgettable Experiences</image:title>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://adventurebackpack.com/jodhpur-experiences</loc>
-    <lastmod>2025-08-21T00:00:00.000Z</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    <image:image>
-      <image:loc>https://adventurebackpack.com/images/jodhpur-experiences.webp</image:loc>
-      <image:title>Jodhpur Experiences: 10 Unforgettable Adventures</image:title>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://adventurebackpack.com/kamakura-itinerary</loc>
-    <lastmod>2025-08-21T00:00:00.000Z</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    <image:image>
-      <image:loc>https://adventurebackpack.com/images/kamakura-itinerary.webp</image:loc>
-      <image:title>Kamakura Itinerary: Explore Japan&amp;#8217;s Coastal Gem</image:title>
-    </image:image>
-  </url>
-  <url>
     <loc>https://adventurebackpack.com/kanchanaburi-itinerary</loc>
     <lastmod>2025-08-21T00:00:00.000Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -9998,6 +9968,36 @@
     <image:image>
       <image:loc>https://adventurebackpack.com/images/asilah-adventures.webp</image:loc>
       <image:title>Asilah Adventures: Discover the Hidden Gems of Morocco</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://adventurebackpack.com/assisi-nightlife</loc>
+    <lastmod>2025-08-18T00:00:00.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://adventurebackpack.com/images/assisi-nightlife.webp</image:loc>
+      <image:title>Assisi Nightlife: Discover the Best Evening Experiences</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://adventurebackpack.com/aswan-culture</loc>
+    <lastmod>2025-08-18T00:00:00.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://adventurebackpack.com/images/aswan-culture.webp</image:loc>
+      <image:title>Aswan Culture: 12 Unique Experiences to Discover</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://adventurebackpack.com/aswan-itinerary</loc>
+    <lastmod>2025-08-18T00:00:00.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://adventurebackpack.com/images/aswan-itinerary.webp</image:loc>
+      <image:title>Aswan Itinerary: Discover Egypt&amp;#8217;s Hidden Gem</image:title>
     </image:image>
   </url>
 </urlset>

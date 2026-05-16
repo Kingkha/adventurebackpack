@@ -1,36 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
-    <loc>https://adventurebackpack.com/pakse-nightlife</loc>
-    <lastmod>2025-08-16T00:00:00.000Z</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    <image:image>
-      <image:loc>https://adventurebackpack.com/images/pakse-nightlife.webp</image:loc>
-      <image:title>Pakse Nightlife: Top 10 Experiences to Explore</image:title>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://adventurebackpack.com/pamplona-activities</loc>
-    <lastmod>2025-08-16T00:00:00.000Z</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    <image:image>
-      <image:loc>https://adventurebackpack.com/images/pamplona-activities.webp</image:loc>
-      <image:title>Pamplona Activities: Top 10 Experiences to Enjoy</image:title>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://adventurebackpack.com/panajachel-nightlife</loc>
-    <lastmod>2025-08-16T00:00:00.000Z</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    <image:image>
-      <image:loc>https://adventurebackpack.com/images/panajachel-nightlife.webp</image:loc>
-      <image:title>Panajachel Nightlife: Discover Unforgettable Experiences</image:title>
-    </image:image>
-  </url>
-  <url>
     <loc>https://adventurebackpack.com/paramaribo-culture</loc>
     <lastmod>2025-08-16T00:00:00.000Z</lastmod>
     <changefreq>weekly</changefreq>

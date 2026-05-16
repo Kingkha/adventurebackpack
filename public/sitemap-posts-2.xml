@@ -1,26 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
-    <loc>https://adventurebackpack.com/walvis-bay-highlights</loc>
-    <lastmod>2025-09-09T00:00:00.000Z</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    <image:image>
-      <image:loc>https://adventurebackpack.com/images/walvis-bay-highlights.webp</image:loc>
-      <image:title>Walvis Bay Highlights: 10 Essential Experiences to Enjoy</image:title>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://adventurebackpack.com/wanaka-activities</loc>
-    <lastmod>2025-09-09T00:00:00.000Z</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    <image:image>
-      <image:loc>https://adventurebackpack.com/images/wanaka-activities.webp</image:loc>
-      <image:title>Wanaka Activities: Top 10 Adventures to Experience</image:title>
-    </image:image>
-  </url>
-  <url>
     <loc>https://adventurebackpack.com/where-to-rent-cycling-gear-nikko-japan</loc>
     <lastmod>2025-09-09T00:00:00.000Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -9998,6 +9978,26 @@
     <image:image>
       <image:loc>https://adventurebackpack.com/images/mangaluru-mangalore-nightlife.webp</image:loc>
       <image:title>Mangaluru Nightlife: Top 10 Experiences You Can&amp;#8217;t Miss</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://adventurebackpack.com/mar-del-plata-nightlife</loc>
+    <lastmod>2025-09-06T00:00:00.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://adventurebackpack.com/images/mar-del-plata-nightlife.webp</image:loc>
+      <image:title>Mar del Plata Nightlife: Discover 10 Hotspots to Experience</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://adventurebackpack.com/maribor-events</loc>
+    <lastmod>2025-09-06T00:00:00.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://adventurebackpack.com/images/maribor-events.webp</image:loc>
+      <image:title>Maribor Events: Top 10 Must-See Festivals and Activities</image:title>
     </image:image>
   </url>
 </urlset>

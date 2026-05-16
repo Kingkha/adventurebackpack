@@ -1,26 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
-    <loc>https://adventurebackpack.com/auckland-highlights</loc>
-    <lastmod>2025-08-26T00:00:00.000Z</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    <image:image>
-      <image:loc>https://adventurebackpack.com/images/auckland-highlights.webp</image:loc>
-      <image:title>Auckland Highlights: 10 Must-See Attractions and Activities</image:title>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://adventurebackpack.com/austin-highlights</loc>
-    <lastmod>2025-08-26T00:00:00.000Z</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    <image:image>
-      <image:loc>https://adventurebackpack.com/images/austin-highlights.webp</image:loc>
-      <image:title>Austin Highlights: Top 10 Must-See Attractions</image:title>
-    </image:image>
-  </url>
-  <url>
     <loc>https://adventurebackpack.com/avignon-experiences</loc>
     <lastmod>2025-08-26T00:00:00.000Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -7611,16 +7591,6 @@
     </image:image>
   </url>
   <url>
-    <loc>https://adventurebackpack.com/amsterdam-highlights</loc>
-    <lastmod>2025-08-24T00:00:00.000Z</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    <image:image>
-      <image:loc>https://adventurebackpack.com/images/amsterdam-highlights.webp</image:loc>
-      <image:title>Amsterdam Highlights: 12 Unmissable Experiences</image:title>
-    </image:image>
-  </url>
-  <url>
     <loc>https://adventurebackpack.com/antibes-activities</loc>
     <lastmod>2025-08-24T00:00:00.000Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -9998,6 +9968,36 @@
     <image:image>
       <image:loc>https://adventurebackpack.com/images/port-louis-activities.webp</image:loc>
       <image:title>Port Louis Activities: Top 10 Experiences You Can&amp;#8217;t Miss</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://adventurebackpack.com/port-moresby-activities</loc>
+    <lastmod>2025-08-24T00:00:00.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://adventurebackpack.com/images/port-moresby-activities.webp</image:loc>
+      <image:title>Port Moresby Activities: 10 Exciting Things to Do</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://adventurebackpack.com/port-vila-highlights</loc>
+    <lastmod>2025-08-24T00:00:00.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://adventurebackpack.com/images/port-vila-highlights.webp</image:loc>
+      <image:title>Port Vila Highlights: Top 10 Must-See Attractions</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://adventurebackpack.com/portobelo-activities</loc>
+    <lastmod>2025-08-24T00:00:00.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://adventurebackpack.com/images/portobelo-activities.webp</image:loc>
+      <image:title>Portobelo Activities: 10 Exciting Experiences to Try</image:title>
     </image:image>
   </url>
 </urlset>

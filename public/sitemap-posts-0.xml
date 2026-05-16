@@ -4801,16 +4801,6 @@
     </image:image>
   </url>
   <url>
-    <loc>https://adventurebackpack.com/amsterdam-experiences</loc>
-    <lastmod>2025-09-12T00:00:00.000Z</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    <image:image>
-      <image:loc>https://adventurebackpack.com/images/amsterdam-experiences.webp</image:loc>
-      <image:title>Amsterdam Experiences: 10 Unforgettable Activities to Enjoy</image:title>
-    </image:image>
-  </url>
-  <url>
     <loc>https://adventurebackpack.com/anchorage-events</loc>
     <lastmod>2025-09-12T00:00:00.000Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -8991,16 +8981,6 @@
     </image:image>
   </url>
   <url>
-    <loc>https://adventurebackpack.com/amsterdam-adventures</loc>
-    <lastmod>2025-09-11T00:00:00.000Z</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    <image:image>
-      <image:loc>https://adventurebackpack.com/images/amsterdam-adventures.webp</image:loc>
-      <image:title>Amsterdam Adventures: Explore 10 Unique Experiences</image:title>
-    </image:image>
-  </url>
-  <url>
     <loc>https://adventurebackpack.com/annecy-culture</loc>
     <lastmod>2025-09-11T00:00:00.000Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -10048,6 +10028,26 @@
     <image:image>
       <image:loc>https://adventurebackpack.com/images/guadalajara-culture.webp</image:loc>
       <image:title>Guadalajara Culture: Discover 10 Authentic Experiences</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://adventurebackpack.com/guangzhou-highlights</loc>
+    <lastmod>2025-09-11T00:00:00.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://adventurebackpack.com/images/guangzhou-highlights.webp</image:loc>
+      <image:title>Guangzhou Highlights: 10 Unmissable Experiences</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://adventurebackpack.com/guilin-culture</loc>
+    <lastmod>2025-09-11T00:00:00.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://adventurebackpack.com/images/guilin-culture.webp</image:loc>
+      <image:title>Guilin Culture: Discover 10 Unique Local Experiences</image:title>
     </image:image>
   </url>
 </urlset>

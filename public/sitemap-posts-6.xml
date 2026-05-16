@@ -1,26 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
-    <loc>https://adventurebackpack.com/la-serena-adventures</loc>
-    <lastmod>2025-08-29T00:00:00.000Z</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    <image:image>
-      <image:loc>https://adventurebackpack.com/images/la-serena-adventures.webp</image:loc>
-      <image:title>La Serena Adventures: Top 10 Activities You Can&amp;#8217;t Miss</image:title>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://adventurebackpack.com/lahaina-itinerary</loc>
-    <lastmod>2025-08-29T00:00:00.000Z</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    <image:image>
-      <image:loc>https://adventurebackpack.com/images/lahaina-itinerary.webp</image:loc>
-      <image:title>Lahaina Itinerary: A Perfect 4-Day Island Escape</image:title>
-    </image:image>
-  </url>
-  <url>
     <loc>https://adventurebackpack.com/lahore-landmarks</loc>
     <lastmod>2025-08-29T00:00:00.000Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -9998,6 +9978,26 @@
     <image:image>
       <image:loc>https://adventurebackpack.com/images/armenia-itinerary.webp</image:loc>
       <image:title>Armenia Itinerary: Explore the Best of Armenia</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://adventurebackpack.com/auckland-highlights</loc>
+    <lastmod>2025-08-26T00:00:00.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://adventurebackpack.com/images/auckland-highlights.webp</image:loc>
+      <image:title>Auckland Highlights: 10 Must-See Attractions and Activities</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://adventurebackpack.com/austin-highlights</loc>
+    <lastmod>2025-08-26T00:00:00.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://adventurebackpack.com/images/austin-highlights.webp</image:loc>
+      <image:title>Austin Highlights: Top 10 Must-See Attractions</image:title>
     </image:image>
   </url>
 </urlset>
