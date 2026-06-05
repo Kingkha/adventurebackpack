@@ -15,6 +15,7 @@ import { notFound } from "next/navigation"
 import ReadingProgressBar from "./ReadingProgressBar"
 import ShareButtons from "./ShareButtons"
 import AffiliateScripts from "./AffiliateScripts"
+import AffiliateTracker from "./AffiliateTracker"
 
 function formatDate(date: string): string {
     const parsed = new Date(date)
@@ -204,6 +205,7 @@ export default async function BlogPostPage({ slug }: { slug: string }) {
                 strategy="lazyOnload"
             />
             <AffiliateScripts />
+            <AffiliateTracker />
 
             <main className="flex-grow">
                 <div className="container mx-auto px-4 pt-24 pb-12 affiliate-safe-area">

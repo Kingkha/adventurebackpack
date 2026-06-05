@@ -11,6 +11,7 @@ import Image from "next/image"
 import Link from "next/link"
 import Script from "next/script"
 import AffiliateScripts from "../../components/AffiliateScripts"
+import AffiliateTracker from "../../components/AffiliateTracker"
 import { processAffiliateLinks } from "@/lib/affiliateLinks"
 import { getBaseUrl, siteConfig } from "@/lib/siteConfig"
 import { toAbsoluteUrl, toISODate, buildCanonicalUrl } from "@/lib/seoUtils"
@@ -327,6 +328,7 @@ function renderContentPostPage({
         strategy="lazyOnload"
       />
       <AffiliateScripts />
+      <AffiliateTracker />
 
       <main className="flex-grow">
         <div className="container mx-auto px-4 pt-24 pb-12 affiliate-safe-area">
