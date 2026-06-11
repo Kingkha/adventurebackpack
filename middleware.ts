@@ -193,7 +193,32 @@ export async function middleware(request: NextRequest) {
 
   let updatedPathname = pathname
 
-  // Normalize /blog/ underscores before any other redirects.
+  // Canonicalize /blog/<slug> → /<slug> with a PERMANENT 301, here in middleware.
+  // Posts are served at the root (/<slug>); /blog/<slug> is a legacy/alternate
+  // path for the same content. Without this, the request falls through to the
+  // catch-all route (app/[slug]/[...rest]), which issues an in-component
+  // redirect() — a 307 *temporary* redirect after fully rendering the page.
+  // Googlebot keeps re-crawling temporary-redirect sources, so /blog/<slug> AND
+  // /<slug> both stay in the crawl rotation = double crawl budget. A 301 here
+  // drops the /blog/* copy, consolidates signals to the root URL, and short-
+  // circuits before any rendering. Excludes the real /blog listing (caught by
+  // startsWith('/blog/') being false for "/blog") and /blog/page/N pagination.
+  if (
+    updatedPathname.startsWith('/blog/') &&
+    updatedPathname !== '/blog/page' &&
+    !updatedPathname.startsWith('/blog/page/')
+  ) {
+    // Also fold underscores → hyphens (was the prior normalization step) so the
+    // single 301 lands directly on the canonical root slug — no extra hop.
+    const stripped = updatedPathname.replace(/_/g, '-').replace(/^\/blog/, '')
+    if (stripped.length > 1) {
+      // Skip bare "/blog/" (stripped === "/"), which is the listing, not a post.
+      url.pathname = stripped
+      return NextResponse.redirect(url, 301)
+    }
+  }
+
+  // Normalize underscores for the remaining /blog/* paths (e.g. /blog/page/2).
   if (updatedPathname.startsWith('/blog/')) {
     updatedPathname = updatedPathname.replace(/_/g, '-')
   }
