@@ -180,8 +180,8 @@ export const siteConfig = {
 
   // About Page Content
   aboutPage: {
-    intro: "Adventure Backpack is an editorial travel project focused on backpacking routes, budget logistics, and outdoor activities worldwide, with practical guidance for independent travelers planning multi-day trips.",
-    story: "Adventure Backpack was built to replace vague travel content with decision-ready guidance that helps backpackers plan faster and avoid common route mistakes.",
+    intro: "is an editorial travel project focused on backpacking routes, budget logistics, and outdoor activities worldwide, with practical guidance for independent travelers planning multi-day trips.",
+    story: "was built to replace vague travel content with decision-ready guidance that helps backpackers plan faster and avoid common route mistakes.",
     teamIntro: "Our team combines editorial research, local context, and QA workflows to keep adventure backpacking coverage useful and current.",
     teamRoles: [
   { title: "Editorial Researchers", description: "Writers and researchers focused on backpacking routes, hostels, and outdoor activities with practical planning depth." },
@@ -195,7 +195,7 @@ export const siteConfig = {
   { title: "Editorial Review", description: "Pages pass structure, usefulness, and accuracy checks before they are published." },
   { title: "Maintenance Cycle", description: "Important pages are revisited and refreshed when assumptions, access, timing, or logistics shift." },
 ],
-    whatWeDo: "We publish and maintain adventure backpacking guides that emphasize tradeoffs, realistic pacing, and the details that change outcomes.",
+    whatWeDo: "publishes and maintains adventure backpacking guides that emphasize tradeoffs, realistic pacing, and the details that change outcomes.",
     commitments: [
   { title: "Decision-First Guidance", description: "We optimize for decisions travelers actually need to make, with clear tradeoffs." },
   { title: "Accuracy Over Hype", description: "We avoid inflated claims and keep recommendations grounded in verifiable details." },

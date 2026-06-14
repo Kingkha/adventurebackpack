@@ -38,7 +38,7 @@ export default function AboutSection() {
             
             <div className="md:w-2/3">
               <p className="text-lg text-gray-700 mb-4">
-                <strong>{siteConfig.brand.name}</strong> {siteConfig.brand.description}
+                {siteConfig.brand.description}
               </p>
               
               <p className="text-lg text-gray-700 mb-4">
