@@ -5,7 +5,7 @@ import { getTotalPages, getBlogCache } from "@/lib/getBlogPosts"
 import Footer from "../../../components/Footer"
 import Pagination from "../../../components/Pagination"
 import { BlogListingJsonLd } from "../../../components/BlogJsonLd"
-import { notFound, redirect } from "next/navigation"
+import { notFound, permanentRedirect } from "next/navigation"
 import { siteConfig, getBaseUrl } from "@/lib/siteConfig"
 
 interface PageProps {
@@ -79,8 +79,10 @@ function getPostUrl(post: any): string {
     return `/${post.folder}/${post.slug}`
   }
   
-  // Default blog path
-  return `/blog/${post.slug}`
+  // Default: posts are exposed at the ROOT (/<slug>), not under /blog/. Returning
+  // /blog/<slug> here made every paginated listing link 301-redirect via middleware
+  // (the Vercel-log 301s) — now matches BlogCard's correct root default.
+  return `/${post.slug}`
 }
 
 export default function BlogPage({ params }: PageProps) {
@@ -88,7 +90,8 @@ export default function BlogPage({ params }: PageProps) {
   const POSTS_PER_PAGE = 12;
 
   if (page === 1) {
-    redirect("/blog")
+    // page 1 IS /blog — permanent (308) canonical redirect, not a temporary 307.
+    permanentRedirect("/blog")
   }
   
   // Calculate the correct slice of posts for the current page
