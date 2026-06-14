@@ -51,7 +51,17 @@ export default function AboutPage() {
               <li key={index}><strong>{role.title}:</strong> {role.description}</li>
             ))}
           </ul>
-          
+
+          <h2>Meet the Editor</h2>
+          <p>
+            Our guides are edited by <strong>{siteConfig.author.defaultName}</strong>, {siteConfig.author.jobTitle} at {siteConfig.brand.name} — the byline you'll see on our articles. {siteConfig.author.description}
+          </p>
+          <ul>
+            {siteConfig.author.credentials.map((credential, index) => (
+              <li key={index}>{credential}</li>
+            ))}
+          </ul>
+
           <h2>Our Research Process</h2>
           <p>
             Every guide we publish is locally grounded and verified:
@@ -81,9 +91,12 @@ export default function AboutPage() {
           
           <h2>Trust & Credibility</h2>
           <p>
-            Our editors maintain high editorial standards. Content is vetted for accuracy, authenticity, availability, and on-the-ground relevance before publication.
+            Our editors maintain high editorial standards. Content is vetted for accuracy, authenticity, availability, and on-the-ground relevance before publication. For the full workflow, read our <a href="/editorial-policy">Editorial Policy</a> and <a href="/trust">Trust &amp; Transparency</a> pages.
           </p>
-          
+          <p>
+            Some guides include affiliate links. If you buy or book through them, we may earn a small commission at no extra cost to you, and these relationships never influence which products or experiences we recommend.
+          </p>
+
           <h2>Join Us on Your Next Adventure</h2>
           <p>
             Whether you're planning a journey, exploring traditions, seeking authentic experiences, or looking for local activities, {siteConfig.brand.name} is here to guide you. Contact us at <a href={`mailto:${siteConfig.contact.email}`}>{siteConfig.contact.email}</a> with your questions or tips.
