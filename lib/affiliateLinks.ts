@@ -38,7 +38,6 @@ const DENSITY_PROFILES: Record<AffiliateDensityMode, DensityRule[]> = {
     { placement: 'primary', minimumSectionCount: 2, targetSection: 1 },
     { placement: 'secondary', minimumSectionCount: 2, targetSection: 2 },
     { placement: 'tertiary', minimumSectionCount: 3, targetSection: 3 },
-    { placement: 'end', minimumSectionCount: 7, targetRatio: 0.82 },
   ],
 };
 
