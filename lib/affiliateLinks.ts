@@ -1,148 +1,278 @@
 /**
- * Affiliate Links Manager
- * Inserts search-based affiliate widgets into blog post HTML.
- * Deep-URL Viator variants (banner / sidebar / "Insider Tip" CTA boxes)
- * were removed — they were too aggressive and Viator has reduced commission
- * on deep-link traffic anyway.
+ * Reusable, density-controlled affiliate widget injection.
+ *
+ * Only exact city/country matches can render. Unmapped pages never borrow a
+ * default city's inventory, and unsupported provider "auto" widgets are not
+ * emitted. Change AFFILIATE_DENSITY_MODE to low, balanced, or aggressive.
  */
 
 import { findCityData, convertCityToUrlFriendly, extractCityFromTags } from './citiesData';
 import { siteConfig } from './siteConfig';
 
+const DOMAIN_NAME = siteConfig.affiliate.domainName;
 const VIATOR_PARTNER_ID = siteConfig.affiliate.viatorPartnerId;
 const GETYOURGUIDE_PARTNER_ID = siteConfig.affiliate.getyourguidePartnerId;
 const VIATOR_WIDGET_REF = siteConfig.affiliate.viatorWidgetRef;
-const DOMAIN_NAME = siteConfig.affiliate.domainName;
 
-/**
- * Build a campaign value that encodes site + widget type + source page.
- * Viator attribution docs require alphanumeric + dash only; non-matching
- * chars collapse to dashes. Capped to stay under platform-observed ~100 char
- * soft limits. Emitted verbatim on Viator as data-campaign/data-vi-campaign
- * and on GYG as data-gyg-campaign.
- */
+type AffiliateDensityMode = 'low' | 'balanced' | 'aggressive';
+type AffiliatePlacement = 'primary' | 'secondary' | 'tertiary' | 'end';
+
+type DensityRule = {
+  placement: AffiliatePlacement;
+  minimumSectionCount: number;
+  targetSection?: number;
+  targetRatio?: number;
+};
+
+const DENSITY_PROFILES: Record<AffiliateDensityMode, DensityRule[]> = {
+  low: [
+    { placement: 'primary', minimumSectionCount: 2, targetSection: 1 },
+    { placement: 'secondary', minimumSectionCount: 6, targetRatio: 0.67 },
+  ],
+  balanced: [
+    { placement: 'primary', minimumSectionCount: 2, targetSection: 1 },
+    { placement: 'secondary', minimumSectionCount: 3, targetSection: 3 },
+    { placement: 'tertiary', minimumSectionCount: 7, targetRatio: 0.75 },
+  ],
+  aggressive: [
+    { placement: 'primary', minimumSectionCount: 2, targetSection: 1 },
+    { placement: 'secondary', minimumSectionCount: 2, targetSection: 2 },
+    { placement: 'tertiary', minimumSectionCount: 3, targetSection: 3 },
+    { placement: 'end', minimumSectionCount: 7, targetRatio: 0.82 },
+  ],
+};
+
+const GENERIC_COUNTRY_TAGS = new Set([
+  'attractions', 'blog', 'city guide', 'europe', 'guide', 'hub page',
+  'information', 'itinerary', 'travel', 'travel guide',
+]);
+
+function densityMode(): AffiliateDensityMode {
+  const configured = String(process.env.AFFILIATE_DENSITY_MODE || 'balanced').toLowerCase();
+  return configured in DENSITY_PROFILES ? configured as AffiliateDensityMode : 'balanced';
+}
+
+function escapeHtml(value: string): string {
+  return value
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
+function normalizePlace(value: string): string {
+  return value
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .replace(/[-_]/g, ' ')
+    .replace(/[^a-z0-9\s()]/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+function cityNameMatches(input: string, resolved: string): boolean {
+  const expected = normalizePlace(input);
+  const normalized = normalizePlace(resolved);
+  const main = normalized.split('(')[0].trim();
+  const alternate = normalized.includes('(') ? normalized.split('(')[1].split(')')[0].trim() : '';
+  return [normalized, main, alternate].filter(Boolean).includes(expected);
+}
+
 function buildCampaign(widgetType: string, pageSlug: string): string {
-  const slug = (pageSlug || '')
+  const site = DOMAIN_NAME.replace(/[^a-zA-Z0-9-]/g, '-').replace(/-+/g, '-').slice(0, 28);
+  const slug = String(pageSlug || '')
     .replace(/^\/+|\/+$/g, '')
     .replace(/\.html$/i, '')
     .replace(/[^a-zA-Z0-9-]/g, '-')
     .replace(/-+/g, '-')
     .replace(/^-+|-+$/g, '')
-    .slice(0, 80)
-    .replace(/-+$/, '');
-  return slug ? `${DOMAIN_NAME}-${widgetType}-${slug}` : `${DOMAIN_NAME}-${widgetType}`;
+    .slice(0, 60);
+  return slug ? `${site}-unit-${widgetType}-${slug}` : `${site}-unit-${widgetType}`;
 }
 
-// Wrap third-party affiliate widgets in a fixed-height shell so the placeholder
-// occupies its final size before the external script hydrates. Prevents the
-// 400-800px CLS shift on mobile that GYG/Viator iframes cause when they paint.
-function sponsoredSlot(innerHtml: string, minHeightPx: number): string {
-  return `<div class="affiliate-slot" data-nosnippet style="min-height:${minHeightPx}px">
-  <span class="affiliate-badge">Sponsored</span>
-  <div class="affiliate-skeleton" aria-hidden="true"></div>
-  <div class="affiliate-inner">${innerHtml}</div>
-</div>`;
-}
-
-function generateGYGCityWidget(gygLocationId: string, pageSlug: string): string {
-  const campaign = buildCampaign('gcity', pageSlug);
-  const inner = `<div
-    data-gyg-href="https://widget.getyourguide.com/default/city.frame"
-    data-gyg-location-id="${gygLocationId}"
-    data-gyg-locale-code="en-US"
-    data-gyg-widget="city"
-    data-gyg-partner-id="${GETYOURGUIDE_PARTNER_ID}"
-    data-gyg-campaign="${campaign}"
-    data-gyg-cmp="${campaign}"
-    loading="lazy"
-></div>`;
-  return sponsoredSlot(inner, 520);
-}
-
-function generateGYGActivitiesWidget(gygLocationId: string, pageSlug: string): string {
-  const campaign = buildCampaign('gact', pageSlug);
-  const inner = `<div
-    data-gyg-href="https://widget.getyourguide.com/default/activities.frame"
-    data-gyg-location-id="${gygLocationId}"
-    data-gyg-locale-code="en-US"
-    data-gyg-widget="activities"
-    data-gyg-partner-id="${GETYOURGUIDE_PARTNER_ID}"
-    data-gyg-number-of-items="4"
-    data-gyg-campaign="${campaign}"
-    data-gyg-cmp="${campaign}"
-    loading="lazy"
-></div>`;
-  return sponsoredSlot(inner, 420);
-}
-
-function generateViatorAutoWidget(city: string, pageSlug: string): string {
-  const citySearch = convertCityToUrlFriendly(city);
-  const campaign = buildCampaign('vauto', pageSlug);
-  const inner = `<div
-    data-vi-partner-id="${VIATOR_PARTNER_ID}"
-    data-vi-widget-ref="${VIATOR_WIDGET_REF}"
-    data-vi-search-term="${citySearch}"
-    data-vi-campaign="${campaign}"
-    data-campaign="${campaign}"
-></div>`;
-  return sponsoredSlot(inner, 600);
-}
-
-type AffiliateContext = {
-  cityName: string;
-  gygLocationId: string;
-};
-
-function buildAffiliateContext(tags: string[]): AffiliateContext | null {
+function resolveCity(tags: string[]) {
   const cityName = extractCityFromTags(tags);
-  if (!cityName) {
-    return null;
-  }
+  if (!cityName) return null;
+  const city = findCityData(cityName);
+  if (!city || !cityNameMatches(cityName, city.city)) return null;
 
-  const cityData = findCityData(cityName);
+  const expectedCountry = normalizePlace(String(tags[2] || ''));
+  const actualCountry = normalizePlace(String(city.country || ''));
+  if (
+    expectedCountry
+    && actualCountry
+    && !GENERIC_COUNTRY_TAGS.has(expectedCountry)
+    && expectedCountry !== actualCountry
+  ) return null;
 
-  return {
-    cityName,
-    gygLocationId: cityData?.getyourguideLocationId || '1634',
-  };
+  return city;
 }
 
-// Strip aggressive inline Viator deep-link anchors sprinkled into prose by the
-// content generator (e.g. <a href="https://www.viator.com/Bangkok/d343?pid=…">
-// guided tours</a>). These tank readability + commission rate vs. the curated
-// search widgets we inject below, so we unwrap them and keep just the anchor
-// text. Runs on every article (including hub pages) via processAffiliateLinks.
-function stripInlineViatorLinks(html: string): string {
-  return html.replace(
-    /<a[^>]*href=["']https?:\/\/(?:www\.)?viator\.com\/[^"']*["'][^>]*>([\s\S]*?)<\/a>/gi,
-    '$1'
-  );
+function sponsoredSlot(input: {
+  innerHtml: string;
+  city: string;
+  provider: 'getyourguide' | 'viator';
+  widget: string;
+  placement: AffiliatePlacement;
+  campaign: string;
+  locationId?: string;
+  minHeight: number;
+}): string {
+  return `<aside class="affiliate-slot" data-nosnippet
+    data-affiliate-unit="experience_finder"
+    data-affiliate-provider="${input.provider}"
+    data-affiliate-widget="${input.widget}"
+    data-affiliate-format="widget"
+    data-affiliate-placement="${input.placement}"
+    data-affiliate-campaign="${escapeHtml(input.campaign)}"
+    data-affiliate-city="${escapeHtml(input.city)}"
+    data-affiliate-location-id="${escapeHtml(input.locationId || '')}"
+    style="min-height:${input.minHeight}px">
+    <span class="affiliate-badge">Sponsored</span>
+    <div class="affiliate-skeleton" aria-hidden="true"></div>
+    <div class="affiliate-inner">${input.innerHtml}</div>
+  </aside>`;
+}
+
+function getYourGuideWidget(
+  city: ReturnType<typeof findCityData> & {},
+  placement: AffiliatePlacement,
+  pageSlug: string,
+  activities: boolean,
+): string {
+  if (!city.getyourguideLocationId) return '';
+  const widget = activities ? 'activities' : 'city';
+  const href = activities
+    ? 'https://widget.getyourguide.com/default/activities.frame'
+    : 'https://widget.getyourguide.com/default/city.frame';
+  const campaign = buildCampaign(activities ? 'gact' : 'gcity', pageSlug);
+  const itemCount = activities ? ' data-gyg-number-of-items="4"' : '';
+  const innerHtml = `<div
+    data-gyg-href="${href}"
+    data-gyg-location-id="${escapeHtml(city.getyourguideLocationId)}"
+    data-gyg-locale-code="en-US"
+    data-gyg-widget="${widget}"
+    data-gyg-partner-id="${escapeHtml(GETYOURGUIDE_PARTNER_ID)}"
+    data-gyg-campaign="${escapeHtml(campaign)}"
+    data-gyg-cmp="${escapeHtml(campaign)}"${itemCount}
+    loading="lazy"></div>`;
+  return sponsoredSlot({
+    innerHtml,
+    city: city.city,
+    provider: 'getyourguide',
+    widget: `getyourguide_${widget}`,
+    placement,
+    campaign,
+    locationId: city.getyourguideLocationId,
+    minHeight: activities ? 420 : 400,
+  });
+}
+
+function viatorWidget(
+  city: ReturnType<typeof findCityData> & {},
+  placement: AffiliatePlacement,
+  pageSlug: string,
+): string {
+  if (!VIATOR_PARTNER_ID || !VIATOR_WIDGET_REF) return '';
+  const campaign = buildCampaign('vauto', pageSlug);
+  const innerHtml = `<div
+    data-vi-partner-id="${escapeHtml(VIATOR_PARTNER_ID)}"
+    data-vi-widget-ref="${escapeHtml(VIATOR_WIDGET_REF)}"
+    data-vi-search-term="${escapeHtml(convertCityToUrlFriendly(city.city))}"
+    data-vi-campaign="${escapeHtml(campaign)}"
+    data-campaign="${escapeHtml(campaign)}"></div>`;
+  return sponsoredSlot({
+    innerHtml,
+    city: city.city,
+    provider: 'viator',
+    widget: 'viator_widget',
+    placement,
+    campaign,
+    minHeight: 600,
+  });
+}
+
+function renderPlacement(
+  city: ReturnType<typeof findCityData> & {},
+  placement: AffiliatePlacement,
+  pageSlug: string,
+): string {
+  if (placement === 'primary') {
+    return getYourGuideWidget(city, placement, pageSlug, false)
+      || viatorWidget(city, placement, pageSlug);
+  }
+  if (placement === 'tertiary') {
+    return getYourGuideWidget(city, placement, pageSlug, true)
+      || viatorWidget(city, placement, pageSlug);
+  }
+  return viatorWidget(city, placement, pageSlug)
+    || getYourGuideWidget(city, placement, pageSlug, true);
 }
 
 function removeExistingWidgets(html: string): string {
-  // Strip prior sponsoredSlot wrappers (re-injected fresh below). Use a
-  // balanced-ish match — affiliate slots contain nested divs, so a non-greedy
-  // single-div regex would leave the outer wrapper behind. The slot block
-  // always ends with the inner widget div, so we anchor on the wrapper class.
+  html = html.replace(/<aside[^>]*class="[^"]*\baffiliate-slot\b[^"]*"[^>]*>[\s\S]*?<\/aside>/gi, '');
+  html = html.replace(/<aside[^>]*class="[^"]*\baffiliate-unit\b[^"]*"[^>]*>[\s\S]*?<\/aside>/gi, '');
   html = html.replace(/<div[^>]*class="affiliate-slot"[\s\S]*?<\/div>\s*<\/div>\s*<\/div>/gi, '');
-
-  // Strip GYG widgets (re-injected fresh below)
+  html = html.replace(/<div[^>]*data-aff-block="(?:viator-banner|viator-sidebar|viator-link)"[^>]*>[\s\S]*?<\/div>(?:\s*<\/div>)?/gi, '');
   html = html.replace(/<div[^>]*data-gyg-widget[^>]*>[\s\S]*?<\/div>/gi, '');
   html = html.replace(/<div[^>]*data-gyg-partner-id[^>]*>[\s\S]*?<\/div>/gi, '');
   html = html.replace(/<script[^>]*widget\.getyourguide\.com[^>]*>[\s\S]*?<\/script>/gi, '');
-
-  // Strip Viator search widget (re-injected) and deprecated deep-link variants
   html = html.replace(/<div[^>]*data-id="viator-banner"[^>]*>[\s\S]*?<\/div>/gi, '');
   html = html.replace(/<div[^>]*data-vi-partner-id[^>]*>[\s\S]*?<\/div>/gi, '');
-  html = html.replace(/<script[^>]*viator\.com[^>]*>[\s\S]*?<\/script>/gi, '');
-  html = html.replace(/<script[^>]*partners\.vtrcdn\.com[^>]*>[\s\S]*?<\/script>/gi, '');
-
-  // Strip deprecated wrappers (deep-URL banners + sidebar + Pro Tip CTA boxes)
+  html = html.replace(/<script[^>]*(?:viator\.com|partners\.vtrcdn\.com)[^>]*>[\s\S]*?<\/script>/gi, '');
   html = html.replace(/<div[^>]*class="sidebar-banner-container"[^>]*>[\s\S]*?<\/div>/gi, '');
   html = html.replace(/<div[^>]*id="sidebar-banner"[^>]*>[\s\S]*?<\/div>/gi, '');
   html = html.replace(/<blockquote><p><strong>(?:Tip|Pro Tip|Recommendation|Insider Tip):<\/strong>[\s\S]*?viator\.com[\s\S]*?<\/p><\/blockquote>/gi, '');
-
   return html;
+}
+
+function faqStart(html: string): number | null {
+  const starts: number[] = [];
+  const section = html.match(/<section[^>]*class="[^"]*\barticle-faq\b[^"]*"[^>]*>/i);
+  if (section?.index !== undefined) starts.push(section.index);
+  for (const heading of html.matchAll(/<h2[^>]*>([\s\S]*?)<\/h2>/gi)) {
+    const text = heading[1].replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+    if (/^(?:faqs?|frequently asked questions)(?:\b|:)/i.test(text) && heading.index !== undefined) {
+      starts.push(heading.index);
+    }
+  }
+  return starts.length > 0 ? Math.min(...starts) : null;
+}
+
+function selectPlacements(html: string): Array<{ position: number; placement: AffiliatePlacement }> {
+  const faq = faqStart(html);
+  const h2Matches = [...html.matchAll(/<h2[^>]*>[\s\S]*?<\/h2>/gi)]
+    .filter((match) => {
+      const position = match.index ?? -1;
+      return faq === null || position < faq;
+    });
+  if (h2Matches.length === 0) return [];
+
+  const articleClose = html.lastIndexOf('</article>');
+  const contentEnd = faq ?? (articleClose >= 0 ? articleClose : html.length);
+  if (h2Matches.length === 1) return [{ position: contentEnd, placement: 'end' }];
+
+  const boundaries = h2Matches.map((match, index) => ({
+    section: index + 1,
+    position: h2Matches[index + 1]?.index ?? contentEnd,
+  }));
+  const selected: Array<{ position: number; placement: AffiliatePlacement }> = [];
+  const usedPositions = new Set<number>();
+
+  for (const rule of DENSITY_PROFILES[densityMode()]) {
+    if (h2Matches.length < rule.minimumSectionCount) continue;
+    const preferred = rule.targetSection
+      ?? Math.max(1, Math.round(h2Matches.length * (rule.targetRatio ?? 0.5)));
+    const boundary = boundaries
+      .filter((candidate) => !usedPositions.has(candidate.position))
+      .sort((a, b) => Math.abs(a.section - preferred) - Math.abs(b.section - preferred))[0];
+    if (!boundary) continue;
+    usedPositions.add(boundary.position);
+    selected.push({ position: boundary.position, placement: rule.placement });
+  }
+  return selected;
 }
 
 export function insertAffiliateLinks(
@@ -150,110 +280,52 @@ export function insertAffiliateLinks(
   tags: string[] = [],
   pageSlug: string = '',
 ): string {
-  const lowerCaseTags = tags.map(tag => String(tag).toLowerCase());
-  if (lowerCaseTags.includes('hub page') || lowerCaseTags.includes('country hub')) {
-    return htmlContent;
+  const processedHtml = removeExistingWidgets(htmlContent);
+  const lowerCaseTags = tags.map((tag) => String(tag).toLowerCase());
+  if (lowerCaseTags.includes('hub page') || lowerCaseTags.includes('country hub')) return processedHtml;
+
+  const city = resolveCity(tags);
+  if (!city) return processedHtml;
+
+  const insertions = selectPlacements(processedHtml)
+    .map(({ position, placement }) => ({
+      position,
+      html: renderPlacement(city, placement, pageSlug),
+    }))
+    .filter((insertion) => insertion.html)
+    .sort((a, b) => b.position - a.position);
+
+  let result = processedHtml;
+  for (const insertion of insertions) {
+    result = `${result.slice(0, insertion.position)}\n${insertion.html}\n${result.slice(insertion.position)}`;
   }
-
-  const context = buildAffiliateContext(tags);
-  if (!context) {
-    return htmlContent;
-  }
-
-  const { cityName, gygLocationId } = context;
-
-  let processedHtml = removeExistingWidgets(htmlContent);
-
-  // Top of article (after H1): GYG city widget only. The Viator widget moves
-  // deeper into the article (mid-content slot) so it doesn't crowd the
-  // intro — placing it directly under or near the GYG city widget reads as
-  // aggressive ad stacking.
-  const cityWidget = generateGYGCityWidget(gygLocationId, pageSlug);
-  const h1Match = processedHtml.match(/<h1[^>]*>[\s\S]*?<\/h1>/i);
-  if (h1Match) {
-    processedHtml = processedHtml.replace(h1Match[0], h1Match[0] + '\n' + cityWidget);
-  } else {
-    const firstPMatch = processedHtml.match(/<p[^>]*>[\s\S]*?<\/p>/i);
-    if (firstPMatch) {
-      processedHtml = processedHtml.replace(firstPMatch[0], firstPMatch[0] + '\n' + cityWidget);
-    } else {
-      processedHtml = cityWidget + '\n' + processedHtml;
-    }
-  }
-
-  const h2Regex = /<h2[^>]*>[\s\S]*?<\/h2>/gi;
-  const h2Matches = [...processedHtml.matchAll(h2Regex)];
-
-  if (h2Matches.length === 0) {
-    return processedHtml;
-  }
-
-  // Mid-content widgets: H2 #1 → GYG activities, H2 #3 → Viator auto.
-  // Layout: GYG city at top + GYG activities mid + Viator auto deeper.
-  // Drops the previous "pre-first-H2 Viator" slot that read as crowding the
-  // GYG city widget above it. Total = 3 widgets per page (down from 4).
-  const widgetSlots: Array<{ h2Index: number; type: 'viator_auto' | 'gyg_activities' }> = [
-    { h2Index: 1, type: 'gyg_activities' },
-    { h2Index: 3, type: 'viator_auto' },
-  ];
-
-  // Walk slots in reverse so earlier indices aren't shifted by insertions.
-  for (let s = widgetSlots.length - 1; s >= 0; s--) {
-    const { h2Index, type } = widgetSlots[s];
-    if (h2Index >= h2Matches.length) continue;
-
-    let widgetHtml = '';
-    switch (type) {
-      case 'gyg_activities':
-        widgetHtml = generateGYGActivitiesWidget(gygLocationId, pageSlug);
-        break;
-      case 'viator_auto':
-        widgetHtml = generateViatorAutoWidget(cityName, pageSlug);
-        break;
-    }
-
-    const i = h2Index;
-
-    if (widgetHtml) {
-      const h2Text = h2Matches[i][0];
-      const h2Position = processedHtml.lastIndexOf(h2Text);
-      if (h2Position !== -1) {
-        processedHtml =
-          processedHtml.substring(0, h2Position + h2Text.length) +
-          '\n' + widgetHtml +
-          processedHtml.substring(h2Position + h2Text.length);
-      }
-    }
-  }
-
-  return processedHtml;
+  return result;
 }
 
 function isAffiliateEnabled(): boolean {
   const enabled = process.env.AFFILIATE_ENABLED;
   if (enabled === undefined || enabled === null || enabled === '') return true;
-  const normalizedValue = enabled.toLowerCase().trim();
-  if (normalizedValue === 'false' || normalizedValue === '0' || normalizedValue === 'no') return false;
-  if (normalizedValue === 'true' || normalizedValue === '1' || normalizedValue === 'yes') return true;
-  return true;
+  return !['false', '0', 'no'].includes(enabled.toLowerCase().trim());
 }
 
 export function processAffiliateLinks(
   content: string,
   tags: string[] = [],
-  pageSlug: string = '',
+  pageSlugOrOptions: string | { includeSidebarBanner?: boolean } = '',
 ): string {
-  if (!isAffiliateEnabled()) {
-    return content;
-  }
-
+  if (!isAffiliateEnabled()) return removeExistingWidgets(content);
+  const pageSlug = typeof pageSlugOrOptions === 'string' ? pageSlugOrOptions : '';
   try {
-    // Strip inline Viator deep-link anchors first so they're removed even on
-    // hub-page articles (where insertAffiliateLinks short-circuits).
-    const stripped = stripInlineViatorLinks(content);
-    return insertAffiliateLinks(stripped, tags, pageSlug);
+    return insertAffiliateLinks(content, tags, pageSlug);
   } catch (error) {
-    console.error('❌ Error processing affiliate links:', error);
-    return content;
+    console.error('Affiliate widget processing failed:', error);
+    return removeExistingWidgets(content);
   }
+}
+
+// Compatibility for older layouts that still import a separate sidebar unit.
+// Density is now controlled in-article, so rendering another sidebar widget
+// would exceed the selected profile.
+export function getSidebarBannerHtml(_tags: string[] = []): string | null {
+  return null;
 }
