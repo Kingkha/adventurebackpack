@@ -48,8 +48,8 @@ const GENERIC_COUNTRY_TAGS = new Set([
 ]);
 
 function densityMode(): AffiliateDensityMode {
-  const configured = String(process.env.AFFILIATE_DENSITY_MODE || 'balanced').toLowerCase();
-  return configured in DENSITY_PROFILES ? configured as AffiliateDensityMode : 'balanced';
+  const configured = String(process.env.AFFILIATE_DENSITY_MODE || 'aggressive').toLowerCase();
+  return configured in DENSITY_PROFILES ? configured as AffiliateDensityMode : 'aggressive';
 }
 
 function escapeHtml(value: string): string {
