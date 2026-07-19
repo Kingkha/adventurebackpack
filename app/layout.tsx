@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Inter, Libre_Baskerville } from 'next/font/google'
+import Script from 'next/script'
 import './globals.css'
 import Header from './components/Header'
 import GoogleAnalytics from './components/GoogleAnalytics'
@@ -121,6 +122,17 @@ export default function RootLayout({
         <link rel="alternate" type="application/rss+xml" title={`${SITE_NAME} RSS Feed`} href="/feed.xml" />
       </head>
       <body className={`${inter.variable} ${libreBaskerville.variable} font-sans bg-white text-gray-800`}>
+        <Script id="stay22-let-me-allez" strategy="afterInteractive">
+          {`(function (s, t, a, y, twenty, two) {
+  s.Stay22 = s.Stay22 || {};
+  s.Stay22.params = { lmaID: '6a5d05290d30f9c7d2a2d320' };
+  twenty = t.createElement(a);
+  two = t.getElementsByTagName(a)[0];
+  twenty.async = 1;
+  twenty.src = y;
+  two.parentNode.insertBefore(twenty, two);
+})(window, document, 'script', 'https://scripts.stay22.com/letmeallez.js');`}
+        </Script>
         <Header />
         {children}
         <Suspense fallback={null}>
